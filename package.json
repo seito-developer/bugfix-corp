@@ -1,0 +1,18 @@
+{
+  "name": "bugfix-corp",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "ejs": "ejs --base-dir ejs/ 'index.ejs' --out dest/"
+  },
+  "devDependencies": {
+    "vite": "^5.1.6"
+  },
+  "dependencies": {
+    "vite-plugin-ejs": "^1.7.0"
+  }
+}
