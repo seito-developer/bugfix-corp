@@ -14,7 +14,7 @@ export default defineConfig({
     // With Data
     ViteEjsPlugin({
       domain: "example.com",
-      title: "My vue project!"
+      title: "BugFix LLC",
     }),
   ],
 });

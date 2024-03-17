@@ -1,19 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <link rel="icon" href="/favicon.ico"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title><%= domain %> | <%= title %></title>
-
-    
-</head>
-<body>
-    <%- include('layout/_header.html') %>
+<%- include('meta/_head.html', {title: `${title} - 真に価値あるエンジニアリングとプログラミングスクール`}) %>
+<%- include('layout/_header.html') %>
 
     <p>hhh</p>
 
-    <%- include('layout/_footer.html') %>
-<!-- <script type="module" src="/src/main.ts"></script> -->
-</body>
-</html>
+<%- include('layout/_footer.html') %>
+<%- include('meta/_foot.html') %>
