@@ -10,6 +10,7 @@
     "ejs": "ejs --base-dir ejs/ --out dest/"
   },
   "devDependencies": {
+    "sanitize.css": "^13.0.0",
     "sass": "^1.72.0",
     "vite": "^5.1.6"
   },
