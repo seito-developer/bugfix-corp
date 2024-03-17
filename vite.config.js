@@ -2,6 +2,13 @@ import {defineConfig} from "vite";
 import {ViteEjsPlugin} from "vite-plugin-ejs";
 
 export default defineConfig({
+  root: './src',
+  base: './',
+  build: {
+    outDir: '../dist',
+    emptyOutDir: true,
+    // rollupOptions: {}
+  },
   plugins: [
     
     // With Data
@@ -10,9 +17,4 @@ export default defineConfig({
       title: "My vue project!"
     }),
   ],
-  server: {
-    watch: {
-      usePolling: true,
-    },
-  },
 });
