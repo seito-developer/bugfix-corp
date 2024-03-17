@@ -7,11 +7,8 @@ export default defineConfig({
   build: {
     outDir: '../dist',
     emptyOutDir: true,
-    // rollupOptions: {}
   },
   plugins: [
-    
-    // With Data
     ViteEjsPlugin({
       domain: "example.com",
       title: "BugFix LLC",
