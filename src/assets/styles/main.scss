@@ -1,4 +1,17 @@
-@use "sanitize.css/sanitize.css";
+@use "_const.scss";
+@use "_base.scss";
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  max-width: var(--site-width);
+  margin: 0 auto;
+}
 
 .nav {
   display: inline-block;
