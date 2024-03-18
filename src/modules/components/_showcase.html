@@ -1,0 +1,23 @@
+<section class="showcase">
+  <div class="showcase-container">
+    <div class="showcase-header">
+      <h1>卒業生のアウトプット・成果</h1>
+      <%- include("./modules/components/_link.html", { modifier: "", href: "",
+      text: "MORE" }) %>
+    </div>
+  </div>
+
+  <div class="showcase-contents">
+    <ul class="showcase-list">
+      <% works.graduationWorks.forEach(workItem => { %>
+      <li>
+        <%- include("./modules/components/_work.html", { 
+          img: workItem.img,
+          headline: workItem.headline, 
+          author: workItem.author,
+          course: workItem.course }) %>
+      </li>
+      <% }) %>
+    </ul>
+  </div>
+</section>
