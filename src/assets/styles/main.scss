@@ -85,7 +85,7 @@ a {
   text-align: center;
   overflow: hidden;
   background: #289b8f;
-  transition: box-shadow ease-out 0.2s;
+  transition: box-shadow ease-out 0.2s, color ease-out 0.2s;
   backface-visibility: hidden;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
@@ -100,8 +100,8 @@ a {
     display: block;
     width: 100%;
     height: 100%;
-    border-radius: 5px;
     z-index: 1;
+    background: lighten(#289b8f, 5%);
     position: absolute;
     left: 0;
     top: 0;
@@ -116,7 +116,6 @@ a {
     &::after {
       transform-origin: 0% 50%;
       transform: scaleX(1);
-      background: lighten(#289b8f, 5%);
     }
   }
 
@@ -127,6 +126,17 @@ a {
     padding: 16px 32px;
     border-radius: 74px;
     font-size: 14px;
+  }
+  &.link-footer {
+    padding: 20px 60px;
+    border: 2px solid #fff;
+    background: transparent;
+    &::after {
+      background: #fff;
+    }
+    &:hover {
+      color: #212732;
+    }
   }
 }
 
@@ -422,6 +432,80 @@ a {
     .work-img {
       > img {
         transform: scale(1.2);
+      }
+    }
+  }
+}
+
+.footer {
+  background: #212732;
+  color: #fff;
+  padding: 120px 0;
+  .footer-top {
+    display: flex;
+  }
+  .footer-top-logo {
+    display: block;
+    margin-bottom: 45px;
+  }
+  .footer-top-info {
+    margin-right: 120px;
+    > address {
+      font-style: normal;
+      color: #686E79;
+    }
+  }
+  .footer-top-nav {
+    margin-right: 120px;
+    > a {
+      color: #fff;
+      display: block;
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .footer-top-others {}
+  .footer-top-sns {
+    margin-bottom: 40px;
+    > a {
+      color: #fff;
+      font-size: 28px;
+      margin-right: 25px;
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+  .footer-container {
+    @include mixin.container;
+  }
+
+  .footer-border {
+    border-top: 1px solid #fff;
+    margin: 42px 0;
+  }
+
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer-bottom-credit {
+    color: #686E79;
+    font-size: 14px;
+  }
+  .footer-bottom-nav {
+    display: flex;
+    > a {
+      color: #fff;
+      margin-left: 32px;
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
