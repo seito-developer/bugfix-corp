@@ -161,20 +161,23 @@ a {
   color: #fff;
   text-align: center;
   line-height: 1;
+  
   > span:nth-child(1) {
     display: block;
     font-size: 120px;
-    font-weight: bold;
     margin-bottom: 60px;
-    stroke: 1px solid #000000;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     display: block;
+    @include mixin.font-maven(600);
   }
   > span:nth-child(2) {
     font-size: 18px;
   }
   &.headline-left {
     text-align-last: left;
+  }
+  &.headline-primary {
+    color: #214A4A;
   }
 }
 
@@ -205,6 +208,28 @@ a {
     white-space: nowrap;
   }
 }
+
+.point {
+  padding: 192px 0;
+  color: #fff;
+  background: #F4F4F4;
+  .point-container {
+    @include mixin.container;
+  }
+  .point-list {
+    display: flex;
+    width: 100%;
+    margin: 90px -8px 0;
+    > li {
+      display: flex;
+      flex-direction: column;
+      width: 33.3%;
+      padding: 0 8px;
+    }
+  }
+}
+
+
 .course {
   padding: 192px 0;
   color: #fff;
@@ -224,11 +249,25 @@ a {
 }
 
 .card {
-  .card-headline {}
-  .card-img {
-    > img {}
+  color: #214A4A;
+  background: #fff;
+  box-shadow: 0px 0px 44px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  height: 100%;
+
+  .card-headline {
+    font-weight: bold;
+    font-size: 24px;
   }
-  .card-disc {}
+  > img {
+    width: 100%;
+    height: auto;
+  }
+  .card-disc {
+    text-align: left;
+  }
 }
 
 .panel {
@@ -240,7 +279,7 @@ a {
   padding: 90px 20px 45px;
   transition: background-color ease-out 0.2s, border-color ease-out 0.2s;
   .panel-headline {
-    font-weight: bold;
+    @include mixin.font-maven(500);
     font-size: 48px;
     margin-bottom: 45px;
     position: relative;

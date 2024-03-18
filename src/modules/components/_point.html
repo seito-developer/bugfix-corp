@@ -14,17 +14,19 @@
   }
 ]; %>
 
-<section class="course">
-  <div class="course-container">
-    <%- include('./modules/components/_headline.html', {modifier: "headline", main: "COURSE", sub: "2つのコース"}) %>
+<section class="point">
+  <div class="point-container">
+    <%- include('./modules/components/_headline.html', {modifier: "headline-primary", main: "COURSE", sub: "3つの特徴"}) %>
     
-    <ul class="cource-cards">
+    <ul class="point-list">
       <% for( let index = 0; index < cards.length; index++ ) { %>
-        <%- include('./modules/components/_card.html', { 
-          headline: cards[index].headline, 
-          img: cards[index].img, 
-          disc: cards[index].disc
-        }) %>
+        <li>
+          <%- include('./modules/components/_card.html', { 
+            headline: cards[index].headline, 
+            img: cards[index].img, 
+            disc: cards[index].disc
+          }) %>
+        </li>
       <% } %>
     </ul>
   </div>
