@@ -1,0 +1,19 @@
+ul, ol, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 14px;  
+  font-feature-settings: "palt";
+  font-family: "Noto Sans JP", "Meiryo", "Arial", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+}
+
+strong, em, b {
+  font-weight: 600;
+}
