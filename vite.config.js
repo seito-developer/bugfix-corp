@@ -12,6 +12,20 @@ export default defineConfig({
     ViteEjsPlugin({
       domain: "example.com",
       title: "BugFix LLC",
+      // watchEjsFiles: true,
+      
+    }, {
+      ejs: {
+        beautify: true,
+      }
     }),
   ],
+  server: {
+    watch: {
+      // ディレクトリの深い場所にあるファイルも監視するために、適切なパターンを設定
+      ignored: ['!**/node_modules/**'],
+      usePolling: true,
+      depth: 10
+    }
+  }
 });

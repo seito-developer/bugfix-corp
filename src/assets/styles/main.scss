@@ -15,9 +15,9 @@ a {
     @include mixin.container;
   }
   .header-flex {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -55,6 +55,7 @@ a {
   color: #fff;
   text-decoration: none;
   position: relative;
+  text-align: center;
   overflow: hidden;
   transition: box-shadow ease-out 0.2s;
   backface-visibility: hidden;
@@ -97,9 +98,13 @@ a {
       box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
     }
   }
+  &.button-full {
+    width: 100%;
+  }
+  &.button-square {
+    border-radius: 0;
+  }
 }
-
-
 
 .hero {
   width: 100vw;
@@ -115,9 +120,9 @@ a {
     align-items: center;
   }
   .hero-headline {
-    color: #214A4A;
+    color: #214a4a;
     font-size: 24px;
-    letter-spacing: .1em;
+    letter-spacing: 0.1em;
     > span {
       font-size: 52px;
       font-weight: bold;
@@ -127,10 +132,10 @@ a {
         content: "";
         display: block;
         width: 100%;
-        border-bottom: 2px solid #214A4A;
+        border-bottom: 2px solid #214a4a;
         position: absolute;
         left: 0;
-        bottom: .1em;
+        bottom: 0.1em;
       }
     }
   }
@@ -147,6 +152,147 @@ a {
   }
   .hero-images-item {
     margin: 0 5px;
+    > img {
+    }
+  }
+}
+
+.headline {
+  color: #fff;
+  text-align: center;
+  line-height: 1;
+  > span:nth-child(1) {
+    display: block;
+    font-size: 120px;
+    font-weight: bold;
+    margin-bottom: 60px;
+    stroke: 1px solid #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: block;
+  }
+  > span:nth-child(2) {
+    font-size: 18px;
+  }
+  &.headline-left {
+    text-align-last: left;
+  }
+}
+
+.about {
+  padding: 192px 0;
+  border-radius: 20px;
+  margin: 0 16px;
+  color: #fff;
+  background: #212732;
+  position: relative;
+  overflow: hidden;
+  .about-container {
+    @include mixin.container;
+  }
+  .about-disc {
+    margin-bottom: 50px;
+    > p {
+      font-size: 24px;
+      line-height: 1.6;
+    }
+  }
+  .about-bottom {
+    color: #313948;
+    font-size: 124px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+  }
+}
+.course {
+  padding: 192px 0;
+  color: #fff;
+  background: #212732;
+  .course-container {
+    @include mixin.container;
+  }
+  .course-list {
+    display: flex;
+    width: 100%;
+    margin: 90px -5px 0;
+    > li {
+      width: 50%;
+      padding: 0 5px;
+    }
+  }
+}
+
+.card {
+  .card-headline {}
+  .card-img {
     > img {}
+  }
+  .card-disc {}
+}
+
+.panel {
+  display: block;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  text-align: center;
+  padding: 90px 20px 45px;
+  transition: background-color ease-out 0.2s, border-color ease-out 0.2s;
+  .panel-headline {
+    font-weight: bold;
+    font-size: 48px;
+    margin-bottom: 45px;
+    position: relative;
+    display: inline-block;
+    padding-right: 50px;
+    transition: padding ease-out 0.2s;
+    > span {
+      margin-top: 3px;
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(#289B8F, .2);
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 0px solid #fff;
+      transition: transform ease-out 0.2s, background-color ease-out 0.2s;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #289B8F;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        transition: all ease-out 0.2s;
+      }
+    }
+  }
+  .panel-disc {
+    font-size: 14px;
+  }
+
+  &:hover {
+    border-color: #289B8F;
+    background: #289B8F;
+    .panel-headline {
+      padding-right: 70px;
+      > span {
+        background-color: rgba(#fff, .2);
+        transform: translateY(-50%) scale(1.2);
+        &::after {
+          background-color: #fff;
+          transform: translate(-50%, -50%) scale(1.1);
+        }
+      }
+    }
   }
 }

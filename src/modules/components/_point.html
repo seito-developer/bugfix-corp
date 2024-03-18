@@ -1,0 +1,31 @@
+<% const cards = [
+  {
+    headline: "ゼミ形式の学習カリキュラム",
+    img: "./assets/images/course-1.png",
+    disc: "「科学的に効果の高い学習メソッド」を用いた上で、プログラミングはもちろんアプリ開発やエンジニアの仕事に必要なスキル・マインドを包括的に学ぶことができます。"
+  }, {
+    headline: "強力な監修・講師陣",
+    img: "./assets/images/course-2.png",
+    disc: "100人規模のWeb開発企業で経営経験があり、テックYouTuberでもある現役エンジニアの堀口セイト氏が皆さんをサポートします。"
+  }, {
+    headline: "圧倒的コストパフォーマンス",
+    img: "./assets/images/course-3.png",
+    disc: "多くのスクールが数ヶ月・数十万円のコースを展開する一方、月3万円からお手軽に学習することができます。"
+  }
+]; %>
+
+<section class="course">
+  <div class="course-container">
+    <%- include('./modules/components/_headline.html', {modifier: "headline", main: "COURSE", sub: "2つのコース"}) %>
+    
+    <ul class="cource-cards">
+      <% for( let index = 0; index < cards.length; index++ ) { %>
+        <%- include('./modules/components/_card.html', { 
+          headline: cards[index].headline, 
+          img: cards[index].img, 
+          disc: cards[index].disc
+        }) %>
+      <% } %>
+    </ul>
+  </div>
+</section>
