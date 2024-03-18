@@ -11,15 +11,17 @@
       </a>
       <div class="nav">
         <nav class="nav-inner">
-          <ul class="nav-main">
-            <li><a href="./">HOME</a></li>
-            <li><a href="./about">COURSES</a></li>
-            <li><a href="./contact">BLOGS</a></li>
+          <ul class="nav-list">
+            <li class="nav-item"><a href="./">HOME</a></li>
+            <li class="nav-item"><a href="./about">COURSES</a></li>
+            <li class="nav-item"><a href="./contact">BLOGS</a></li>
           </ul>
           <div class="nav-contact">
-            <a class="button button-primary" href="">
-              <span>お申し込み</span>
-            </a>
+            <%- include("./modules/components/_link.html", {
+              modifier: "link-nav",
+              href: "",
+              text: "お申し込み"
+            }) %>
           </div>
         </nav>
       </div>

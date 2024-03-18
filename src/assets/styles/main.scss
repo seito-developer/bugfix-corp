@@ -1,3 +1,4 @@
+@use "sanitize.css";
 @use "const";
 @use "mixins" as mixin;
 @use "base";
@@ -11,6 +12,7 @@ a {
   padding: 20px 0;
   margin: 0 auto;
   position: fixed;
+  z-index: var(--z-index-max);
   .header-inner {
     @include mixin.container;
   }
@@ -22,6 +24,7 @@ a {
 }
 
 .nav {
+  background: #fff;
   display: inline-block;
   padding: 10px 12px;
   box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.15);
@@ -31,13 +34,35 @@ a {
     align-content: center;
     align-items: center;
   }
-  .nav-main {
+  .nav-list {
     display: flex;
-    > li {
-      padding: 0 20px;
-      > a {
-        text-decoration: none;
-        color: #21264a;
+  }
+  .nav-item {
+    padding: 0 20px;
+    > a {
+      text-decoration: none;
+      color: #21264a;
+      display: inline-block;
+      position: relative;
+      @include mixin.font-maven(500);
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #21264a;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: scaleX(0);
+        transform-origin: 0% 50%;
+        transition: transform ease-out 0.2s;
+      }
+
+      &:hover {
+        &::after {
+          transform: scaleX(1);
+        }
       }
     }
   }
@@ -48,18 +73,22 @@ a {
   }
 }
 
-.button {
+.link {
+  @include mixin.font-maven(500);
   display: inline-block;
-  padding: 16px 32px;
-  font-size: 14px;
+  padding: 24px 86px;
+  font-size: 16px;
+  line-height: 1;
   color: #fff;
   text-decoration: none;
   position: relative;
   text-align: center;
   overflow: hidden;
+  background: #289b8f;
   transition: box-shadow ease-out 0.2s;
   backface-visibility: hidden;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
 
   > span {
     position: relative;
@@ -71,6 +100,7 @@ a {
     display: block;
     width: 100%;
     height: 100%;
+    border-radius: 5px;
     z-index: 1;
     position: absolute;
     left: 0;
@@ -82,27 +112,21 @@ a {
   }
 
   &:hover {
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
     &::after {
       transform-origin: 0% 50%;
       transform: scaleX(1);
+      background: lighten(#289b8f, 5%);
     }
   }
 
-  &.button-primary {
-    background: #289b8f;
-    border-radius: 37px;
-    &::after {
-      background: lighten(#289b8f, 5%);
-    }
-    &:hover {
-      box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-    }
-  }
-  &.button-full {
+  &.link-full {
     width: 100%;
   }
-  &.button-square {
-    border-radius: 0;
+  &.link-nav {
+    padding: 16px 32px;
+    border-radius: 74px;
+    font-size: 14px;
   }
 }
 
@@ -334,4 +358,23 @@ a {
       }
     }
   }
+}
+
+
+.works {
+  .works-container {
+    @include mixin.container;
+  }
+  .works-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    > h1 {
+      font-weight: bold;
+      font-size: 48px;
+      color: #214A4A;
+      letter-spacing: .15em;
+    }
+  }
+  .works-contents {}
 }
