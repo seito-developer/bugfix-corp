@@ -10,7 +10,9 @@
     </div>
     
     <div class="works-contents">
-      
+      <% for( let index = 0; index < works.graduationWorks.length; index++ ) { %>
+        <p><%= works.graduationWorks[index].title %></p>
+      <% } %>
     </div>
   </div>
 </section>

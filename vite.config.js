@@ -1,5 +1,7 @@
 import {defineConfig} from "vite";
 import {ViteEjsPlugin} from "vite-plugin-ejs";
+import { mainData } from "./src/data/mainData";
+// import {works} from "./src/data/works";
 
 export default defineConfig({
   root: './src',
@@ -9,12 +11,7 @@ export default defineConfig({
     emptyOutDir: true,
   },
   plugins: [
-    ViteEjsPlugin({
-      domain: "example.com",
-      title: "BugFix LLC",
-      // watchEjsFiles: true,
-      
-    }, {
+    ViteEjsPlugin(mainData, {
       ejs: {
         beautify: true,
       }
