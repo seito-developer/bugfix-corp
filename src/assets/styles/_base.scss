@@ -1,3 +1,16 @@
+html { font-size: 62.5%; }
+
+body {
+  margin: 0;
+  line-height: 1.6;
+  // font-size: 14px;  
+  font-feature-settings: "palt";
+  font-family: "Noto Sans JP", "Meiryo", "Arial", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  background: #F4F4F4;
+}
+
 ul, ol, li {
   margin: 0;
   padding: 0;
@@ -6,17 +19,6 @@ ul, ol, li {
 
 dl, dt, dd {
   margin: 0;
-}
-
-body {
-  margin: 0;
-  line-height: 1.6;
-  font-size: 14px;  
-  font-feature-settings: "palt";
-  font-family: "Noto Sans JP", "Meiryo", "Arial", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  background: #F4F4F4;
 }
 
 strong, em, b {

@@ -1,5 +1,6 @@
 @use "sanitize.css";
 @use "const";
+@use "animation";
 @use "mixins" as mixin;
 @use "base";
 
@@ -9,10 +10,10 @@ a {
 
 .header {
   width: 100%;
-  padding: 20px 0;
   margin: 0 auto;
   position: fixed;
   z-index: var(--z-index-max);
+  top: 6.4%;
   .header-inner {
     @include mixin.container;
   }
@@ -101,7 +102,7 @@ a {
     width: 100%;
     height: 100%;
     z-index: 1;
-    background: lighten(#289b8f, 5%);
+    background: darken(#289b8f, 10%);
     position: absolute;
     left: 0;
     top: 0;
@@ -142,7 +143,7 @@ a {
     background: #EE7D2B;
     padding: 30px 160px;
     &::after {
-      background: lighten(#EE7D2B, 20%);
+      background: darken(#EE7D2B, 10%);
     }
   }
 }
@@ -152,13 +153,9 @@ a {
   height: 100vh;
   position: relative;
   .hero-inner {
-    @include mixin.container;
-  }
-  .hero-flex {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
+    @include mixin.container(auto);
+    margin-top: 16%;
+    margin-bottom: 8%;
   }
   .hero-headline {
     color: #214a4a;
@@ -182,18 +179,24 @@ a {
   }
   .hero-images {
     width: 100%;
-    position: absolute;
-    z-index: 1;
-    bottom: 0;
+    height: 30%;
+    max-height: 286px;
   }
   .hero-images-list {
     width: 100%;
-    display: flex;
+    height: 100%;
+    // display: flex;
     overflow: hidden;
+    white-space: nowrap;
+    animation: marquee 60s linear infinite;
   }
   .hero-images-item {
+    height: 100%;
+    display: inline-block;
     margin: 0 5px;
     > img {
+      height: 100%;
+      width: auto;
     }
   }
 }
@@ -205,14 +208,14 @@ a {
   
   > span:nth-child(1) {
     display: block;
-    font-size: 120px;
+    font-size: 12rem;
     margin-bottom: 60px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     display: block;
     @include mixin.font-maven(600);
   }
   > span:nth-child(2) {
-    font-size: 18px;
+    font-size: 1.8rem;
   }
   &.headline-left {
     text-align-last: left;
@@ -223,7 +226,9 @@ a {
 }
 
 .about {
-  padding: 192px 0;
+  // padding: 192px 0;
+  padding: 10rem;
+  
   border-radius: 20px;
   margin: 0 16px;
   color: #fff;
@@ -231,12 +236,13 @@ a {
   position: relative;
   overflow: hidden;
   .about-container {
-    @include mixin.container;
+    // @include mixin.container;
+    margin-bottom: 5rem;
   }
   .about-disc {
-    margin-bottom: 50px;
+    margin-bottom: 5rem;
     > p {
-      font-size: 24px;
+      font-size: 2.4rem;
       line-height: 1.6;
     }
   }
@@ -245,6 +251,7 @@ a {
     font-size: 124px;
     position: absolute;
     bottom: 0;
+    left: 0;
     width: 100%;
     white-space: nowrap;
   }
