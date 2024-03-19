@@ -2,12 +2,14 @@
 <%- include('./modules/layout/_header.html') %>
 
 <%- include('./modules/components/_hero.html') %>
-<%- include('./modules/components/_about.html') %>
 
-<%- include('./modules/components/_point.html') %>
-<%- include('./modules/components/_course.html') %>
+<main class="page-index">
+  <%- include('./modules/components/_about.html') %>
+  <%- include('./modules/components/_point.html') %>
+  <%- include('./modules/components/_course.html') %>
+  <%- include('./modules/components/_showcase.html') %>
+  <%- include('./modules/components/_contact.html') %>
+</main>
 
-<%- include('./modules/components/_showcase.html') %>
-
-<%- include('./modules/layout/_footer.html') %>
+<%- include('./modules/layout/_footer.html', {modifier: "footer-has-contact"}) %>
 <%- include('./modules/meta/_foot.html') %>

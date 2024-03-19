@@ -138,6 +138,13 @@ a {
       color: #212732;
     }
   }
+  &.link-contact {
+    background: #EE7D2B;
+    padding: 30px 160px;
+    &::after {
+      background: lighten(#EE7D2B, 20%);
+    }
+  }
 }
 
 .hero {
@@ -246,7 +253,6 @@ a {
 .point {
   padding: 192px 0;
   color: #fff;
-  background: #F4F4F4;
   .point-container {
     @include mixin.container;
   }
@@ -372,8 +378,8 @@ a {
 
 
 .showcase {
+  padding: 240px 0 170px;
   overflow: hidden;
-  background: #F4F4F4;
   .showcase-container {
     @include mixin.container;
   }
@@ -509,4 +515,32 @@ a {
       }
     }
   }
+
+  // modifier
+  &.footer-has-contact {
+    padding-top: 120px + 150px;
+  }
+}
+
+.contact {
+  @include mixin.container;
+  position: relative;
+  z-index: 2px;
+  .contact-inner {
+    text-align: center;
+    background: #fff;
+    padding: 57px 0;
+    border-radius: 8px;
+  }
+  > h1 {
+    color: #214A4A;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 45px;
+  }
+}
+
+
+.page-index {
+  margin-bottom: -150px;
 }
