@@ -4,17 +4,23 @@
       <a href="./">
         <img
         src="./assets/images/logo.png"
-        width="50"
-        height="30"
+        width="99"
+        height="60"
         alt="プログラミング・ゼミ SiiD ロゴ画像"
       />
       </a>
-      <div class="nav">
-        <nav class="nav-inner">
+      <nav class="nav">
+        <div class="nav-container">
           <ul class="nav-list">
-            <li class="nav-item"><a href="./">HOME</a></li>
-            <li class="nav-item"><a href="./about">COURSES</a></li>
-            <li class="nav-item"><a href="./contact">BLOGS</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="./">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about">COURSES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact">BLOGS</a>
+            </li>
           </ul>
           <div class="nav-contact">
             <%- include("./modules/components/_link.html", {
@@ -23,8 +29,8 @@
               text: "お申し込み"
             }) %>
           </div>
-        </nav>
-      </div>
+        </div>
+      </nav>
     </div>
   </div>
 </header>

@@ -1,7 +1,13 @@
-@use "sanitize.css";
-@use "const";
-@use "animation";
+// settings
+@use "const" as cn;
+@use "function" as fn;
 @use "mixins" as mixin;
+
+// reset
+@use "sanitize.css";
+
+// styles
+@use "animation";
 @use "base";
 
 a {
@@ -10,12 +16,11 @@ a {
 
 .header {
   width: 100%;
-  margin: 0 auto;
-  position: fixed;
-  z-index: var(--z-index-max);
+  position: absolute;
   top: 6.4%;
+  left: 0;
   .header-inner {
-    @include mixin.container;
+    margin: 0 fn.vw(120px);
   }
   .header-flex {
     width: 100%;
@@ -25,60 +30,70 @@ a {
 }
 
 .nav {
+  position: fixed;
+  width: fn.vw(510px);
+  z-index: cn.$z-index-max;
+  right: fn.vw(120px);
   background: #fff;
-  display: inline-block;
-  padding: 10px 12px;
+  padding: fn.vw(20px) fn.vw(24px) fn.vw(20px) fn.vw(54px);
   box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.15);
-  border-radius: 37px;
-  .nav-inner {
+  border-radius: fn.vw(74px);
+  .nav-container {
+    width: 100%;
     display: flex;
-    align-content: center;
-    align-items: center;
-  }
-  .nav-list {
-    display: flex;
-  }
-  .nav-item {
-    padding: 0 20px;
-    > a {
-      text-decoration: none;
-      color: #21264a;
-      display: inline-block;
-      position: relative;
-      @include mixin.font-maven(500);
-      &::after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 2px;
-        background: #21264a;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        transform: scaleX(0);
-        transform-origin: 0% 50%;
-        transition: transform ease-out 0.2s;
-      }
-
-      &:hover {
-        &::after {
-          transform: scaleX(1);
-        }
-      }
-    }
+    justify-content: space-between;
   }
   .nav-contact {
-    margin-left: 10px;
+    width: 34.2%; //134px / 510px = 34.2%
     line-height: 1;
-    font-size: 0;
+    text-align: right;
+  }
+  .nav-list {
+    width: 58%;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-item {
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+  .nav-link {
+    text-decoration: none;
+    color: #21264a;
+    display: inline-block;
+    position: relative;
+    font-size: fn.fs(16px);
+    @include mixin.font-maven(500);
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: #21264a;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: scaleX(0);
+      transform-origin: 0% 50%;
+      transition: transform ease-out 0.2s;
+    }
+
+    &:hover {
+      &::after {
+        transform: scaleX(1);
+      }
+    }
   }
 }
 
 .link {
   @include mixin.font-maven(500);
   display: inline-block;
-  padding: 24px 86px;
-  font-size: 16px;
+  padding: fn.vw(25px) fn.vw(86px);
+  font-size: fn.fs(16px);
   line-height: 1;
   color: #fff;
   text-decoration: none;
@@ -124,9 +139,9 @@ a {
     width: 100%;
   }
   &.link-nav {
-    padding: 16px 32px;
-    border-radius: 74px;
-    font-size: 14px;
+    padding: fn.vw(16px) calc(fn.vw(32px));
+    border-radius: fn.fs(74px);
+    font-size: fn.fs(14px);
   }
   &.link-footer {
     padding: 20px 60px;
@@ -385,33 +400,45 @@ a {
 
 
 .showcase {
-  padding: 240px 0 170px;
+  padding: fn.vw(160px) 0 fn.vw(120px);
   overflow: hidden;
-  .showcase-container {
-    @include mixin.container;
-  }
   .showcase-header {
     display: flex;
+    padding: 0 fn.fs(120px);
     justify-content: space-between;
     align-items: center;
+    margin-bottom: fn.vw(80px);
     > h1 {
       font-weight: bold;
-      font-size: 48px;
+      font-size: fn.fs(48px);
       color: #214A4A;
       letter-spacing: .15em;
     }
   }
   .showcase-contents {
-    @include mixin.container;
+    // @include mixin.container;
     white-space: nowrap;
+    overflow: hidden;
   }
   .showcase-list {
     // display: flex;
-    margin: 0 -16px;
+    overflow: scroll;
+    padding-bottom: fn.vw(80px);
+    scrollbar-color: #289B8F #333;
+    scrollbar-width: thin;
     > li {
       display: inline-block;
-      // width: 50%;
-      margin: 0 16px;
+      width: 64vw;
+      margin-right: 16px;
+      
+      &:first-child {
+        width: fn.vw(120px);
+        height: 100%;
+        margin-right: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }
@@ -419,21 +446,22 @@ a {
 .work {
   background: #fff;
   border-radius: 10px;
-  padding: 16px;
+  padding: 3%;
   cursor: pointer;
   .work-img {
     border-radius: 10px;
     overflow: hidden;
     > img {
       width: 100%;
-      height: auto;
+      // height: auto;
+      aspect-ratio: 16 / 9;
       transition: transform ease-out 0.2s;
     }
   }
   .work-data {
-    margin-top: 20px;
+    margin-top: 2%;
     > dt {
-      font-size: 24px;
+      font-size: fn.fs(24px);
       color: #214A4A;
       margin-bottom: 15px;
       font-weight: bold;
@@ -530,9 +558,9 @@ a {
 }
 
 .contact {
-  @include mixin.container;
+  margin: 0 fn.vw(120px);
   position: relative;
-  z-index: 2px;
+  z-index: 2;
   .contact-inner {
     text-align: center;
     background: #fff;
@@ -541,9 +569,9 @@ a {
   }
   > h1 {
     color: #214A4A;
-    font-size: 32px;
+    font-size: fn.fs(32px);
     font-weight: bold;
-    margin-bottom: 45px;
+    margin-bottom: fn.vw(40px);
   }
 }
 

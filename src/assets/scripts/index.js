@@ -1,3 +1,6 @@
+import { showcase } from "./modules/showcase";
+showcase();
+
 let scrollAmountNum = 0;
 const $stream = document.querySelector("#js-stream");
 

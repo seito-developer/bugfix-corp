@@ -1,9 +1,11 @@
-html { font-size: 62.5%; }
+@use "function" as fn;
+
+// html { font-size: 62.5%; }
 
 body {
   margin: 0;
   line-height: 1.6;
-  // font-size: 14px;  
+  font-size: fn.fs(14px);
   font-feature-settings: "palt";
   font-family: "Noto Sans JP", "Meiryo", "Arial", sans-serif;
   font-optical-sizing: auto;
@@ -23,4 +25,8 @@ dl, dt, dd {
 
 strong, em, b {
   font-weight: 600;
+}
+
+h1 {
+  margin: 0;
 }

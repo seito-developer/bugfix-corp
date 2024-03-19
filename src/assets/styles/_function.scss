@@ -1,0 +1,15 @@
+@use "const" as cn;
+
+@function vw($px){
+  @return #{calc($px / cn.$site-width * 100)}vw;
+}
+
+@function fs($px){
+  $base: #{calc($px / cn.$site-width * 100)}vw;
+  $max: $px;
+  $min: calc($px / 1.5);
+  @if calc($px / 1.5) < 12px {
+    $min:12px;
+  }
+  @return clamp($min, $base, $px);
+}
