@@ -109,7 +109,7 @@ a {
   transition: box-shadow ease-out 0.2s, color ease-out 0.2s;
   backface-visibility: hidden;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 5px;
+  border-radius: fn.vw(8px);
 
   > span {
     position: relative;
@@ -250,14 +250,15 @@ a {
   
   > span:nth-child(1) {
     display: block;
-    font-size: 12rem;
-    margin-bottom: 60px;
+    font-size: fn.fs(120px);
+    margin-bottom: fn.fs(40px);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     display: block;
     @include mixin.font-maven(600);
   }
   > span:nth-child(2) {
-    font-size: 1.8rem;
+    font-size: fn.fs(18px);
+    font-weight: normal;
   }
   &.headline-left {
     text-align-last: left;
@@ -269,10 +270,10 @@ a {
 
 .about {
   // padding: 192px 0;
-  padding: 10rem;
+  padding: fn.vw(160px);
   
   border-radius: 20px;
-  margin: 0 16px;
+  margin: 0 fn.vw(16px);
   color: #fff;
   background: #212732;
   position: relative;
@@ -282,15 +283,19 @@ a {
     margin-bottom: 5rem;
   }
   .about-disc {
-    margin-bottom: 5rem;
+    margin: fn.vw(80px) 0;
     > p {
-      font-size: 2.4rem;
-      line-height: 1.6;
+      font-size: fn.vw(24px);
+      line-height: 1.5;
+      letter-spacing: .25em;
+      margin-top: 0;
+      margin-bottom: 2.6vw;
     }
   }
   .about-bottom {
     color: #313948;
-    font-size: 124px;
+    @include mixin.font-maven(400);
+    font-size: fn.vw(124px);
     position: absolute;
     bottom: 0;
     left: 0;
