@@ -251,7 +251,7 @@ a {
   > span:nth-child(1) {
     display: block;
     font-size: fn.fs(120px);
-    margin-bottom: fn.fs(40px);
+    margin-bottom: fn.fs(30px);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     display: block;
     @include mixin.font-maven(600);
@@ -305,39 +305,43 @@ a {
 }
 
 .point {
-  padding: 192px 0;
+  padding: fn.vw(170px) fn.vw(120px) fn.vw(160px);
   color: #fff;
   .point-container {
-    @include mixin.container;
+    // @include mixin.container;
   }
   .point-list {
     display: flex;
+    justify-content: space-between;
     width: 100%;
-    margin: 90px -8px 0;
+    margin-top: fn.vw(80px);
     > li {
       display: flex;
       flex-direction: column;
-      width: 33.3%;
-      padding: 0 8px;
+      width: 32%;
+      // margin-right: fn.vw(24px);
+      // &:last-child {
+      //   margin-right: 0;
+      // }
     }
   }
 }
 
 
 .course {
-  padding: 192px 0;
+  padding: fn.vw(170px) fn.vw(120px) fn.vw(75px);
   color: #fff;
   background: #212732;
   .course-container {
-    @include mixin.container;
+    // @include mixin.container;
   }
   .course-list {
     display: flex;
+    justify-content: space-between;
     width: 100%;
-    margin: 90px -5px 0;
+    margin: fn.vw(85px) 0;
     > li {
-      width: 50%;
-      padding: 0 5px;
+      width: 49.3%;
     }
   }
 }
@@ -347,20 +351,36 @@ a {
   background: #fff;
   box-shadow: 0px 0px 44px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
-  padding: 16px;
+  padding: fn.vw(50px) fn.vw(16px) fn.vw(32px);
   text-align: center;
   height: 100%;
 
   .card-headline {
     font-weight: bold;
-    font-size: 24px;
+    font-size: fn.fs(24px);
+    letter-spacing: .15em;
+    margin-bottom: fn.vw(22px);
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: -50%;
+      width: fn.vw(8px);
+      height: fn.vw(8px);
+      background: #289B8F;
+      border-radius: 50%;
+    }
   }
   > img {
     width: 100%;
     height: auto;
   }
   .card-disc {
+    margin-top: fn.vw(24px);
     text-align: left;
+    letter-spacing: .04em;
   }
 }
 
@@ -368,28 +388,29 @@ a {
   display: block;
   color: #fff;
   border: 1px solid #fff;
-  border-radius: 10px;
+  border-radius: fn.vw(8px);
   text-align: center;
-  padding: 90px 20px 45px;
+  padding: fn.vw(85px) fn.vw(20px) fn.vw(60px);
   transition: background-color ease-out 0.2s, border-color ease-out 0.2s;
   .panel-headline {
+    line-height: 1;
     @include mixin.font-maven(500);
-    font-size: 48px;
-    margin-bottom: 45px;
+    font-size: fn.fs(48px);
+    margin-bottom: fn.vw(45px);
     position: relative;
     display: inline-block;
-    padding-right: 50px;
+    padding-right: fn.vw(50px);
     transition: padding ease-out 0.2s;
     > span {
-      margin-top: 3px;
+      margin-top: fn.vw(1px);
       display: block;
       position: absolute;
       right: 0;
       top: 50%;
       transform: translateY(-50%);
       background: rgba(#289B8F, .2);
-      width: 34px;
-      height: 34px;
+      width: fn.vw(34px);
+      height: fn.vw(34px);
       border-radius: 50%;
       border: 0px solid #fff;
       transition: transform ease-out 0.2s, background-color ease-out 0.2s;
@@ -397,8 +418,8 @@ a {
       &::after {
         content: "";
         display: block;
-        width: 8px;
-        height: 8px;
+        width: fn.vw(8px);
+        height: fn.vw(8px);
         border-radius: 50%;
         background: #289B8F;
         position: absolute;

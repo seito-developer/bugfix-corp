@@ -1,7 +1,6 @@
 import {defineConfig} from "vite";
 import {ViteEjsPlugin} from "vite-plugin-ejs";
 import { mainData } from "./src/data/mainData";
-// import {works} from "./src/data/works";
 
 export default defineConfig({
   root: './src',
