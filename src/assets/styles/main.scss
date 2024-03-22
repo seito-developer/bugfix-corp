@@ -10,6 +10,9 @@
 @use "animation";
 @use "base";
 
+// components
+@use "components/anim";
+
 a {
   text-decoration: none;
 }
@@ -17,14 +20,16 @@ a {
 .header {
   width: 100%;
   position: absolute;
-  top: 6.4%;
+  top: fn.vw(60px);
   left: 0;
   .header-inner {
-    margin: 0 fn.vw(120px);
+    margin: 0 fn.vw(80px);
   }
   .header-flex {
     width: 100%;
+    padding: 0.9vw 0;
     display: flex;
+    align-items: center;
     justify-content: space-between;
   }
 }
@@ -33,7 +38,7 @@ a {
   position: fixed;
   width: fn.vw(510px);
   z-index: cn.$z-index-max;
-  right: fn.vw(120px);
+  right: fn.vw(80px);
   background: #fff;
   padding: fn.vw(20px) fn.vw(24px) fn.vw(20px) fn.vw(54px);
   box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.15);
@@ -167,17 +172,27 @@ a {
   width: 100vw;
   height: 100vh;
   position: relative;
+  // padding-top: fn.vw(310px);
+  // padding-left: fn.vw(160px);
+  // padding-bottom: fn.vw(160px);
+  margin-bottom: fn.vw(80px);
+  overflow: hidden;
   .hero-inner {
-    @include mixin.container(auto);
-    margin-top: 16%;
-    margin-bottom: 8%;
+    // position: relative;
+    position: absolute;
+    z-index: 2;
+    left: fn.vw(160px);
+    // bottom: fn.vw(160px);
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: -5%;
   }
   .hero-headline {
     color: #214a4a;
-    font-size: 24px;
+    font-size: fn.fs(24px);
     letter-spacing: 0.1em;
     > span {
-      font-size: 52px;
+      font-size: fn.fs(52px);
       font-weight: bold;
       position: relative;
       display: inline-block;
@@ -194,14 +209,12 @@ a {
   }
   .hero-images {
     width: 100%;
-    height: 30%;
-    max-height: 286px;
+    position: absolute;
+    z-index: 2;
+    bottom: -1vw;
+    left: 0;
   }
   .hero-images-list {
-    width: 100%;
-    height: 100%;
-    // display: flex;
-    overflow: hidden;
     white-space: nowrap;
     animation: marquee 60s linear infinite;
   }
@@ -210,8 +223,22 @@ a {
     display: inline-block;
     margin: 0 5px;
     > img {
-      height: 100%;
       width: auto;
+      height: fn.vw(286px);
+    }
+  }
+  .hero-animation {
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    transform: rotateY(-180deg);
+    > svg {
+      width: 100%;
+      height: 100%;
     }
   }
 }

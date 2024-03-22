@@ -1,4 +1,6 @@
+import { hero } from "./modules/hero";
 import { showcase } from "./modules/showcase";
+hero();
 showcase();
 
 let scrollAmountNum = 0;
