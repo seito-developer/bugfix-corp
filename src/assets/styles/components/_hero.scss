@@ -6,6 +6,7 @@
 .hero {
   width: 100vw;
   height: 100vh;
+  min-height: fn.vw(720px);
   position: relative;
   margin-bottom: fn.vw(80px);
   overflow: hidden;

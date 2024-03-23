@@ -11,6 +11,13 @@
   .header-inner {
     margin: 0 fn.vw(80px);
   }
+  .header-logo {
+    width: fn.vw(99px);
+    > img {
+      width: 100%;
+      height: auto;
+    }
+  }
   .header-flex {
     width: 100%;
     padding: 0.9vw 0;

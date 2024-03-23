@@ -13,6 +13,11 @@
   .footer-top-logo {
     display: block;
     margin-bottom: fn.vw(45px);
+    width: fn.vw(251px);
+    > img {
+      width: 100%;
+      height: auto;
+    }
   }
   .footer-top-info {
     margin-right: fn.vw(120px);
