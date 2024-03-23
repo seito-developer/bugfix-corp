@@ -1,0 +1,27 @@
+// settings
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+.contact {
+  margin: 0 fn.vw(120px);
+  position: relative;
+  z-index: 2;
+  .contact-inner {
+    text-align: center;
+    background: #fff;
+    padding: fn.vw(52px) 0;
+    border-radius: fn.vw(8px);
+    > h1 {
+      color: #214A4A;
+      font-size: fn.fs(32px);
+      font-weight: bold;
+      margin-bottom: fn.vw(37px);
+    }
+  }
+
+  // modifiers
+  &.contact-index {
+    margin-bottom: fn.vw(-150px);
+  }
+}

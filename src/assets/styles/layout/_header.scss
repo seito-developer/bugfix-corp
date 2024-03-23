@@ -1,0 +1,21 @@
+// settings
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+.header {
+  width: 100%;
+  position: absolute;
+  top: fn.vw(60px);
+  left: 0;
+  .header-inner {
+    margin: 0 fn.vw(80px);
+  }
+  .header-flex {
+    width: 100%;
+    padding: 0.9vw 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

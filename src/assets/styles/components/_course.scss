@@ -1,0 +1,23 @@
+// settings
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+.course {
+  padding: fn.vw(170px) fn.vw(120px) fn.vw(75px);
+  color: #fff;
+  background: #212732;
+  .course-container {
+    // @include mixin.container;
+  }
+  .course-list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: fn.vw(85px) 0;
+    > li {
+      width: 49.3%;
+    }
+  }
+}
+

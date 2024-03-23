@@ -1,0 +1,38 @@
+// settings
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+.work {
+  background: #fff;
+  border-radius: fn.vw(8px);
+  padding: fn.vw(24px);
+  cursor: pointer;
+  .work-img {
+    border-radius: fn.vw(8px);
+    overflow: hidden;
+    > img {
+      width: 100%;
+      height: auto;
+      transition: transform ease-out 0.2s;
+    }
+  }
+  .work-data {
+    margin-top: 2%;
+    > dt {
+      font-size: fn.fs(24px);
+      color: #214A4A;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+    > dd {}
+  }
+
+  &:hover {
+    .work-img {
+      > img {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

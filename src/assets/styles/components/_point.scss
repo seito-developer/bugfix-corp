@@ -1,0 +1,22 @@
+// settings
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+.point {
+  padding: fn.vw(170px) fn.vw(120px) fn.vw(160px);
+  color: #fff;
+  .point-container {
+  }
+  .point-list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: fn.vw(80px);
+    > li {
+      display: flex;
+      flex-direction: column;
+      width: 32%;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+// settings
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+.showcase {
+  padding: fn.vw(140px) 0 fn.vw(120px);
+  overflow: hidden;
+  .showcase-header {
+    display: flex;
+    padding: 0 fn.vw(120px);
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: fn.vw(75px);
+    > h1 {
+      font-weight: bold;
+      font-size: fn.fs(48px);
+      color: #214A4A;
+      letter-spacing: .05em;
+    }
+  }
+  .showcase-contents {
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .showcase-list {
+    overflow: scroll;
+    padding-bottom: fn.vw(85px);
+    scrollbar-color: #289B8F #333;
+    scrollbar-width: thin;
+    > li {
+      display: inline-block;
+      width: fn.vw(772px);
+      margin-right: fn.vw(16px);
+      
+      &:first-child {
+        width: fn.vw(120px);
+        height: 100%;
+        margin-right: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+

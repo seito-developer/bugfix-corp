@@ -1,0 +1,37 @@
+// settings
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+.about {
+  padding: fn.vw(160px);
+  border-radius: 20px;
+  margin: 0 fn.vw(16px);
+  color: #fff;
+  background: #212732;
+  position: relative;
+  overflow: hidden;
+  .about-container {
+    margin-bottom: 5rem;
+  }
+  .about-disc {
+    margin: fn.vw(80px) 0;
+    > p {
+      font-size: fn.vw(24px);
+      line-height: 1.5;
+      letter-spacing: .25em;
+      margin-top: 0;
+      margin-bottom: 2.6vw;
+    }
+  }
+  .about-bottom {
+    color: #313948;
+    @include mixin.font-maven(400);
+    font-size: fn.vw(124px);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    white-space: nowrap;
+  }
+}

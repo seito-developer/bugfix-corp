@@ -1,0 +1,74 @@
+// settings
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  margin-bottom: fn.vw(80px);
+  overflow: hidden;
+  .hero-inner {
+    position: absolute;
+    z-index: 2;
+    left: fn.vw(160px);
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: -5%;
+  }
+  .hero-headline {
+    color: #214a4a;
+    font-size: fn.fs(24px);
+    letter-spacing: 0.1em;
+    > span {
+      font-size: fn.fs(52px);
+      font-weight: bold;
+      position: relative;
+      display: inline-block;
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        border-bottom: 2px solid #214a4a;
+        position: absolute;
+        left: 0;
+        bottom: 0.1em;
+      }
+    }
+  }
+  .hero-images {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    bottom: -1vw;
+    left: 0;
+  }
+  .hero-images-list {
+    white-space: nowrap;
+    animation: marquee 60s linear infinite;
+  }
+  .hero-images-item {
+    height: 100%;
+    display: inline-block;
+    margin: 0 5px;
+    > img {
+      width: auto;
+      height: fn.vw(286px);
+    }
+  }
+  .hero-animation {
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    transform: rotateY(-180deg);
+    > svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

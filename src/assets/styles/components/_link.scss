@@ -1,0 +1,78 @@
+// settings
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+.link {
+  @include mixin.font-maven(500);
+  display: inline-block;
+  padding: fn.vw(25px) fn.vw(86px);
+  font-size: fn.fs(16px);
+  line-height: 1;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  background: #289b8f;
+  transition: box-shadow ease-out 0.2s, color ease-out 0.2s;
+  backface-visibility: hidden;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: fn.vw(8px);
+
+  > span {
+    position: relative;
+    z-index: 2;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: darken(#289b8f, 10%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    backface-visibility: hidden;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+    transition: transform ease-out 0.2s;
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    &::after {
+      transform-origin: 0% 50%;
+      transform: scaleX(1);
+    }
+  }
+
+  &.link-full {
+    width: 100%;
+  }
+  &.link-nav {
+    padding: fn.vw(16px) calc(fn.vw(32px));
+    border-radius: fn.fs(74px);
+    font-size: fn.fs(14px);
+  }
+  &.link-footer {
+    padding: fn.vw(20px) fn.vw(55px);
+    border: fn.vw(2px) solid #fff;
+    background: transparent;
+    &::after {
+      background: #fff;
+    }
+    &:hover {
+      color: #212732;
+    }
+  }
+  &.link-contact {
+    background: #EE7D2B;
+    padding: fn.vw(28px) fn.vw(160px);
+    &::after {
+      background: darken(#EE7D2B, 10%);
+    }
+  }
+}

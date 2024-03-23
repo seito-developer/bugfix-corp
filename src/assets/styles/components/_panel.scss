@@ -1,0 +1,71 @@
+// settings
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+.panel {
+  display: block;
+  color: #fff;
+  border: fn.vw(1px) solid #fff;
+  border-radius: fn.vw(8px);
+  text-align: center;
+  padding: fn.vw(85px) fn.vw(20px) fn.vw(60px);
+  transition: background-color ease-out 0.2s, border-color ease-out 0.2s;
+  .panel-headline {
+    line-height: 1;
+    @include mixin.font-maven(500);
+    font-size: fn.fs(48px);
+    margin-bottom: fn.vw(45px);
+    position: relative;
+    display: inline-block;
+    padding-right: fn.vw(50px);
+    transition: padding ease-out 0.2s;
+    > span {
+      margin-top: fn.vw(1px);
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(#289B8F, .2);
+      width: fn.vw(34px);
+      height: fn.vw(34px);
+      border-radius: 50%;
+      border: 0px solid #fff;
+      transition: transform ease-out 0.2s, background-color ease-out 0.2s;
+
+      &::after {
+        content: "";
+        display: block;
+        width: fn.vw(8px);
+        height: fn.vw(8px);
+        border-radius: 50%;
+        background: #289B8F;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        transition: all ease-out 0.2s;
+      }
+    }
+  }
+  .panel-disc {
+    font-size: 14px;
+  }
+
+  &:hover {
+    border-color: #289B8F;
+    background: #289B8F;
+    .panel-headline {
+      padding-right: 70px;
+      > span {
+        background-color: rgba(#fff, .2);
+        transform: translateY(-50%) scale(1.2);
+        &::after {
+          background-color: #fff;
+          transform: translate(-50%, -50%) scale(1.1);
+        }
+      }
+    }
+  }
+}
