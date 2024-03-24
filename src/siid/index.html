@@ -1,3 +1,13 @@
+<% const courses = [
+  {
+    headline: "BBB",
+    disc: "「科学的に効果の高い学習メソッド」を用いた上で、プログラミングはもちろんアプリ開発やエンジニアの仕事に必要なスキル・マインドを包括的に学ぶことができます。"
+  }, {
+    headline: "CAREER",
+    disc: "「科学的に効果の高い学習メソッド」を用いた上で、プログラミングはもちろんアプリ開発やエンジニアの仕事に必要なスキル・マインドを包括的に学ぶことができます。"
+  }
+]; %>
+
 <%- include('./modules/meta/_head.html', {title: `${common.title} - 真に価値あるエンジニアリングとプログラミングスクール`}) %>
 <%- include('./modules/layout/_header.html') %>
 
@@ -6,7 +16,7 @@
 <main>
   <%- include('./modules/components/_about.html') %>
   <%- include('./modules/components/_point.html') %>
-  <%- include('./modules/components/_course.html') %>
+  <%- include('./modules/components/_course.html', {courses: courses}) %>
   <%- include('./modules/components/_showcase.html') %>
   <%- include('./modules/components/_contact.html') %>
 </main>
@@ -15,5 +25,5 @@
 
 <%- include('./modules/layout/_footer.html', {modifier: "footer-has-contact"}) %>
 
-<script type="module" src="./assets/scripts/index.js"></script>
+<script type="module" src="/assets/scripts/index.js"></script>
 <%- include('./modules/meta/_foot.html') %>
