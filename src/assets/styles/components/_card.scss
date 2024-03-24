@@ -7,11 +7,10 @@
   color: #214A4A;
   background: #fff;
   box-shadow: 0px 0px 44px rgba(0, 0, 0, 0.15);
-  border-radius: 8px;
+  border-radius: fn.vw(8px);
   padding: fn.vw(50px) fn.vw(16px) fn.vw(32px);
   text-align: center;
   height: 100%;
-
   .card-headline {
     font-weight: bold;
     font-size: fn.fs(24px);
@@ -35,8 +34,23 @@
     height: auto;
   }
   .card-disc {
-    margin-top: fn.vw(24px);
+    margin: fn.vw(24px) 0 0;
     text-align: left;
     letter-spacing: .04em;
+  }
+  
+  @media screen and (max-width: cn.$bp-sm){
+    border-radius: fn.vw(16px);
+    padding-right:  fn.vw(40px);
+    padding-left:  fn.vw(40px);
+    padding-bottom:  fn.vw(70px);
+    .card-headline {
+      font-size: fn.fs(18px);
+      letter-spacing: .15em;
+      margin-bottom: fn.vw(44px);
+    }
+    .card-disc {
+      margin-top: fn.vw(48px);
+    }
   }
 }

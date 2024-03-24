@@ -12,7 +12,7 @@
     display: block;
     font-size: fn.fs(120px);
     margin-bottom: fn.fs(30px);
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0px fn.fs(4px) fn.fs(4px) rgba(0, 0, 0, 0.25);
     @include mixin.font-maven(600);
   }
   > span:nth-child(2) {
@@ -20,9 +20,23 @@
     font-weight: normal;
   }
   &.headline-left {
-    text-align-last: left;
+    text-align: left;
   }
   &.headline-primary {
     color: #214A4A;
+  }
+
+  @media screen and (max-width: cn.$bp-sm){
+    > span:nth-child(1) {
+      font-size: fn.fs(60px);
+      margin-bottom: fn.vw(10px);
+    }
+    > span:nth-child(2) {
+      font-size: fn.fs(20px);
+    }
+
+    &.headline-left {
+      text-align: center;
+    }
   }
 }

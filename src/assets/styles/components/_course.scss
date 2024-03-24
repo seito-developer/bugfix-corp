@@ -7,9 +7,6 @@
   padding: fn.vw(170px) fn.vw(120px) fn.vw(75px);
   color: #fff;
   background: #212732;
-  .course-container {
-    // @include mixin.container;
-  }
   .course-list {
     display: flex;
     justify-content: space-between;
@@ -17,6 +14,23 @@
     margin: fn.vw(85px) 0;
     > li {
       width: 49.3%;
+    }
+  }
+
+  @media screen and (max-width: cn.$bp-sm){
+    padding-right: fn.vw(80px);
+    padding-left: fn.vw(80px);
+    padding-bottom: fn.vw(190px);
+    .course-list {
+      flex-direction: column;
+      margin-bottom: 0;
+      > li {
+        width: 100%;
+        margin-bottom: fn.vw(80px);
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
   }
 }

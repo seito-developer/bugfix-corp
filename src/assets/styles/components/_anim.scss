@@ -48,4 +48,11 @@
   .cls-6 {
     fill: transparent;
   }
+
+  @media screen and (max-width: cn.$bp-sm){
+    svg {
+      height: 100vh;
+      width: auto;
+    }
+  }
 }

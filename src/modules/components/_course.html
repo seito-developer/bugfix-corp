@@ -9,18 +9,16 @@
 ]; %>
 
 <section class="course">
-  <div class="course-container">
-    <%- include('./modules/components/_headline.html', {modifier: "headline", main: "COURSE", sub: "2つのコース"}) %>
-    
-    <ul class="course-list">
-      <% for( let index = 0; index < courses.length; index++ ) { %>
-        <li>
-          <%- include('./modules/components/_panel.html', { 
-            headline: courses[index].headline, 
-            disc: courses[index].disc
-          }) %>
-        </li>
-      <% } %>
-    </ul>
-  </div>
+  <%- include('./modules/components/_headline.html', {modifier: "headline", main: "COURSE", sub: "2つのコース"}) %>
+  
+  <ul class="course-list">
+    <% for( let index = 0; index < courses.length; index++ ) { %>
+      <li>
+        <%- include('./modules/components/_panel.html', { 
+          headline: courses[index].headline, 
+          disc: courses[index].disc
+        }) %>
+      </li>
+    <% } %>
+  </ul>
 </section>

@@ -6,8 +6,6 @@
 .point {
   padding: fn.vw(170px) fn.vw(120px) fn.vw(160px);
   color: #fff;
-  .point-container {
-  }
   .point-list {
     display: flex;
     justify-content: space-between;
@@ -17,6 +15,18 @@
       display: flex;
       flex-direction: column;
       width: 32%;
+    }
+  }
+
+  @media screen and (max-width: cn.$bp-sm){
+    padding-right: fn.vw(80px);
+    padding-left: fn.vw(80px);
+    .point-list {
+      flex-direction: column;
+      > li {
+        width: 100%;
+        margin-bottom: fn.vw(80px);
+      }
     }
   }
 }

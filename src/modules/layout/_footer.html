@@ -1,56 +1,54 @@
 <footer class="footer <%= modifier %>">
-    <div class="footer-container">
-        <div class="footer-top">
-            <div class="footer-top-info">
-                <a class="footer-top-logo" href="./">
-                    <img
-                    src="./assets/images/logo2.png"
-                    width="251"
-                    height="150"
-                    alt="プログラミング・ゼミ SiiD ロゴ画像"
-                  />
-                </a>
-                <address>
-                    運営：合同会社BugFix<br>
-                    156-0045<br>
-                    東京都世田谷区桜上水４丁目９−１１ wdsビル303
-                </address>
-            </div>
-            <div class="footer-top-nav">
-                <a href="">ホーム</a>
-                <a href="">コースについて</a>
-                <a href="">ブログ</a>
-                <a href="">企業サイト</a>
-            </div>
-            <div class="footer-top-others">
-                <div class="footer-top-sns">
-                    <a href="">
-                        <i class="fa-brands fa-x-twitter"></i>
-                    </a>
-                    <a href="">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
-                    <a href="">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                </div>
-                <%- include("./modules/components/_link.html", {
-                    modifier: "link-footer",
-                    href: "",
-                    text: "EEE転職はこちら"
-                  }) %>
-            </div>
+    <div class="footer-top">
+        <div class="footer-top-info">
+            <a class="footer-top-logo" href="./">
+                <img
+                src="./assets/images/logo2.png"
+                width="251"
+                height="150"
+                alt="プログラミング・ゼミ SiiD ロゴ画像"
+                />
+            </a>
+            <address>
+                運営：合同会社BugFix<br>
+                156-0045<br>
+                東京都世田谷区桜上水４丁目９−１１ wdsビル303
+            </address>
         </div>
-        
-        <hr class="footer-border">
-
-        <div class="footer-bottom">
-            <small class="footer-bottom-credit">©BugFix LLC.</small>
-            <div class="footer-bottom-nav">
-                <a href="">利用規約</a>
-                <a href="">プライバシーポリシー</a>
-                <a href="">特定商取引法に基づく表示</a>
+        <div class="footer-top-nav">
+            <a href="">ホーム</a>
+            <a href="">コースについて</a>
+            <a href="">ブログ</a>
+            <a href="">企業サイト</a>
+        </div>
+        <div class="footer-top-others">
+            <div class="footer-top-sns">
+                <a href="">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
             </div>
+            <%- include("./modules/components/_link.html", {
+                modifier: "link-footer",
+                href: "",
+                text: "EEE転職はこちら"
+                }) %>
+        </div>
+    </div>
+    
+    <hr class="footer-border">
+
+    <div class="footer-bottom">
+        <small class="footer-bottom-credit">©BugFix LLC.</small>
+        <div class="footer-bottom-nav">
+            <a href="">利用規約</a>
+            <a href="">プライバシーポリシー</a>
+            <a href="">特定商取引法に基づく表示</a>
         </div>
     </div>
 </footer>

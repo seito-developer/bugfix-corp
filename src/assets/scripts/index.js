@@ -1,7 +1,9 @@
 import { hero } from "./modules/hero";
 import { showcase } from "./modules/showcase";
+import { nav } from "./modules/nav";
 hero();
 showcase();
+nav();
 
 let scrollAmountNum = 0;
 const $stream = document.querySelector("#js-stream");

@@ -15,19 +15,17 @@
 ]; %>
 
 <section class="point">
-  <div class="point-container">
-    <%- include('./modules/components/_headline.html', {modifier: "headline-primary", main: "POINT", sub: "3つの特徴"}) %>
-    
-    <ul class="point-list">
-      <% for( let index = 0; index < cards.length; index++ ) { %>
-        <li>
-          <%- include('./modules/components/_card.html', { 
-            headline: cards[index].headline, 
-            img: cards[index].img, 
-            disc: cards[index].disc
-          }) %>
-        </li>
-      <% } %>
-    </ul>
-  </div>
+  <%- include('./modules/components/_headline.html', {modifier: "headline-primary", main: "POINT", sub: "3つの特徴"}) %>
+  
+  <ul class="point-list">
+    <% for( let index = 0; index < cards.length; index++ ) { %>
+      <li>
+        <%- include('./modules/components/_card.html', { 
+          headline: cards[index].headline, 
+          img: cards[index].img, 
+          disc: cards[index].disc
+        }) %>
+      </li>
+    <% } %>
+  </ul>
 </section>

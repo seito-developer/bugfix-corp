@@ -72,4 +72,25 @@
       height: 100%;
     }
   }
+
+  @media screen and (max-width: cn.$bp-sm){
+    .hero-inner {
+      left: 0;
+      width: 100%;
+    }
+    .hero-headline {
+      width: 100%;
+      text-align: center;
+      color: #214a4a;
+      font-size: fn.fs(14px);
+      letter-spacing: 0.1em;
+      > span {
+        display: block;
+        font-size: fn.fs(26px);
+        &::after{
+          display: none;
+        }
+      }
+    }
+  }
 }

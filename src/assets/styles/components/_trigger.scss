@@ -1,0 +1,18 @@
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+.trigger {
+  appearance: none;
+  border: 0;
+  width: fn.vw(40px);
+  height: fn.vw(40px);
+
+  &::before,
+  &::after,
+  > span {
+    content: "";
+    display: block;
+    
+  }
+}

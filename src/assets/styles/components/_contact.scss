@@ -20,8 +20,20 @@
     }
   }
 
-  // modifiers
+  // modifier
   &.contact-index {
     margin-bottom: fn.vw(-150px);
   }
+
+  @media screen and (max-width: cn.$bp-sm){
+    margin: 0 fn.vw(80px);
+    .contact-inner {
+      border-radius: fn.vw(16px);
+      padding-right: fn.vw(80px);
+      padding-left: fn.vw(80px);
+      > h1 {
+        font-size: fn.fs(24px);
+      }
+    }
+  } 
 }
