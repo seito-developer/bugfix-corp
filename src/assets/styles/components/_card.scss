@@ -1,4 +1,3 @@
-// settings
 @use "../const" as cn;
 @use "../function" as fn;
 @use "../mixins" as mixin;
@@ -51,6 +50,12 @@
     }
     .card-disc {
       margin-top: fn.vw(48px);
+    }
+  }
+
+  @media screen and (min-width: cn.$bp-sm) and (max-width: cn.$bp-lg) {
+    .card-headline {
+      font-size: fn.fs(14px);
     }
   }
 }

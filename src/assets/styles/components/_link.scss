@@ -1,4 +1,3 @@
-// settings
 @use "../const" as cn;
 @use "../function" as fn;
 @use "../mixins" as mixin;
@@ -85,6 +84,12 @@
     }
     &.link-footer {
       padding: fn.vw(50px) fn.vw(110px);
+    }
+  }
+
+  @media screen and (min-width: cn.$bp-sm) and (max-width: cn.$bp-lg) {
+    &.link-footer {
+      padding: fn.vw(40px) fn.vw(110px);
     }
   }
 }

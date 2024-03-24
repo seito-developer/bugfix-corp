@@ -1,4 +1,3 @@
-// settings
 @use "../const" as cn;
 @use "../function" as fn;
 @use "../mixins" as mixin;
@@ -28,5 +27,10 @@
         margin-bottom: fn.vw(80px);
       }
     }
+  }
+
+  @media screen and (min-width: cn.$bp-sm) and (max-width: cn.$bp-lg) {
+    padding-right: fn.vw(40px);
+    padding-left: fn.vw(40px);
   }
 }

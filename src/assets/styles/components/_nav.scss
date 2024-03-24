@@ -94,4 +94,14 @@
       text-align: center;
     }
   }
+
+  @media screen and (min-width: cn.$bp-sm) and (max-width: cn.$bp-lg) {
+    width: fn.vw(700px);
+    .nav-link {
+      font-size: fn.fs(14px);
+    }
+    .nav-contact {
+      width: 40%;
+    }
+  }
 }
