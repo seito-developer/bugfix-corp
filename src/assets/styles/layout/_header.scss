@@ -11,10 +11,12 @@
     margin: 0 fn.vw(80px);
   }
   .header-logo {
-    width: fn.vw(99px);
-    > img {
-      width: 100%;
+    svg {
+      width: fn.vw(180px);
       height: auto;
+    }
+    path {
+      fill: cn.$color-main;
     }
   }
   .header-flex {

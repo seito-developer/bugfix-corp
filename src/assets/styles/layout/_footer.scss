@@ -12,10 +12,12 @@
   .footer-top-logo {
     display: block;
     margin-bottom: fn.vw(45px);
-    width: fn.vw(251px);
-    > img {
-      width: 100%;
+    svg {
+      width: fn.vw(180px);
       height: auto;
+    }
+    path {
+      fill: #fff;
     }
   }
   .footer-top-info {
