@@ -1,11 +1,12 @@
 export const nav = () => {
   const $nav = document.querySelector("#js-nav");
-  const $navTrigger = document.querySelector("#js-nav-toggle");
+  const $navTrigger = document.querySelector("#js-nav-trigger");
   // const $navClose = document.querySelector("#js-nav-close");
   // const $navItems = document.querySelectorAll(".nav__item");
 
   const toggleNav = () => {
     $nav.classList.toggle("is-active");
+    $navTrigger.classList.toggle("is-active");
   };
 
   $navTrigger.addEventListener("click", toggleNav);

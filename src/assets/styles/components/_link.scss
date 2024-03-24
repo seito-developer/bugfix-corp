@@ -50,7 +50,7 @@
     width: 100%;
   }
   &.link-nav {
-    padding: fn.vw(16px) calc(fn.vw(32px));
+    padding: fn.vw(16px) fn.vw(32px);
     border-radius: fn.fs(74px);
     font-size: fn.fs(14px);
   }
@@ -77,6 +77,9 @@
     padding-top: fn.vw(50px);
     padding-bottom: fn.vw(50px);
     border-radius: fn.vw(16px);
+    &.link-nav {
+      padding: fn.vw(70px) fn.vw(172px);
+    }
     &.link-contact {
       padding-top: fn.vw(56px);
       padding-bottom: fn.vw(56px);

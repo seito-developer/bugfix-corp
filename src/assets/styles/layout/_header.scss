@@ -27,9 +27,8 @@
 
   @media screen and (max-width: cn.$bp-sm){
     overflow: hidden;
-    
     .header-logo {
-      width: fn.vw(160px);
+      width: fn.vw(200px);
     }
   }
 }
