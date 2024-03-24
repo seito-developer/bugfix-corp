@@ -1,22 +1,69 @@
-<% const courses = [
-  {
-    headline: "BBB",
-    disc: "「科学的に効果の高い学習メソッド」を用いた上で、プログラミングはもちろんアプリ開発やエンジニアの仕事に必要なスキル・マインドを包括的に学ぶことができます。"
-  }, {
-    headline: "CAREER",
-    disc: "「科学的に効果の高い学習メソッド」を用いた上で、プログラミングはもちろんアプリ開発やエンジニアの仕事に必要なスキル・マインドを包括的に学ぶことができます。"
-  }
-]; %>
+<% 
+const hero = `
+<span class="hero-headline-text">
+  <span>一生使えるITスキル</span>を習得しよう。
+</span><br>
+<span class="hero-headline-text">オンライン・プログラミング・ゼミの『SiiD』</span>`;
+
+const about = {
+  headline: {
+    main: "ABOUT", 
+    sub: "SiiDとは"
+  },
+  disc: `<p><strong>なんかめっちゃエモい話をここで書く。</strong>事業への想いとか、現状のプログラミングスクールへの感情とか、今後日本をどうしていきたいとか、教育はどうあるべきかとかとか。強調したい言葉のみウェイト太くするとメリハリ効いて良さそう。</p>
+      <p>自身の体験も踏まえてみるといいかも？とにかくそんなアツい感じの文章をここに書く予定、そんな感じである。</p>
+      <p>それか全部ウェイト太くして力強さを出すか。それか全部ウェイト太くして力強さを出すか。それか全部ウェイト太くして力強さを出すか。</p>`,
+  bottom: "Technology / Education / Web Marketing / IT Consulting / Development / Design / Business"
+};
+
+const point = {
+  headline: {
+    main: "POINT",
+    sub: "3つの特徴"
+  },
+  cards: [
+    {
+      headline: "ゼミ形式の学習カリキュラム",
+      img: "/assets/images/point-1.png",
+      disc: "「科学的に効果の高い学習メソッド」を用いた上で、プログラミングはもちろんアプリ開発やエンジニアの仕事に必要なスキル・マインドを包括的に学ぶことができます。"
+    }, {
+      headline: "強力な監修・講師陣",
+      img: "/assets/images/point-2.png",
+      disc: "100人規模のWeb開発企業で経営経験があり、テックYouTuberでもある現役エンジニアの堀口セイト氏が皆さんをサポートします。"
+    }, {
+      headline: "圧倒的コストパフォーマンス",
+      img: "/assets/images/point-3.png",
+      disc: "多くのスクールが数ヶ月・数十万円のコースを展開する一方、月3万円からお手軽に学習することができます。"
+    }
+  ]
+};
+
+const course = {
+  headline: {
+    main: "",
+    sub: ""
+  },
+  courses: [
+    {
+      headline: "BASIC",
+      disc: "「科学的に効果の高い学習メソッド」を用いた上で、プログラミングはもちろんアプリ開発やエンジニアの仕事に必要なスキル・マインドを包括的に学ぶことができます。"
+    }, {
+      headline: "CAREER",
+      disc: "「科学的に効果の高い学習メソッド」を用いた上で、プログラミングはもちろんアプリ開発やエンジニアの仕事に必要なスキル・マインドを包括的に学ぶことができます。"
+    }
+  ]
+};
+%>
 
 <%- include('./modules/meta/_head.html', {title: `${common.title} - 真に価値あるエンジニアリングとプログラミングスクール`}) %>
 <%- include('./modules/layout/_header.html') %>
 
-<%- include('./modules/components/_hero.html') %>
+<%- include('./modules/components/_hero.html', {heroCopy: hero}) %>
 
 <main>
-  <%- include('./modules/components/_about.html') %>
-  <%- include('./modules/components/_point.html') %>
-  <%- include('./modules/components/_course.html', {courses: courses}) %>
+  <%- include('./modules/components/_about.html', {about: about}) %>
+  <%- include('./modules/components/_point.html', {point: point}) %>
+  <%- include('./modules/components/_course.html', {course: course}) %>
   <%- include('./modules/components/_showcase.html') %>
   <%- include('./modules/components/_contact.html') %>
 </main>
