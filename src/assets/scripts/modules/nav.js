@@ -1,17 +1,14 @@
-export const nav = () => {
+const nav = () => {
   const $nav = document.querySelector("#js-nav");
   const $navTrigger = document.querySelector("#js-nav-trigger");
-  // const $navClose = document.querySelector("#js-nav-close");
-  // const $navItems = document.querySelectorAll(".nav__item");
+  const ACTIVE_CLASS = "is-active";
 
   const toggleNav = () => {
-    $nav.classList.toggle("is-active");
-    $navTrigger.classList.toggle("is-active");
+    $nav.classList.toggle(ACTIVE_CLASS);
+    $navTrigger.classList.toggle(ACTIVE_CLASS);
   };
 
   $navTrigger.addEventListener("click", toggleNav);
-  // $navClose.addEventListener("click", toggleNav);
-  // $navItems.forEach((item) => {
-  //   item.addEventListener("click", toggleNav);
-  // });
 }
+
+export default nav;

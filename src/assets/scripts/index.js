@@ -1,9 +1,9 @@
 import { hero } from "./modules/hero";
+import modal from "./modules/modal";
 import { showcase } from "./modules/showcase";
-import { nav } from "./modules/nav";
 hero();
 showcase();
-nav();
+modal();
 
 let scrollAmountNum = 0;
 const $stream = document.querySelector("#js-stream");

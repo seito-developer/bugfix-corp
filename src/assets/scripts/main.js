@@ -1,3 +1,5 @@
-// import { works } from "./modules/showcase";
+import nav from "./modules/nav";
+import modal from "./modules/modal";
 
-// works();
+nav();
+modal();
