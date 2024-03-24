@@ -14,7 +14,7 @@
     > h1 {
       font-weight: bold;
       font-size: fn.fs(48px);
-      color: #214A4A;
+      color: cn.$color-main;
       letter-spacing: .05em;
     }
   }
@@ -25,7 +25,7 @@
   .showcase-list {
     overflow: scroll;
     padding-bottom: fn.vw(85px);
-    scrollbar-color: #289B8F #333;
+    scrollbar-color: cn.$color-sub #333;
     scrollbar-width: thin;
     > li {
       white-space: wrap;

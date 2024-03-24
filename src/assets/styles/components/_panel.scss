@@ -26,7 +26,7 @@
       right: 0;
       top: 50%;
       transform: translateY(-50%);
-      background: rgba(#289B8F, .2);
+      background: rgba(cn.$color-sub, .2);
       width: fn.vw(34px);
       height: fn.vw(34px);
       border-radius: 50%;
@@ -38,7 +38,7 @@
         width: fn.vw(8px);
         height: fn.vw(8px);
         border-radius: 50%;
-        background: #289B8F;
+        background: cn.$color-sub;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -49,8 +49,8 @@
   }
   // .panel-disc {}
   &:hover {
-    border-color: #289B8F;
-    background: #289B8F;
+    border-color: cn.$color-sub;
+    background: cn.$color-sub;
     .panel-headline {
       padding-right: fn.vw(70px);
       > span {
@@ -66,11 +66,9 @@
 
   @media screen and (max-width: cn.$bp-sm){
     border-radius: fn.vw(16px);
-
     .panel-headline {
       font-size: fn.fs(32px);
       padding-right: fn.vw(100px);
-
       > span {
         width: fn.vw(68px);
         height: fn.vw(68px);
@@ -80,7 +78,6 @@
         }
       }
     }
-
     &:hover {
       .panel-headline {
         padding-right: fn.vw(150px);

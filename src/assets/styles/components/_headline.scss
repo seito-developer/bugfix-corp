@@ -40,10 +40,10 @@
     text-align: left;
   }
   &.headline-primary {
-    color: #214A4A;
+    color: cn.$color-main;
     > span {
       &::after {
-        background: #214A4A;
+        background: cn.$color-main;
       }
     }
   }

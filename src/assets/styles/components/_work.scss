@@ -20,7 +20,7 @@
     margin-top: fn.vw(15px);
     > dt {
       font-size: fn.fs(24px);
-      color: #214A4A;
+      color: cn.$color-main;
       margin-bottom: fn.vw(15px);
       font-weight: bold;
     }
@@ -44,7 +44,7 @@
       margin-top: 2%;
       > dt {
         font-size: fn.fs(24px);
-        color: #214A4A;
+        color: cn.$color-main;
         margin-bottom: fn.vw(15px);
       }
     }

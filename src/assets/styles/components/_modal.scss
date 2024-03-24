@@ -21,7 +21,7 @@
     border: 0;
     width: 35px;
     height: 35px;
-    background: #214A4A;
+    background: cn.$color-main;
     border-radius: 50%;
     position: absolute;
     right: -10px;
@@ -79,7 +79,7 @@
     border-radius: fn.fs(8px);
   }
   .modal-data {
-    color: #214A4A;
+    color: cn.$color-main;
     > dt {
       font-size: fn.fs(24px);
       font-weight: bold;

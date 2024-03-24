@@ -3,7 +3,7 @@
 @use "../mixins" as mixin;
 
 .footer {
-  background: #212732;
+  background: cn.$color-core;
   color: #fff;
   padding: fn.vw(120px);
   .footer-top {

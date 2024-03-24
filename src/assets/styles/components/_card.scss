@@ -3,7 +3,7 @@
 @use "../mixins" as mixin;
 
 .card {
-  color: #214A4A;
+  color: cn.$color-main;
   background: #fff;
   box-shadow: 0px 0px 44px rgba(0, 0, 0, 0.15);
   border-radius: fn.vw(8px);
@@ -24,7 +24,7 @@
       top: -50%;
       width: fn.vw(8px);
       height: fn.vw(8px);
-      background: #289B8F;
+      background: cn.$color-sub;
       border-radius: 50%;
     }
   }
