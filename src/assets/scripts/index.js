@@ -1,9 +1,11 @@
+import { scrollAnimation } from "./modules/scrollAnimation";
 import { hero } from "./modules/hero";
 import modal from "./modules/modal";
 import { showcase } from "./modules/showcase";
 hero();
 showcase();
 modal();
+scrollAnimation();
 
 let scrollAmountNum = 0;
 const $stream = document.querySelector("#js-stream");
