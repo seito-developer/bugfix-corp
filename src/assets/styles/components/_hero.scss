@@ -32,7 +32,7 @@
     font-size: fn.fs(24px);
     letter-spacing: 0.1em;
   }
-  .hero-headline-text{
+  .hero-headline-text {
     display: inline-block;
     position: relative;
     > span {
@@ -119,9 +119,12 @@
       color: cn.$color-main;
       font-size: fn.fs(14px);
       letter-spacing: 0.1em;
+    }
+    .hero-headline-text {
       > span {
         display: block;
-        font-size: fn.fs(26px);
+        font-size: fn.fs(32px);
+        white-space: nowrap;
         &::after{
           display: none;
         }

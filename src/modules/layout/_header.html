@@ -14,17 +14,17 @@
               <a class="nav-link" href="./">HOME</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./about">COURSES</a>
+              <a class="nav-link u-disable" href="./service">SERVICES</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./contact">BLOGS</a>
+              <a class="nav-link" href="https://note.com/seito_horiguchi" target="_blank">BLOGS</a>
             </li>
           </ul>
           <div class="nav-contact">
             <%- include("./modules/components/_link.html", {
               modifier: "link-nav",
-              href: "",
-              text: "お申し込み"
+              href: header.contact.href,
+              text: header.contact.text
             }) %>
           </div>
         </div>

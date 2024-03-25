@@ -1,9 +1,20 @@
 <% 
-const hero = `
-<span class="hero-headline-text">
-  <span>世の中をバグ</span>を解決する。
-</span><br>
-<span class="hero-headline-text">テクノロジー ✕ 教育 ✕ Webマーケティング</span>`;
+
+const header = {
+  contact: {
+    href: "mailto:seito@bug-fix.org?subject=Webサイトからのお問い合わせ",
+    text: "CONTACT"
+  }
+};
+
+const hero = {
+  copy: `
+    <span class="hero-headline-text">
+      <span>世の中のバグを解決する。</span>
+    </span><br>
+    <span class="hero-headline-text">テクノロジー ✕ 教育 ✕ Webマーケティング</span>`,
+  images: ["index/hero-image-1.jpeg", "index/hero-image-2.jpeg", "index/hero-image-3.jpeg", "index/hero-image-4.jpeg", "index/hero-image-5.jpeg", "index/hero-image-6.jpeg"]
+};
 
 const about = {
   headline: {
@@ -55,18 +66,24 @@ const course = {
     }
   ]
 };
+
+const contact = {
+  headline: "お問い合わせはこちら",
+  href: "mailto:seito@bug-fix.org?subject=Webサイトからのお問い合わせ"
+};
 %>
 
 <%- include('./modules/meta/_head.html', {title: `${common.title} - 真に価値あるエンジニアリングとプログラミングスクール`}) %>
-<%- include('./modules/layout/_header.html') %>
+<%- include('./modules/layout/_header.html', {header: header}) %>
 
-<%- include('./modules/components/_hero.html', {heroCopy: hero}) %>
+<%- include('./modules/components/_hero.html', {hero: hero}) %>
 
 <main>
   <%- include('./modules/components/_about.html', {about: about}) %>
   <%- include('./modules/components/_point.html', {point: point}) %>
   <%- include('./modules/components/_course.html', {course: course}) %>
-  <%- include('./modules/components/_contact.html') %>
+  <br><br><br><br><br>
+  <%- include('./modules/components/_contact.html', {contact: contact}) %>
 </main>
 
 <%- include('./modules/layout/_footer.html', {modifier: "footer-has-contact"}) %>

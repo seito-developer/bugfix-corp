@@ -11,25 +11,25 @@
             </address>
         </div>
         <div class="footer-top-nav">
-            <a href="">ホーム</a>
-            <a href="">コースについて</a>
-            <a href="">ブログ</a>
-            <a href="">企業サイト</a>
+            <a href="./">ホーム</a>
+            <a class="u-disable" href="">サービスについて</a>
+            <a href="https://note.com/seito_horiguchi" target="_blank">ブログ</a>
+            <a href="https://www.youtube.com/channel/UC8IWoNfegB72Q2nT9GJy2zQ" target="_blank">YouTube</a>
         </div>
         <div class="footer-top-others">
             <div class="footer-top-sns">
-                <a href="">
+                <a href="https://twitter.com/seito_horiguchi" target="_blank">
                     <i class="fa-brands fa-x-twitter"></i>
                 </a>
-                <a href="">
+                <a href="https://www.youtube.com/channel/UC8IWoNfegB72Q2nT9GJy2zQ" target="_blank">
                     <i class="fa-brands fa-youtube"></i>
                 </a>
-                <a href="">
-                    <i class="fa-brands fa-instagram"></i>
+                <a href="https://www.tiktok.com/@seito2020" target="_blank">
+                    <i class="fa-brands fa-tiktok"></i>
                 </a>
             </div>
             <%- include("./modules/components/_link.html", {
-                modifier: "link-footer",
+                modifier: "link-footer u-disable",
                 href: "",
                 text: "EEE転職はこちら"
                 }) %>
@@ -41,9 +41,9 @@
     <div class="footer-bottom">
         <small class="footer-bottom-credit">©BugFix LLC.</small>
         <div class="footer-bottom-nav">
-            <a href="">利用規約</a>
-            <a href="">プライバシーポリシー</a>
-            <a href="">特定商取引法に基づく表示</a>
+            <a class="u-disable" href="">利用規約</a>
+            <a class="u-disable" href="">プライバシーポリシー</a>
+            <a class="u-disable" href="">特定商取引法に基づく表示</a>
         </div>
     </div>
 </footer>

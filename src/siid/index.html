@@ -1,9 +1,20 @@
 <% 
-const hero = `
-<span class="hero-headline-text">
-  <span>一生使えるITスキル</span>を習得しよう。
-</span><br>
-<span class="hero-headline-text">オンライン・プログラミング・ゼミの『SiiD』</span>`;
+
+const header = {
+  contact: {
+    href: "",
+    text: "お申し込み"
+  }
+};
+
+const hero = {
+  copy: `
+    <span class="hero-headline-text">
+      <span>一生使えるITスキル</span>を習得しよう。
+    </span><br>
+    <span class="hero-headline-text">オンライン・プログラミング・ゼミの『SiiD』</span>`,
+    images: ["index/hero-image-1.jpeg", "index/hero-image-2.jpeg", "index/hero-image-3.jpeg", "index/hero-image-4.jpeg", "index/hero-image-5.jpeg", "index/hero-image-6.jpeg"]
+};
 
 const about = {
   headline: {
@@ -53,19 +64,24 @@ const course = {
     }
   ]
 };
+
+const contact = {
+  headline: "お申し込みはこちら",
+  href: "",
+};
 %>
 
 <%- include('./modules/meta/_head.html', {title: `${common.title} - 真に価値あるエンジニアリングとプログラミングスクール`}) %>
-<%- include('./modules/layout/_header.html') %>
+<%- include('./modules/layout/_header.html', {header: header}) %>
 
-<%- include('./modules/components/_hero.html', {heroCopy: hero}) %>
+<%- include('./modules/components/_hero.html', {hero: hero}) %>
 
 <main>
   <%- include('./modules/components/_about.html', {about: about}) %>
   <%- include('./modules/components/_point.html', {point: point}) %>
   <%- include('./modules/components/_course.html', {course: course}) %>
   <%- include('./modules/components/_showcase.html') %>
-  <%- include('./modules/components/_contact.html') %>
+  <%- include('./modules/components/_contact.html', {contact: contact}) %>
 </main>
 
 <%- include('./modules/components/_modal.html') %>
