@@ -68,10 +68,14 @@ const course = {
 const contact = {
   headline: "お申し込みはこちら",
   href: "",
+  text: "説明会に申し込む"
 };
 %>
 
-<%- include('./modules/meta/_head.html', {title: `${common.title} - 真に価値あるエンジニアリングとプログラミングスクール`}) %>
+<%- include('./modules/meta/_head.html', {
+  title: `${common.title} - 真に価値あるエンジニアリングとプログラミングスクール`,
+  theme: "theme-siid"
+}) %>
 <%- include('./modules/layout/_header.html', {header: header}) %>
 
 <%- include('./modules/components/_hero.html', {hero: hero}) %>
