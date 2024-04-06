@@ -1,0 +1,22 @@
+<section class="curriculum">
+  <div class="curriculum-container">
+    <div class="curriculum-header">
+      <h1>カリキュラム</h1>
+    </div>
+  </div>
+
+  <div class="curriculum-contents">
+    <ul class="curriculum-list">
+      <li></li>
+      <% curriculum.contents.forEach(contentsItem => { %>
+      <li>
+        <ul>
+          <% contentsItem.forEach(contentsItem => { %>
+            <li><%= contentsItem %></li>
+          <% }) %>
+        </ul>
+      </li>
+      <% }) %>
+    </ul>
+  </div>
+</section>

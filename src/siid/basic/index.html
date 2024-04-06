@@ -36,41 +36,13 @@ const features = {
   ]
 };
 
-const point = {
-  headline: {
-    main: "POINT",
-    sub: "3つの特徴"
-  },
-  cards: [
-    {
-      headline: "ゼミ形式の学習カリキュラム",
-      img: "/assets/images/point-1.png",
-      disc: "「科学的に効果の高い学習メソッド」を用いた上で、プログラミングはもちろんアプリ開発やエンジニアの仕事に必要なスキル・マインドを包括的に学ぶことができます。"
-    }, {
-      headline: "強力な監修・講師陣",
-      img: "/assets/images/point-2.png",
-      disc: "100人規模のWeb開発企業で経営経験があり、テックYouTuberでもある現役エンジニアの堀口セイト氏が皆さんをサポートします。"
-    }, {
-      headline: "圧倒的コストパフォーマンス",
-      img: "/assets/images/point-3.png",
-      disc: "多くのスクールが数ヶ月・数十万円のコースを展開する一方、月3万円からお手軽に学習することができます。"
-    }
-  ]
-};
 
-const course = {
-  headline: {
-    main: "",
-    sub: ""
-  },
-  courses: [
-    {
-      headline: "BASIC",
-      disc: "「科学的に効果の高い学習メソッド」を用いた上で、プログラミングはもちろんアプリ開発やエンジニアの仕事に必要なスキル・マインドを包括的に学ぶことができます。"
-    }, {
-      headline: "CAREER",
-      disc: "「科学的に効果の高い学習メソッド」を用いた上で、プログラミングはもちろんアプリ開発やエンジニアの仕事に必要なスキル・マインドを包括的に学ぶことができます。"
-    }
+const curriculum = {
+  headline: "カリキュラム",
+  contents: [
+    ["ABC", "DEF", "GHI", "GHI"],
+    ["JKL", "MNO", "PQR", "PQR"],
+    ["STU", "VWX", "YZ", "YZ"]
   ]
 };
 
@@ -91,13 +63,12 @@ const contact = {
 
 <main>
   <%- include('./modules/components/_features.html', {features: features}) %>
-  <%- include('./modules/components/_point.html', {point: point}) %>
-  <%- include('./modules/components/_course.html', {course: course}) %>
-  <%- include('./modules/components/_showcase.html') %>
+  
+  <%- include('./modules/components/_curriculum.html', {curriculum: curriculum}) %>
   <%- include('./modules/components/_contact.html', {contact: contact}) %>
 </main>
 
-<%- include('./modules/components/_modal.html') %>
+
 
 <%- include('./modules/layout/_footer.html', {modifier: "footer-has-contact"}) %>
 
