@@ -8,15 +8,20 @@
   <div class="curriculum-contents">
     <ul class="curriculum-list">
       <li></li>
-      <% curriculum.contents.forEach(contentsItem => { %>
+      <% for(let i = 0; i < curriculum.contents.length; i++){ %>
       <li>
-        <ul>
-          <% contentsItem.forEach(contentsItem => { %>
-            <li><%= contentsItem %></li>
-          <% }) %>
+        <ul class="curriculum-bar-list">
+          <% for(let j = 0; j < curriculum.contents[i].length; j++){ %>
+            <li>
+              <%- include('./modules/components/_bar.html', {
+                index: j + 1 + (i * 4),
+                item: curriculum.contents[i][j]
+              }) %>
+            </li>
+          <% } %>
         </ul>
       </li>
-      <% }) %>
+      <% } %>
     </ul>
   </div>
 </section>

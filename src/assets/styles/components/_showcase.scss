@@ -27,13 +27,16 @@
     padding-bottom: fn.vw(85px);
     scrollbar-color: var(--color-sub) #333;
     scrollbar-width: thin;
+    padding-right: fn.vw(120px);
     > li {
       white-space: wrap;
       display: inline-block;
       width: fn.vw(772px);
       margin-right: fn.vw(16px);
       &:first-child {
-        display: none;
+        width: fn.vw(120px);
+        visibility: hidden;
+        margin: 0;
       }
       &:last-child {
         margin-right: 0;
@@ -66,11 +69,13 @@
       padding-left: fn.vw(80px);
     }
     .showcase-list {
+      padding-right: fn.vw(80px);
       padding-bottom: fn.vw(85px);
       > li {
         width: 80%;
         margin-right: fn.vw(40px);
         &:first-child {
+          display: none;
           width: fn.vw(180px);
           height: 100%;
           margin-right: 0;
