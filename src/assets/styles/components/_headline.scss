@@ -40,10 +40,10 @@
     text-align: left;
   }
   &.headline-primary {
-    color: cn.$color-main;
+    color: var(--color-main);
     > span {
       &::after {
-        background: cn.$color-main;
+        background: var(--color-main);
       }
     }
   }

@@ -21,7 +21,7 @@
     display: block;
     left: 0;
     width: 100%;
-    border-top: 2px solid cn.$color-main;
+    border-top: 2px solid var(--color-main);
     transition: transform .2s ease-out;
   }
   &::before {

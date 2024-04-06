@@ -8,7 +8,7 @@
   border-radius: fn.vw(20px);
   margin: 0 fn.vw(16px);
   color: #fff;
-  background: cn.$color-core;
+  background: var(--color-core);
   position: relative;
   overflow: hidden;
   .about-container {

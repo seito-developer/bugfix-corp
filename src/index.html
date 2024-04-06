@@ -73,7 +73,10 @@ const contact = {
 };
 %>
 
-<%- include('./modules/meta/_head.html', {title: `${common.title} - 真に価値あるエンジニアリングとプログラミングスクール`}) %>
+<%- include('./modules/meta/_head.html', {
+  title: `${common.title} - 真に価値あるエンジニアリングとプログラミングスクール`,
+  theme: ""
+}) %>
 <%- include('./modules/layout/_header.html', {header: header}) %>
 
 <%- include('./modules/components/_hero.html', {hero: hero}) %>
