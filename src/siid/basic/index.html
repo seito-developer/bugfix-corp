@@ -1,0 +1,105 @@
+<% 
+
+const header = {
+  contact: {
+    href: "",
+    text: "お申し込み"
+  }
+};
+
+const hero = {
+  title: "COURSES",
+  sub: "SiiD BASIC",
+  disc: "ますはプログラミングを楽しみたい方へ"
+};
+
+const features = {
+  disc: `Basicコースでは<strong>「プログラミングを当たり前に」</strong>をコンセプトに、技術と効率的な学習方法を学びます。<br>
+  エンジニアに必要な基礎技術のほか、どのように学習すべきかといったノウハウも合わせて習得することで、みなさんのプログラミング習得速度を加速させます。`,
+  contents: [
+    {
+      img: "/assets/images/feature-1.png",
+      title: "目標とするゴール",
+      disc: `テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
+      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト`
+    }, {
+      img: "/assets/images/feature-2.png",
+      title: "前提条件・スキル",
+      disc: `テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
+      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト`
+    }, {
+      img: "/assets/images/feature-1.png",
+      title: "こんな人にオススメ",
+      disc: `テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
+      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト`
+    }
+  ]
+};
+
+const point = {
+  headline: {
+    main: "POINT",
+    sub: "3つの特徴"
+  },
+  cards: [
+    {
+      headline: "ゼミ形式の学習カリキュラム",
+      img: "/assets/images/point-1.png",
+      disc: "「科学的に効果の高い学習メソッド」を用いた上で、プログラミングはもちろんアプリ開発やエンジニアの仕事に必要なスキル・マインドを包括的に学ぶことができます。"
+    }, {
+      headline: "強力な監修・講師陣",
+      img: "/assets/images/point-2.png",
+      disc: "100人規模のWeb開発企業で経営経験があり、テックYouTuberでもある現役エンジニアの堀口セイト氏が皆さんをサポートします。"
+    }, {
+      headline: "圧倒的コストパフォーマンス",
+      img: "/assets/images/point-3.png",
+      disc: "多くのスクールが数ヶ月・数十万円のコースを展開する一方、月3万円からお手軽に学習することができます。"
+    }
+  ]
+};
+
+const course = {
+  headline: {
+    main: "",
+    sub: ""
+  },
+  courses: [
+    {
+      headline: "BASIC",
+      disc: "「科学的に効果の高い学習メソッド」を用いた上で、プログラミングはもちろんアプリ開発やエンジニアの仕事に必要なスキル・マインドを包括的に学ぶことができます。"
+    }, {
+      headline: "CAREER",
+      disc: "「科学的に効果の高い学習メソッド」を用いた上で、プログラミングはもちろんアプリ開発やエンジニアの仕事に必要なスキル・マインドを包括的に学ぶことができます。"
+    }
+  ]
+};
+
+const contact = {
+  headline: "お申し込みはこちら",
+  href: "",
+  text: "説明会に申し込む"
+};
+%>
+
+<%- include('./modules/meta/_head.html', {
+  title: `${common.title} - 真に価値あるエンジニアリングとプログラミングスクール`,
+  theme: "theme-siid"
+}) %>
+<%- include('./modules/layout/_header.html', {header: header}) %>
+
+<%- include('./modules/components/_sub-hero.html', {hero: hero}) %>
+
+<main>
+  <%- include('./modules/components/_features.html', {features: features}) %>
+  <%- include('./modules/components/_point.html', {point: point}) %>
+  <%- include('./modules/components/_course.html', {course: course}) %>
+  <%- include('./modules/components/_showcase.html') %>
+  <%- include('./modules/components/_contact.html', {contact: contact}) %>
+</main>
+
+<%- include('./modules/components/_modal.html') %>
+
+<%- include('./modules/layout/_footer.html', {modifier: "footer-has-contact"}) %>
+
+<script type="module" src="/assets/scripts/index.js"></script>
+<%- include('./modules/meta/_foot.html') %>
