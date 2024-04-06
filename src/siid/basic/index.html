@@ -36,7 +36,6 @@ const features = {
   ]
 };
 
-
 const curriculum = {
   headline: "カリキュラム",
   contents: [
@@ -45,6 +44,38 @@ const curriculum = {
     ["STU", "VWX", "YZ", "YZ"]
   ]
 };
+
+const skills = [
+{
+    icon: "lightbulb",
+    modifier: "emblem-a",
+    name: "アルゴリズム"
+  }, {
+    icon: "lightbulb",
+    modifier: "emblem-a",
+    name: "アルゴリズム"
+  }, {
+    icon: "lightbulb",
+    modifier: "emblem-a",
+    name: "アルゴリズム"
+  }, {
+    icon: "lightbulb",
+    modifier: "emblem-a",
+    name: "アルゴリズム"
+  }, {
+    icon: "lightbulb",
+    modifier: "emblem-a",
+    name: "アルゴリズム"
+  }, {
+    icon: "lightbulb",
+    modifier: "emblem-a",
+    name: "アルゴリズム"
+  }, {
+    icon: "lightbulb",
+    modifier: "emblem-a",
+    name: "アルゴリズム"
+  }, 
+]
 
 const contact = {
   headline: "お申し込みはこちら",
@@ -63,12 +94,16 @@ const contact = {
 
 <main>
   <%- include('./modules/components/_features.html', {features: features}) %>
-  
   <%- include('./modules/components/_curriculum.html', {curriculum: curriculum}) %>
+  <%- include('./modules/components/_shelf.html', {skills: skills}) %>
   <%- include('./modules/components/_contact.html', {contact: contact}) %>
 </main>
 
-
+<%- include('./modules/components/_emblem.html', {
+  icon: "lightbulb",
+  modifier: "emblem-a",
+  name: "アルゴリズム"
+}) %>
 
 <%- include('./modules/layout/_footer.html', {modifier: "footer-has-contact"}) %>
 
