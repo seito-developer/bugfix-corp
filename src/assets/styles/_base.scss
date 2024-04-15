@@ -325,10 +325,20 @@ a {
   position: relative;
   overflow: hidden;
 
+  .shelf-header {
+    margin-bottom: fn.vw(48px - 12px);
+    > h1 {
+      font-size: fn.fs(48px);
+    }
+  }
+
   .shelf-list {
     display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
     > li {
-      margin: fn.vw(24px);
+      margin: fn.vw(12px);
       &:last-child {
         margin-bottom: 0;
       }
