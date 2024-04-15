@@ -1,3 +1,6 @@
+@use "../const" as cn;
+@use "../function" as fn;
+
 .u-disable {
   pointer-events: none;
   user-select: none;
@@ -5,5 +8,16 @@
   &::before,
   &::after {
     display: none;
+  }
+}
+
+@for $index from 0 through 60 {
+  $spacer: 5;
+  $value: $index * $spacer * 1px;
+  .u-mb-#{$index * $spacer} {
+    margin-bottom: fn.vw($value);
+  }
+  .u-mt-#{$index * $spacer} {
+    margin-bottom: fn.vw($value);
   }
 }
