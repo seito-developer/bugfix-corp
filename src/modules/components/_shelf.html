@@ -10,9 +10,11 @@
       <% skills.forEach(skill => { %>
         <li>
             <%- include("./modules/components/_emblem.html", { 
-              icon: skill.icon,
               modifier: skill.modifier,
-              name: skill.name }) %>
+              cat: skill.cat,
+              icon: skill.icon,
+              name: skill.name,
+              option: skill.option }) %>
         </li>
       <% }) %>
     </ul>

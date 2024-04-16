@@ -1,6 +1,11 @@
-<figure class="emblem <%= modifier %>">
+<figure class="emblem <%= modifier %> <% if(option) { %>emblem-option<% } %>">
   <div class="emblem-inner">
-    <i class="fa-regular fa-<%= icon %>"></i>
+    <i class="fa-<%= cat %> fa-<%= icon %>"></i>
   </div>
-  <figcaption><%= name %></figcaption>
+  <figcaption class="emblem-caption">
+    <%- name %>
+    <% if(option) { %>
+      <br><span class="emblem-option">オプション</span>
+    <% } %>
+  </figcaption>
 </figure>
