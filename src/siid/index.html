@@ -1,4 +1,9 @@
 <% 
+const head = {
+  title: common.title.siid.index,
+  disc: common.disc.siid.index,
+  theme: "theme-siid"
+};
 
 const header = {
   contact: {
@@ -86,11 +91,7 @@ const contact = {
 };
 %>
 
-<%- include('./modules/meta/_head.html', {
-  title: common.title.siid.index,
-  disc: common.disc.siid.index,
-  theme: "theme-siid"
-}) %>
+<%- include('./modules/meta/_head.html', head) %>
 <%- include('./modules/layout/_header.html', {header: header}) %>
 
 <%- include('./modules/components/_hero.html', {hero: hero}) %>

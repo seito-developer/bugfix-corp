@@ -1,7 +1,7 @@
 <% 
 const head = {
-  title: common.title.siid.basic,
-  disc: common.disc.siid.basic,
+  title: common.title.siid.career,
+  disc: common.disc.siid.career,
   theme: "theme-siid"
 };
 
@@ -14,13 +14,14 @@ const header = {
 
 const hero = {
   title: "COURSES",
-  sub: "SiiD BASIC",
-  disc: "ますはプログラミングを楽しみたい方へ"
+  sub: "SiiD CAREER",
+  disc: "本気でエンジニア転職に取り組みたい方へ"
 };
 
 const features = {
-  disc: `Basicコースでは<strong>「プログラミングを当たり前に」</strong>をコンセプトに、技術と効率的な学習方法を学びます。<br><br>
-  エンジニアに必要な基礎技術のほか、どのように学習すべきかといったノウハウも合わせて習得することで、みなさんのプログラミング習得速度を加速させます。`,
+  disc: `Web/ITエンジニアの転職には、プログラミングスキルだけでなく、エンジニアとしてのマインドやコミュニケーション能力も求められます。<br><br>
+  Careerコースは<strong>「本気のエンジニア転職」</strong>をコンセプトに、技術としてのスキルはもちろん、そうしたソフトスキルをも含め、<strong>みなさんの総合力を鍛え上げる</strong>カリキュラムです。<br><br>
+  またエンジニア・人事経験者が皆さんのコーチとなり、一人一人に寄り添った最適な学習計画とフィードバックを行います。`,
   contents: [
     {
       img: {
@@ -30,9 +31,9 @@ const features = {
       },
       title: "目標とするゴール",
       disc: [
-        "簡単なWebサイトが作成できる",
-        "初級レベルのプログラミング問題が解ける",
-        "仕事で技術的なコミュニケーションがとれる"
+        "Web/ITエンジニア職に内定する",
+        "オリジナルのアプリケーションを完成させる",
+        "ITビジネスパーソンとして十分なコミュニケーションスキルを習得する"
       ]
     }, {
       img: {
@@ -43,7 +44,7 @@ const features = {
       title: "前提条件・スキル",
       disc: [
         "入門的なPC操作",
-        "中学〜高校レベルの国語力と英語力",
+        "中学〜高校レベルの国語力と英語力"
       ]
     }, {
       img: {
@@ -53,8 +54,8 @@ const features = {
       },
       title: "こんな人にオススメ",
       disc: [
-        "Web/ITエンジニア職、またはそれに準ずる職種にキャリアチェンジしたい",
-        "1人では挫折しそうなのでメンターや仲間がほしい"
+        "気軽にプログラミングを始めてみたい",
+        "ITスキルを仕事に活かしたい"
       ]
     }
   ]
@@ -205,6 +206,7 @@ const contact = {
 
 
 <%- include('./modules/meta/_head.html', head) %>
+
 <%- include('./modules/layout/_header.html', {header: header}) %>
 
 <%- include('./modules/components/_sub-hero.html', {hero: hero}) %>
