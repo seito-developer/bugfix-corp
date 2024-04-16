@@ -1,0 +1,82 @@
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+.profile {
+  background: linear-gradient(105deg, #212732 1.43%, #14413E 53.34%, #414A59 98.06%);
+  padding: fn.vw(190px) fn.vw(76px) 0;
+  color: #fff;
+  position: relative;
+
+  .profile-body {
+    display: flex;
+    justify-content: space-between;
+    margin-top: fn.vw(120px);
+  }
+  .profile-img {
+    flex-grow: 1;
+    width: 50%;
+    position: relative;
+    > img {
+      object-fit: cover;
+      width: fn.vw(610px);
+      height: fn.vw(725px);
+      position: absolute;
+      left: fn.vw(-76px);
+      bottom: fn.vw(-120px);
+    }
+  }
+
+  .profile-texts {
+    flex-grow: 1;
+    width: 50%;
+    padding: fn.vw(110px) 0;
+  }
+
+  .profile-name {
+    margin: 0;
+    position: relative;
+    &::after {
+      content:"";
+      display: block;
+      width: fn.vw(80px);
+      border-top: fn.vw(1px) solid #fff;
+      margin: fn.vw(40px) 0 fn.vw(43px);
+    }
+    > span:nth-child(1){
+      vertical-align: middle;
+      font-size: fn.fs(32px);
+    }
+    > span:nth-child(2){
+      vertical-align: middle;
+      font-size: fn.fs(18px);
+    }
+  }
+
+  .profile-disc {
+    > p {
+      font-size: fn.vw(24px);
+      line-height: 1.5;
+      letter-spacing: .25em;
+      margin-top: 0;
+      margin-bottom: fn.vw(24px);
+    }
+  }
+
+
+  @media screen and (max-width: cn.$bp-sm){
+    padding-right: fn.vw(60px);
+    padding-left: fn.vw(60px);
+
+    .about-disc {
+      margin: fn.vw(100px) 0;
+      > p {
+        font-size: fn.fs(14px);
+        margin-bottom: fn.vw(50px);
+      }
+    }
+    .about-container {
+      margin-bottom: fn.vw(160px);
+    }
+  }
+}

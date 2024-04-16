@@ -1,0 +1,27 @@
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+.block {
+  display: flex;
+  align-items: center;
+  background: #333B48;
+  padding: fn.vw(24px);
+  border-radius: fn.vw(8px);
+  .block-img {
+    width: 22.5%;
+    height: auto;
+  }
+  .block-contents {
+    padding-left: fn.vw(44px);
+    dt {
+      font-size: fn.fs(24px);
+      color: var(--color-strong);
+      font-weight: bold;
+      margin-bottom: fn.vw(16px);
+    }
+    dd {
+      font-size: fn.fs(16px);
+    }
+  }
+}
