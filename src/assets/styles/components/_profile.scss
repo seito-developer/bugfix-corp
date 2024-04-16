@@ -7,7 +7,6 @@
   padding: fn.vw(190px) fn.vw(120px) 0;
   color: #fff;
   position: relative;
-
   .profile-body {
     display: flex;
     justify-content: space-between;
@@ -26,13 +25,11 @@
       bottom: fn.vw(-120px);
     }
   }
-
   .profile-texts {
     flex-grow: 1;
     width: 50%;
     padding: fn.vw(110px) 0;
   }
-
   .profile-name {
     margin: 0;
     position: relative;
@@ -52,10 +49,9 @@
       font-size: fn.fs(18px);
     }
   }
-
   .profile-disc {
     > p {
-      font-size: fn.vw(24px);
+      font-size: fn.fs(24px);
       line-height: 1.5;
       letter-spacing: .25em;
       margin-top: 0;
@@ -63,20 +59,46 @@
     }
   }
 
-
   @media screen and (max-width: cn.$bp-sm){
-    padding-right: fn.vw(60px);
-    padding-left: fn.vw(60px);
-
-    .about-disc {
-      margin: fn.vw(100px) 0;
-      > p {
-        font-size: fn.fs(14px);
-        margin-bottom: fn.vw(50px);
+    padding: fn.vw(95px) fn.vw(60px);
+    .profile-body {
+      // display: block;
+      justify-content: space-between;
+      margin-top: fn.vw(120px);
+    }
+    .profile-img {
+      flex-grow: 1;
+      width: 30%;
+      position: relative;
+      > img {
+        position: static;
+        aspect-ratio: 610 / 725;
+        max-width: 100%;
+        height: auto;
       }
     }
-    .about-container {
-      margin-bottom: fn.vw(160px);
+    .profile-texts {
+      flex-grow: 1;
+      width: 70%;
+      padding: 0;
+      padding-left: 4%;
+      margin-top: -0.35em;
+    }
+    .profile-name {
+      > span:nth-child(1){
+        display: block;
+        font-size: fn.fs(16px);
+      }
+      > span:nth-child(2){
+        display: block;
+        font-size: fn.fs(8px);
+      }
+    }
+    .profile-disc {
+      > p {
+        font-size: fn.fs(10px);
+        margin-bottom: fn.vw(24px);
+      }
     }
   }
 }

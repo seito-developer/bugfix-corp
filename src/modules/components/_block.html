@@ -3,7 +3,9 @@
   <figcaption class="block-contents">
     <dl>
       <dt><%- title %></dt>
-      <dd><%- disc %></dd>
+      <% disc.forEach(discItem => { %>
+        <dd><%= discItem %></dd>
+      <% }) %>
     </dl>
   </figcaption>
 </figure>

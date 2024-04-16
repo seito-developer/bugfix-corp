@@ -20,4 +20,21 @@
       }
     }
   }
+
+  @media screen and (max-width: cn.$bp-sm){
+    padding: fn.vw(280px) 0 fn.vw(120px);
+    .sub-hero-title {
+      > span {
+        &:nth-child(1){
+          font-size: fn.fs(20px);
+        }
+        &:nth-child(2){
+          font-size: fn.fs(40px);
+        }
+        &:nth-child(3){
+          font-size: fn.fs(12px);
+        }
+      }
+    }
+  }
 }

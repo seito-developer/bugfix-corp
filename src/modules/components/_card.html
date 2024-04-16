@@ -1,5 +1,7 @@
 <article class="card">
   <h1 class="card-headline"><%= headline %></h1>
-  <img src="<%= img %>" width="352" height="240" alt="">
+  <div class="card-img">
+    <img src="<%= img.url %>" width="<%= img.width %>" height="<%= img.height %>" alt="">
+  </div>
   <p class="card-disc"><%= disc %></p>
 </article>

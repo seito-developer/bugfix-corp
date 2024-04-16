@@ -28,9 +28,18 @@
       border-radius: 50%;
     }
   }
-  > img {
+  .card-img {
     width: 100%;
-    height: auto;
+    aspect-ratio: 16 / 9;
+    background: var(--color-img-bg);
+    border-radius: fn.vw(8px);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    > img {
+      // width: 100%;
+      // height: auto;
+    }
   }
   .card-disc {
     margin: fn.vw(24px) 0 0;

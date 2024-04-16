@@ -10,7 +10,6 @@
   background: var(--color-core);
   position: relative;
   overflow: hidden;
-
   .features-container {
     > p {
       font-size: fn.vw(24px);
@@ -23,7 +22,6 @@
       color: var(--color-strong);
     }
   }
-
   .features-list {
     > li {
       margin-bottom: fn.vw(24px);
@@ -38,9 +36,9 @@
     padding-left: fn.vw(60px);
 
     .features-container {
-      margin: fn.vw(100px) 0;
+      margin: 0;
       > p {
-        font-size: fn.fs(14px);
+        font-size: fn.fs(12px);
         margin-bottom: fn.vw(50px);
       }
     }

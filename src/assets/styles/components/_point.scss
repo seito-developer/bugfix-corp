@@ -7,24 +7,28 @@
   color: #fff;
   .point-list {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
+    margin: fn.vw(-12px);
     margin-top: fn.vw(80px);
     > li {
-      display: flex;
       flex-direction: column;
-      width: 32%;
+      margin: fn.vw(12px);
+      width: 31%;
     }
   }
 
   @media screen and (max-width: cn.$bp-sm){
-    padding-right: fn.vw(80px);
-    padding-left: fn.vw(80px);
+    padding: fn.vw(100px) fn.vw(80px) fn.vw(110px);
     .point-list {
       flex-direction: column;
       > li {
         width: 100%;
         margin-bottom: fn.vw(80px);
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
   }
