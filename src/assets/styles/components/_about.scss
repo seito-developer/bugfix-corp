@@ -25,7 +25,7 @@
     }
   }
   .about-bottom {
-    color: #313948;
+    color: var(--color-stream);
     @include mixin.font-maven(400);
     font-size: fn.vw(124px);
     position: absolute;
