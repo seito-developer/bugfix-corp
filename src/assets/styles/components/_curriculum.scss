@@ -29,6 +29,7 @@
     scrollbar-width: thin;
     padding-right: fn.vw(120px);
     > li {
+      vertical-align: top;
       white-space: wrap;
       display: inline-block;
       width: fn.vw(772px);
