@@ -10,7 +10,15 @@
   border-radius: fn.vw(8px);
   .block-img {
     width: 22.5%;
-    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    > img {
+      max-width: 95%;
+      max-height: 95%;
+      width: auto;
+      height: auto;
+    }
   }
   .block-contents {
     padding-left: fn.vw(44px);

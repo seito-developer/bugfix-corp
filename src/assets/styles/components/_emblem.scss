@@ -25,6 +25,8 @@
     color: var(--color-strong);
   }
   .emblem-option {
+    display: block;
+    white-space: nowrap;
     font-size: fn.fs(12px);
     position: absolute;
     top: 0;
@@ -68,7 +70,7 @@
 
   @media screen and (max-width: cn.$bp-sm){
     .emblem-inner {
-      font-size: fn.fs(25px);
+      font-size: fn.fs(20px);
     }
     .emblem-caption {
       margin-top: fn.vw(12px);
