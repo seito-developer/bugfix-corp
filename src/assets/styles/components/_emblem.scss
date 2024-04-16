@@ -3,10 +3,9 @@
 @use "../mixins" as mixin;
 
 .emblem {
-  display: inline-block;
+  display: block;
   font-weight: bold;
   text-align: center;
-  background: #333B48;
   padding: fn.vw(24px);
   border-radius: fn.vw(8px);
   position: relative;

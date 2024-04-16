@@ -14,14 +14,15 @@
   .shelf-header {
     margin-bottom: fn.vw(48px - 12px);
   }
-
   .shelf-list {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
     justify-content: center;
+    margin: -1%;
     > li {
-      margin: fn.vw(12px);
+      background: #333B48;
+      width: calc(20% -   2%);
+      margin: 1%;
       &:last-child {
         margin-bottom: 0;
       }
@@ -33,5 +34,15 @@
     padding-left: fn.vw(60px);
 
     // .features-container {}
+    .shelf-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: -1%;
+      > li {
+        background: #333B48;
+        width: calc(33.3% -   2%);
+      }
+    }
   }
 }
