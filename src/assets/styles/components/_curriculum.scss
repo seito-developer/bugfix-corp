@@ -3,7 +3,6 @@
 @use "../mixins" as mixin;
 
 .curriculum {
-  padding: fn.vw(140px) 0 fn.vw(120px);
   overflow: hidden;
   .curriculum-header {
     display: flex;
@@ -54,10 +53,6 @@
   }
 
   @media screen and (max-width: cn.$bp-sm){
-    padding-right: 0;
-    padding-left: 0;
-    padding-top: fn.vw(70px);
-    padding-bottom: fn.vw(60px);
     position: relative;
     margin-bottom: fn.vw(140px);
     .curriculum-header {

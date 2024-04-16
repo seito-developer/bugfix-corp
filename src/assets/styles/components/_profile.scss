@@ -33,20 +33,13 @@
   .profile-name {
     margin: 0;
     position: relative;
+    font-size: fn.fs(32px);
     &::after {
       content:"";
       display: block;
       width: fn.vw(80px);
       border-top: fn.vw(1px) solid #fff;
       margin: fn.vw(40px) 0 fn.vw(43px);
-    }
-    > span:nth-child(1){
-      vertical-align: middle;
-      font-size: fn.fs(32px);
-    }
-    > span:nth-child(2){
-      vertical-align: middle;
-      font-size: fn.fs(18px);
     }
   }
   .profile-disc {
@@ -85,14 +78,7 @@
       margin-top: -0.35em;
     }
     .profile-name {
-      > span:nth-child(1){
-        display: block;
-        font-size: fn.fs(16px);
-      }
-      > span:nth-child(2){
-        display: block;
-        font-size: fn.fs(8px);
-      }
+      font-size: fn.fs(16px);
     }
     .profile-disc {
       > p {
