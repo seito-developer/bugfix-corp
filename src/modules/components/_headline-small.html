@@ -1,4 +1,5 @@
-<div class="headline-small">
+<% const mod = modifier ? modifier : ""; %>
+<div class="headline-small <%= mod %>">
   <h1><%= title %></h1>
   <% if(link){ %>
     <%- include("./modules/components/_link.html", { 

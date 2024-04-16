@@ -13,6 +13,13 @@
     letter-spacing: .05em;
   }
 
+  // modifier
+  &.headline-small-white {
+    > h1 {
+      color: #fff;
+    }
+  }
+
   @media screen and (max-width: cn.$bp-sm){
     display: block;
     text-align: center;
