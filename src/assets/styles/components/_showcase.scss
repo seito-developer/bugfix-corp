@@ -6,17 +6,8 @@
   padding: fn.vw(140px) 0 fn.vw(120px);
   overflow: hidden;
   .showcase-header {
-    display: flex;
     padding: 0 fn.vw(120px);
-    justify-content: space-between;
-    align-items: center;
     margin-bottom: fn.vw(75px);
-    > h1 {
-      font-weight: bold;
-      font-size: fn.fs(48px);
-      color: var(--color-main);
-      letter-spacing: .05em;
-    }
   }
   .showcase-contents {
     white-space: nowrap;
@@ -51,19 +42,8 @@
     position: relative;
     margin-bottom: fn.vw(140px);
     .showcase-header {
-      display: block;
       padding: 0 fn.vw(80px);
-      text-align: center;
       margin-bottom: fn.vw(75px);
-      > h1 {
-        font-size: fn.fs(24px);
-      }
-      > a {
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-      }
     }
     .showcase-contents {
       padding-left: fn.vw(80px);

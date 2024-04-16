@@ -1,0 +1,9 @@
+<div class="headline-small">
+  <h1><%= title %></h1>
+  <% if(link){ %>
+    <%- include("./modules/components/_link.html", { 
+      modifier: link.modifier, 
+      href: link.href,
+      text: link.text }) %>
+  <% } %>
+</div>
