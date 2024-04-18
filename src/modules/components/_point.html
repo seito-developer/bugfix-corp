@@ -1,6 +1,12 @@
 <section class="point">
-  <%- include('./modules/components/_headline.html', { modifier:
-  "headline-primary", main: point.headline.main, sub: point.headline.sub }) %>
+<% if(!point.headline.isNormal) { %>
+    <%- include('./modules/components/_headline.html', { modifier: "headline-primary", main: point.headline.main, sub: point.headline.sub }) %>
+<% } else { %>
+  <%- include('./modules/components/_headline-small.html', { 
+    title: point.headline.main,
+    modifier: false,
+    link: false }) %>
+<% } %>
 
   <ul class="point-list">
     <% for( let index = 0; index < point.cards.length; index++ ) { %>

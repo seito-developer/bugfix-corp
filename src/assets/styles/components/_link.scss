@@ -13,7 +13,7 @@
   position: relative;
   text-align: center;
   overflow: hidden;
-  background: cn.$color-sub;
+  background: var(--color-sub);
   transition: box-shadow ease-out 0.2s, color ease-out 0.2s;
   backface-visibility: hidden;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
@@ -28,7 +28,7 @@
     width: 100%;
     height: 100%;
     z-index: 1;
-    background: darken(cn.$color-sub, 10%);
+    background: var(--color-sub-dark);
     position: absolute;
     left: 0;
     top: 0;
@@ -62,14 +62,14 @@
       background: #fff;
     }
     &:hover {
-      color: cn.$color-core;
+      color: var(--color-core);
     }
   }
   &.link-contact {
-    background: cn.$color-accent;
+    background: var(--color-accent);
     padding: fn.vw(28px) fn.vw(160px);
     &::after {
-      background: darken(cn.$color-accent, 10%);
+      background: var(--color-accent-dark);
     }
   }
 

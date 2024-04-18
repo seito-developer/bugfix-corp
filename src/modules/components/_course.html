@@ -6,7 +6,8 @@
       <li>
         <%- include('./modules/components/_panel.html', { 
           headline: course.courses[index].headline, 
-          disc: course.courses[index].disc
+          disc: course.courses[index].disc,
+          href: course.courses[index].href
         }) %>
       </li>
     <% } %>

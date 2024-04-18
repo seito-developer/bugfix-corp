@@ -26,7 +26,7 @@
       right: 0;
       top: 50%;
       transform: translateY(-50%);
-      background: rgba(cn.$color-sub, .2);
+      background: rgba(var(--color-sub), .2);
       width: fn.vw(34px);
       height: fn.vw(34px);
       border-radius: 50%;
@@ -38,7 +38,7 @@
         width: fn.vw(8px);
         height: fn.vw(8px);
         border-radius: 50%;
-        background: cn.$color-sub;
+        background: var(--color-sub);
         position: absolute;
         top: 50%;
         left: 50%;
@@ -49,8 +49,8 @@
   }
   // .panel-disc {}
   &:hover {
-    border-color: cn.$color-sub;
-    background: cn.$color-sub;
+    border-color: var(--color-sub);
+    background: var(--color-sub);
     .panel-headline {
       padding-right: fn.vw(70px);
       > span {

@@ -1,4 +1,9 @@
 <% 
+const head = {
+  title: common.title.siid.index,
+  disc: common.disc.siid.index,
+  theme: "theme-siid"
+};
 
 const header = {
   contact: {
@@ -33,17 +38,29 @@ const point = {
     sub: "3つの特徴"
   },
   cards: [
-    {
+  {
       headline: "ゼミ形式の学習カリキュラム",
-      img: "/assets/images/point-1.png",
+      img: {
+        url: "/assets/images/point-1.png",
+        width: "286.5",
+        height: "205.5"
+      },
       disc: "「科学的に効果の高い学習メソッド」を用いた上で、プログラミングはもちろんアプリ開発やエンジニアの仕事に必要なスキル・マインドを包括的に学ぶことができます。"
     }, {
       headline: "強力な監修・講師陣",
-      img: "/assets/images/point-2.png",
+      img: {
+        url: "/assets/images/point-2.png",
+        width: "195",
+        height: "191"
+      },
       disc: "100人規模のWeb開発企業で経営経験があり、テックYouTuberでもある現役エンジニアの堀口セイト氏が皆さんをサポートします。"
     }, {
       headline: "圧倒的コストパフォーマンス",
-      img: "/assets/images/point-3.png",
+      img: {
+        url: "/assets/images/point-3.png",
+        width: "285",
+        height: "214"
+      },
       disc: "多くのスクールが数ヶ月・数十万円のコースを展開する一方、月3万円からお手軽に学習することができます。"
     }
   ]
@@ -51,16 +68,18 @@ const point = {
 
 const course = {
   headline: {
-    main: "",
-    sub: ""
+    main: "Course",
+    sub: "コース"
   },
   courses: [
     {
       headline: "BASIC",
-      disc: "「科学的に効果の高い学習メソッド」を用いた上で、プログラミングはもちろんアプリ開発やエンジニアの仕事に必要なスキル・マインドを包括的に学ぶことができます。"
+      disc: "カジュアルに始められる易しめプログラム。<br>まずは始めてみたい、現在のキャリアに活かしたい、という方はこちら。",
+      href: "./basic"
     }, {
       headline: "CAREER",
-      disc: "「科学的に効果の高い学習メソッド」を用いた上で、プログラミングはもちろんアプリ開発やエンジニアの仕事に必要なスキル・マインドを包括的に学ぶことができます。"
+      disc: "転職支援を含むストイックなプログラム。<br>本気で転職を目指したい、全力でコミットしたい、という方はこちら。",
+      href: ""
     }
   ]
 };
@@ -68,10 +87,11 @@ const course = {
 const contact = {
   headline: "お申し込みはこちら",
   href: "",
+  text: "説明会に申し込む"
 };
 %>
 
-<%- include('./modules/meta/_head.html', {title: `${common.title} - 真に価値あるエンジニアリングとプログラミングスクール`}) %>
+<%- include('./modules/meta/_head.html', head) %>
 <%- include('./modules/layout/_header.html', {header: header}) %>
 
 <%- include('./modules/components/_hero.html', {hero: hero}) %>

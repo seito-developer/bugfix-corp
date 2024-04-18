@@ -12,7 +12,7 @@
     padding: fn.vw(52px) 0;
     border-radius: fn.vw(8px);
     > h1 {
-      color: cn.$color-main;
+      color: var(--color-main);
       font-size: fn.fs(32px);
       font-weight: bold;
       margin-bottom: fn.vw(37px);

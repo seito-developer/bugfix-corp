@@ -1,9 +1,15 @@
 <section class="showcase">
   <div class="showcase-container">
     <div class="showcase-header">
-      <h1>卒業生のアウトプット・成果</h1>
-      <%- include("./modules/components/_link.html", { modifier: "", href: "",
-      text: "MORE" }) %>
+      <%- include('./modules/components/_headline-small.html', { 
+        title: "卒業生の実績",
+        modifier: false,
+        link: {
+          modifier: "",
+          href: "",
+          text: "MORE"
+        }
+      }) %>
     </div>
   </div>
 

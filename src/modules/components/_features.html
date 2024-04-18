@@ -1,0 +1,18 @@
+<section class="features">
+  <div class="features-container">    
+    <p>
+      <%- features.disc %>
+    </p>
+
+    <ul class="features-list">
+      <% features.contents.forEach(featureItem => { %>
+        <li>
+            <%- include("./modules/components/_block.html", { 
+              img: featureItem.img,
+              title: featureItem.title,
+              disc: featureItem.disc }) %>
+        </li>
+      <% }) %>
+    </ul>
+  </div>
+</section>

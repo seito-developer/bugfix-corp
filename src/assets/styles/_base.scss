@@ -1,7 +1,17 @@
 @use "const" as cn;
 @use "function" as fn;
 
-// html { font-size: 62.5%; }
+:root {
+  --color-main: #333;
+  --color-sub: #896ed9;
+  --color-sub-dark: #7d64c6;
+  --color-core: #333;
+  --color-accent: #896ed9;
+  --color-accent-dark: #7d64c6;
+  --color-base: #F4F4F4;
+  --color-stream: #5b5570;
+  --color-img-bg: #C5DDDD;
+}
 
 body {
   margin: 0;
@@ -11,7 +21,7 @@ body {
   font-family: "Noto Sans JP", "Meiryo", "Arial", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
-  background: cn.$color-base;
+  background: var(--color-base);
   letter-spacing: .05em;
 }
 
@@ -21,7 +31,7 @@ ul, ol, li {
   list-style: none;
 }
 
-dl, dt, dd {
+dl, dt, dd, figure, figcaption {
   margin: 0;
 }
 
