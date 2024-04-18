@@ -8,7 +8,7 @@ const head = {
 const header = {
   contact: {
     href: "",
-    text: "お申し込み"
+    text: "CONTACT"
   }
 };
 
@@ -17,17 +17,7 @@ const hero = {
   sub: "お問い合わせ",
 };
 
-const curriculum = {
-  headline: "カリキュラム",
-  contents: [
-    ["オリエンテーション", "アプリケーション開発概論", "HTML/CSS", "IDE, Git, ほか"],
-    ["JavaScript", "中間復習", "アルゴリズム", "オブジェクト指向とクラス"],
-    ["データベース", "総復習"],
-  ]
-};
-
 %>
-
 
 <%- include('./modules/meta/_head.html', head) %>
 <%- include('./modules/layout/_header.html', {header: header}) %>

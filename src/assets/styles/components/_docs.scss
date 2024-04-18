@@ -1,0 +1,23 @@
+// settings
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+.docs {
+  font-size: fn.fs(16px);
+  padding: fn.vw(120px);  
+  dl {
+    margin: fn.vw(20px) 0;
+  }
+  dt {
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: cn.$bp-sm){
+    padding-right: fn.vw(80px);
+    padding-left: fn.vw(80px);
+    dl {
+      margin: fn.vw(40px) 0;
+    }
+  }
+}
