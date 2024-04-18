@@ -1,0 +1,56 @@
+<% 
+const head = {
+  title: common.title.contact,
+  disc: common.disc.contact,
+  theme: ""
+};
+
+const header = {
+  contact: {
+    href: "",
+    text: "お申し込み"
+  }
+};
+
+const hero = {
+  title: "CONTACT",
+  sub: "お問い合わせ",
+};
+
+const curriculum = {
+  headline: "カリキュラム",
+  contents: [
+    ["オリエンテーション", "アプリケーション開発概論", "HTML/CSS", "IDE, Git, ほか"],
+    ["JavaScript", "中間復習", "アルゴリズム", "オブジェクト指向とクラス"],
+    ["データベース", "総復習"],
+  ]
+};
+
+%>
+
+
+<%- include('./modules/meta/_head.html', head) %>
+<%- include('./modules/layout/_header.html', {header: header}) %>
+
+<%- include('./modules/components/_sub-hero.html', {hero: hero}) %>
+
+<main>
+
+  <div class="jicoo">
+    <p>
+      弊社BugFixへのお問い合わせは<br class="jicoo-spbr">こちらのフォームから承っております。<br>
+      お仕事、イベント事、その他のお問い合わせ<br class="jicoo-spbr">についてもお気軽にご連絡ください。<br>
+      送信から3営業日以内を目安に<br class="jicoo-spbr">ご返信させていただきます。
+    </p>
+
+    <!-- Jicoo widget begin -->
+    <div class="jicoo-widget" data-url="https://www.jicoo.com/forms/i8tYisJ3LJYA/widget"></div>
+    <script type="text/javascript" src="https://www.jicoo.com/widget/event_type.js" async></script>
+    <!-- Jicoo widget end -->
+  </div>
+</main>
+
+<%- include('./modules/layout/_footer.html', {modifier: "footer-has-contact"}) %>
+
+<script type="module" src="/assets/scripts/siid.js"></script>
+<%- include('./modules/meta/_foot.html') %>
