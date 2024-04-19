@@ -1,0 +1,31 @@
+// settings
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+.line {
+  display: flex;
+  .line-img {
+    max-width: fn.vw(150px);
+    height: auto;
+  }
+  .line-text {
+    text-align: left;
+    padding-left: fn.vw(20px);
+    > dt {
+      font-weight: bold;
+      margin-bottom: fn.vw(10px);
+    }
+  }
+
+  @media screen and (max-width: cn.$bp-lg) {
+    .line-img {
+      max-width: 100px;
+      width: 100px;
+      height: 100px;
+    }
+    .line-text {
+      padding-left: fn.vw(40px);
+    }
+  }
+}

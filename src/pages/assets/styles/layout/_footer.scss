@@ -8,6 +8,7 @@
   padding: fn.vw(120px);
   .footer-top {
     display: flex;
+    justify-content: space-between;
   }
   .footer-top-logo {
     display: block;
@@ -43,6 +44,7 @@
   }
   .footer-top-others {
     margin-top: fn.vw(-10px);
+    width: 30%;
   }
   .footer-top-sns {
     margin-bottom: fn.vw(35px);
@@ -83,6 +85,34 @@
     padding-top: fn.vw(120px + 150px);
   }
 
+  @media screen and (max-width: cn.$bp-lg) {
+    .footer-top-info {
+      display: flex;
+      align-items: center;
+      margin-right: 0;
+      margin-bottom: fn.vw(80px);
+      width: 50%;
+      > address {
+        margin-left: fn.fs(40px);
+      }
+    }
+    .footer-top-logo {
+      margin-bottom: 0;
+    }
+    .footer-top-nav {
+      display: none;
+    }
+    .footer-top-line {
+      // width: 50%;
+    }
+    .footer-bottom {
+      flex-direction: column-reverse;
+    }
+    .footer-bottom-nav {
+      margin-bottom: fn.vw(40px);
+    }
+  }
+
   @media screen and (max-width: cn.$bp-sm){
     padding-right: fn.vw(80px);
     padding-left: fn.vw(80px);
@@ -90,6 +120,7 @@
       flex-direction: column;
     }
     .footer-top-info {
+      width: 100%;
       display: flex;
       align-items: center;
       margin-right: 0;
@@ -102,9 +133,9 @@
     .footer-top-logo {
       margin-bottom: 0;
     }
-    // .footer-top-nav {
-    //   display: none;
-    // }
+    .footer-top-line {
+      // width: 60%;
+    }
     .footer-bottom {
       flex-direction: column-reverse;
     }
@@ -112,46 +143,14 @@
       flex-direction: column;
       margin-bottom: fn.vw(40px);
     }
-    .footer-top-others {
+    .footer-top-sns {
       text-align: center;
+    }
+    .footer-top-others {
+      width: 100%;
     }
     .footer-border {
       margin: fn.vw(80px) 0;
-    }
-  }
-
-  @media screen and (max-width: cn.$bp-lg) {
-    .footer-top {
-      display: block;
-    }
-    .footer-top-info {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-right: 0;
-      margin-bottom: fn.vw(80px);
-      width: 100%;
-      > address {
-        margin-left: fn.fs(40px);
-      }
-    }
-    .footer-top-logo {
-      margin-bottom: 0;
-    }
-    .footer-top-nav {
-      display: none;
-    }
-    .footer-bottom {
-      flex-direction: column-reverse;
-    }
-    .footer-bottom-nav {
-      margin-bottom: fn.vw(40px);
-    }
-    .footer-top-others {
-      justify-content: space-between;
-      text-align: center;
-      display: flex;
-      width: 100%;
     }
   }
 }

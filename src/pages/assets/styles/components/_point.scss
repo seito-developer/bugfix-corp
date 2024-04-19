@@ -3,7 +3,7 @@
 @use "../mixins" as mixin;
 
 .point {
-  padding: fn.vw(170px) fn.vw(120px) fn.vw(160px);
+  padding: fn.vw(160px) fn.vw(120px);
   color: #fff;
   .point-list {
     display: flex;
@@ -20,7 +20,7 @@
   }
 
   @media screen and (max-width: cn.$bp-sm){
-    padding: fn.vw(100px) fn.vw(80px) fn.vw(110px);
+    padding: fn.vw(160px) fn.vw(80px);
     .point-list {
       flex-direction: column;
       > li {

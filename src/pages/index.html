@@ -86,6 +86,48 @@ const course = {
   ]
 };
 
+const media = {
+  headline: {
+    main: "Media",
+    isNormal: true,
+    link: { 
+      modifier: "",
+      href: "/works",
+      text: "もっと見る"
+    }
+  },
+  media: [
+  {
+      headline: "書籍",
+      href: "https://amzn.asia/d/c7sj64L",
+      img: {
+        url: "/images/media/book.jpg",
+        width: "156",
+        height: "222",
+      },
+      disc: "代表はこれまでに2冊執筆歴があります。その内の１冊『現役エンジニア＆インフルエンサー セイト先生が教えるプログラミング入門』は日経BP社から好評発売中です。(2024/3)"
+    }, {
+      headline: "YouTube",
+      href: "https://www.youtube.com/@webit7652",
+      img: {
+        url: "/images/media/youtube.png",
+        width: "325",
+        height: "217"
+      },
+      disc: "登録者数約12万人のYouTubeチャンネルでは、「テクノロジーを楽しくわかりやすく」をコンセプトに、毎週Web/IT業界の情報やプログラミングのチュートリアルなどを発信しています。"
+    }, {
+      headline: "公式LINE",
+      href: "https://line.me/R/ti/p/@558nfxrq",
+      img: {
+        url: "/images/media/line.png",
+        width: "222",
+        height: "222"
+      },
+      disc: "公式LINEではイベントやライブ配信の告知を行っているほか、無料キャリア相談にも乗っています。Web/ITエンジニアを中心としたキャリアでお悩みの方はご利用ください。"
+    }
+  ]
+};
+
 const contact = {
   headline: "お問い合わせはこちら",
   href: "mailto:seito@bug-fix.org?subject=Webサイトからのお問い合わせ",
@@ -102,7 +144,7 @@ const contact = {
   <%- include('../modules/components/_about.html', {about: about}) %>
   <%- include('../modules/components/_point.html', {point: point}) %>
   <%- include('../modules/components/_course.html', {course: course}) %>
-  <br><br><br><br><br>
+  <%- include('../modules/components/_point.html', {point: media}) %>
   <%- include('../modules/components/_contact.html', {contact: contact}) %>
 </main>
 
