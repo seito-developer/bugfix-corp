@@ -5,6 +5,7 @@
 .header {
   width: 100%;
   position: absolute;
+  z-index: 19;
   top: fn.vw(60px);
   left: 0;
   .header-inner {

@@ -102,9 +102,9 @@
     .footer-top-logo {
       margin-bottom: 0;
     }
-    .footer-top-nav {
-      display: none;
-    }
+    // .footer-top-nav {
+    //   display: none;
+    // }
     .footer-bottom {
       flex-direction: column-reverse;
     }
@@ -120,7 +120,7 @@
     }
   }
 
-  @media screen and (min-width: cn.$bp-sm) and (max-width: cn.$bp-lg) {
+  @media screen and (max-width: cn.$bp-lg) {
     .footer-top {
       display: block;
     }

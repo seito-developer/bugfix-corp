@@ -1,9 +1,9 @@
 <% const head = { title: common.title.law, disc: common.disc.law, theme:
-"" }; const header = { contact: { href: "", text: "CONTACT" } }; const hero = {
+"" }; const header = { contact: { href: "/contact/", text: "CONTACT" } }; const hero = {
 title: "LOW", sub: "特定商取引法に基づく表示", modifier: "sub-hero-long" }; %>
 <%- include('../modules/meta/_head.html', head) %> <%-
-include('./modules/layout/_header.html', {header: header}) %> <%-
-include('./modules/components/_sub-hero.html', {hero: hero}) %>
+include('../modules/layout/_header.html', {header: header}) %> <%-
+include('../modules/components/_sub-hero.html', {hero: hero}) %>
 
 <main>
   <div class="docs">

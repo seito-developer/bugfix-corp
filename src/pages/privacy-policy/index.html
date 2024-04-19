@@ -1,9 +1,9 @@
 <% const head = { title: common.title.privacyPolicy, disc: common.disc.privacyPolicy, theme:
-"" }; const header = { contact: { href: "", text: "CONTACT" } }; const hero = {
+"" }; const header = { contact: { href: "/contact/", text: "CONTACT" } }; const hero = {
 title: "Privacy Policy", sub: "プライバシーポリシー", modifier: "sub-hero-long"
 }; %> <%- include('../modules/meta/_head.html', head) %> <%-
-include('./modules/layout/_header.html', {header: header}) %> <%-
-include('./modules/components/_sub-hero.html', {hero: hero}) %>
+include('../modules/layout/_header.html', {header: header}) %> <%-
+include('../modules/components/_sub-hero.html', {hero: hero}) %>
 
 <main>
   <div class="docs">
