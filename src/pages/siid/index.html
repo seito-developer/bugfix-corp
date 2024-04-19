@@ -41,7 +41,7 @@ const point = {
   {
       headline: "ゼミ形式の学習カリキュラム",
       img: {
-        url: "/assets/images/point-1.png",
+        url: "/images/point-1.png",
         width: "286.5",
         height: "205.5"
       },
@@ -49,7 +49,7 @@ const point = {
     }, {
       headline: "強力な監修・講師陣",
       img: {
-        url: "/assets/images/point-2.png",
+        url: "/images/point-2.png",
         width: "195",
         height: "191"
       },
@@ -57,7 +57,7 @@ const point = {
     }, {
       headline: "圧倒的コストパフォーマンス",
       img: {
-        url: "/assets/images/point-3.png",
+        url: "/images/point-3.png",
         width: "285",
         height: "214"
       },
@@ -91,22 +91,22 @@ const contact = {
 };
 %>
 
-<%- include('./modules/meta/_head.html', head) %>
-<%- include('./modules/layout/_header.html', {header: header}) %>
+<%- include('../modules/meta/_head.html', head) %>
+<%- include('../modules/layout/_header.html', {header: header}) %>
 
-<%- include('./modules/components/_hero.html', {hero: hero}) %>
+<%- include('../modules/components/_hero.html', {hero: hero}) %>
 
 <main>
-  <%- include('./modules/components/_about.html', {about: about}) %>
-  <%- include('./modules/components/_point.html', {point: point}) %>
-  <%- include('./modules/components/_course.html', {course: course}) %>
-  <%- include('./modules/components/_showcase.html') %>
-  <%- include('./modules/components/_contact.html', {contact: contact}) %>
+  <%- include('../modules/components/_about.html', {about: about}) %>
+  <%- include('../modules/components/_point.html', {point: point}) %>
+  <%- include('../modules/components/_course.html', {course: course}) %>
+  <%- include('../modules/components/_showcase.html') %>
+  <%- include('../modules/components/_contact.html', {contact: contact}) %>
 </main>
 
-<%- include('./modules/components/_modal.html') %>
+<%- include('../modules/components/_modal.html') %>
 
-<%- include('./modules/layout/_footer.html', {modifier: "footer-has-contact"}) %>
+<%- include('../modules/layout/_footer.html', {modifier: "footer-has-contact"}) %>
 
 <script type="module" src="/assets/scripts/index.js"></script>
-<%- include('./modules/meta/_foot.html') %>
+<%- include('../modules/meta/_foot.html') %>

@@ -4,11 +4,12 @@ import {ViteEjsPlugin} from "vite-plugin-ejs";
 import { mainData } from "./src/data/mainData";
 
 export default defineConfig({
-  root: 'src',
+  root: 'src/pages',
+  publicDir: '../../public',
   build: {
-    outDir: '../dist',
+    outDir: '../../dist',
     emptyOutDir: true,
-    copyPublicDir: 'public',
+    publicDir: '../public',
     rollupOptions: {
       
       input: {
@@ -17,12 +18,10 @@ export default defineConfig({
           "": resolve(__dirname, 'siid/index.html'),
           basic: resolve(__dirname, 'siid/basic/index.html'),
           career: resolve(__dirname, 'siid/career/index.html'),
-        }
-        // contact: './src/contact/index.html',
-        // privacyPolicy: './src/privacy-policy/index.html',
-        // law: './src/law/index.html',
-        // siid_basic: './src/siid/basic/index.html',
-        // siid_career: './src/siid/career/index.html',
+        },
+        contact: 'contact/index.html',
+        privacyPolicy: 'privacy-policy/index.html',
+        law: 'law/index.html'
       }
     }
   },

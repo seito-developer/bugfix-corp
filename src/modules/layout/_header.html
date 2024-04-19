@@ -2,7 +2,7 @@
   <div class="header-inner">
     <div class="header-flex">
       <a class="header-logo" href="./">
-        <%- include('./modules/components/_logo.html') %>
+        <%- include('../modules/components/_logo.html') %>
       </a>
       <button type="button" class="trigger" id="js-nav-trigger">
         <span></span>
@@ -24,7 +24,7 @@
             </li>
           </ul>
           <div class="nav-contact">
-            <%- include("./modules/components/_link.html", {
+            <%- include("../modules/components/_link.html", {
               modifier: "link-nav",
               href: header.contact.href,
               text: header.contact.text

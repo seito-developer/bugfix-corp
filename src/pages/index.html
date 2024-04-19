@@ -93,20 +93,20 @@ const contact = {
 };
 %>
 
-<%- include('./modules/meta/_head.html', head) %>
-<%- include('./modules/layout/_header.html', {header: header}) %>
+<%- include('../modules/meta/_head.html', head) %>
+<%- include('../modules/layout/_header.html', {header: header}) %>
 
-<%- include('./modules/components/_hero.html', {hero: hero}) %>
+<%- include('../modules/components/_hero.html', {hero: hero}) %>
 
 <main>
-  <%- include('./modules/components/_about.html', {about: about}) %>
-  <%- include('./modules/components/_point.html', {point: point}) %>
-  <%- include('./modules/components/_course.html', {course: course}) %>
+  <%- include('../modules/components/_about.html', {about: about}) %>
+  <%- include('../modules/components/_point.html', {point: point}) %>
+  <%- include('../modules/components/_course.html', {course: course}) %>
   <br><br><br><br><br>
-  <%- include('./modules/components/_contact.html', {contact: contact}) %>
+  <%- include('../modules/components/_contact.html', {contact: contact}) %>
 </main>
 
-<%- include('./modules/layout/_footer.html', {modifier: "footer-has-contact"}) %>
+<%- include('../modules/layout/_footer.html', {modifier: "footer-has-contact"}) %>
 
 <script type="module" src="/assets/scripts/index.js"></script>
-<%- include('./modules/meta/_foot.html') %>
+<%- include('../modules/meta/_foot.html') %>

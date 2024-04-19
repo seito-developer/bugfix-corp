@@ -24,7 +24,7 @@ const features = {
   contents: [
     {
       img: {
-        url: "/assets/images/feature-1.png",
+        url: "/images/feature-1.png",
         width: "245",
         height: "200"
       },
@@ -36,7 +36,7 @@ const features = {
       ]
     }, {
       img: {
-        url: "/assets/images/feature-2.png",
+        url: "/images/feature-2.png",
         width: "245",
         height: "171"
       },
@@ -47,7 +47,7 @@ const features = {
       ]
     }, {
       img: {
-        url: "/assets/images/feature-3.png",
+        url: "/images/feature-3.png",
         width: "245",
         height: "161"
       },
@@ -73,7 +73,7 @@ const point = {
   {
       headline: "受講生ファースト",
       img: {
-        url: "/assets/images/style-5.png",
+        url: "/images/style-5.png",
         width: "227.5",
         height: "190"
       },
@@ -81,7 +81,7 @@ const point = {
     }, {
       headline: "グループワーク",
       img: {
-        url: "/assets/images/style-3.png",
+        url: "/images/style-3.png",
         width: "297.5",
         height: "200"
       },
@@ -89,7 +89,7 @@ const point = {
     }, {
       headline: "個別相談",
       img: {
-        url: "/assets/images/style-4.png",
+        url: "/images/style-4.png",
         width: "247.5",
         height: "182.5"
       },
@@ -186,25 +186,25 @@ const contact = {
 %>
 
 
-<%- include('./modules/meta/_head.html', head) %>
-<%- include('./modules/layout/_header.html', {header: header}) %>
+<%- include('../modules/meta/_head.html', head) %>
+<%- include('../modules/layout/_header.html', {header: header}) %>
 
-<%- include('./modules/components/_sub-hero.html', {hero: hero}) %>
+<%- include('../modules/components/_sub-hero.html', {hero: hero}) %>
 
 <main>
-  <%- include('./modules/components/_features.html', {features: features}) %>
-  <%- include('./modules/components/_point.html', {point: point}) %>
-  <%- include('./modules/components/_curriculum.html', {curriculum: curriculum}) %>
+  <%- include('../modules/components/_features.html', {features: features}) %>
+  <%- include('../modules/components/_point.html', {point: point}) %>
+  <%- include('../modules/components/_curriculum.html', {curriculum: curriculum}) %>
   <div class="u-mb-240">
-    <%- include('./modules/components/_shelf.html', {skills: skills}) %>
+    <%- include('../modules/components/_shelf.html', {skills: skills}) %>
   </div>
   <div class="u-mb-240">
-    <%- include('./modules/components/_profile.html') %>
+    <%- include('../modules/components/_profile.html') %>
   </div>
-  <%- include('./modules/components/_contact.html', {contact: contact}) %>
+  <%- include('../modules/components/_contact.html', {contact: contact}) %>
 </main>
 
-<%- include('./modules/layout/_footer.html', {modifier: "footer-has-contact"}) %>
+<%- include('../modules/layout/_footer.html', {modifier: "footer-has-contact"}) %>
 
 <script type="module" src="/assets/scripts/siid.js"></script>
-<%- include('./modules/meta/_foot.html') %>
+<%- include('../modules/meta/_foot.html') %>
