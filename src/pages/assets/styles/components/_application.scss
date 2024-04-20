@@ -3,6 +3,7 @@
 @use "../mixins" as mixin;
 
 .application {
+  background: #fff;
   .application-header {
     padding: 0 fn.vw(120px);
     margin: fn.vw(80px) 0;
@@ -51,6 +52,7 @@
     height: 0;
     overflow: hidden;
 
+    // active
     &:has(.is-active){
       height: auto;
     }
@@ -65,17 +67,37 @@
       position: relative;
     }
     
+    // active
     &.is-active {
       visibility: visible;
     }
   }
 
+  .application-spbr {
+    display: none;
+  }
+
   @media screen and (max-width: cn.$bp-sm){
+    .application-header {
+      padding: 0 fn.vw(40px);
+    }
     .application-selection {
+      padding: 0;
       display: block;
+      > dt {
+        font-size: fn.fs(16px);
+        margin-bottom: fn.vw(80px);
+      }
       > dd {
         margin-top: fn.vw(20px);
       }
+    }
+    .application-spbr {
+      display: block;
+    }
+    .application-body {
+      padding-right: fn.vw(40px);
+      padding-left: fn.vw(40px);
     }
   }
 }

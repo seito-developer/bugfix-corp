@@ -14,8 +14,8 @@ const header = {
 
 const hero = {
   title: "COUNSELING",
-  sub: "お申し込み",
-  disc: "まずはXXX"
+  sub: "お申し込み・個別相談",
+  // disc: ""
 };
 
 %>
@@ -26,13 +26,15 @@ const hero = {
 <%- include('../modules/components/_sub-hero.html', {hero: hero}) %>
 
 <main>
-
-
-  <p>
-    弊社BugFixへのお問い合わせは<br class="jicoo-spbr">こちらのフォームから承っております。<br>
-    お仕事、イベント事、その他のお問い合わせ<br class="jicoo-spbr">についてもお気軽にご連絡ください。<br>
-    送信から3営業日以内を目安に<br class="jicoo-spbr">ご返信させていただきます。
-  </p>
+  
+  <div class="counseling-lead">
+    <p>
+      <strong>すでにお申し込みを決めてる、迷っている、</strong>どちらの場合でもお気軽にお申込ください。
+    </p>
+    <p>
+      講師の堀口が直接お話をお伺いし、<br class="counseling-lead-spbr">プログラミング学習やキャリア相談について<br class="counseling-lead-spbr">ご相談にのります。<br>
+    </p>
+  </div>
 
   <section class="application">
 
@@ -40,7 +42,13 @@ const hero = {
     
     <div class="application-header">
       <dl class="application-selection" id="js-tab">
-        <dt>まずはご希望のコースを選択ください。</dt>
+        <dt>
+          ご希望のコースを選択ください。<br>
+          
+          送信いただいた番号に当日お電話からご連絡いたします。
+          <br class="application-spbr">
+          (Basicは最長20分、Careerは最長45分程度です)
+        </dt>
         <dd>
           <label class="radio">
             <input name="course" type="radio" value="basic">
@@ -75,7 +83,6 @@ const hero = {
         </div>
       </div>
 
-      <script type="text/javascript" src="https://www.jicoo.com/widget/event_type.js" async></script>
     </div>
 
   </section>
@@ -83,5 +90,6 @@ const hero = {
 
 <%- include('../modules/layout/_footer.html', {modifier: ""}) %>
 
+<script type="text/javascript" src="https://www.jicoo.com/widget/event_type.js" async></script>
 <script type="module" src="/assets/scripts/consulting.js"></script>
 <%- include('../modules/meta/_foot.html') %>

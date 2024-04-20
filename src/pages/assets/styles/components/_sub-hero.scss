@@ -26,10 +26,10 @@
     .sub-hero-title {
       > span {
         &:nth-child(1){
-          font-size: fn.fs(20px);
+          font-size: fn.fs(18px);
         }
         &:nth-child(2){
-          font-size: fn.fs(40px);
+          font-size: fn.fs(32px);
         }
         &:nth-child(3){
           font-size: fn.fs(12px);

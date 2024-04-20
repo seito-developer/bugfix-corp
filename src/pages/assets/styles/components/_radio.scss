@@ -11,7 +11,7 @@
     display: block;
     cursor: pointer;
     position: relative;
-    padding: fn.vw(13px) fn.vw(24px) fn.vw(14px) fn.vw(60px);
+    padding: 13px 24px 14px 60px;
     background-color: #fff;
     border: fn.vw(2px) solid var(--color-main);
     border-radius: fn.vw(16px);
@@ -34,8 +34,8 @@
         position: absolute;
         top: 4px;
         left: 4px;
-        width: 13px;
-        height: 13px;
+        width: 12px;
+        height: 12px;
         background-color: var(--color-sub);
         border-radius: 50%;
         transition: transform ease-out 0.2s;
@@ -52,6 +52,19 @@
         border-color: var(--color-sub);
         &::after {
           transform: scale(1);
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: cn.$bp-sm){
+    .radio-inner {
+      > i {
+        &::after {
+          top: 5px;
+          left: 5px;
+          width: 13px;
+          height: 13px;
         }
       }
     }
