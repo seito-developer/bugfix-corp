@@ -4,12 +4,14 @@
 
 .radio {
   > input {
-    display: none;
+    position: absolute;
+    visibility: hidden;
   }
   .radio-inner {
+    display: block;
     cursor: pointer;
     position: relative;
-    padding: 14px 24px 14px 49px;
+    padding: fn.vw(13px) fn.vw(24px) fn.vw(14px) fn.vw(60px);
     background-color: #fff;
     border: fn.vw(2px) solid var(--color-main);
     border-radius: fn.vw(16px);
@@ -32,8 +34,8 @@
         position: absolute;
         top: 4px;
         left: 4px;
-        width: 14px;
-        height: 14px;
+        width: 13px;
+        height: 13px;
         background-color: var(--color-sub);
         border-radius: 50%;
         transition: transform ease-out 0.2s;
@@ -42,16 +44,14 @@
   }
 
   // checked
-  > input {
-    &:checked {
-      + .radio-inner {
+  &:has(input:checked){
+    .radio-inner {
+      border-color: var(--color-sub);
+      color: var(--color-sub);
+      > i {
         border-color: var(--color-sub);
-        color: var(--color-sub);
-        > i {
-          border-color: var(--color-sub);
-          &::after {
-            transform: scale(1);
-          }
+        &::after {
+          transform: scale(1);
         }
       }
     }

@@ -15,6 +15,7 @@ const header = {
 const hero = {
   title: "COUNSELING",
   sub: "お申し込み",
+  disc: "まずはXXX"
 };
 
 %>
@@ -26,45 +27,61 @@ const hero = {
 
 <main>
 
-  <div class="application">
+
+  <p>
+    弊社BugFixへのお問い合わせは<br class="jicoo-spbr">こちらのフォームから承っております。<br>
+    お仕事、イベント事、その他のお問い合わせ<br class="jicoo-spbr">についてもお気軽にご連絡ください。<br>
+    送信から3営業日以内を目安に<br class="jicoo-spbr">ご返信させていただきます。
+  </p>
+
+  <section class="application">
+
+    <h1 class="application-conductor">お申し込みはこちらから</h1>
     
+    <div class="application-header">
+      <dl class="application-selection" id="js-tab">
+        <dt>まずはご希望のコースを選択ください。</dt>
+        <dd>
+          <label class="radio">
+            <input name="course" type="radio" value="basic">
+            <span class="radio-inner"><i></i>Basicコース</span>
+          </label>
+        </dd>
+        <dd>
+          <label class="radio">
+            <input name="course" type="radio" value="career">
+            <span class="radio-inner"><i></i>Careerコース</span>
+          </label>
+        </dd>
+      <dd>
+        <label class="radio">
+          <input name="course" type="radio" value="all">
+          <span class="radio-inner"><i></i>決まっていない</span>
+        </label>
+      </dd>
+    </div>
 
+    <div class="application-body">
 
-    <label class="radio">
-      <input name="course" type="radio">
-      <span class="radio-inner"><i></i>Basic</span>
-    </label>
-    
-    <br>
+      <div class="application-form" id="js-content">
+        <div class="application-form-item" id="js-basic">
+          <div class="jicoo-widget" data-url="https://www.jicoo.com/event_types/nTuXo7MI4wrW/widget" style="min-width:320px;height:720px;border:1px solid #e4e4e4;box-sizing:content-box;"></div>
+        </div>
+        <div class="application-form-item" id="js-career">
+          <div class="jicoo-widget" data-url="https://www.jicoo.com/event_types/5jYPHyN0bUGx/widget" style="min-width:320px;height:720px;border:1px solid #e4e4e4;box-sizing:content-box;"></div>
+        </div>
+        <div class="application-form-item" id="js-all">
+          <div class="jicoo-widget" data-url="https://www.jicoo.com/event_types/F7TpWEJ9CPno/widget" style="min-width:320px;height:720px;border:1px solid #e4e4e4;box-sizing:content-box;"></div>
+        </div>
+      </div>
 
-    <label class="radio">
-      <input name="course" type="radio">
-      <span class="radio-inner"><i></i>Career</span>
-    </label>
+      <script type="text/javascript" src="https://www.jicoo.com/widget/event_type.js" async></script>
+    </div>
 
-    <br>
-
-    <label class="radio">
-      <input name="course" type="radio">
-      <span class="radio-inner"><i></i>決まっていない</span>
-    </label>
-
-  </div>
-
-  <div class="jicoo">
-    <p>
-      弊社BugFixへのお問い合わせは<br class="jicoo-spbr">こちらのフォームから承っております。<br>
-      お仕事、イベント事、その他のお問い合わせ<br class="jicoo-spbr">についてもお気軽にご連絡ください。<br>
-      送信から3営業日以内を目安に<br class="jicoo-spbr">ご返信させていただきます。
-    </p>
-
-    <!-- Jicoo widget begin -->
-    <div class="jicoo-widget" data-url="https://www.jicoo.com/forms/i8tYisJ3LJYA/widget"></div>
-    <script type="text/javascript" src="https://www.jicoo.com/widget/event_type.js" async></script>
-    <!-- Jicoo widget end -->
-  </div>
+  </section>
 </main>
 
 <%- include('../modules/layout/_footer.html', {modifier: ""}) %>
 
+<script type="module" src="/assets/scripts/consulting.js"></script>
 <%- include('../modules/meta/_foot.html') %>
