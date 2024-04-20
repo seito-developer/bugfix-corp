@@ -1,0 +1,59 @@
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+.radio {
+  > input {
+    display: none;
+  }
+  .radio-inner {
+    cursor: pointer;
+    position: relative;
+    padding: 14px 24px 14px 49px;
+    background-color: #fff;
+    border: fn.vw(2px) solid var(--color-main);
+    border-radius: fn.vw(16px);
+    font-weight: bold;
+    transition: border-color ease-out 0.2s, color ease-out 0.2s;
+    > i {
+      content: "";
+      display: block;
+      position: absolute;
+      top: .85em;
+      left: 20px;
+      width: 24px;
+      height: 24px;
+      border: fn.vw(2px) solid var(--color-main);
+      border-radius: 50%;
+      transition: border-color ease-out 0.2s;
+      &::after {
+        transform: scale(0);
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        width: 14px;
+        height: 14px;
+        background-color: var(--color-sub);
+        border-radius: 50%;
+        transition: transform ease-out 0.2s;
+      }
+    }
+  }
+
+  // checked
+  > input {
+    &:checked {
+      + .radio-inner {
+        border-color: var(--color-sub);
+        color: var(--color-sub);
+        > i {
+          border-color: var(--color-sub);
+          &::after {
+            transform: scale(1);
+          }
+        }
+      }
+    }
+  }
+}

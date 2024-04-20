@@ -1,0 +1,70 @@
+<% 
+const head = {
+  title: common.title.siid.index,
+  disc: common.disc.siid.index,
+  theme: "theme-siid"
+};
+
+const header = {
+  contact: {
+    href: "/counseling/",
+    text: "お申し込み"
+  }
+};
+
+const hero = {
+  title: "COUNSELING",
+  sub: "お申し込み",
+};
+
+%>
+
+<%- include('../modules/meta/_head.html', head) %>
+<%- include('../modules/layout/_header.html', {header: header}) %>
+
+<%- include('../modules/components/_sub-hero.html', {hero: hero}) %>
+
+<main>
+
+  <div class="application">
+    
+
+
+    <label class="radio">
+      <input name="course" type="radio">
+      <span class="radio-inner"><i></i>Basic</span>
+    </label>
+    
+    <br>
+
+    <label class="radio">
+      <input name="course" type="radio">
+      <span class="radio-inner"><i></i>Career</span>
+    </label>
+
+    <br>
+
+    <label class="radio">
+      <input name="course" type="radio">
+      <span class="radio-inner"><i></i>決まっていない</span>
+    </label>
+
+  </div>
+
+  <div class="jicoo">
+    <p>
+      弊社BugFixへのお問い合わせは<br class="jicoo-spbr">こちらのフォームから承っております。<br>
+      お仕事、イベント事、その他のお問い合わせ<br class="jicoo-spbr">についてもお気軽にご連絡ください。<br>
+      送信から3営業日以内を目安に<br class="jicoo-spbr">ご返信させていただきます。
+    </p>
+
+    <!-- Jicoo widget begin -->
+    <div class="jicoo-widget" data-url="https://www.jicoo.com/forms/i8tYisJ3LJYA/widget"></div>
+    <script type="text/javascript" src="https://www.jicoo.com/widget/event_type.js" async></script>
+    <!-- Jicoo widget end -->
+  </div>
+</main>
+
+<%- include('../modules/layout/_footer.html', {modifier: ""}) %>
+
+<%- include('../modules/meta/_foot.html') %>
