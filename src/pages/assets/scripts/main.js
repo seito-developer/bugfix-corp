@@ -1,5 +1,5 @@
 import nav from "./modules/nav";
-import modal from "./modules/modal";
+import { scrollAnimation } from "./modules/scrollAnimation";
 
 nav();
-modal();
+scrollAnimation();

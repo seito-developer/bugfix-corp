@@ -1,6 +1,12 @@
 <% const head = { title: common.title.law, disc: common.disc.law, theme:
 "" }; const header = { contact: { href: "/contact/", text: "CONTACT" } }; const hero = {
-title: "LOW", sub: "特定商取引法に基づく表示", modifier: "sub-hero-long" }; %>
+title: "LOW", sub: "特定商取引法に基づく表示", modifier: "sub-hero-long" }; 
+const contact = {
+  headline: "お問い合わせはこちら",
+  href: "/contact/",
+  text: "CONTACT"
+};
+%>
 <%- include('../modules/meta/_head.html', head) %> <%-
 include('../modules/layout/_header.html', {header: header}) %> <%-
 include('../modules/components/_sub-hero.html', {hero: hero}) %>
@@ -61,6 +67,8 @@ include('../modules/components/_sub-hero.html', {hero: hero}) %>
     </dl>
     <p><time datetime="2022-">2022年11月01日 制定</time></p>
   </div>
+
+  <%- include('../modules/components/_contact.html', {contact: contact}) %>
 </main>
 
 <%- include('../modules/layout/_footer.html', {modifier: "footer-has-contact"})

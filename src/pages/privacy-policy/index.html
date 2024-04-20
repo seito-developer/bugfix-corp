@@ -1,7 +1,15 @@
 <% const head = { title: common.title.privacyPolicy, disc: common.disc.privacyPolicy, theme:
 "" }; const header = { contact: { href: "/contact/", text: "CONTACT" } }; const hero = {
 title: "Privacy Policy", sub: "プライバシーポリシー", modifier: "sub-hero-long"
-}; %> <%- include('../modules/meta/_head.html', head) %> <%-
+}; 
+
+const contact = {
+  headline: "お問い合わせはこちら",
+  href: "/contact/",
+  text: "CONTACT"
+};
+
+%> <%- include('../modules/meta/_head.html', head) %> <%-
 include('../modules/layout/_header.html', {header: header}) %> <%-
 include('../modules/components/_sub-hero.html', {hero: hero}) %>
 
@@ -87,6 +95,8 @@ include('../modules/components/_sub-hero.html', {hero: hero}) %>
     </address>
     <p><time datetime="2022-11-01">2022年11月01日 制定</time></p>
   </div>
+
+  <%- include('../modules/components/_contact.html', {contact: contact}) %>
 </main>
 
 <%- include('../modules/layout/_footer.html', {modifier: "footer-has-contact"})
