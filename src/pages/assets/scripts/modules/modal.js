@@ -10,6 +10,11 @@ const modal = () => {
       const inputs = $modalTrigger.querySelectorAll('input');
       inputs.forEach(input => {
           console.log(`Name: ${input.name}, Value: ${input.value}`);
+          if(input.name === "workImg"){
+            $modal.querySelector(`*[name=${input.name}]`).setAttribute("src", input.value);
+          } else {
+            $modal.querySelector(`*[name=${input.name}]`).innerHTML = input.value;
+          }
       });
   });
 

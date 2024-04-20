@@ -4,11 +4,7 @@
       <%- include('../modules/components/_headline-small.html', { 
         title: "卒業生の実績",
         modifier: false,
-        link: {
-          modifier: "",
-          href: "",
-          text: "MORE"
-        }
+        link: false
       }) %>
     </div>
   </div>
@@ -23,7 +19,8 @@
           headline: workItem.headline, 
           author: workItem.author,
           course: workItem.course,
-          desc: workItem.desc }) %>
+          desc: workItem.desc,
+          tech: workItem.tech }) %>
       </li>
       <% }) %>
     </ul>

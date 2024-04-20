@@ -2,11 +2,18 @@
   <aside class="modal-inner">
     <button class="modal-close js-modal-close-trigger" type="button"></button>
     <div class="modal-contents">
-      <img class="modal-img" src="https://dummyimage.com/956x556/000/fff" alt="">
+      <div class="modal-img">
+        <img name="workImg" src="/images/dummy.png" width="724" height="420" alt="">
+      </div>
       <dl class="modal-data">
-        <dt></dt>
-        <dd></dd>
-        <dd></dd>
+        <dt name="workHeadline"></dt>
+        <dd>
+          <b>制作者： </b><span name="workAuthor"></span>
+          (<span name="workCourse"></span>)
+          <br>
+          <b>使用技術： </b><span name="workTech"></span>
+        </dd>
+        <dd name="workDesc"></dd>
       </dl>
     </div>
   </aside>

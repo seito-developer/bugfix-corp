@@ -71,14 +71,17 @@
     overflow: scroll;
     height: 600px;
     border-radius: fn.fs(8px);
+    text-align: center;
   }
   .modal-img {
-    display: block;
-    width: 100%;
-    height: auto;
+    display: inline-block;
+    border: 1px solid #eee;
     border-radius: fn.fs(8px);
+    overflow: hidden;
+    text-align: center;
   }
   .modal-data {
+    text-align: left;
     color: var(--color-main);
     > dt {
       font-size: fn.fs(24px);
@@ -110,7 +113,15 @@
       width: 90%;
     }
     .modal-contents {
-      height: 500px;
+      height: auto;
+      max-height: 90vh;
+    }
+    .modal-img {
+      width: 100%;
+      > img {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }
