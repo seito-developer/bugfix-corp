@@ -18,6 +18,12 @@ const hero = {
   disc: "あなたに最適なコースをご提案します"
 };
 
+const contact = {
+  headline: "お申し込みはこちら",
+  href: "/siid/counseling/",
+  text: "お申し込み・個別相談会へ"
+};
+
 %>
 
 <%- include('../modules/meta/_head.html', head) %>
@@ -36,121 +42,128 @@ const hero = {
     </p>
   </div>
 
-  <dl class="tuition">
+  <section class="tuition">
+    <h1 class="tuition-header">
+      <span>Basicコース</span>
+      <span>Careerコース</span>
+    </h1>
+    <dl class="tuition-inner">
 
+      <!-- goal -->
+      <dt>目標とするゴール</dt>
+      <dd>
+        <ul>
+          <li>簡単なWebサイトが作成できる</li>
+          <li>初級レベルのプログラミング問題が解ける</li>
+          <li>仕事で技術的なコミュニケーションがとれる</li>
+        </ul>
+      </dd>
+      <dd>
+        <ul>
+          <li>Web/ITエンジニア職に内定する</li>
+          <li>オリジナルのアプリケーションを完成させる</li>
+          <li>ITビジネスパーソンとして十分なコミュニケーションスキルを習得する</li>
+        </ul>
+      </dd>
 
-    <!-- goal -->
-    <dt>目標とするゴール</dt>
-    <dd>
-      <ul>
-        <li>簡単なWebサイトが作成できる</li>
-        <li>初級レベルのプログラミング問題が解ける</li>
-        <li>仕事で技術的なコミュニケーションがとれる</li>
-      </ul>
-    </dd>
-    <dd>
-      <ul>
-        <li>Web/ITエンジニア職に内定する</li>
-        <li>オリジナルのアプリケーションを完成させる</li>
-        <li>ITビジネスパーソンとして十分なコミュニケーションスキルを習得する</li>
-      </ul>
-    </dd>
+      <!-- person -->
+      <dt>こんな人にオススメ</dt>
+      <dd>
+        <ul>
+          <li>気軽にプログラミングを始めてみたい</li>
+          <li>ITスキルを仕事に活かしたい</li>
+        </ul>
+      </dd>
+      <dd>
+        <ul>
+          <li>Web/ITエンジニア職、またはそれに準ずる職種にキャリアチェンジしたい</li>
+          <li>1人では挫折しそうなのでメンターや仲間がほしい</li>
+        </ul>
+      </dd>
 
-    <!-- person -->
-    <dt>こんな人にオススメ</dt>
-    <dd>
-      <ul>
-        <li>気軽にプログラミングを始めてみたい</li>
-        <li>ITスキルを仕事に活かしたい</li>
-      </ul>
-    </dd>
-    <dd>
-      <ul>
-        <li>Web/ITエンジニア職、またはそれに準ずる職種にキャリアチェンジしたい</li>
-        <li>1人では挫折しそうなのでメンターや仲間がほしい</li>
-      </ul>
-    </dd>
+      <!-- 学習スタイル -->
+      <dt>課題の内容</dt>
+      <dd>
+        <ul>
+          <li>カジュアル</li>
+          <li>ペーパーテスト</li>
+          <li>コーディング演習</li>
+          <li>グループワーク</li>
+        </ul>
+      </dd>
+      <dd>
+        <ul>
+          <li>ストイック</li>
+          <li>ペーパーテスト</li>
+          <li>コーディング演習</li>
+          <li>グループワーク</li>
+          <li>アプリケーション開発・企画</li>
+          <li>コミュニケーション力やリーダシップを求めるもの</li>
+        </ul>
+      </dd>
 
-    <!-- 学習スタイル -->
-    <dt>課題の内容</dt>
-    <dd>
-      <ul>
-        <li>カジュアル</li>
-        <li>ペーパーテスト</li>
-        <li>コーディング演習</li>
-        <li>グループワーク</li>
-      </ul>
-    </dd>
-    <dd>
-      <ul>
-        <li>ストイック</li>
-        <li>ペーパーテスト</li>
-        <li>コーディング演習</li>
-        <li>グループワーク</li>
-        <li>アプリケーション開発・企画</li>
-        <li>コミュニケーション力やリーダシップを求めるもの</li>
-      </ul>
-    </dd>
+      <!-- サポート範囲 -->
+      <dt>学習範囲</dt>
+      <dd>
+        <ul>
+          <li>学習方法・課題解決力</li>
+          <li>HTML, CSS, JavaScript/ES6, SQL</li>
+          <li>Git, ChatGPT, CLI, DevTool</li>
+          <li>コンピューターサイエンス</li>
+          <li>(Option) Node.js, Firebase</li>
+        </ul>
+      </dd>
+      <dd>
+        <ul>
+          <li>学習方法・課題解決力</li>
+          <li>HTML, CSS, JavaScript/ES6, Node.js, PHP/Laravel, MySQL</li>
+          <li>Git, ChatGPT, CLI, DevTool</li>
+          <li>コンピューターサイエンス</li>
+          <li>オリジナルのアプリケーション開発</li>
+          <li>転職支援</li>
+          <li>その他ソフトスキル</li>
+          <li>(Option) Docker, TypeScript, React, Python</li>
+        </ul>
+      </dd>
 
-    <!-- サポート範囲 -->
-    <dt>学習範囲</dt>
-    <dd>
-      <ul>
-        <li>学習方法・課題解決力</li>
-        <li>HTML, CSS, JavaScript/ES6, SQL</li>
-        <li>Git, ChatGPT, CLI, DevTool</li>
-        <li>コンピューターサイエンス</li>
-        <li>(Option) Node.js, Firebase</li>
-      </ul>
-    </dd>
-    <dd>
-      <ul>
-        <li>学習方法・課題解決力</li>
-        <li>HTML, CSS, JavaScript/ES6, Node.js, PHP/Laravel, MySQL</li>
-        <li>Git, ChatGPT, CLI, DevTool, Docker</li>
-        <li>コンピューターサイエンス</li>
-        <li>オリジナルのアプリケーション開発</li>
-        <li>転職支援</li>
-        <li>その他ソフトスキル</li>
-        <li>(Option) TypeScript, React, Python</li>
-      </ul>
-    </dd>
+      <!-- 実施内容 -->
+      <dt>実施内容</dt>
+      <dd>
+        <ul>
+          <li>1on1: 月次</li>
+          <li>個別コンサル: 初回のみ</li>
+          <li>グループワーク: 適時</li>
+          <li>チャット: 24h質問・相談OK</li>
+        </ul>
+      </dd>
+      <dd>
+        <ul>
+          <li>1on1: 週次</li>
+          <li>個別コンサル: 初回 + 適時</li>
+          <li>グループワーク: 適時</li>
+          <li>チャット: 24h質問・相談OK</li>
+        </ul>
+      </dd>
 
-    <!-- 実施内容 -->
-    <dt>実施内容</dt>
-    <dd>
-      <ul>
-        <li>1on1: 月次</li>
-        <li>個別コンサル: 初回のみ</li>
-        <li>グループワーク: 適時</li>
-        <li>チャット: 24h質問・相談OK</li>
-      </ul>
-    </dd>
-    <dd>
-      <ul>
-        <li>1on1: 週次</li>
-        <li>個別コンサル: 初回 + 適時</li>
-        <li>グループワーク: 適時</li>
-        <li>チャット: 24h質問・相談OK</li>
-      </ul>
-    </dd>
+      <!-- 期間-->
+      <dt>学習期間</dt>
+      <dd>最短3ヶ月　〜　最長6ヶ月</dd>
+      <dd>最短6ヶ月　〜　最長18ヶ月</dd>
 
-    <!-- 期間-->
-    <dt>学習期間</dt>
-    <dd>最短3ヶ月　〜　最長6ヶ月</dd>
-    <dd>最短6ヶ月　〜　最長18ヶ月</dd>
+      <!-- tuition -->
+      <dt>受講料</dt>
+      <dd>
+        400,000円（税込）
+      </dd>
+      <dd>
+        400,000円（税込）
+      </dd>
+    </dl>
+  </section>
 
-    <!-- tuition -->
-    <dt>受講料</dt>
-    <dd>
-      400,000円（税込）
-    </dd>
-    <dd>
-      400,000円（税込）
-    </dd>
-  </dl>
+  <%- include('../modules/components/_contact.html', {contact: contact}) %>
 </main>
 
-<%- include('../modules/layout/_footer.html', {modifier: ""}) %>
+<%- include('../modules/layout/_footer.html', {modifier: "footer-has-contact"}) %>
 
 <%- include('../modules/meta/_foot.html') %>
