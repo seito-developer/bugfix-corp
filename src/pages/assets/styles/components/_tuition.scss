@@ -78,7 +78,7 @@
       }
       ul {
         display: inline-block;
-        text-align-last: left;
+        text-align: left;
       }
     }
 
@@ -106,78 +106,39 @@
       }
     }
   }
-
-  // modifier
-  &.tuition-ver1 {
-    @media screen and (max-width: cn.$bp-lg){
-      margin: 0 fn.vw(20px) fn.vw(80px);
-      display: grid;
-      grid-template-columns: repeat(11, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-      justify-items: stretch;
-      justify-content: start;
-      .tuition-header {
-        display: block;
-        grid-column: 1 / 2;
-        grid-row: 1 / 4;
-        font-size: fn.fs(18px);
-        padding-top: 20px;
+  @media screen and (max-width: cn.$bp-lg){
+    .tuition-header-inner {
+      font-size: fn.fs(20px);
+    }
+    .tuition-body-inner {
+      grid-template-columns: repeat(2, minmax(50%, 1fr));
+      > dt {
+        font-size: fn.fs(16px);
+        padding: fn.vw(40px) 0;
       }
-      .tuition-header-inner {
-        grid-template-columns: 1fr;
-        > span {
-          &:nth-child(1){
-            display: block;
-          }
+      > dd {
+        font-size: fn.fs(12px);
+        padding: fn.vw(40px) fn.vw(30px);
+        &:nth-of-type(odd),
+        &:nth-of-type(even){
+          text-align: left;
         }
       }
-      .tuition-body {
-        grid-column: 2 / 12;
-        grid-row: 1 / 4;
-      }
-      .tuition-body-inner {
-        display: grid;
-        grid-auto-flow: column;
-        grid-template-columns: repeat(7, minmax(50vw,1fr));
-        grid-template-rows: repeat(3, 1fr);
-        // grid-auto-rows: minmax(50px, 20vw);
-        // grid-auto-columns: minmax(160px, 20vw);
-        overflow-x: auto;
-        background: #fff;
-        > dt {
-          grid-column: auto;
-          font-size: fn.fs(16px);
+      ul {
+        li {
+          padding-left: .95em;
+          line-height: 1.5;
+          margin-bottom: .5em;
+          &:last-child {
+            margin-bottom: 0;
+          }
           &::after {
-            display: none;
-          }
-          &:nth-of-type(7){
-            grid-column: 8 / 11;
-          }
-        }
-        > dd {
-          font-size: fn.fs(12px);
-          &:nth-of-type(13){
-            grid-column: 8 / 11;
-            // grid-column: 1 / 1;
-            // grid-row: 1 / 1;
-          }
-          &:nth-of-type(14){
-            grid-column: 8 / 11;
-            // grid-column: 1 / 1;
-            // grid-row: 1 / 1;
+            top: 0.5em;
           }
         }
         ul {
-          // display: none !important;
-          li {
-            padding-left: 1.25em;
-          }
+          padding-left: 0.25em;
         }
-      }
-      .tuition-price {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr;
       }
     }
   }
