@@ -3,15 +3,15 @@
 @use "../mixins" as mixin;
 
 .tuition {
-  // padding: 0 fn.vw(120px);
   margin: 0 fn.vw(20px) fn.vw(120px);
   box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   border-radius: fn.vw(16px) fn.vw(8px) 0 0;
 
-  .tuition-header {
+  // .tuition-header {}
+  .tuition-header-inner {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     overflow: hidden;
     > span {
@@ -19,49 +19,36 @@
       text-align: center;
       padding: fn.vw(40px) 0;
       &:nth-child(1){
-        // background: #fff;
-        // color: var(--color-main);
+        display: none;
+      }
+      &:nth-child(2){
         background: var(--color-sub);
         color: #fff;
       }
-      &:nth-child(2){
+      &:nth-child(3){
         background: var(--color-core);
         color: #fff;
-        // background: var(--color-base);
       }
     }
   }
-
-  .tuition-inner {
+  // .tuition-body {}
+  .tuition-body-inner {
     background: #fff;
-    // .tuition-inner {
-    //   padding: 0 fn.vw(120px);
-    //   margin: fn.vw(80px) 0;
-    // }
     display: grid;
-    grid-template-columns: 1fr 1fr;
-      // grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto; /* 行の高さを自動で設定 */
     > dt {
-      grid-column: 1 / 4;
+      grid-column: 1 / -1;
       font-size: fn.fs(24px);
       font-weight: bold;
-      width: 100%;
-      // background: var(--color-core);
-      // background: var(--color-core);
-      // background: #eee;
       background: var(--color-gray);
       text-align: center;
-      // color: #fff;
-      // color: var(--color-main);
-      // color: var(--color-main);
       padding: fn.vw(20px) 0;
       position: relative;
       &::after {
         content: "";
         display: block;
         border: fn.vw(40px) solid transparent;
-        // border-top: fn.vw(35px) solid var(--color-sub);
-        // border-top: fn.vw(35px) solid var(--color-core);
         border-top: fn.vw(35px) solid var(--color-gray);
         position: absolute;
         z-index: 3;
@@ -76,6 +63,7 @@
       }
     }
     > dd {
+      grid-column: auto; /* ddを自動で各列に配置 */
       font-size: fn.fs(18px);
       padding: fn.vw(20px);
       text-align: center;
@@ -117,81 +105,80 @@
         padding-left: 1.25em;
       }
     }
+  }
 
-
-    // }
-    // .application-selection {
-    //   display: grid;
-    //   grid-template-columns: 1fr 1fr 1fr;
-    //   grid-template-rows: 1fr 1fr;
-    //   grid-gap: 0 fn.vw(20px);
-    //   padding: 0 fn.vw(80px);
-    //   > dt {
-    //     grid-row: 1 / 2;
-    //     grid-column: 1 / 4;
-    //     text-align: center;
-    //     margin-bottom: fn.vw(40px);
-    //     font-size: fn.fs(18px);
-    //   }
-    //   > dd {
-    //     grid-row: 2 / 2;
-    //   }
-    // }
-    // .application-body {
-    //   padding: 0 fn.vw(120px) fn.vw(120px);
-    // }
-    // .application-form {
-    //   position: relative;
-    //   height: 0;
-    //   overflow: hidden;
-
-    //   // active
-    //   &:has(.is-active){
-    //     height: auto;
-    //   }
-    // }
-    // .application-form-item {
-    //   visibility: hidden;
-    //   position: absolute;
-    //   left: 0;
-    //   top: 0;
-    //   width: 100%;
-    //   &:nth-child(1){
-    //     position: relative;
-    //   }
-      
-    //   // active
-    //   &.is-active {
-    //     visibility: visible;
-    //   }
-    // }
-
-    // .application-spbr {
-    //   display: none;
-    // }
-
-    // @media screen and (max-width: cn.$bp-sm){
-    //   .application-header {
-    //     padding: 0 fn.vw(40px);
-    //   }
-    //   .application-selection {
-    //     padding: 0;
-    //     display: block;
-    //     > dt {
-    //       font-size: fn.fs(16px);
-    //       margin-bottom: fn.vw(80px);
-    //     }
-    //     > dd {
-    //       margin-top: fn.vw(20px);
-    //     }
-    //   }
-    //   .application-spbr {
-    //     display: block;
-    //   }
-    //   .application-body {
-    //     padding-right: fn.vw(40px);
-    //     padding-left: fn.vw(40px);
-    //   }
-    // }
+  // modifier
+  &.tuition-ver1 {
+    @media screen and (max-width: cn.$bp-lg){
+      margin: 0 fn.vw(20px) fn.vw(80px);
+      display: grid;
+      grid-template-columns: repeat(11, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      justify-items: stretch;
+      justify-content: start;
+      .tuition-header {
+        display: block;
+        grid-column: 1 / 2;
+        grid-row: 1 / 4;
+        font-size: fn.fs(18px);
+        padding-top: 20px;
+      }
+      .tuition-header-inner {
+        grid-template-columns: 1fr;
+        > span {
+          &:nth-child(1){
+            display: block;
+          }
+        }
+      }
+      .tuition-body {
+        grid-column: 2 / 12;
+        grid-row: 1 / 4;
+      }
+      .tuition-body-inner {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: repeat(7, minmax(50vw,1fr));
+        grid-template-rows: repeat(3, 1fr);
+        // grid-auto-rows: minmax(50px, 20vw);
+        // grid-auto-columns: minmax(160px, 20vw);
+        overflow-x: auto;
+        background: #fff;
+        > dt {
+          grid-column: auto;
+          font-size: fn.fs(16px);
+          &::after {
+            display: none;
+          }
+          &:nth-of-type(7){
+            grid-column: 8 / 11;
+          }
+        }
+        > dd {
+          font-size: fn.fs(12px);
+          &:nth-of-type(13){
+            grid-column: 8 / 11;
+            // grid-column: 1 / 1;
+            // grid-row: 1 / 1;
+          }
+          &:nth-of-type(14){
+            grid-column: 8 / 11;
+            // grid-column: 1 / 1;
+            // grid-row: 1 / 1;
+          }
+        }
+        ul {
+          // display: none !important;
+          li {
+            padding-left: 1.25em;
+          }
+        }
+      }
+      .tuition-price {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+      }
+    }
   }
 }
