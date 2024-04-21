@@ -23,6 +23,12 @@ body {
   font-weight: 300;
   background: var(--color-base);
   letter-spacing: .05em;
+  -webkit-tap-highlight-color: var(--color-base);
+}
+
+::selection{
+  background: var(--color-main);
+  color: #fff;
 }
 
 ul, ol, li {

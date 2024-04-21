@@ -12,4 +12,15 @@
       </li>
     <% } %>
   </ul>
+  
+  <% if(course.button) { %>
+    <div class="course-footer">
+      <%- include('../modules/components/_link.html', {
+        modifier: course.button.modifier,
+        href: course.button.href,
+        text: course.button.text
+      }
+      ) %>
+    </div>
+  <% } %>
 </section>

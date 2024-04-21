@@ -19,7 +19,7 @@ export default defineConfig({
           basic: resolve(__dirname, 'siid/basic/index.html'),
           career: resolve(__dirname, 'siid/career/index.html'),
           counseling: resolve(__dirname, 'siid/siid/counseling/index.html'),
-          price: resolve(__dirname, 'siid/price/index.html'),
+          tuition: resolve(__dirname, 'siid/tuition/index.html'),
         },
         contact: 'contact/index.html',
         privacyPolicy: 'privacy-policy/index.html',
