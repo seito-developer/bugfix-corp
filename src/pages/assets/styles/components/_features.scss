@@ -11,7 +11,7 @@
   position: relative;
   overflow: hidden;
   .features-container {
-    > p {
+    p {
       font-size: fn.vw(24px);
       line-height: 1.5;
       letter-spacing: .25em;
@@ -28,6 +28,13 @@
       &:last-child {
         margin-bottom: 0;
       }
+    }
+  }
+  .features-bottom {
+    margin-top: fn.vw(80px);
+    text-align: center;
+    p:last-of-type {
+      margin-bottom: 0;
     }
   }
   

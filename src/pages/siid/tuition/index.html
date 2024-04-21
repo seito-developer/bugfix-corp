@@ -24,6 +24,52 @@ const contact = {
   text: "お申し込み・個別相談会へ"
 };
 
+const features = {
+  disc: `<strong>「自分はどれくらい勉強すればいいの？」</strong>と疑問に思われるかもしれません。<br>
+  プログラミング学習の期間は、皆さんの現時点での能力、目標とするゴール、普段の学習時間などによってさまざまに変化します。下記はその一例です。`,
+  contents: [
+    {
+      img: {
+        url: "/images/case-1.png",
+        width: "301",
+        height: "200"
+      },
+      title: "Case 1: カジュアルに始めて、ITを理解したい",
+      disc: [
+        "現在のスキル： PC歴5年。仕事でPCはよく使う。",
+        "学習時間： 平日は通勤中に1.0時間、休日に6.0時間まとめて勉強。",
+        "<strong>最適プラン： Basicコース（3ヶ月）</strong>",
+      ]
+    }, {
+      img: {
+        url: "/images/case-2.png",
+        width: "233",
+        height: "194"
+      },
+      title: "Case 2: 仕事を辞め、短期間で転職を目指す",
+      disc: [
+        "現在のスキル： PC歴3年、MSO製品は一通り操作できる",
+        "学習時間： 毎日8.0時間。プログラミング学習にフルコミット。",
+        "<strong>最適プラン： Careerコース（8ヶ月）</strong>",
+      ]
+    }, {
+      img: {
+        url: "/images/case-3.png",
+        width: "210",
+        height: "234"
+      },
+      title: "Case 3: 非IT職。家庭と両立しながら転職を目指す",
+      disc: [
+        "現在のスキル： PC操作は不得意",
+        "学習時間： 平日は仕事終わりに1.5時間、休日は3.0時間ずつ。",
+        "<strong>最適プラン： Careerコース(18ヶ月)</strong>",
+      ]
+    }
+  ],
+  bottom: `SiiDでは皆さんのご状況を伺い、どのような計画が最適かご提案します。<br>ぜひ個別相談にお申し込みください。<br>
+  <small>※Basicから始め、途中でCareerコースに切り替えるなども可能です。</small>`
+};
+
 %>
 
 <%- include('../modules/meta/_head.html', head) %>
@@ -205,14 +251,15 @@ const contact = {
       <dt>
         受講料
         <span>
-          ※銀行振込 or クレジットカード支払い可<br>
-          ※クレジットカード支払いの場合は手数料分が上乗せされます</span>
+          ※銀行振込 or クレジットカード支払い可。<br>
+          ※クレジットカード支払いの場合は手数料分が上乗せされます。
+        </span>
       </dt>
       <dd>
         <dl class="price">
           <dt>3ヶ月プラン</dt>
           <dd>
-            分割月々<em>24,085</em>円（税込）〜 ✕ 4回
+            分割月々<em>24,085</em>円（税込） ✕ 4回
           </dd>
           <dd>
             一括料金<em>92,500</em>円（税込）
@@ -221,7 +268,7 @@ const contact = {
         <dl class="price">
           <dt>6ヶ月プラン</dt>
           <dd>
-            分割月々<em>19,072</em>円（税込）〜 ✕ 8回
+            分割月々<em>19,072</em>円（税込） ✕ 8回
           </dd>
           <dd>
             一括料金<em>146,500</em>円（税込）
@@ -232,16 +279,16 @@ const contact = {
         <dl class="price">
           <dt>8ヶ月プラン</dt>
           <dd>
-            分割月々<em>28,338</em>円（税込）〜 （12回の場合）
+            分割月々<em>28,338</em>円（税込） ✕ 12回
           </dd>
           <dd>
-            一括料金<em>340,056</em>円（税込）
+            一括料金<em>326,507</em>円（税込）
           </dd>
         </dl>
         <dl class="price">
           <dt>12ヶ月プラン</dt>
           <dd>
-            分割月々<em>30,416</em>円（税込）〜 （16回の場合）
+            分割月々<em>30,416</em>円（税込） ✕ 16回
           </dd>
           <dd>
             一括料金<em>467,260</em>円（税込）
@@ -250,15 +297,94 @@ const contact = {
         <dl class="price">
           <dt>18ヶ月プラン</dt>
           <dd>
-            分割月々<em>31,245</em>円（税込）〜 （20回の場合）
+            分割月々<em>35,327</em>円（税込） ✕ 20回
           </dd>
           <dd>
-            一括料金<em>600,000</em>円（税込）
+            一括料金<em>678,390</em>円（税込）
           </dd>
         </dl>
       </dd>
     </dl>
   </section>
+
+  <div class="u-mb-60">
+    <%- include('../modules/components/_headline.html', {modifier: "headline-primary headline-medium", main: "Discount", sub: "割引キャンペーン"}) %>
+  </div>
+  <section class="tuition">
+    <h1 class="tuition-header">
+      <span>Basicコース</span>
+      <span>Careerコース</span>
+    </h1>
+    <dl class="tuition-inner">
+
+      <!-- Discount -->
+      <dt>
+        リニューアルキャンペーン（6期生）
+        <span>
+          <em>2024年5月24日まで</em>にお申し込みの方に限り、下記の割引が適応されます。<br>
+        </span>
+      </dt>
+      <dd>
+        <p class="u-center"><strong>総額から<em>5% ~ 10%</em> OFF</strong></p>
+        <dl class="price">
+          <dt>3ヶ月プラン (5% OFF)</dt>
+          <dd>
+            分割月々<del>24,085円</del><em>22,880</em>円（税込） ✕ 4回
+          </dd>
+          <dd>
+            一括料金<del>90,000円</del><em>87,875</em>円（税込）
+          </dd>
+        </dl>
+        <dl class="price">
+          <dt>6ヶ月プラン (10% OFF)</dt>
+          <dd>
+            分割月々<del>22,880円</del><em>19,072</em>円（税込） ✕ 8回
+          </dd>
+          <dd>
+            一括料金<del>146,500円</del><em>131,850</em>円（税込）
+          </dd>
+        </dl>
+      </dd>
+      <dd>
+        <p class="u-center"><strong>総額から<em>35% ~ 45%</em> OFF</strong></p>
+        <dl class="price">
+          <dt>8ヶ月プラン (35% OFF)</dt>
+          <dd>
+            分割月々<del>28,338円</del><em>18,420</em>円（税込） ✕ 12回
+          </dd>
+          <dd>
+            一括料金<del>326,507円</del><em>212,229</em>円（税込）
+          </dd>
+        </dl>
+        <dl class="price">
+          <dt>12ヶ月プラン (40% OFF)</dt>
+          <dd>
+            分割月々<del>30,416円</del><em>18,249</em>円（税込） ✕ 16回
+          </dd>
+          <dd>
+            一括料金<del>467,260円</del><em>280,356</em>円（税込）
+          </dd>
+        </dl>
+        <dl class="price">
+          <dt>18ヶ月プラン (45% OFF)</dt>
+          <dd>
+            分割月々<del>35,327円</del><em>19,430</em>円（税込） ✕ 20回
+          </dd>
+          <dd>
+            一括料金<del>678,390円</del><em>373,115</em>円（税込）
+          </dd>
+        </dl>
+      </dd>
+    </dl>
+  </section>
+
+  <div class="u-mb-60">
+    <%- include('../modules/components/_headline.html', {modifier: "headline-primary headline-medium", main: "Study Plan", sub: "あなたに最適な学習プラン"}) %>
+  </div>
+
+  <div class="u-mb-120">
+    <%- include('../modules/components/_features.html', {features: features}) %>
+  </div>
 
   <%- include('../modules/components/_contact.html', {contact: contact}) %>
 </main>

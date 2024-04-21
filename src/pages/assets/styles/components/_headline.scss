@@ -25,6 +25,7 @@
     }
     &:nth-of-type(1) {
       font-size: fn.fs(120px);
+      padding: .1em 0;
       margin-bottom: fn.fs(30px);
       text-shadow: 0px fn.fs(4px) fn.fs(4px) rgba(0, 0, 0, 0.25);
       @include mixin.font-maven(600);
@@ -44,6 +45,14 @@
     > span {
       &::after {
         background: var(--color-main);
+      }
+    }
+  }
+  &.headline-medium {
+    > span {
+      &:nth-of-type(1) {
+        font-size: fn.fs(80px);
+        margin-bottom: fn.fs(20px);
       }
     }
   }
