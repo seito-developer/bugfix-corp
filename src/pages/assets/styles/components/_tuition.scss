@@ -69,10 +69,16 @@
         left: 50%;
         margin-left: fn.vw(-40px);
       }
+      span {
+        display: block;
+        font-weight: normal;
+        font-size: fn.fs(12px);
+      }
     }
     > dd {
       font-size: fn.fs(18px);
       padding: fn.vw(20px);
+      text-align: center;
       &:nth-of-type(odd){
         text-align: right;
         border-right: 1px solid var(--color-gray);
@@ -81,6 +87,34 @@
         // background: var(--color-base);
         text-align: left;
         border-left: 1px solid var(--color-gray);
+      }
+      ul {
+        display: inline-block;
+        text-align-last: left;
+      }
+    }
+
+    ul {
+      li {
+        position: relative;
+        line-height: 2;
+        padding-left: 1.25em;
+        &::after {
+          content: "";
+          display: block;
+          width: 0.5em;
+          height: 0.5em;
+          border-radius: 50%;
+          background: var(--color-main);
+          position: absolute;
+          left: 0;
+          top: .8em;
+        }
+      }
+      ul, p {
+        margin: 0;
+        display: block;
+        padding-left: 1.25em;
       }
     }
 
