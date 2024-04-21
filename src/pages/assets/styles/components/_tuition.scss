@@ -5,12 +5,14 @@
 .tuition {
   // padding: 0 fn.vw(120px);
   margin: 0 fn.vw(20px) fn.vw(120px);
+  box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  border-radius: fn.vw(16px) fn.vw(8px) 0 0;
 
   .tuition-header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    border-radius: fn.vw(16px) fn.vw(8px) 0 0;
     overflow: hidden;
     > span {
       display: block;
