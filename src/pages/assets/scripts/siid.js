@@ -4,5 +4,4 @@ import modal from "./modules/modal";
 
 hero();
 stream();
-showcase();
 modal();
