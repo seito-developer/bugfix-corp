@@ -1,25 +1,28 @@
-import { resolve } from 'path'
-import {defineConfig} from "vite";
+import { defineConfig, loadEnv } from 'vite'
+import { networkInterfaces } from 'os'
 import {ViteEjsPlugin} from "vite-plugin-ejs";
 import { mainData } from "./src/data/mainData";
+import VitePluginBrowserSync from 'vite-plugin-browser-sync'
 
+// https://ja.vitejs.dev/guide/build.html
+const ip = Object.values(networkInterfaces()).flat().find((i) => i.family === 'IPv4' && !i.internal)?.address
+const root = 'src/pages';
 export default defineConfig({
-  root: 'src/pages',
+  root: root,
   publicDir: '../../public',
   build: {
     outDir: '../../dist',
     emptyOutDir: true,
     publicDir: '../public',
     rollupOptions: {
-      
       input: {
-        main: resolve(__dirname, 'index.html'),
+        main: 'index.html',
         siid: {
-          "": resolve(__dirname, 'siid/index.html'),
-          basic: resolve(__dirname, 'siid/basic/index.html'),
-          career: resolve(__dirname, 'siid/career/index.html'),
-          counseling: resolve(__dirname, 'siid/siid/counseling/index.html'),
-          tuition: resolve(__dirname, 'siid/tuition/index.html'),
+          "": 'siid/index.html',
+          basic: 'siid/basic/index.html',
+          career: 'siid/career/index.html',
+          counseling: 'siid/siid/counseling/index.html',
+          tuition: 'siid/tuition/index.html',
         },
         contact: 'contact/index.html',
         privacyPolicy: 'privacy-policy/index.html',
@@ -28,6 +31,7 @@ export default defineConfig({
     }
   },
   plugins: [
+    VitePluginBrowserSync(),
     ViteEjsPlugin(mainData, {
       ejs: {
         beautify: true,
@@ -35,8 +39,8 @@ export default defineConfig({
     }),
   ],
   server: {
+    host: ip ? ip : 'localhost',
     watch: {
-      // ディレクトリの深い場所にあるファイルも監視するために、適切なパターンを設定
       ignored: ['!**/node_modules/**'],
       usePolling: true,
       depth: 10
