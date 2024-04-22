@@ -63,12 +63,10 @@
     left: 0;
     top: 0;
     width: 100%;
-    &:nth-child(1){
-      position: relative;
-    }
     
     // active
     &.is-active {
+      position: relative;
       visibility: visible;
     }
   }
@@ -96,8 +94,7 @@
       display: block;
     }
     .application-body {
-      padding-right: fn.vw(40px);
-      padding-left: fn.vw(40px);
+      padding: 0;
     }
   }
 }
