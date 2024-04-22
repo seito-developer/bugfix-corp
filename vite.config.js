@@ -20,7 +20,7 @@ const moveScript = () => {
       const document = dom.window.document;
 
       // <head>内の<script>タグを検索し、条件に合致するものを移動
-      const scripts = Array.from(document.head.querySelectorAll('script[src*="assets"]'));
+      const scripts = Array.from(document.head.querySelectorAll('script[src*="assets"][src*=".js"]'));
       scripts.forEach(script => {
         // <script>タグを<body>の終わりに移動
         document.body.appendChild(script);
