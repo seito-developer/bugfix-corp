@@ -96,11 +96,6 @@
     padding: fn.vh(20px) fn.vh(20px);
     text-align: center;
     white-space: nowrap;
-    // &::after {
-    //   width: 60%;
-    //   left: 20%;
-    //   // bottom: 10%;
-    // }
   }
 
   @media screen and (max-width: cn.$bp-sm){
@@ -153,8 +148,6 @@
     }
     .nav-children {
       padding: 0;
-      visibility: visible;
-      opacity: 1;
       position: static;
       transform: translate(0, 0);
     }
@@ -182,6 +175,10 @@
       }
       .nav-contact {
         transform: translateY(0);
+        opacity: 1;
+      }
+      .nav-children {
+        visibility: visible;
         opacity: 1;
       }
     }
