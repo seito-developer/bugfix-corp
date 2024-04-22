@@ -3,4 +3,3 @@ import { stream } from "./modules/stream";
 
 hero();
 stream();
-scrollAnimation();
