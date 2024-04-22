@@ -5,6 +5,7 @@ import { mainData } from "./src/data/mainData";
 import VitePluginBrowserSync from 'vite-plugin-browser-sync'
 import { globSync } from 'glob';
 import path from 'path';
+import { imagetools } from 'vite-imagetools'
 
 const ip = Object.values(networkInterfaces()).flat().find((i) => i.family === 'IPv4' && !i.internal)?.address
 const root = 'src/pages/';
@@ -26,6 +27,7 @@ export default defineConfig({
     }
   },
   plugins: [
+    imagetools(),
     VitePluginBrowserSync(),
     ViteEjsPlugin(mainData, {
       ejs: {
