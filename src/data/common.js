@@ -1,5 +1,6 @@
 export const common = {
-  domain: "example.com",
+  siteName: "BugFix LLC Webサイト",
+  domain: "bug-fix.org",
   title: {
     index: "BugFix LLC - テクノロジー ✕ 教育 ✕ Webマーケティング",
     contact: "お問い合わせ | BugFix LLC",
