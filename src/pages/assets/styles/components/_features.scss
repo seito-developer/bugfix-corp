@@ -49,5 +49,10 @@
         margin-bottom: fn.vw(50px);
       }
     }
+    .features-bottom {
+      > p {
+        font-size: fn.fs(12px);
+      }
+    }
   }
 }
