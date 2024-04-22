@@ -7,7 +7,8 @@
         <%- include('../modules/components/_panel.html', { 
           headline: course.courses[index].headline, 
           disc: course.courses[index].disc,
-          href: course.courses[index].href
+          href: course.courses[index].href,
+          external: course.courses[index].external
         }) %>
       </li>
     <% } %>
