@@ -1,4 +1,4 @@
-import { defineConfig, loadEnv } from 'vite'
+import { defineConfig } from 'vite'
 import { networkInterfaces } from 'os'
 import {ViteEjsPlugin} from "vite-plugin-ejs";
 import { mainData } from "./src/data/mainData";
