@@ -1,1 +1,1 @@
-(Beta version) The website for BugFix LLC
+The website for BugFix LLC
