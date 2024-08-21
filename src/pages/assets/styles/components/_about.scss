@@ -19,9 +19,14 @@
     > p {
       font-size: fn.vw(24px);
       line-height: 1.5;
-      letter-spacing: .25em;
+      letter-spacing: 0.25em;
       margin-top: 0;
       margin-bottom: fn.vw(38px);
+    }
+    small {
+      font-size: fn.vw(14px);
+      line-height: 1.25;
+      letter-spacing: 0.1em;
     }
   }
   .about-bottom {
@@ -35,8 +40,7 @@
     white-space: nowrap;
   }
 
-
-  @media screen and (max-width: cn.$bp-sm){
+  @media screen and (max-width: cn.$bp-sm) {
     padding-right: fn.vw(60px);
     padding-left: fn.vw(60px);
 
@@ -45,6 +49,9 @@
       > p {
         font-size: fn.fs(14px);
         margin-bottom: fn.vw(50px);
+      }
+      small {
+        font-size: fn.fs(12px);
       }
     }
     .about-container {
