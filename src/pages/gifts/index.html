@@ -1,0 +1,35 @@
+<% const head = { title: common.title.privacyPolicy, disc: common.disc.privacyPolicy, theme:
+"" }; const header = { contact: { href: "/contact/", text: "CONTACT" } }; const hero = {
+title: "LINE Gifts", sub: "LINEギフト", modifier: "sub-hero-long"
+}; 
+
+const contact = {
+  headline: "お問い合わせはこちら",
+  href: "/contact/",
+  text: "CONTACT"
+};
+
+%> <%- include('../modules/meta/_head.html', head) %> <%-
+include('../modules/layout/_header.html', {header: header}) %> <%-
+include('../modules/components/_sub-hero.html', {hero: hero}) %>
+
+<main>
+  <div class="docs">
+    <ul class="gifts">
+      <li class="gifts-item"><a href="/HTML,CSS,JSでおみくじアプリを作ろう.pdf" download>HTML,CSS,JSでおみくじアプリを作ろう.pdf</a></li>
+      <li class="gifts-item"><a href="/LINEギフト用・未経験者向けおすすめ就活サイト.pdf" download>LINEギフト用・未経験者向けおすすめ就活サイト.pdf</a></li>
+      <li class="gifts-item"><a href="/エンジニア転職・履歴書サンプル  ver.3.docx" download>エンジニア転職・履歴書サンプル  ver.3.docx</a></li>
+      <li class="gifts-item"><a href="/エンジニア転職・職務経歴書サンプル  ver.3.docx" download>エンジニア転職・職務経歴書サンプル  ver.3.docx</a></li>
+      <li class="gifts-item"><a href="/主要プログラミング言語22選まとめ.pdf" download>主要プログラミング言語22選まとめ.pdf</a></li>
+    </ul>
+    
+  </div>
+
+  <%- include('../modules/components/_contact.html', {contact: contact}) %>
+</main>
+
+<%- include('../modules/layout/_footer.html', {modifier: "footer-has-contact"})
+%>
+
+<script type="module" src="/assets/scripts/gifts.js"></script>
+<%- include('../modules/meta/_foot.html') %>
