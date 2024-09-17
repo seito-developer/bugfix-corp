@@ -72,6 +72,13 @@
       background: var(--color-accent-dark);
     }
   }
+  &.link-line {
+    background: var(--color-line);
+    color: #fff;
+    &::after {
+      background: var(--color-line-dark);
+    }
+  }
 
   @media screen and (max-width: cn.$bp-sm){
     padding-top: fn.vw(50px);

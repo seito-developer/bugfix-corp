@@ -1,0 +1,10 @@
+// settings
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+.container {
+  font-size: fn.fs(16px);
+  padding: fn.vw(120px);
+  text-align: center;
+}
