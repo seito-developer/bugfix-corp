@@ -1,0 +1,50 @@
+<% 
+const head = {
+  title: common.title.siid.voices,
+  disc: common.disc.siid.voices,
+  theme: "theme-siid"
+};
+
+const header = {
+  contact: {
+    href: "/siid/counseling/",
+    text: "お申し込み"
+  }
+};
+
+const hero = {
+  title: "VOICES",
+  sub: "受講生様の声"
+};
+
+%>
+
+<%- include('../modules/meta/_head.html', head) %>
+<%- include('../modules/layout/_header.html', {header: header}) %>
+
+<%- include('../modules/components/_sub-hero.html', {hero: hero}) %>
+
+<main>
+  <div class="voices">
+    <ul class="voices-list">
+      <% voices.forEach(voiceItem => { %>
+        <li>
+          <%- include('../modules/components/_voice.html', { 
+            result: voiceItem.result, 
+            name: voiceItem.name, 
+            age: voiceItem.age, 
+            img: voiceItem.img, 
+            href: voiceItem.href,
+            disc: voiceItem.disc
+          }); %>
+        </li>
+      <% }) %>
+    </ul>
+  </div>
+</main>
+
+<%- include('../modules/layout/_footer.html', {modifier: ""}) %>
+
+<script type="text/javascript" src="https://www.jicoo.com/widget/event_type.js" async></script>
+<script type="module" src="/assets/scripts/consulting.js"></script>
+<%- include('../modules/meta/_foot.html') %>
