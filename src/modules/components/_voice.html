@@ -1,14 +1,19 @@
-<article class="voice">
-  <a class="voice-link" href="<%= href %>" target="_blank">
-    <div class="voice-inner">
-      <div class="voice-img">
-        <img src="<%= img.url %>" alt="<%= name %>のイメージ">
-      </div>
-      <dl class="voice-data">
-        <dt class="voice-result"><%= result %></dt>
-        <dd><%= name %>／<%= age %></dd>
-        <!-- <dd>ご年齢：<%= age %></dd> -->
-      </dl>
+<article class="voice js-modal-voice-trigger">
+  <div class="voice-inner">
+    <div class="voice-img">
+      <img src="<%= img %>" alt="<%= name %>のイメージ">
     </div>
-  </a>
+    <dl class="voice-data">
+      <dt class="voice-result"><%= result %></dt>
+      <dd><%= name %>／<%= age %></dd>
+      <!-- <dd>ご年齢：<%= age %></dd> -->
+    </dl>
+  </div>
+
+  <input name="voiceImg" type="hidden" value="<%= img %>">
+  <input name="voiceResult" type="hidden" value="<%= result %>">
+  <input name="voiceName" type="hidden" value="<%= name %>">
+  <input name="voiceAge" type="hidden" value="<%= age %>">
+  <input name="voiceJob" type="hidden" value="<%= job %>">
+  <input name="voiceThought" type="hidden" value="<%= hiddenData.thoughts %>">
 </article>

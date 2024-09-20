@@ -1,3 +1,32 @@
+<% if(type === "voices"){ %>
+<div class="modal modal-voice" id="js-modal-voice">
+  <aside class="modal-inner">
+    <button class="modal-close js-modal-close-trigger" type="button"></button>
+    
+    <div class="modal-contents">
+      <div class="modal-contents-inner">
+        <div class="modal-img">
+          <img name="voiceImg" src="/images/dummy.png" width="724" height="420" alt="">
+        </div>
+        <dl class="modal-data">
+          <dt name="voiceResult"></dt>
+          <dd>
+            <b>名前： </b><span name="voiceName"></span>
+            <br>
+            <b>年齢： </b><span name="voiceAge"></span>
+            <br>
+            <b>職業： </b><span name="voiceJob"></span>
+          </dd>
+          <dd>
+            <b>受講した感想： </b><span name="voiceThought"></span>
+          </dd>
+        </dl>
+      </div>
+    </div>
+  </aside>
+  <div class="modal-back js-modal-close-trigger"></div>
+</div>
+<% } else { %>
 <div class="modal" id="js-modal">
   <aside class="modal-inner">
     <button class="modal-close js-modal-close-trigger" type="button"></button>
@@ -22,3 +51,4 @@
   </aside>
   <div class="modal-back js-modal-close-trigger"></div>
 </div>
+<% } %>

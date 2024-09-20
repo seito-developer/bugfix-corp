@@ -34,8 +34,8 @@ const hero = {
             name: voiceItem.name, 
             age: voiceItem.age, 
             img: voiceItem.img, 
-            href: voiceItem.href,
-            disc: voiceItem.disc
+            job: voiceItem.job,
+            hiddenData: voiceItem.hiddenData
           }); %>
         </li>
       <% }) %>
@@ -43,8 +43,10 @@ const hero = {
   </div>
 </main>
 
+<%- include('../modules/components/_modal.html', {type: "voices"}) %>
+
 <%- include('../modules/layout/_footer.html', {modifier: ""}) %>
 
 <script type="text/javascript" src="https://www.jicoo.com/widget/event_type.js" async></script>
-<script type="module" src="/assets/scripts/consulting.js"></script>
+<script type="module" src="/assets/scripts/voices.js"></script>
 <%- include('../modules/meta/_foot.html') %>

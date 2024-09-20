@@ -1,35 +1,60 @@
-const modal = () => {
-  const $modal = document.querySelector("#js-modal");
-  const $modalTriggers = document.querySelectorAll('.js-modal-trigger');
-  const $modalCloseTriggers = document.querySelectorAll('.js-modal-close-trigger');
-  const ACTIVE_CLASS = "is-active";
+class Modal {
+  constructor({
+    modal: modalSelector, 
+    trigger: triggerSelector, 
+    closeTrigger: closeTriggerSelector,
+    prefix: prefix = ""
+  }) {
+    this.modal = document.querySelector(modalSelector);
+    this.modalTriggers = document.querySelectorAll(triggerSelector);
+    this.modalCloseTriggers = document.querySelectorAll(closeTriggerSelector);
+    this.prefix = prefix;
+    this.ACTIVE_CLASS = "is-active";
 
-  $modalTriggers.forEach($modalTrigger => {
-    $modalTrigger.addEventListener('click', () => {
-      $modal.classList.add(ACTIVE_CLASS);
-      const inputs = $modalTrigger.querySelectorAll('input');
-      inputs.forEach(input => {
-          console.log(`Name: ${input.name}, Value: ${input.value}`);
-          if(input.name === "workImg"){
-            $modal.querySelector(`*[name=${input.name}]`).setAttribute("src", input.value);
-          } else {
-            $modal.querySelector(`*[name=${input.name}]`).innerHTML = input.value;
-          }
-      });
-  });
+    this.init();
+  }
 
-  $modalCloseTriggers.forEach($modalCloseTrigger => {
-    $modalCloseTrigger.addEventListener('click', () => {
-      $modal.classList.remove(ACTIVE_CLASS);
+  init() {
+    this.addModalTriggerEvents();
+    this.addCloseTriggerEvents();
+    this.addKeydownEvent();
+  }
+
+  addModalTriggerEvents() {
+    this.modalTriggers.forEach(trigger => {
+      trigger.addEventListener('click', () => this.openModal(trigger));
     });
-  });
+  }
 
-  document.addEventListener('keydown', (e) => {
-    if(e.key === 'Escape'){
-      $modal.classList.remove(ACTIVE_CLASS);
-    }
-  });
-});
+  openModal(trigger) {
+    this.modal.classList.add(this.ACTIVE_CLASS);
+    const inputs = trigger.querySelectorAll('input');
+    inputs.forEach(input => {
+      if (input.name === `${this.prefix}Img`) {
+        this.modal.querySelector(`*[name=${input.name}]`).setAttribute("src", input.value);
+      } else {
+        this.modal.querySelector(`*[name=${input.name}]`).innerHTML = input.value;
+      }
+    });
+  }
+
+  addCloseTriggerEvents() {
+    this.modalCloseTriggers.forEach(closeTrigger => {
+      closeTrigger.addEventListener('click', () => this.closeModal());
+    });
+  }
+
+  closeModal() {
+    this.modal.classList.remove(this.ACTIVE_CLASS);
+  }
+
+  addKeydownEvent() {
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        this.closeModal();
+      }
+    });
+  }
 }
 
-export default modal;
+export default Modal;
