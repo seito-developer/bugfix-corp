@@ -4,13 +4,11 @@
 
 .voices {
   font-size: fn.fs(16px);
-  text-align: center;
   padding: 0 fn.vw(120px) fn.vw(160px);
   color: #fff;
   .voices-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     width: 100%;
     margin: fn.vw(-12px);
     margin-top: fn.vw(80px);
@@ -23,7 +21,7 @@
 
   @media screen and (max-width: cn.$bp-sm){
     padding: fn.vw(160px) fn.vw(80px);
-    .point-list {
+    .voices-list {
       flex-direction: column;
       > li {
         width: 100%;

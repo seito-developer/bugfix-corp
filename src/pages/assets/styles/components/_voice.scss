@@ -10,14 +10,11 @@
   padding: fn.vw(16px);
   height: 100%;
   text-align: center;
-  .voice-link {
-    display: block;
-    color: var(--color-main);
-    &:hover {
-      color: var(--color-sub);
-    }
+  cursor: pointer;
+  &:hover {
+    color: var(--color-sub);
   }
-  .voice-inner {}
+  // .voice-inner {}
   .voice-img {
     width: 100%;
     aspect-ratio: 352 / 240;
@@ -38,39 +35,22 @@
   .voice-data {
     text-align: left;
   }
+  .voice-course {
+    font-size: fn.fs(12px);
+    letter-spacing: .15em;
+    margin: fn.vw(22px) 0 0;
+  }
   .voice-result {
     font-weight: bold;
-    // font-size: fn.fs(24px);
-    font-size: fn.fs(18px);
-    letter-spacing: .15em;
-    margin-top: fn.vw(22px);
-    position: relative;
-  }
-  
-  .voice-disc {
-    margin: fn.vw(24px) 0 0;
-    text-align: left;
-    letter-spacing: .04em;
   }
   
   @media screen and (max-width: cn.$bp-sm){
     border-radius: fn.vw(16px);
-    padding-right:  fn.vw(40px);
-    padding-left:  fn.vw(40px);
-    padding-bottom:  fn.vw(70px);
+    padding:  fn.vw(40px);
+    
     .voice-result {
-      font-size: fn.fs(16px);
       letter-spacing: .15em;
       margin-bottom: fn.vw(44px);
-    }
-    .voice-disc {
-      margin-top: fn.vw(48px);
-    }
-  }
-
-  @media screen and (min-width: cn.$bp-sm) and (max-width: cn.$bp-lg) {
-    .voice-result {
-      font-size: fn.fs(12px);
     }
   }
 }

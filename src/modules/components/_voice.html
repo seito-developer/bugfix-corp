@@ -4,9 +4,9 @@
       <img src="<%= img %>" alt="<%= name %>のイメージ">
     </div>
     <dl class="voice-data">
-      <dt class="voice-result"><%= result %></dt>
+      <dt class="voice-course">＜<%= course %>コース＞</dt>
+      <dd class="voice-result"><%= result %></dd>
       <dd><%= name %>／<%= age %></dd>
-      <!-- <dd>ご年齢：<%= age %></dd> -->
     </dl>
   </div>
 
@@ -15,5 +15,7 @@
   <input name="voiceName" type="hidden" value="<%= name %>">
   <input name="voiceAge" type="hidden" value="<%= age %>">
   <input name="voiceJob" type="hidden" value="<%= job %>">
+  <input name="voiceCourse" type="hidden" value="<%= course %>">
   <input name="voiceThought" type="hidden" value="<%= hiddenData.thoughts %>">
+  <input name="voiceFeedback" type="hidden" value="<%= hiddenData.feedback %>">
 </article>

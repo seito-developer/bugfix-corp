@@ -137,5 +137,12 @@
         height: auto;
       }
     }
+
+    // modifier
+    &.modal-voice {
+      .modal-inner {
+        width: 90%;
+      }
+    }
   }
 }
