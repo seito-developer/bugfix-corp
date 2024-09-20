@@ -61,17 +61,22 @@
     position: relative;
     z-index: cn.$z-index-max + 1;
     width: fn.vw(1000px);
-    max-height: 80%;
+
     background: #fff;
-    padding: fn.vw(24px);
     transform: translateY(-5%);
     transition: transform 0.15s;
+    // overflow: scroll;
   }
   .modal-contents {
-    overflow: scroll;
-    height: 600px;
     border-radius: fn.fs(8px);
     text-align: center;
+    max-height: 90vh;
+    overflow-y: scroll;
+    padding: fn.vw(24px);
+    // max-height: calc(100% - (fn.vw(24px * 2)));
+  }
+  .modal-contents-inner {
+
   }
   .modal-img {
     display: inline-block;
@@ -79,6 +84,10 @@
     border-radius: fn.fs(8px);
     overflow: hidden;
     text-align: center;
+    > img {
+      max-width: 100%;
+    height: auto;
+    }
   }
   .modal-data {
     text-align: left;
