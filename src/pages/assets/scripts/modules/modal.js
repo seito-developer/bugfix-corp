@@ -3,13 +3,14 @@ class Modal {
     modal: modalSelector, 
     trigger: triggerSelector, 
     closeTrigger: closeTriggerSelector,
-    prefix: prefix = ""
+    prefix: prefix = "",
+    activeClass: activeClass = "is-active"
   }) {
     this.modal = document.querySelector(modalSelector);
     this.modalTriggers = document.querySelectorAll(triggerSelector);
     this.modalCloseTriggers = document.querySelectorAll(closeTriggerSelector);
     this.prefix = prefix;
-    this.ACTIVE_CLASS = "is-active";
+    this.ACTIVE_CLASS = activeClass;
 
     this.init();
   }

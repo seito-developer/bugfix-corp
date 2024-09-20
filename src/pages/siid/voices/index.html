@@ -17,6 +17,12 @@ const hero = {
   sub: "受講生様の声"
 };
 
+const contact = {
+  headline: "お申し込みはこちら",
+  href: "/siid/counseling/",
+  text: "お申し込み・個別相談会へ"
+};
+
 %>
 
 <%- include('../modules/meta/_head.html', head) %>
@@ -24,8 +30,12 @@ const hero = {
 
 <%- include('../modules/components/_sub-hero.html', {hero: hero}) %>
 
-<main>
-  <div class="voices">
+<main class="voices">
+  <section class="voices-students">
+    <h1 class="voices-headline">
+      <span>受講生様の感想（一部）</span>
+    </h1>
+
     <ul class="voices-list">
       <% voices.forEach(voiceItem => { %>
         <li>
@@ -41,12 +51,47 @@ const hero = {
         </li>
       <% }) %>
     </ul>
-  </div>
+
+    <p class="voices-bottom">
+      <a
+        href="https://docs.google.com/document/d/e/2PACX-1vRZv3ro50YWS5LdR3PSGB3b93omPY854misnktTRAOZ7xgIOj9MRQs4TgybkO3kJLSDzUXiQEoDDaJ4/pub"
+        target="_blank"
+        >過去の受講生アンケート結果はこちら</a
+      >
+    </p>
+  </section>
+
+  <section class="voices-works">
+    <h1 class="voices-headline">
+      <span>受講生様の作品例（一部）</span>
+    </h1>
+    <div class="voices-showcase showcase">
+      <div class="showcase-contents">
+        <ul class="showcase-list" id="js-showcase">
+          <li></li>
+          <% works.graduationWorks.forEach(workItem => { %>
+          <li>
+            <%- include("../modules/components/_work.html", { 
+              img: workItem.img,
+              headline: workItem.headline, 
+              author: workItem.author,
+              course: workItem.course,
+              desc: workItem.desc,
+              tech: workItem.tech }) %>
+          </li>
+          <% }) %>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <%- include('../modules/components/_contact.html', {contact: contact}) %>
 </main>
 
 <%- include('../modules/components/_modal.html', {type: "voices"}) %>
+<%- include('../modules/components/_modal.html', {type: ""}) %>
 
-<%- include('../modules/layout/_footer.html', {modifier: ""}) %>
+<%- include('../modules/layout/_footer.html', {modifier: "footer-has-contact"}) %>
 
 <script type="text/javascript" src="https://www.jicoo.com/widget/event_type.js" async></script>
 <script type="module" src="/assets/scripts/voices.js"></script>

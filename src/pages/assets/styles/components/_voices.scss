@@ -4,23 +4,58 @@
 
 .voices {
   font-size: fn.fs(16px);
-  padding: 0 fn.vw(120px) fn.vw(160px);
-  color: #fff;
+
+  .voices-students {
+    padding: 0 fn.vw(120px);
+    margin-bottom: fn.vw(80px);
+  }
+  // .voices-works {}
+  .voices-headline {
+    text-align: center;
+    color: #333;
+    padding: fn.vw(20px) 0;
+    position: relative;
+    > span {
+      display: inline-block;
+      padding: 0 1em .1em;
+      border-bottom: 5px solid #333;
+    }
+  }
   .voices-list {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
     margin: fn.vw(-12px);
-    margin-top: fn.vw(80px);
+    margin-top: fn.vw(40px);
     > li {
-      flex-direction: column;
-      margin: fn.vw(12px);
-      width: 31%;
+      padding: fn.vw(12px);
+      width: 33.3%;
     }
+  }
+  .voices-bottom {
+    text-align: center;
+    margin-bottom: 0;
+    > a {
+      color: var(--color-sub);
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .voices-showcase {
+    padding: 0 0 fn.vw(80px);
+    margin-top: fn.vw(40px);
   }
 
   @media screen and (max-width: cn.$bp-sm){
-    padding: fn.vw(160px) fn.vw(80px);
+    // padding: fn.vw(160px) fn.vw(80px);
+    .voices-students {
+      padding: 0 fn.vw(80px);
+      margin-bottom: fn.vw(120px);
+    }
+    .voices-headline {
+      font-size: fn.fs(18px);
+    }
     .voices-list {
       flex-direction: column;
       > li {

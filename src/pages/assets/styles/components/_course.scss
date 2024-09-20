@@ -20,17 +20,6 @@
     margin-top: fn.vw(60px);
   }
 
-  .course-bottom-link {
-    text-align: center;
-    > a {
-      color: var(--color-sub);
-      text-decoration: underline;
-      &:hover {
-        text-decoration: none;
-      }
-    }
-  }
-
   @media screen and (max-width: cn.$bp-sm) {
     padding-right: fn.vw(80px);
     padding-left: fn.vw(80px);
