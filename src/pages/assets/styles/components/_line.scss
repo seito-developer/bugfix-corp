@@ -4,7 +4,11 @@
 @use "../mixins" as mixin;
 
 .line {
-  display: flex;
+  > a {
+    display: flex;
+    color: #fff;
+    text-decoration: none;
+  }
   .line-img {
     max-width: fn.vw(150px);
     height: auto;
