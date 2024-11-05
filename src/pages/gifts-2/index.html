@@ -1,0 +1,40 @@
+<% const head = { title: common.title.gifts, disc: common.disc.gifts, theme:
+"" }; const header = { contact: { href: "/contact/", text: "CONTACT" } }; const hero = {
+title: "LINE Gifts", sub: "LINEギフト", modifier: "sub-hero-long"
+}; 
+
+const contact = {
+  headline: "お問い合わせはこちら",
+  href: "/contact/",
+  text: "CONTACT"
+};
+
+%> <%- include('../modules/meta/_head.html', head) %> <%-
+include('../modules/layout/_header.html', {header: header}) %> <%-
+include('../modules/components/_sub-hero.html', {hero: hero}) %>
+
+<main>
+  <div class="container">
+    <ul class="gifts">
+      <li class="gifts-item">プログラミング学習向けPCの選び方</li>
+      <li class="gifts-item">プログラミング効率を爆上げする厳選ショートカットキー42選</li>
+      <li class="gifts-item">おすすめのプログラミング言語22選</li>
+      <li class="gifts-item">おみくじアプリの作り方教材</li>
+      <li class="gifts-item">エンジニア転職専用の履歴書の雛形</li>
+      <li class="gifts-item">エンジニア転職専用の職務経歴書の雛形</li>
+      <li class="gifts-item">未経験者向けおすすめ就活サイト</li>
+    </ul>
+
+    <a class="link link-line" href="/gifts-1/gifts-1.zip" download>
+      <span>まとめてZIPでダウンロード</span>
+    </a>
+  </div>
+
+  <%- include('../modules/components/_contact.html', {contact: contact}) %>
+</main>
+
+<%- include('../modules/layout/_footer.html', {modifier: "footer-has-contact"})
+%>
+
+<script type="module" src="/assets/scripts/gifts-2.js"></script>
+<%- include('../modules/meta/_foot.html') %>

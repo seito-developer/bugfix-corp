@@ -17,3 +17,22 @@
     }
   }
 }
+
+.gifts-single {
+  margin-bottom: 30px;
+  > h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  > p {
+    font-size: 15px;
+    margin: 0;
+  }
+  br {
+    display: none;
+    @media screen and (max-width: cn.$bp-sm) {
+      display: block;
+    }
+  }
+}
