@@ -1,0 +1,84 @@
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+.reskill {
+  padding: fn.vw(44px) fn.vw(20px)  fn.vw(80px);
+  .reskill-inner {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: fn.vw(24px);
+    border-radius: fn.vw(8px);
+  }
+  .reskill-img {
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    > img {
+      max-width: 95%;
+      max-height: 95%;
+      width: auto;
+      height: auto;
+    }
+    .reskill-img-pc {
+      display: block;
+    }
+    .reskill-img-sp {
+      display: none;
+    }
+  }
+  .reskill-contents {
+    padding-left: fn.vw(44px);
+    dt {
+      font-size: fn.fs(24px);
+      color: var(--color-sub);
+      font-weight: bold;
+      margin-bottom: fn.vw(16px);
+    }
+    dd {
+      font-size: fn.fs(16px);
+      position: relative;
+      line-height: 2;
+      br {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: cn.$bp-sm){
+    .reskill-inner {
+      display: block;
+    }
+    .reskill-img {
+      width: 100%;
+      padding: 5% 20%;
+      display: block;
+      .reskill-img-pc {
+        display: none;
+      }
+      .reskill-img-sp {
+        display: block;
+      }
+    }
+    .reskill-contents {
+      dt {
+        text-align: center;
+        font-size: fn.fs(18px);
+        margin-bottom: fn.vw(40px);
+      }
+      dd {
+        font-size: fn.fs(12px);
+        br {
+          display: block;
+        }
+      }
+    } 
+  }
+
+  // modifier
+  &.reskill-siid-top {
+    margin-top: fn.vw(-80px);
+  }
+}

@@ -37,6 +37,9 @@
   br {
     display: none;
   }
+  strong {
+    text-decoration: underline;
+  }
 
   @media screen and (max-width: cn.$bp-lg){
     margin-right: 0;
@@ -57,5 +60,12 @@
     br {
       display: block;
     }
+  }
+
+  .special {
+    display: inline-block;
+    margin-top: 15px;
+    border-top: 1px solid var(--color-sub);
+    padding-top: 15px;
   }
 }

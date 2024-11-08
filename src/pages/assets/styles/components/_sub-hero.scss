@@ -26,13 +26,13 @@
     .sub-hero-title {
       > span {
         &:nth-child(1){
-          font-size: fn.fs(18px);
+          font-size: fn.fs(18px * 1.5);
         }
         &:nth-child(2){
-          font-size: fn.fs(32px);
+          font-size: fn.fs(32px * 1.5);
         }
         &:nth-child(3){
-          font-size: fn.fs(12px);
+          font-size: fn.fs(12px * 1.5);
         }
       }
     }
