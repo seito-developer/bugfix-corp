@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 .lp {
   display: block;
   margin: 0 auto;
@@ -7,6 +11,11 @@
     height: auto;
     width: 100%;
   }
+}
+
+.book {
+  margin: 10px 0 0;
+  padding: 0 15%;
 }
 
 .mb {
