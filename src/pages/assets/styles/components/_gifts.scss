@@ -6,12 +6,13 @@
 .gifts {
   border-top: 1px solid var(--color-core);
   margin-bottom: 30px;
+
   .gifts-item {
     margin: 0;
     list-style: none;
     border-bottom: 1px solid var(--color-core);
-    
-    > a {
+
+    >a {
       display: block;
       padding: 20px 0;
     }
@@ -20,19 +21,23 @@
 
 .gifts-single {
   margin-bottom: 30px;
-  > h1 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  > p {
-    font-size: 15px;
-    margin: 0;
-  }
-  br {
-    display: none;
-    @media screen and (max-width: cn.$bp-sm) {
-      display: block;
-    }
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+p {
+  font-size: 15px;
+  margin: 0;
+}
+
+br {
+  display: none;
+
+  @media screen and (max-width: cn.$bp-sm) {
+    display: block;
   }
 }
