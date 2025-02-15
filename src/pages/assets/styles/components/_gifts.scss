@@ -4,40 +4,44 @@
 @use "../mixins" as mixin;
 
 .gifts {
-  border-top: 1px solid var(--color-core);
-  margin-bottom: 30px;
+  
+  h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
 
-  .gifts-item {
-    margin: 0;
-    list-style: none;
-    border-bottom: 1px solid var(--color-core);
+  > a {
+    margin: 30px 0;
+  }
 
-    >a {
-      display: block;
-      padding: 20px 0;
+  .gifts-list {
+    border-top: 1px solid var(--color-core);
+    margin-bottom: 30px;
+
+    > dt {
+      font-weight: bold;
+      padding-top: 10px;
+    }
+
+    > dd {
+      margin: 0;
+      list-style: none;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--color-core);
     }
   }
-}
 
-.gifts-single {
-  margin-bottom: 30px;
-}
+  p {
+    font-size: 15px;
+    margin: 0;
+  }
 
-h1 {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
+  br {
+    display: none;
 
-p {
-  font-size: 15px;
-  margin: 0;
-}
-
-br {
-  display: none;
-
-  @media screen and (max-width: cn.$bp-sm) {
-    display: block;
+    @media screen and (max-width: cn.$bp-sm) {
+      display: block;
+    }
   }
 }
