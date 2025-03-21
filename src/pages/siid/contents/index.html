@@ -1,0 +1,157 @@
+<% 
+const head = {
+  title: common.title.siid.career,
+  disc: common.disc.siid.career,
+  theme: "theme-siid"
+};
+
+const header = {
+  contact: {
+    href: "/siid/counseling/",
+    text: "お申し込み"
+  }
+};
+
+const hero = {
+  title: "COURSES",
+  sub: "SiiD CAREER",
+  disc: "本気でエンジニア転職に取り組みたい方へ"
+};
+
+const skills = [
+  {
+    modifier: "emblem-d",
+    cat: "solid",
+    icon: "computer",
+    name: "CS基礎"
+  }, {
+    modifier: "emblem-e",
+    cat: "solid",
+    icon: "database",
+    name: "データベース"
+  }, {
+    modifier: "emblem-a",
+    cat: "solid",
+    icon: "diagram-project",
+    name: "アルゴリズム"
+  }, {
+    modifier: "emblem-b",
+    cat: "regular",
+    icon: "object-group",
+    name: "OOP"
+  }, {
+    modifier: "emblem-c",
+    cat: "brands",
+    icon: "html5",
+    name: "HTML"
+  }, {
+    modifier: "emblem-d",
+    cat: "brands",
+    icon: "css3-alt",
+    name: "CSS"
+  }, {
+    modifier: "emblem-e",
+    cat: "brands",
+    icon: "sass",
+    name: "Sass"
+  }, {
+    modifier: "emblem-a",
+    cat: "brands",
+    icon: "js",
+    name: "JavaScript"
+  }, {
+    modifier: "emblem-b",
+    cat: "brands",
+    icon: "node",
+    name: "Node.js/npm"
+  }, {
+    modifier: "emblem-c",
+    cat: "brands",
+    icon: "php",
+    name: "PHP"
+  }, {
+    modifier: "emblem-d",
+    cat: "brands",
+    icon: "laravel",
+    name: "Laravel"
+  }, {
+    modifier: "emblem-e",
+    cat: "brands",
+    icon: "docker",
+    name: "Docker"
+  }, 
+  {
+    modifier: "emblem-a",
+    cat: "solid",
+    icon: "robot",
+    name: "ChatGPT"
+  }, {
+    modifier: "emblem-b",
+    cat: "brands",
+    icon: "github",
+    name: "Git/GitHub"
+  },{
+    modifier: "emblem-c",
+    cat: "solid",
+    icon: "cloud",
+    name: "fly.io",
+  }
+];
+
+const skills2 = [
+  {
+    modifier: "emblem-a",
+    cat: "brands",
+    icon: "js",
+    name: "TypeScript",
+  }, {
+    modifier: "emblem-b",
+    cat: "brands",
+    icon: "react",
+    name: "React",
+  }, {
+    modifier: "emblem-c",
+    cat: "brands",
+    icon: "python",
+    name: "Python",
+  },{
+    modifier: "emblem-d",
+    cat: "brands",
+    icon: "google",
+    name: "Firebase",
+  }, 
+];
+
+const contact = {
+  headline: "お申し込みはこちら",
+  href: "/siid/counseling/",
+  text: "お申し込み・個別相談会へ"
+};
+%>
+
+
+<%- include('../modules/meta/_head.html', head) %>
+
+<!-- <%- include('../modules/layout/_header.html', {header: header}) %> -->
+
+<%- include('../modules/components/_sub-hero.html', {hero: hero}) %>
+
+<%- include('../modules/components/_reskill.html', {modifier: ""}) %>
+
+<main>
+  
+  <div class="u-mb-240">
+    <%- include('../modules/components/_shelf.html', {title: "基礎", skills: skills}) %>
+    <br><br>
+    <%- include('../modules/components/_shelf.html', {title: "発展", skills: skills2}) %>
+  </div>
+  
+  <div class="u-mb-240">
+    <%- include('../modules/components/_profile.html') %>
+  </div>
+  <%- include('../modules/components/_contact.html', {contact: contact}) %>
+</main>
+
+<%- include('../modules/layout/_footer.html', {modifier: "footer-has-contact"}) %>
+
+<%- include('../modules/meta/_foot.html') %>
