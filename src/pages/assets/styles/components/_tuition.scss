@@ -105,6 +105,14 @@
         padding-left: 1.25em;
       }
     }
+
+    .tuition-headline {
+      margin: 10px 0 5px;
+      border-top: 1px solid #000;
+      padding-top: 5px;
+      font-style: italic;
+      text-decoration: underline;
+    }
   }
   @media screen and (max-width: cn.$bp-sm){
     .tuition-header-inner {
