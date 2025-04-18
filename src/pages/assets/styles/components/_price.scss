@@ -68,4 +68,8 @@
     border-top: 1px solid var(--color-sub);
     padding-top: 15px;
   }
+
+  &.price-option {
+    border-style: double;
+  }
 }
