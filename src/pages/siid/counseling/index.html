@@ -1,43 +1,54 @@
-<% const head={ title: common.title.siid.index, disc: common.disc.siid.index, theme: "theme-siid" }; const header={
-  contact: { href: "/siid/counseling/" , text: "お申し込み" } }; const hero={ title: "COUNSELING" , sub: "個別説明会・お申し込み" ,
-  disc: "SiiD個別説明会の窓口です" }; %>
+<% const head={ title: common.title.siid.index, disc: common.disc.siid.index,
+theme: "theme-siid" }; const header={ contact: { href: "/siid/counseling/" ,
+text: "お申し込み" } }; const hero={ title: "COUNSELING" , sub:
+"個別説明会・お申し込み" , disc: "SiiD個別説明会の窓口です" }; %> <%-
+include('../modules/meta/_head.html', head) %> <%-
+include('../modules/layout/_header.html', {header: header}) %> <%-
+include('../modules/components/_sub-hero.html', {hero: hero}) %>
 
-  <%- include('../modules/meta/_head.html', head) %>
-    <%- include('../modules/layout/_header.html', {header: header}) %>
+<main>
+  <div class="counseling-lead">
+    <p>
+      こちらはプログラミングスクール"SiiD"の個別説明会の窓口です。<br />
+      <strong>Zoomの面談</strong>でのご案内になります。
+    </p>
+  </div>
 
-      <%- include('../modules/components/_sub-hero.html', {hero: hero}) %>
+  <section class="application">
+    <h1 class="application-conductor">お申し込みはこちらから</h1>
 
-        <main>
+    <div class="application-body">
+      <div class="application-form">
+        <div class="application-form-item">
+          <p>
+            フォームが表示されない場合はお手数ですが、<a
+              href="https://www.jicoo.com/t/iYDSD_qvK-HS/e/XllTYCJ3"
+              target="_blank"
+              ><b>こちらからお問い合わせください。</b></a
+            >
+          </p>
 
-          <div class="counseling-lead">
-            <p>
-              こちらはプログラミングスクール"SiiD"の個別説明会の窓口です。<br>
-              <strong>Zoomの面談</strong>でのご案内になります。
-            </p>
-          </div>
+          <div
+            class="jicoo-widget"
+            data-url="https://www.jicoo.com/event_types/dPvwnhRYxhQB/widget"
+            style="
+              min-width: 320px;
+              height: 720px;
+              border: 1px solid #e4e4e4;
+              box-sizing: content-box;
+            "
+          ></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
-          <section class="application">
+<%- include('../modules/layout/_footer.html', {modifier: "" }) %>
 
-            <h1 class="application-conductor">お申し込みはこちらから</h1>
-
-            <div class="application-body">
-              <div class="application-form">
-                <div class="application-form-item">
-                  <p>フォームが表示されない場合はお手数ですが、<a href="https://www.jicoo.com/t/iYDSD_qvK-HS/e/siid-all"
-                      target="_blank"><b>こちらからお問い合わせください。</b></a></p>
-
-                  <div class="jicoo-widget" data-url="https://www.jicoo.com/event_types/F7TpWEJ9CPno/widget"
-                    style="min-width:320px;height:720px;border:1px solid #e4e4e4;box-sizing:content-box;"></div>
-
-                </div>
-              </div>
-
-            </div>
-
-          </section>
-        </main>
-
-        <%- include('../modules/layout/_footer.html', {modifier: "" }) %>
-
-          <script type="text/javascript" src="https://www.jicoo.com/widget/event_type.js" async></script>
-          <%- include('../modules/meta/_foot.html') %>
+<script
+  type="text/javascript"
+  src="https://www.jicoo.com/widget/event_type.js"
+  async
+></script>
+<%- include('../modules/meta/_foot.html') %>
