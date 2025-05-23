@@ -104,4 +104,51 @@
       padding: 0;
     }
   }
+
+  // modifier
+
+
+  &.application-complete {
+    padding: 0 15px;
+    .application-body {
+      padding-top: 10px;
+      padding-bottom: 60px;
+    }
+    .application-body > p {
+      text-align: center;
+      font-size: 16px;
+      line-height: 1.8;
+      margin: 2em 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .app-link {
+      font-weight: bold;
+      font-size: 18px;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    .app-cancel {
+      font-size: 14px;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    .br {
+      display: none;
+    }
+
+    @media screen and (max-width: cn.$bp-sm){
+      .application-body {
+        padding-top: 0;
+      }
+      .br {
+        display: block;
+      }
+    }
+  }
 }
