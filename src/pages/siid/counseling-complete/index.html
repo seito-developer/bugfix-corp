@@ -1,62 +1,73 @@
 <% const head={ title: common.title.siid.index, disc: common.disc.siid.index,
 theme: "theme-siid" }; const header={ contact: { href: "/siid/counseling/" ,
-text: "お申し込み" } }; const hero={ title: "COUNSELING" , sub:
-"個別説明会", disc: "SiiD個別説明会の窓口です" }; %> 
-<%-
-include('../modules/meta/_head.html', head) %> 
+text: "お申し込み" } }; const hero={ title: "COUNSELING" , sub: "個別説明会",
+disc: "SiiD個別説明会の窓口です" }; %> <%- include('../modules/meta/_head.html',
+head) %>
 
 <span id="a8sales"></span>
 <script src="//statics.a8.net/a8sales/a8sales.js"></script>
 <script>
-a8sales({
-  "pid": "s00000026893001",
-  "order_number": "申込番号",
-  "currency": "JPY",
-  "items": [
-  {
-    "code": "soudan",
-    "price": 1,
-    "quantity": 1
-  },
-  ],
-"total_price": 1
-});
+  let params = new URLSearchParams(document.location.search);
+  let eventUid = params.get("eventUid");
+  console.log('eventUid:', eventUid);
+  a8sales({
+    pid: "s00000026893001",
+    order_number: eventUid,
+    currency: "JPY",
+    items: [
+      {
+        code: "soudan",
+        price: 1,
+        quantity: 1,
+      },
+    ],
+    total_price: 1,
+  });
 </script>
 
-<%-
-include('../modules/layout/_header.html', {header: header}) %> <%-
+<%- include('../modules/layout/_header.html', {header: header}) %> <%-
 include('../modules/components/_sub-hero.html', {hero: hero}) %>
 
 <main>
-
   <section class="application application-complete">
     <h1 class="application-conductor">お申し込み完了</h1>
 
     <div class="application-body">
       <p>
         お申し込みありがとうございました！<br />
-        こちらからお申し込み内容を確認後、<br class="br" />担当者よりご連絡いたします。
+        こちらからお申し込み内容を確認後、<br
+          class="br"
+        />担当者よりご連絡いたします。
       </p>
       <p>
-        当日お時間になりましたら、<br class="br" />メールに記載のZoom URLにご参加下さいませ。
+        当日お時間になりましたら、<br class="br" />メールに記載のZoom
+        URLにご参加下さいませ。
       </p>
       <p>
-        また、限られた時間の中で<br class="br" />最大限有意義なサービス説明をさせていただくために、<br>
-        弊社YouTubeチャンネルの受講生様対談動画を<br class="br" />2,3本ほどご視聴いただけますと幸いです。<br>
-        <a class="app-link" href="https://youtube.com/@programming-siid" target="_blank">SiiD YouTube</a>
+        また、限られた時間の中で<br
+          class="br"
+        />最大限有意義なサービス説明をさせていただくために、<br />
+        弊社YouTubeチャンネルの受講生様対談動画を<br
+          class="br"
+        />2,3本ほどご視聴いただけますと幸いです。<br />
+        <a
+          class="app-link"
+          href="https://youtube.com/@programming-siid"
+          target="_blank"
+          >SiiD YouTube</a
+        >
       </p>
-
-
 
       <p>
         キャンセル・変更に゙関してはお手数ですが、お問合せフォームからその旨をお伝えいただきますようお願いいたします。
         <br />
-        <a class="app-cancel" href="https://bug-fix.org/contact" target="_blank">キャンセル・変更のご連絡</a>
+        <a class="app-cancel" href="https://bug-fix.org/contact" target="_blank"
+          >キャンセル・変更のご連絡</a
+        >
       </p>
     </div>
   </section>
 </main>
 
-<%- include('../modules/layout/_footer.html', {modifier: "" }) %>
-
-<%- include('../modules/meta/_foot.html') %>
+<%- include('../modules/layout/_footer.html', {modifier: "" }) %> <%-
+include('../modules/meta/_foot.html') %>
