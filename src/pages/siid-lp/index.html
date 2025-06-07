@@ -1,67 +1,13 @@
-<% 
-const head = {
-  title: common.title.siid.index,
-  disc: common.disc.siid.index,
-};
-%>
+<% const head = { title: common.title.siid.index, disc: common.disc.siid.index,
+}; %> <%- include('../modules/meta/siid-lp/_head.html', head) %>
+<main class="lp">
 
-<%- include('../modules/meta/siid-lp/_head.html', head) %>
-
-<div class="lp">
-  <div class="top">
-    <img src="/images/siid-lp/lp/title.png" alt="180日でITエンジニアになる方法 時間・場所・お金の不安から解放され、自由に働く7つのステップ">
-  </div>
-  <div class="book">
-    <img src="/images/siid-lp/lp/book.png" alt="豪華特典付き・エンジニア転職までの最速のルート">
-  </div>
-  <div>
-    <div>
-      <img src="/images/siid-lp/lp/button-1.png" alt="ITエンジニアを目指す人を応援したい想いから、無料でどうぞ！">
-    </div>
-    <div>
-      <a href="https://lin.ee/L4S7LX8" target="_blank">
-        <img src="/images/siid-lp/lp/button-2.png" alt="LINEで無料で手に入れる">
-      </a>
-    </div>
-  </div>
-  <div>
-    <img src="/images/siid-lp/lp/top-2.png" alt="プログラミングを学んでITエンジニアになりたいけど...">
-  </div>
-  <div>
-    <div>
-      <img src="/images/siid-lp/lp/sec-1.png" alt="">
-    </div>
-    <div>
-      <img src="/images/siid-lp/lp/sec-2.png" alt="">
-    </div>
-    <div>
-      <img src="/images/siid-lp/lp/sec-3.png" alt="">
-    </div>
-    <div>
-      <img src="/images/siid-lp/lp/sec-4.png" alt="">
-    </div>
-  </div>
-  <div>
-    <img src="/images/siid-lp/lp/author.png" alt="">
-  </div>
-  <div>
-    <div>
-      <img src="/images/siid-lp/lp/button-1.png" alt="ITエンジニアを目指す人を応援したい想いから、無料でどうぞ！">
-    </div>
-    <div>
-      <a href="https://lin.ee/L4S7LX8" target="_blank">
-        <img src="/images/siid-lp/lp/button-2.png" alt="LINEで無料で手に入れる">
-      </a>
-    </div>
-  </div>
-  <div class="mt-20">
-    <div>
-      <img src="/images/siid-lp/lp/footer-1.png" alt="">
-    </div>
-    <div>
-      <img src="/images/siid-lp/lp/footer-2.png" alt="">
-    </div>
-  </div>
+  <%- include('../modules/components/lp/_hero-builder.html') %>
+  <%- include('../modules/components/lp/_benefits-section.html') %>
+  <%- include('../modules/components/lp/_button-area.html') %>
+  <%- include('../modules/components/lp/_concerns-section.html') %>
   
-  
+  <%- include('../modules/components/lp/_faq.html') %>
 </div>
+  <%- include('../modules/components/lp/_line-cta-button.html') %>
+</main>

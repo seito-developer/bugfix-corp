@@ -1,31 +1,31 @@
+@use "sanitize.css";
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  font-family: "Noto Sans",  Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+div, ul, li, h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
 }
 
 .lp {
   display: block;
   margin: 0 auto;
-  text-align: center;
+  max-width: 520px;
   img {
-    max-width: 393px;
+    max-width: 100%;
     height: auto;
-    width: 100%;
   }
 }
 
-.top {
-  padding: 0 5%;
+.f-mincho {
+  font-family:"Hiragino Mincho ProN", YuMincho, serif;
 }
-
-.book {
-  margin: 10px 0 0;
-  padding: 0 20%;
-}
-
-.mb {
-  margin-bottom: 40px;
-}
-
-.mt-20 {
-  margin-top: 20px;
+.f-number {
+  font-family: "Oxygen Mono", monospace, sans-serif;
 }

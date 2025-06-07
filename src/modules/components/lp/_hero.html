@@ -1,0 +1,109 @@
+<div class="hero-container">
+    <p class="hero-subtitle-top f-mincho">生成AI × プログラミング力</p>
+    <div class="hero-main-text-wrapper">
+        <div class="hero-main-text">
+            <span>ITビジネス戦闘力を</span>
+        </div>
+    </div>
+    <div class="hero-main-text-wrapper">
+        <div class="hero-main-text">
+            <span>ブチ上げる環境へ。</span>
+        </div>
+    </div>
+    <p class="hero-subtitle-bottom f-mincho">超実践型プログラミングスクール</p>
+</div>
+
+<style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInSkew {
+            from {
+                opacity: 0;
+                transform: translateX(-50px) skewX(-15deg);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0) skewX(-15deg);
+            }
+        }
+        
+        .hero-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-subtitle-top {
+            font-size: 1.5rem; /* Adjust as needed */
+            color: #333333;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .hero-main-text-wrapper {
+            margin-bottom: 10px;
+            animation: slideInSkew 1s ease-out 0.3s forwards;
+            opacity: 0; /* Start hidden for animation */
+        }
+
+        .hero-main-text-wrapper:last-of-type {
+             margin-bottom: 25px;
+             animation-delay: 0.6s; /* Stagger animation */
+        }
+
+
+        .hero-main-text {
+            background-color: #2A5B5C; /* Dark teal color from image */
+            color: #ffffff;
+            font-size: 2.5rem; /* Adjust as needed */
+            font-weight: bold;
+            padding: 15px 40px;
+            display: inline-block;
+            transform: skewX(-15deg); /* Skew effect */
+            line-height: 1.2;
+        }
+
+        .hero-main-text span {
+            display: inline-block;
+            transform: skewX(15deg); /* Counter-skew text */
+        }
+
+        .hero-subtitle-bottom {
+            font-size: 1.5rem; /* Adjust as needed */
+            color: #2A5B5C; /* Dark teal color */
+            font-weight: bold;
+            animation: fadeIn 1s ease-out 0.9s forwards;
+            opacity: 0; /* Start hidden for animation */
+            margin-bottom: 10px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-main-text {
+                font-size: 1.8rem;
+                padding: 10px 25px;
+            }
+            .hero-subtitle-bottom {
+                font-size: 1.5rem;
+            }
+        }
+         @media (max-width: 480px) {
+            .hero-main-text {
+                font-size: 1.5rem;
+                padding: 8px 20px;
+            }
+            .hero-subtitle-bottom {
+                font-size: 1.5rem;
+            }
+        }
+    </style>

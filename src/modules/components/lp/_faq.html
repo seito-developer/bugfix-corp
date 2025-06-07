@@ -1,0 +1,190 @@
+<% const faqs = [
+{
+    "id": "faq1",
+    "question": "現在の仕事と両立しながらできる？",
+    "answer": "問題ございません。受講生様の半数以上が仕事と両立されています。またSiiDとしてもその前提でカリキュラムを組んでおります。"
+  },
+  {
+    "id": "faq2",
+    "question": "絶対に転職を目指さないといけない？",
+    "answer": "転職しなくても構いません。現在の職場でのキャリアアップ目的で受講されている生徒さんもいらっしゃいます。またライトに始めるBasicというコースもございます。"
+  },
+  {
+    "id": "faq3",
+    "question": "学生でも受講できる？",
+    "answer": "できます。新卒でのエンジニア就職を目指して取り組む大学生の受講生様も多くいらっしゃいます。"
+  },
+  {
+    "id": "faq4",
+    "question": "個別面談を受けたら絶対申し込まないといけない？",
+    "answer": "申し込みいただかなくても大丈夫です。無理なセールストークも行っていないので、ご安心ください。また個別面談では皆さまのプログラミング学習や転職活動全般のご相談にのっております。ぜひご活用ください。"
+  },
+  {
+    "id": "faq5",
+    "question": "補助金はどうすれば受給できる？",
+    "answer": "「雇用保険の被保険者期間2年以上」が条件となります。またカリキュラムをサボらずしっかり受講し完了いただく必要がございます。申請は全国のハローワークが窓口となるため、確実な情報を知るにはそちらで相談いただく必要がございます。\nSiiDの個別面談でもできる範囲でご相談にのらせていただきます。"
+  },
+  {
+    "id": "faq6",
+    "question": "すぐに個別面談の申込を行いたい",
+    "answer": "弊社のSiiD Webサイトからお申し込みいただけます。 <a href=\"https://bug-fix.org/siid/counseling\" target=\"_blank\">https://bug-fix.org/siid/counseling/</a>"
+  }
+]; %>
+
+<div class="faq-section-container">
+    <%- include('_headline-label.html', { headline: "よくあるご質問" }) %>
+    <% faqs.forEach((item, index) => { %>
+    <details class="faq-item" <% if (index === 0) { %>open<% } %>>
+        <summary>
+            <span class="faq-question-content">
+                <span class="q-prefix">Q.</span>
+                <span class="question-text"><%= item.question %></span>
+            </span>
+            <span class="toggle-icon">
+                <span class="plus">+</span>
+                <span class="minus">−</span> <!-- Using a proper minus sign -->
+            </span>
+        </summary>
+        <div class="faq-answer">
+            <div class="faq-answer-content">
+                <%- item.answer %>
+            </div>
+        </div>
+    </details>
+  <% }); %>
+
+</div>
+
+<style>
+  .faq-section-container {
+    position: relative;
+    z-index: 999px;
+            max-width: 700px;
+            width: 100%;
+        }
+
+        .faq-headline {
+            background-color: #2d5a58; /* Dark teal/greenish-blue from image */
+            color: #ffffff;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 1.25rem; /* Approx 20px */
+            font-weight: bold;
+            border-radius: 4px; /* Slight rounding on the headline block */
+            margin-bottom: 24px;
+        }
+
+        .faq-item {
+            background-color: #ffffff; /* white */
+            border: 1px solid #e2e8f0; /* slate-200 or similar light gray */
+            border-radius: 8px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+
+        .faq-item summary {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 24px; /* Increased padding for a taller summary */
+            cursor: pointer;
+            list-style: none; 
+        }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-question-content {
+            display: flex;
+            align-items: flex-start; 
+        }
+
+        .q-prefix {
+            font-size: 1.75rem; /* Larger Q, approx 28px */
+            color: #2d5a58; /* Dark teal from headline */
+            margin-right: 10px; /* Increased margin */
+            font-weight: bold;
+            line-height: 1.2; /* Adjust line-height for better vertical alignment with question text */
+        }
+
+        .question-text {
+            font-size: 1.125rem; /* Approx 18px */
+            color: #1a202c; /* Dark gray / almost black */
+            font-weight: bold;
+            padding-top: 4px; /* Align baseline a bit better with Q */
+        }
+
+        .toggle-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px; /* Slightly larger icon */
+            height: 32px;
+            background-color: #4a5568; /* Dark gray from image */
+            color: #ffffff; 
+            border-radius: 50%;
+            font-size: 1.5rem; /* Larger + symbol */
+            font-weight: bold;
+            line-height: 1; /* Center the + symbol better */
+            flex-shrink: 0; 
+            margin-left: 16px; 
+        }
+                
+        .toggle-icon .plus {
+            display: block;
+        }
+        .toggle-icon .minus {
+            display: none;
+        }
+
+        .faq-item[open] .toggle-icon .plus {
+            display: none;
+        }
+        .faq-item[open] .toggle-icon .minus {
+            display: block;
+        }
+
+        .faq-answer {
+            padding: 0px 24px 20px 24px; /* Adjust padding */
+            color: #4a5568; /* Medium gray for answer text */
+            font-size: 0.95rem; /* Approx 15px */
+            line-height: 1.6;
+        }
+
+        .faq-answer-content {
+            /* Adjust padding to align with Q text: q-prefix font-size + margin-right */
+            padding-left: calc(1.75rem + 10px); 
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .faq-headline {
+                font-size: 1.1rem;
+                padding: 10px 15px;
+            }
+            .faq-item summary {
+                padding: 16px;
+            }
+            .q-prefix {
+                font-size: 1.5rem; 
+                margin-right: 8px;
+            }
+            .question-text {
+                font-size: 1rem; 
+            }
+            .toggle-icon {
+                width: 28px; 
+                height: 28px; 
+                font-size: 1.25rem;
+            }
+            .faq-answer {
+                padding: 0px 16px 16px 16px;
+                font-size: 0.9rem; 
+            }
+            .faq-answer-content {
+                padding-left: calc(1.5rem + 8px);
+            }
+        }
+</style>

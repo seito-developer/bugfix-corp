@@ -1,0 +1,60 @@
+<div class="container">
+    <a href="#" class="line-button">
+        <img src="/images/siid-lp/line.png" alt="LINE" class="line-logo" style="width: 40px; height: 40px; object-fit: contain; object-position: 10% 50%; border-radius: 6px; background-color: #00B900; padding:2px;">
+        LINEで特典をもらう
+    </a>
+    <p class="caption">
+        LINEからは個別相談・申し込み・限定情報<br>
+        の閲覧などがご利用できます。
+    </p>
+</div>
+
+<style>
+    .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 0 30px;
+        }
+        .line-button {
+            display: flex;
+            align-items: center;
+            background-color: #2A5B55; /* Dark teal from image */
+            color: white;
+            padding: 15px 25px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 24px; /* Adjusted for visual match */
+            font-weight: bold;
+            border: 2px solid white;
+            box-shadow: 0 0 0 1px #2A5B55; /* Creates the inner border effect */
+            transition: background-color 0.3s ease;
+            min-width: 300px; /* Ensure it's wide enough */
+            justify-content: center;
+        }
+        .line-button:hover {
+            background-color: #224c47; /* Slightly darker teal on hover */
+        }
+        .line-logo {
+            width: 40px; /* Adjusted for visual match */
+            height: 40px; /* Adjusted for visual match */
+            margin-right: 15px;
+        }
+        .caption {
+            margin-top: 15px;
+            font-size: 14px; /* Adjusted for visual match */
+            color: #374151; /* Dark greyish teal from image */
+            text-align: center;
+            max-width: 450px; /* To match the image's text wrapping */
+            br {
+                display: none;
+            }
+        }
+        @media (max-width: 480px) {
+            .caption {
+                br {
+                    display: block;
+                }
+            }
+        }
+</style>
