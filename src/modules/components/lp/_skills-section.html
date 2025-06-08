@@ -1,7 +1,5 @@
 <section class="skills-section">
-        <div class="section-headline-container">
-            <h2 class="section-headline">SiiDの学習範囲</h2>
-        </div>
+        <%- include('_headline-label.html', { headline: "SiiDの学習範囲" }) %>
 
         <div class="skills-container">
             <img src="/images/siid-lp/skills.png" alt="SiiDの学習範囲">
@@ -13,21 +11,6 @@
             background-color: #efefef;
             padding: 40px 0;
             width: 100%;
-        }
-
-        .section-headline-container {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 30px;
-        }
-
-        .section-headline {
-            background-color: #2A585C; /* Dark Teal */
-            color: white;
-            font-size: 1.25rem; /* Approx 20px */
-            font-weight: 600;
-            padding: 12px 24px;
-            display: inline-block;
         }
 
         .skills-container {

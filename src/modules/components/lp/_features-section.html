@@ -1,6 +1,6 @@
 <div class="features-section-wrapper">
   <section class="features-section">
-    <h2 class="main-headline">SiiDの特徴4つ</h2>
+    <%- include('_headline-label.html', { headline: "SiiDの特徴4つ" }) %>
     <ol class="features-list">
       <li class="feature-item">
         <div class="feature-number">01</div>
@@ -63,20 +63,6 @@
     border-radius: 8px;
     max-width: 700px;
     width: 100%;
-  }
-  .main-headline {
-    background-color: #375F58; /* Dark teal background */
-    color: white;
-    text-align: center;
-    padding: 12px 20px;
-    font-size: 1.5em; /* Adjusted for better visual match */
-    font-weight: bold;
-    border-radius: 4px;
-    margin: 0 auto 40px auto; /* Centered and margin bottom */
-    display: inline-block; /* To make it wrap content width */
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
   }
   .features-list {
     list-style: none;

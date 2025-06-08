@@ -1,16 +1,21 @@
-<h3 class="headline-label"><%= headline %></h3>
+<div class="section-headline-container">
+    <h3 class="headline-label"><%= headline %></h3>
+</div>
 
 <style>
   .headline-label {
     background-color: #2d5a58; /* Dark teal/greenish-blue from image */
     color: #ffffff;
     text-align: center;
-    padding: 12px 20px;
+    padding: 12px 24px;
     font-size: 1.25rem; /* Approx 20px */
     font-weight: bold;
-    border-radius: 4px; /* Slight rounding on the headline block */
-    margin-bottom: 24px;
+    margin-bottom: 24px;        
   }
+  .section-headline-container {
+        display: flex;
+        justify-content: center;
+    }
   @media (max-width: 600px) {
     .headline-label {
       font-size: 1.1rem;
