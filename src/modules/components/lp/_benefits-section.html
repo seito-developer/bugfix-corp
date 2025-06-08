@@ -23,10 +23,12 @@
 %>
 
 <section class="benefits-section">
-    <h1 class="main-title">
+    <div class="main-title-wrapper">
+        <h1 class="main-title">
             今SiiD公式LINEを登録すると、<br>
             豪華特典11個をプレゼント！
         </h1>
+    </div>
 
         <% benefits.forEach(benefit => { %>
             <div class="benefit-item">
@@ -60,6 +62,9 @@
         color: #FFFFFF;
         padding: 40px 20px 60px;
         position: relative;
+    }
+    .main-title-wrapper {
+        text-align: center;
     }
     .main-title {
             font-size: 28px;
