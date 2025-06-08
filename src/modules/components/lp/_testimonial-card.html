@@ -1,0 +1,125 @@
+<% const carousels = [
+{
+    "headline": "地方で未経験からITエンジニアに内定！",
+    "customerName": "けんけんさん",
+    "desc": "苦手な転職活動をがっつりサポートしていただくために入校しました。特に自己分析、書類作成、面接対策の手厚さとクオリティに感動しました！転職を少しでも良い方向に進めたい方にオススメです！",
+    "imgUrl": "work-1.jpg"
+  },{
+    "headline": "地方で未経験からITエンジニアに内定！",
+    "customerName": "けんけんさん",
+    "desc": "苦手な転職活動をがっつりサポートしていただくために入校しました。特に自己分析、書類作成、面接対策の手厚さとクオリティに感動しました！転職を少しでも良い方向に進めたい方にオススメです！",
+    "imgUrl": "work-2.webp"
+  },{
+    "headline": "地方で未経験からITエンジニアに内定！",
+    "customerName": "けんけんさん",
+    "desc": "苦手な転職活動をがっつりサポートしていただくために入校しました。特に自己分析、書類作成、面接対策の手厚さとクオリティに感動しました！転職を少しでも良い方向に進めたい方にオススメです！",
+    "imgUrl": "work-3.webp"
+  },
+]
+%>
+<% carousels.forEach((item, index) => { %>
+<div class="carousel-item">
+    <article class="testimonial-card">
+        <div class="card-header">
+            <div class="case-numbering f-number">
+                <span class="case-prefix">Case</span>
+                <span class="case-digit">0<%- index + 1 %></span>
+            </div>
+
+            <div class="headline-container">
+                <h2><%- item.headline %></h2>
+                <p class="customer-name"><%- item.customerName %></p>
+            </div>
+            <div class="image-container">
+                <img src="/images/siid-lp/works/<%- item.imgUrl %>" alt="お客様の声 - <%- item.customerName %>" />
+            </div>
+        </div>
+        <div class="card-body">
+            <p><%- item.desc %></p>
+        </div>
+    </article>
+</div>
+<% }); %>
+
+<style>
+
+    .testimonial-card {
+        position: relative;
+        background-color: #fff;
+        width: 100%;
+    }
+
+    .card-header {
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    }
+
+    .case-numbering {
+        color: #376060; /* Dark Teal */
+        font-weight: bold;
+        line-height: 1;
+        margin-bottom: 15px;
+        padding-left: 10px;
+        position: absolute;
+        left: 0;
+        top: -5%;
+    }
+
+    .case-prefix {
+        font-size: 30px;
+        font-weight: 500; /* Slightly less bold than numbers */
+        margin-right: 0.1em;
+    }
+    .case-digit {
+        font-size: 50px;
+    }
+
+    .headline-container {
+        padding: 0 35% 0 10px;
+        display: inline-block; /* Fit content */
+        margin-bottom: 10px;
+        position: absolute;
+        left: 0;
+        top: 25%;
+    }
+
+    .headline-container h2 {
+        padding: 10px 15px;
+        background-color: #376060; /* Dark Teal */
+        color: #ffffff;
+        font-size: 1.5rem; /* Prominent headline */
+        font-weight: bold;
+        margin: 0;
+        line-height: 1.4;
+    }
+
+    .customer-name {
+        color: #376060; /* Dark Teal */
+        font-size: 1rem;
+        font-weight: 600;
+        margin-top: 10px;
+    }
+
+    .image-container {
+        width: 100%;
+        padding-left: 20%;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+        display: block; /* Remove extra space below image */
+    }
+
+    .card-body {
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .card-body p {
+        color: #333333;
+        font-size: 0.95rem;
+        line-height: 1.7;
+        margin: 0;
+    }
+</style>

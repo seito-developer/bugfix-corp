@@ -1,0 +1,104 @@
+<div class="programming-info-section">
+    <header class="info-header">
+        <h1>プログラミング学習を成功<br>させるには…</h1>
+    </header>
+    <div class="info-content">
+        <p class="important-notice">↓↓この2つが重要です↓↓</p>
+        <ul class="info-list">
+            <li class="info-list-item">
+                <div class="item-title-container">
+                    <div class="item-icon">
+                        <%- include('../modules/components/lp/_diamond.html') %>
+                    </div>
+                    <h2 class="item-title">プログラミング特有の学習方法を知る</h2>
+                </div>
+                <p class="item-description">
+                    プログラミングは義務教育や資格勉強とは異なるため、特有の学習方法で学ぶ必要があります。
+                </p>
+            </li>
+            <li class="info-list-item">
+                <div class="item-title-container">
+                    <div class="item-icon">
+                        <%- include('../modules/components/lp/_diamond.html') %>
+                    </div>
+                    <h2 class="item-title">横断的な技術を学ぶ</h2>
+                </div>
+                <p class="item-description">
+                    じつはプログラミングはシステム開発を行う際の一工程にすぎません。実際にはコンピュータの仕組みや仕様書の作り方なども学ぶ必要があります。（基礎だけでOK）
+                </p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<style>
+    .programming-info-section {
+        background-color: #ffffff;
+        width: 100%;
+        max-width: 600px; /* Adjust as needed */
+    }
+
+    .info-header {
+        background-color: #2A5B58; /* Dark teal */
+        color: #ffffff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .info-header h1 {
+        margin: 0;
+        font-size: 1.8em; /* Adjusted for prominence */
+        font-weight: bold;
+    }
+
+    .info-content {
+        padding: 20px; /* Increased horizontal padding */
+    }
+
+    .important-notice {
+        text-align: center;
+        font-weight: bold;
+        color: #333333;
+        margin-bottom: 30px; /* Increased margin */
+        font-size: 1.2em; /* Slightly larger */
+    }
+
+    .info-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .info-list-item {
+        margin-bottom: 30px; /* Increased margin */
+    }
+
+    .info-list-item:last-child {
+        margin-bottom: 0;
+    }
+    
+    .item-title-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px; /* Increased margin */
+    }
+
+    .item-icon {
+        width: 28px; /* Slightly larger icon */
+        height: 28px;
+        margin-right: 12px; /* Increased margin */
+        fill: #2A5B58; /* Dark teal */
+    }
+
+    .item-title {
+        color: #2A5B58; /* Dark teal */
+        font-size: 1.3em; /* Adjusted for prominence */
+        font-weight: bold;
+    }
+
+    .item-description {
+        color: #333333;
+        font-size: 1em;
+        line-height: 1.8;
+    }
+</style>

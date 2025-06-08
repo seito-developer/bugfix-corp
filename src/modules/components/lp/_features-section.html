@@ -1,0 +1,155 @@
+<div class="features-section-wrapper">
+  <section class="features-section">
+    <h2 class="main-headline">SiiDの特徴4つ</h2>
+    <ol class="features-list">
+      <li class="feature-item">
+        <div class="feature-number">01</div>
+        <div class="feature-content">
+          <h3 class="feature-title">実践型カリキュラム</h3>
+          <p class="feature-description">
+            プログラミングはもちろん、現場で使われるシステム開発に必要なスキル全般および学習方法をもレクチャーします。
+          </p>
+        </div>
+      </li>
+      <li class="feature-item">
+        <div class="feature-number">02</div>
+        <div class="feature-content">
+          <h3 class="feature-title">ビジネススキルも徹底指導</h3>
+          <p class="feature-description">
+            プログラミング学習は当たり前に、資料作成、面接プレゼン、企画書作成などの課題を徹底的に1on1指導します。
+          </p>
+        </div>
+      </li>
+      <li class="feature-item">
+        <div class="feature-number">03</div>
+        <div class="feature-content">
+          <h3 class="feature-title">受講生様に合わせたプランニング</h3>
+          <p class="feature-description">
+            1人1人に合わせた学習計画を立て、皆さんの経験や性格に合わせた自己PR作成や応募先企業の選定を支援します。
+          </p>
+        </div>
+      </li>
+      <li class="feature-item">
+        <div class="feature-number">03</div>
+        <div class="feature-content">
+          <h3 class="feature-title">最新のWeb/IT業界トレンドをカバー</h3>
+          <p class="feature-description">
+            現役エンジニアやエンジニアマネージャーが講師を務めるため、業界トレンドに沿ったカリキュラムや就活対策に努めます。
+          </p>
+        </div>
+      </li>
+    </ol>
+  </section>
+</div>
+
+<style>
+  /* Ensure a common base font and box-sizing if this component is used in various contexts */
+  .features-section-wrapper { /* Added a wrapper for potential isolated styling */
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    box-sizing: border-box;
+    background-color: #F0F0F0; /* Light gray background for the section's context */
+    padding: 40px 20px; /* Mimic body padding from previous example */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .features-section-wrapper * {
+    box-sizing: border-box;
+  }
+
+  .features-section {
+    /* Removed background-color here if wrapper handles it, or keep if section itself has the color */
+    /* padding: 40px 20px; */ /* Padding might be on wrapper or section depending on use */
+    border-radius: 8px;
+    max-width: 700px;
+    width: 100%;
+  }
+  .main-headline {
+    background-color: #375F58; /* Dark teal background */
+    color: white;
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 1.5em; /* Adjusted for better visual match */
+    font-weight: bold;
+    border-radius: 4px;
+    margin: 0 auto 40px auto; /* Centered and margin bottom */
+    display: inline-block; /* To make it wrap content width */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .feature-item {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    margin-bottom: 30px;
+  }
+  .feature-item:last-child {
+    margin-bottom: 0;
+  }
+  .feature-number {
+    font-size: 4em; /* Large number */
+    font-weight: bold;
+    color: #7BC8C4; /* Light teal color */
+    margin-right: 20px;
+    line-height: 1; /* Adjust line height for better alignment */
+    min-width: 80px; /* Ensure numbers align well */
+    text-align: center;
+  }
+  .feature-content {
+    flex-grow: 1;
+  }
+  .feature-title {
+    font-size: 1.3em; /* Slightly larger title */
+    font-weight: bold;
+    color: #333333;
+    margin-top: 10px; /* Align better with the large number */
+    margin-bottom: 8px;
+    border-bottom: 2px solid #7BC8C4; /* Underline with light teal */
+    padding-bottom: 4px;
+    display: inline-block; /* To make underline fit content */
+  }
+  .feature-description {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #4A4A4A; /* Slightly lighter than title for contrast */
+  }
+/* 
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .features-section-wrapper {
+        padding: 20px 10px;
+    }
+    .main-headline {
+      font-size: 1.3em;
+      padding: 10px 15px;
+    }
+    .feature-item {
+      flex-direction: column; /* Stack number and content on small screens */
+      align-items: center; /* Center items when stacked */
+      text-align: center;
+    }
+    .feature-number {
+      font-size: 3em;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+    .feature-title {
+      font-size: 1.2em;
+      margin-top: 0;
+      text-align: center;
+      display: block; /* Full width underline */
+    }
+    .feature-description {
+      font-size: 0.9em;
+      text-align: center;
+    }
+    /* .features-section {
+      padding: 20px 10px;
+    } */
+  } */
+</style>

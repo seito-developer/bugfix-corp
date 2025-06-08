@@ -7,19 +7,27 @@
             <h2>こんなお悩みありませんか？</h2>
             <ul class="concerns-list">
                 <li>
-                    <span class="diamond-icon"></span>
+                    <div class="item-icon">
+                        <%- include('../modules/components/lp/_diamond.html') %>
+                    </div>
                     <span class="concern-text">何から始めたらいいかわからない</span>
                 </li>
                 <li>
-                    <span class="diamond-icon"></span>
+                    <div class="item-icon">
+                        <%- include('../modules/components/lp/_diamond.html') %>
+                    </div>
                     <span class="concern-text">難しそう、挫折しそう...</span>
                 </li>
                 <li>
-                    <span class="diamond-icon"></span>
+                    <div class="item-icon">
+                        <%- include('../modules/components/lp/_diamond.html') %>
+                    </div>
                     <span class="concern-text">「そんなに甘くない」と言われた</span>
                 </li>
                 <li>
-                    <span class="diamond-icon"></span>
+                    <div class="item-icon">
+                        <%- include('../modules/components/lp/_diamond.html') %>
+                    </div>
                     <span class="concern-text">就活を始めたが企業の反応が微妙...</span>
                 </li>
             </ul>
@@ -88,9 +96,7 @@
         }
 
 
-        .diamond-icon {
-            width: 1em; 
-            height: 1em; 
+        .diamond-icon { 
             border: 0.25em solid #2A5B58; /* Teal border */
             transform: rotate(45deg);
             display: inline-block;
