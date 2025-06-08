@@ -1,40 +1,67 @@
 <% const carousels = [
-{
-    "headline": "地方で未経験からITエンジニアに内定！",
-    "customerName": "けんけんさん",
-    "desc": "苦手な転職活動をがっつりサポートしていただくために入校しました。特に自己分析、書類作成、面接対策の手厚さとクオリティに感動しました！転職を少しでも良い方向に進めたい方にオススメです！",
-    "imgUrl": "work-1.jpg"
+    {
+    "num": "01",
+    "headline": "5ヶ月でWebエンジニアに内定！",
+    "customerName": "Zakkyさん",
+    "attr": "30代・ミュージシャン",
+    "desc": "全力で応えてくれる先生のもと、1on1ではプログラミングのみならず、ビジネスコミュニケーションの学びにもなりました。常に受講生ファーストで向き合ってくれるので、自分の状況に応じて、都度スケジュールを一緒に考えてもらえました。経歴関係なく、やる気のある人全員にオススメします！",
+    "imgUrl": "work-1.png"
   },{
-    "headline": "地方で未経験からITエンジニアに内定！",
-    "customerName": "けんけんさん",
-    "desc": "苦手な転職活動をがっつりサポートしていただくために入校しました。特に自己分析、書類作成、面接対策の手厚さとクオリティに感動しました！転職を少しでも良い方向に進めたい方にオススメです！",
-    "imgUrl": "work-2.webp"
+    "num": "02",
+    "headline": "8ヶ月でエンジニア内定！",
+    "customerName": "なおやさん",
+    "attr": "20代・学生",
+    "desc": "就活の時に「エンジニアになりたい！」って思って独学や他のスクールに挑戦したけど、うまくいかなくて。でも諦めきれなくてSiiDに入ったんです。せと先生と直接話せるし、卒業後もコミュニティに残れるのが魅力でした。ポートフォリオも作れて内定ももらえて、自信めちゃくちゃつきました！",
+    "imgUrl": "work-2.png"
   },{
-    "headline": "地方で未経験からITエンジニアに内定！",
-    "customerName": "けんけんさん",
-    "desc": "苦手な転職活動をがっつりサポートしていただくために入校しました。特に自己分析、書類作成、面接対策の手厚さとクオリティに感動しました！転職を少しでも良い方向に進めたい方にオススメです！",
-    "imgUrl": "work-3.webp"
-  },
+    "num": "03",
+    "headline": "自作Webゲームを作成＆販売！",
+    "customerName": "ぽんさん",
+    "attr": "20代・公務員",
+    "desc": "ほかの生徒の皆さんの学ぶ意欲に圧倒され、「何か自分でもアウトプットしてみよう！」と思い、自分が好きなゲームとプログラミングを掛け合わせた商品を作り、ウェブ上で販売したところ、多くの人が自分の作った作品で遊んでくれるようになりました！",
+    "imgUrl": "work-3.png"
+  },{
+    "num": "04",
+    "headline": "エンジニア職に8社内定！",
+    "customerName": "Ryoさん",
+    "attr": "20代・フリーター",
+    "desc": "「0→1」「1→10」「10→100」全て自分で創り上げる楽しさをしれました！IT業界に興味あるけど、何から始めたらいいか分からない、自信がないって方におすすめです！！",
+    "imgUrl": "work-4.png"
+  },{
+    "num": "05",
+    "headline": "SIerからWeb系企業へ転職！",
+    "customerName": "A・Hさん",
+    "attr": "20代・SE",
+    "desc": "受講後に目標だった自社ECサイトを運用している会社にFEエンジニアとして転職を達成できたので大満足しています。内容としては転職後にもよく使っているツールや考え方を学べまたので、今でもとても役立っています！また、毎週宿題で小さな成果物を作るので勉強が習慣になるのも良いところだと思いました！",
+    "imgUrl": "work-5.png"
+  },,{
+    "num": "06",
+    "headline": "スタートアップのインターンに内定！",
+    "customerName": "Iryuさん",
+    "attr": "20代・学生",
+    "desc": "幅広く学ぶことができ、実務の現場で「これやった！」という場面が多々ありました。また、ITスキルだけでなくビジネスにおけるコミュニケーションも学べる内容で、非常に実践的でした。",
+    "imgUrl": "work-6.png"
+  }
 ]
 %>
 <% carousels.forEach((item, index) => { %>
 <div class="carousel-item">
     <article class="testimonial-card">
         <div class="card-header">
-            <div class="case-numbering f-number">
-                <span class="case-prefix">Case</span>
-                <span class="case-digit">0<%- index + 1 %></span>
-            </div>
-
-            <div class="headline-container">
-                <h2><%- item.headline %></h2>
+            <div class="case-numbering">
+                <span class="case-prefix f-number">Case</span>
+                <span class="case-digit f-number"><%- item.num %></span>
                 <p class="customer-name"><%- item.customerName %></p>
+                <p class="customer-name"><%- item.attr %></p>
             </div>
             <div class="image-container">
                 <img src="/images/siid-lp/works/<%- item.imgUrl %>" alt="お客様の声 - <%- item.customerName %>" />
             </div>
         </div>
         <div class="card-body">
+            <div class="headline-container">
+                <h2><%- item.headline %></h2>
+            </div>
             <p><%- item.desc %></p>
         </div>
     </article>
@@ -75,19 +102,16 @@
     }
 
     .headline-container {
-        padding: 0 35% 0 10px;
+        padding: 0 10% 0 0;
         display: inline-block; /* Fit content */
         margin-bottom: 10px;
-        position: absolute;
-        left: 0;
-        top: 25%;
     }
 
     .headline-container h2 {
         padding: 10px 15px;
         background-color: #376060; /* Dark Teal */
         color: #ffffff;
-        font-size: 1.5rem; /* Prominent headline */
+        font-size: 20px; /* Prominent headline */
         font-weight: bold;
         margin: 0;
         line-height: 1.4;
@@ -108,17 +132,20 @@
     .image-container img {
         width: 100%;
         height: auto;
-        display: block; /* Remove extra space below image */
+        display: block;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
     }
 
     .card-body {
-        padding: 20px;
-        margin-top: 20px;
+        padding: 0 20px;
+        margin-top: -20px;
+        position: relative;
     }
 
     .card-body p {
         color: #333333;
-        font-size: 0.95rem;
+        font-size: 16px;
         line-height: 1.7;
         margin: 0;
     }
