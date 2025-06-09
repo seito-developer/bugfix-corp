@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生成AIの教科書 - ITエンジニアが指南する現代のキャリアハック術</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .font-jp {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        #bg-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        .content-z {
+            position: relative;
+            z-index: 1;
+        }
+        .parallax-bg {
+            position: absolute;
+            opacity: 0.1;
+            z-index: 0;
+            pointer-events: none;
+            transition: transform 0.2s ease-out; /* Add smooth transition */
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-gray-300">
+
+    <header class="bg-slate-900/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 border-b border-slate-700">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold font-jp">生成AIの教科書</div>
+            <a href="#purchase" class="bg-emerald-500 hover:bg-emerald-400 text-white font-bold py-2 px-4 rounded-lg transition-colors">今すぐ購入</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative pt-32 pb-20 bg-gradient-to-b from-slate-900 to-slate-800 text-center overflow-hidden">
+            <canvas id="bg-canvas"></canvas>
+            <div class="container mx-auto px-6 content-z">
+                <p class="text-emerald-400 font-bold font-jp mb-2 fade-in-section">登録者12万人超！現役ITエンジニア「セイト先生」完全監修</p>
+                <h1 class="text-4xl md:text-6xl font-black text-white font-jp leading-tight mb-4 fade-in-section" style="transition-delay: 100ms;">AIを“使う側”になれ。</h1>
+                <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-10 fade-in-section" style="transition-delay: 200ms;">あなたの市場価値を劇的に高める、現代最強のキャリアハック術。未来の不安を、圧倒的な自信へ変える時が来た。</p>
+                <div class="fade-in-section" style="transition-delay: 300ms;">
+                    <a href="#purchase" class="bg-emerald-500 hover:bg-emerald-400 text-white text-2xl font-bold py-4 px-10 rounded-xl transition-transform transform hover:scale-105 shadow-lg shadow-emerald-500/20">
+                        LINEで今すぐ教科書を受け取る
+                    </a>
+                    <p class="text-gray-500 mt-4 text-sm font-jp">ジュース1本分の価格(¥280)で、未来への扉を開く</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-slate-800">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold text-white font-jp mb-4 fade-in-section">もし、あなたが今...</h2>
+                <p class="text-lg text-gray-400 mb-12 fade-in-section">一つでも当てはまるなら、この教科書はあなたのためのものです。</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="glassmorphism p-6 rounded-xl fade-in-section">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <p class="font-bold text-white">AIに仕事を奪われるのではと漠然と不安を感じている。</p>
+                    </div>
+                    <div class="glassmorphism p-6 rounded-xl fade-in-section" style="transition-delay: 100ms;">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                        <p class="font-bold text-white">エンジニアやIT業界に興味があるが、何から学ぶべきか分からない。</p>
+                    </div>
+                    <div class="glassmorphism p-6 rounded-xl fade-in-section" style="transition-delay: 200ms;">
+                         <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+                        <p class="font-bold text-white">今の収入に満足できず、転職や副業でキャリアアップしたい。</p>
+                    </div>
+                    <div class="glassmorphism p-6 rounded-xl fade-in-section" style="transition-delay: 300ms;">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <p class="font-bold text-white">学びたい気持ちはあるが、日々の業務に追われ時間がない。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-slate-900 relative overflow-hidden">
+            <div class="parallax-bg w-48 h-48 bg-emerald-900/50 rounded-full -top-20 -left-20 parallax-element" data-speed="0.3"></div>
+            <div class="parallax-bg w-32 h-32 border-2 border-slate-700 rounded-lg -bottom-10 -right-10 transform rotate-45 parallax-element" data-speed="-0.2"></div>
+            <div class="container mx-auto px-6 content-z">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-black text-white font-jp mb-4 fade-in-section">その悩み、<span class="text-emerald-400">AIを味方につければ</span>全て解決できます。</h2>
+                    <p class="text-lg text-gray-400 max-w-3xl mx-auto fade-in-section">この教科書は、単なるAIツールの使い方ガイドではありません。あなたのキャリアを根底から変えるための「思考法」と「実践スキル」を凝縮した、未来への羅針盤です。</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-10">
+                    <div class="fade-in-section">
+                        <div class="text-emerald-400 p-3 bg-slate-800 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white font-jp mb-2">明日から使える実践スキル</h3>
+                        <p class="text-gray-400">企画書作成、メール営業、データ分析、SNS運用...。あなたの業務をAIで自動化・効率化する具体的なプロンプトと思考法を伝授。残業を減らし、成果を最大化します。</p>
+                    </div>
+                    <div class="fade-in-section" style="transition-delay: 100ms;">
+                        <div class="text-emerald-400 p-3 bg-slate-800 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white font-jp mb-2">市場価値を高める思考法</h3>
+                        <p class="text-gray-400">AI時代に求められるのは「AIに指示を出す力」。本質的な課題を発見し、AIをパートナーとして最適な解決策を導き出す「AIビジネスマインド」を養います。</p>
+                    </div>
+                    <div class="fade-in-section" style="transition-delay: 200ms;">
+                        <div class="text-emerald-400 p-3 bg-slate-800 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white font-jp mb-2">スキマ時間で完結する学習</h3>
+                        <p class="text-gray-400">忙しいあなたのために、動画とテキストを組み合わせたハイブリッド学習法を採用。通勤中や休憩中など、スマホ一つでいつでもどこでも効率的に学べます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-slate-800 relative overflow-hidden">
+             <div class="parallax-bg w-40 h-40 border-4 border-slate-700 rounded-full -top-10 -right-20 parallax-element" data-speed="0.25"></div>
+             <div class="parallax-bg w-24 h-24 bg-emerald-900/50 rounded-lg bottom-20 -left-10 transform -rotate-12 parallax-element" data-speed="-0.15"></div>
+             <div class="container mx-auto px-6 content-z">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-black text-white font-jp mb-4 fade-in-section">生成AIでできるようになること</h2>
+                    <p class="text-lg text-gray-400 max-w-3xl mx-auto fade-in-section">AIスキルは、現代のビジネスにおける最強の武器です。あなたの専門分野と掛け合わせることで、その能力を最大限にエンハンスし、新たな価値を創造します。</p>
+                </div>
+                <div class="space-y-16 md:space-y-24">
+                    <%- include('../modules/components/ai-lp/_people.html') %>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-slate-900">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-16">
+                    <h2 class="text-4xl font-black text-white font-jp mb-4 fade-in-section">収録コンテンツ（一部抜粋）</h2>
+                    <p class="text-lg text-gray-400 max-w-3xl mx-auto fade-in-section">全7章、50以上の動画とテキストで構成。初心者からでも体系的に学べます。</p>
+                </div>
+                <div class="max-w-3xl mx-auto bg-slate-800 p-8 rounded-lg shadow-lg fade-in-section">
+                    <ul class="space-y-4">
+                        <li class="border-b border-slate-700 pb-2"><strong class="text-emerald-400">第1章：</strong>AI時代の新常識 - なぜ今、AIを学ぶべきなのか？</li>
+                        <li class="border-b border-slate-700 pb-2"><strong class="text-emerald-400">第2章：</strong>ChatGPT完全攻略 - 基本から応用プロンプトエンジニアリング</li>
+                        <li class="border-b border-slate-700 pb-2"><strong class="text-emerald-400">第3章：</strong>ビジネス実践編 - 企画・営業・マーケティングでのAI活用術</li>
+                        <li class="border-b border-slate-700 pb-2"><strong class="text-emerald-400">第4章：</strong>画像生成AI入門 - Midjourney & Stable Diffusionでアイデアを具現化</li>
+                        <li><strong class="text-emerald-400">第5章：</strong>キャリアハック編 - AIを使った自己分析と職務経歴書の自動作成</li>
+                        <li class="text-gray-500">...他、多数のコンテンツを収録</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Logos Section -->
+        <section class="py-16 bg-slate-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold text-white font-jp mb-4 fade-in-section">本教材で扱うテクノロジーの一部</h2>
+                    <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-12 fade-in-section">業界標準のツールから最新のAIサービスまで、あなたのスキルセットをアップデートします。</p>
+                </div>
+                <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 fade-in-section" style="transition-delay: 100ms;">
+                    <!-- OpenAI Logo -->
+                    <div title="ChatGPT (OpenAI)" class="h-10 text-gray-500 hover:text-white transition-colors duration-300">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-full w-auto fill-current"><path d="M22.68,14.01C22.68,14.01,22.68,14.01,22.68,14.01C21.9,13.23,21.9,13.23,21.9,13.23C21.12,12.45,21.12,12.45,21.12,12.45C20.34,11.67,20.34,11.67,20.34,11.67C19.56,10.89,19.56,10.89,19.56,10.89C18.78,10.11,18.78,10.11,18.78,10.11C18,9.33,18,9.33,18,9.33C17.22,8.55,17.22,8.55,17.22,8.55C16.44,7.77,16.44,7.77,16.44,7.77C15.66,6.99,15.66,6.99,15.66,6.99C14.88,6.21,14.88,6.21,14.88,6.21C14.1,5.43,14.1,5.43,14.1,5.43C13.32,4.65,13.32,4.65,13.32,4.65C12.54,3.87,12.54,3.87,12.54,3.87L12,3.33L11.46,3.87C11.46,3.87,11.46,3.87,11.46,3.87C10.68,4.65,10.68,4.65,10.68,4.65C9.9,5.43,9.9,5.43,9.9,5.43C9.12,6.21,9.12,6.21,9.12,6.21C8.34,6.99,8.34,6.99,8.34,6.99C7.56,7.77,7.56,7.77,7.56,7.77C6.78,8.55,6.78,8.55,6.78,8.55C6,9.33,6,9.33,6,9.33C5.22,10.11,5.22,10.11,5.22,10.11C4.44,10.89,4.44,10.89,4.44,10.89C3.66,11.67,3.66,11.67,3.66,11.67C2.88,12.45,2.88,12.45,2.88,12.45C2.1,13.23,2.1,13.23,2.1,13.23C1.32,14.01,1.32,14.01,1.32,14.01L1.32,14.01L6.47,16.59C6.47,16.59,6.47,16.59,6.47,16.59L7.25,16.98C7.25,16.98,7.25,16.98,7.25,16.98L12,19.67L16.75,16.98C16.75,16.98,16.75,16.98,16.75,16.98L17.53,16.59C17.53,16.59,17.53,16.59,17.53,16.59L22.68,14.01ZM12,1.33L5.22,5.22C5.22,5.22,5.22,5.22,5.22,5.22C4.44,5.99,4.44,5.99,4.44,5.99C3.66,6.77,3.66,6.77,3.66,6.77C2.88,7.55,2.88,7.55,2.88,7.55C2.1,8.33,2.1,8.33,2.1,8.33C1.32,9.11,1.32,9.11,1.32,9.11C0.54,9.89,0.54,9.89,0.54,9.89L0,10.43L0.54,10.97C0.54,10.97,0.54,10.97,0.54,10.97C1.32,11.75,1.32,11.75,1.32,11.75C2.1,12.53,2.1,12.53,2.1,12.53C2.88,13.31,2.88,13.31,2.88,13.31C3.66,14.09,3.66,14.09,3.66,14.09C4.44,14.87,4.44,14.87,4.44,14.87C5.22,15.65,5.22,15.65,5.22,15.65L12,20.67L18.78,15.65C18.78,15.65,18.78,15.65,18.78,15.65C19.56,14.87,19.56,14.87,19.56,14.87C20.34,14.09,20.34,14.09,20.34,14.09C21.12,13.31,21.12,13.31,21.12,13.31C21.9,12.53,21.9,12.53,21.9,12.53C22.68,11.75,22.68,11.75,22.68,11.75C23.46,10.97,23.46,10.97,23.46,10.97L24,10.43L23.46,9.89C23.46,9.89,23.46,9.89,23.46,9.89C22.68,9.11,22.68,9.11,22.68,9.11C21.9,8.33,21.9,8.33,21.9,8.33C21.12,7.55,21.12,7.55,21.12,7.55C20.34,6.77,20.34,6.77,20.34,6.77C19.56,5.99,19.56,5.99,19.56,5.99C18.78,5.22,18.78,5.22,18.78,5.22L12,1.33Z"/></svg>
+                    </div>
+                    <!-- GitHub Logo -->
+                    <div title="GitHub" class="h-10 text-gray-500 hover:text-white transition-colors duration-300">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-full w-auto fill-current"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                    </div>
+                    <!-- Claude (Anthropic) Logo -->
+                    <div title="Claude (Anthropic)" class="h-9 text-gray-500 hover:text-white transition-colors duration-300">
+                         <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-full w-auto fill-current"><path d="M12 0L0 22h24L12 0zm0 4.53L18.66 19H5.34L12 4.53z"/></svg>
+                    </div>
+                    <!-- Midjourney Logo -->
+                    <div title="Midjourney" class="h-10 text-gray-500 hover:text-white transition-colors duration-300">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-full w-auto fill-current"><path d="M22,12.5l-3,3l-2.5-2.5l3-3l-3.5-3.5l-3,3l-2-2l3-3L12,2L2,12l3,3l-2,2l3.5,3.5l2.5-2.5l-3-3l2-2l3,3l2.5-2.5l-3-3 l2-2l3,3l3.5,3.5L22,12.5z"/></svg>
+                    </div>
+                    <!-- Stable Diffusion Logo -->
+                    <div title="Stable Diffusion" class="h-10 text-gray-500 hover:text-white transition-colors duration-300">
+                         <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-full w-auto fill-current"><title>Stable Diffusion</title><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><circle cx="12" cy="12" r="5"/></svg>
+                    </div>
+                    <!-- Notion Logo -->
+                    <div title="Notion" class="h-10 text-gray-500 hover:text-white transition-colors duration-300">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-full w-auto fill-current"><path d="M21.111 2.923H2.889A.889.889 0 002 3.812v16.376a.889.889 0 00.889.888h18.222a.889.889 0 00.889-.888V3.812a.889.889 0 00-.889-.889zM8.889 18.4V5.6h2.833l.112 4.667 2.456-4.667h2.889V18.4h-2.889v-6.945l-2.666 5.1V18.4H8.89z"/></svg>
+                    </div>
+                    <!-- Gemini (Google) Logo -->
+                    <div title="Gemini (Google)" class="h-10 text-gray-500 hover:text-white transition-colors duration-300">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-full w-auto fill-current"><path d="M12 2l2.365 7.299H22l-6.09 4.51L18.365 22 12 17.299 5.635 22 8.09 13.809 2 9.299h7.635L12 2z"/></svg>
+                    </div>
+                    <!-- DeepL Logo -->
+                    <div title="DeepL" class="h-8 text-gray-500 hover:text-white transition-colors duration-300">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-full w-auto fill-current"><path d="M2 2v20h20V2H2zm8 14H6V8h4v8zm8 0h-4V8h4v8z"/></svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-slate-800">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-black text-white font-jp mb-4 fade-in-section">受講者の声</h2>
+                </div>
+                <div class="grid lg:grid-cols-3 gap-8">
+                    <div class="glassmorphism p-8 rounded-lg fade-in-section">
+                        <p class="mb-4">"AIへの漠然とした不安が、確信に変わりました。今ではAIなしの仕事は考えられません。特に営業メールの作成機能は、成約率を1.5倍にしてくれました。"</p>
+                        <p class="font-bold text-white">T. Tanaka (32歳 / 営業職)</p>
+                    </div>
+                    <div class="glassmorphism p-8 rounded-lg fade-in-section" style="transition-delay: 100ms;">
+                        <p class="mb-4">"280円という価格に惹かれて購入しましたが、内容は28万円の価値があると感じました。おかげでIT業界への転職に成功し、年収も150万円アップしました。"</p>
+                        <p class="font-bold text-white">M. Suzuki (28歳 / 元・事務職)</p>
+                    </div>
+                    <div class="glassmorphism p-8 rounded-lg fade-in-section" style="transition-delay: 200ms;">
+                        <p class="mb-4">"就職活動で何をアピールすべきか悩んでいましたが、この教材で学んだAIスキルを武器に、第一志望のコンサルティングファームから内定を貰えました。"</p>
+                        <p class="font-bold text-white">K. Ito (22歳 / 学生)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-slate-900">
+            <div class="container mx-auto px-6 text-center">
+                <img src="https://placehold.co/150x150/64748B/FFFFFF?text=先生" alt="セイト先生" class="w-40 h-40 rounded-full mx-auto mb-6 border-4 border-slate-700 shadow-xl fade-in-section">
+                <h2 class="text-3xl font-bold text-white font-jp mb-2 fade-in-section">著者：セイト先生</h2>
+                <p class="text-emerald-400 font-bold mb-8 fade-in-section">現役ITエンジニア / 教育系インフルエンサー (登録者12万人)</p>
+                <p class="text-lg max-w-3xl mx-auto text-gray-400 fade-in-section">「かつての私も、スキルがなく将来に悩むビジネスマンの一人でした。しかし、ITの力、特にAIを使いこなすことで、キャリアは大きく変わります。この教科書は、過去の私と同じような悩みを持つ人が、最短ルートで未来を切り拓くための羅針盤です。高額なスクールや情報商材に手を出す前に、まずはここから、あなたの新しいキャリアを始めてください。私が全力でサポートします。」</p>
+            </div>
+        </section>
+
+        <section class="py-20 bg-slate-800">
+            <div class="container mx-auto px-6 max-w-3xl">
+                <h2 class="text-3xl font-bold text-white font-jp text-center mb-12 fade-in-section">よくある質問</h2>
+                <div class="space-y-6">
+                    <div class="fade-in-section">
+                        <h4 class="text-xl font-bold text-white mb-2">Q. 全くの初心者でも大丈夫ですか？</h4>
+                        <p class="text-gray-400">A. はい、もちろんです。本教材は、AIに初めて触れる方を対象に、専門用語を極力使わず、基礎の基礎から丁寧に解説しています。PCの基本操作ができれば問題ありません。</p>
+                    </div>
+                    <div class="fade-in-section">
+                        <h4 class="text-xl font-bold text-white mb-2">Q. 購入後の追加料金はありますか？</h4>
+                        <p class="text-gray-400">A. 一切ありません。280円で全てのコンテンツを無期限で閲覧いただけます。</p>
+                    </div>
+                    <div class="fade-in-section">
+                        <h4 class="text-xl font-bold text-white mb-2">Q. どのような支払い方法がありますか？</h4>
+                        <p class="text-gray-400">A. LINE登録後、各種クレジットカード、PayPay、LINE Payなどがご利用いただけます。</p>
+                    </div>
+                    <div class="fade-in-section">
+                        <h4 class="text-xl font-bold text-white mb-2">Q. この教材はバックエンド商品への誘導ですか？</h4>
+                        <p class="text-gray-400">A. 本教材だけでも十分に価値を感じていただける内容ですが、さらに深く学びたい方向けに、より高度なスキルを習得できるオンラインスクールのご案内もさせていただいております。ですが、しつこい勧誘などは一切ございませんのでご安心ください。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="purchase" class="py-20 bg-gradient-to-t from-slate-900 to-slate-800">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-5xl font-black text-white font-jp leading-tight mb-4 fade-in-section">さあ、あなたもAIを使いこなす<br class="hidden md:block"/>1%の人材へ。</h2>
+                <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-10 fade-in-section">未来は待ってくれません。変化を恐れる側から、変化を創り出す側へ。その第一歩を、今ここで踏み出しましょう。</p>
+                <div class="max-w-2xl mx-auto fade-in-section">
+                    <div class="glassmorphism p-8 sm:p-12 rounded-2xl shadow-2xl mb-10 border-emerald-500/50 border">
+                        <p class="text-xl font-bold text-gray-300 font-jp mb-2">人生を変えるほどの知識が、</p>
+                        <p class="text-2xl font-bold text-white font-jp mb-6">ジュース1本分の価格で手に入る。</p>
+                        <p class="text-7xl font-black text-white flex items-center justify-center gap-4">¥<span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-teal-300">280</span></p>
+                    </div>
+                    <a href="#" class="bg-emerald-500 hover:bg-emerald-400 text-white text-2xl font-bold py-5 px-12 rounded-xl transition-transform transform hover:scale-105 shadow-lg shadow-emerald-500/20">
+                        LINEに登録して、今すぐ始める
+                    </a>
+                    <p class="text-gray-500 mt-4 text-sm font-jp">24時間いつでも、あなたのキャリアは変えられます。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 border-t border-slate-800 py-8">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p>&copy; 2025 生成AIの教科書. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Fade-in animation script
+        const fadeInSections = document.querySelectorAll('.fade-in-section');
+        const fadeInObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        fadeInSections.forEach(section => {
+            fadeInObserver.observe(section);
+        });
+
+        // three.js background animation
+        let scene, camera, renderer, particles, mouseX = 0, mouseY = 0;
+        const canvas = document.getElementById('bg-canvas');
+        if (canvas) {
+            const heroSection = canvas.parentElement;
+
+            function initThree() {
+                scene = new THREE.Scene();
+                camera = new THREE.PerspectiveCamera(75, heroSection.offsetWidth / heroSection.offsetHeight, 0.1, 1000);
+                camera.position.z = 50;
+
+                renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true });
+                renderer.setSize(heroSection.offsetWidth, heroSection.offsetHeight);
+                renderer.setClearColor(0x000000, 0);
+
+                const particleCount = 500;
+                const geometry = new THREE.BufferGeometry();
+                const positions = new Float32Array(particleCount * 3);
+                const colors = new Float32Array(particleCount * 3);
+                const color = new THREE.Color();
+
+                for (let i = 0; i < particleCount; i++) {
+                    const x = (Math.random() - 0.5) * 200;
+                    const y = (Math.random() - 0.5) * 200;
+                    const z = (Math.random() - 0.5) * 200;
+                    positions[i * 3] = x;
+                    positions[i * 3 + 1] = y;
+                    positions[i * 3 + 2] = z;
+
+                    color.setHSL(0.4 + Math.random() * 0.2, 0.7, 0.5 + Math.random() * 0.1);
+                    colors[i * 3] = color.r;
+                    colors[i * 3 + 1] = color.g;
+                    colors[i * 3 + 2] = color.b;
+                }
+
+                geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+                geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+                const material = new THREE.PointsMaterial({
+                    size: 0.5,
+                    vertexColors: true,
+                    blending: THREE.AdditiveBlending,
+                    transparent: true,
+                    opacity: 0.8
+                });
+
+                particles = new THREE.Points(geometry, material);
+                scene.add(particles);
+
+                animateThree();
+            }
+
+            function animateThree() {
+                requestAnimationFrame(animateThree);
+                const time = Date.now() * 0.0001;
+                if(particles) particles.rotation.y = time;
+
+                if(camera) {
+                    camera.position.x += (mouseX - camera.position.x) * 0.02;
+                    camera.position.y += (-mouseY - camera.position.y) * 0.02;
+                    camera.lookAt(scene.position);
+                }
+
+                if(renderer) renderer.render(scene, camera);
+            }
+            
+            function onWindowResize() {
+                if(camera) {
+                    camera.aspect = heroSection.offsetWidth / heroSection.offsetHeight;
+                    camera.updateProjectionMatrix();
+                }
+                if(renderer) renderer.setSize(heroSection.offsetWidth, heroSection.offsetHeight);
+            }
+
+            function onDocumentMouseMove(event) {
+                mouseX = (event.clientX - window.innerWidth / 2) / 20;
+                mouseY = (event.clientY - window.innerHeight / 2) / 20;
+            }
+
+            window.addEventListener('resize', onWindowResize, false);
+            document.addEventListener('mousemove', onDocumentMouseMove, false);
+            initThree();
+        }
+
+
+        // Custom Parallax Effect
+        document.addEventListener('scroll', function() {
+            const parallaxElements = document.querySelectorAll('.parallax-element');
+            const scrollY = window.scrollY;
+
+            parallaxElements.forEach(elem => {
+                const speed = parseFloat(elem.dataset.speed) || 0.5;
+                
+                const sectionTop = elem.closest('section').offsetTop;
+                const relativeScrollY = scrollY - sectionTop;
+                
+                // Reverse the direction: move elements up on scroll down
+                const relativeOffset = relativeScrollY * -speed; 
+
+                elem.style.transform = `translateY(${relativeOffset}px)`;
+            });
+        });
+
+    </script>
+
+</body>
+</html>
