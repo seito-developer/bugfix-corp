@@ -45,12 +45,14 @@
             position: relative;
             z-index: 1;
         }
+        .parallax-bg, .parallax-element {
+            transition: transform 0.2s ease-out;
+        }
         .parallax-bg {
             position: absolute;
             opacity: 0.1;
             z-index: 0;
             pointer-events: none;
-            transition: transform 0.2s ease-out; /* Add smooth transition */
         }
     </style>
 </head>
@@ -67,14 +69,22 @@
         <section class="relative pt-32 pb-20 bg-gradient-to-b from-slate-900 to-slate-800 text-center overflow-hidden">
             <canvas id="bg-canvas"></canvas>
             <div class="container mx-auto px-6 content-z">
-                <p class="text-emerald-400 font-bold font-jp mb-2 fade-in-section">登録者12万人超！現役ITエンジニア「セイト先生」完全監修</p>
-                <h1 class="text-4xl md:text-6xl font-black text-white font-jp leading-tight mb-4 fade-in-section" style="transition-delay: 100ms;">AIを“使う側”になれ。</h1>
+                <p class="text-emerald-400 font-bold font-jp mb-2 fade-in-section">登録者12万人超！<br class="md:hidden">現役ITエンジニア「セイト先生」完全監修</p>
+                <h1 class="text-4xl md:text-6xl font-black text-white font-jp leading-tight mb-4 fade-in-section" style="transition-delay: 100ms;">AIを<br class="sm:hidden">“使う側”になれ。</h1>
                 <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-10 fade-in-section" style="transition-delay: 200ms;">あなたの市場価値を劇的に高める、現代最強のキャリアハック術。未来の不安を、圧倒的な自信へ変える時が来た。</p>
                 <div class="fade-in-section" style="transition-delay: 300ms;">
+                    <div class="glassmorphism border-emerald-500/50 p-3 rounded-lg mb-6 max-w-md mx-auto">
+                        <p class="text-white font-bold text-lg flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2 text-emerald-400" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                            </svg>
+                            
+                            LINE登録後、<br class="md:hidden">購入ページのURLが届きます
+                        </p>
+                    </div>
                     <a href="#purchase" class="bg-emerald-500 hover:bg-emerald-400 text-white text-2xl font-bold py-4 px-10 rounded-xl transition-transform transform hover:scale-105 shadow-lg shadow-emerald-500/20">
-                        LINEで今すぐ教科書を受け取る
+                        教科書を獲得する
                     </a>
-                    <p class="text-gray-500 mt-4 text-sm font-jp">ジュース1本分の価格(¥280)で、未来への扉を開く</p>
                 </div>
             </div>
         </section>
@@ -113,22 +123,22 @@
                     <p class="text-lg text-gray-400 max-w-3xl mx-auto fade-in-section">この教科書は、単なるAIツールの使い方ガイドではありません。あなたのキャリアを根底から変えるための「思考法」と「実践スキル」を凝縮した、未来への羅針盤です。</p>
                 </div>
                 <div class="grid md:grid-cols-3 gap-10">
-                    <div class="fade-in-section">
-                        <div class="text-emerald-400 p-3 bg-slate-800 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                    <div class="fade-in-section text-center">
+                        <div class="text-emerald-400 p-3 bg-slate-800 rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                         </div>
                         <h3 class="text-2xl font-bold text-white font-jp mb-2">明日から使える実践スキル</h3>
                         <p class="text-gray-400">企画書作成、メール営業、データ分析、SNS運用...。あなたの業務をAIで自動化・効率化する具体的なプロンプトと思考法を伝授。残業を減らし、成果を最大化します。</p>
                     </div>
-                    <div class="fade-in-section" style="transition-delay: 100ms;">
-                        <div class="text-emerald-400 p-3 bg-slate-800 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                    <div class="fade-in-section text-center" style="transition-delay: 100ms;">
+                        <div class="text-emerald-400 p-3 bg-slate-800 rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" /></svg>
                         </div>
                         <h3 class="text-2xl font-bold text-white font-jp mb-2">市場価値を高める思考法</h3>
                         <p class="text-gray-400">AI時代に求められるのは「AIに指示を出す力」。本質的な課題を発見し、AIをパートナーとして最適な解決策を導き出す「AIビジネスマインド」を養います。</p>
                     </div>
-                    <div class="fade-in-section" style="transition-delay: 200ms;">
-                        <div class="text-emerald-400 p-3 bg-slate-800 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                    <div class="fade-in-section text-center" style="transition-delay: 200ms;">
+                        <div class="text-emerald-400 p-3 bg-slate-800 rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                         </div>
                         <h3 class="text-2xl font-bold text-white font-jp mb-2">スキマ時間で完結する学習</h3>
@@ -146,9 +156,7 @@
                     <h2 class="text-4xl font-black text-white font-jp mb-4 fade-in-section">生成AIでできるようになること</h2>
                     <p class="text-lg text-gray-400 max-w-3xl mx-auto fade-in-section">AIスキルは、現代のビジネスにおける最強の武器です。あなたの専門分野と掛け合わせることで、その能力を最大限にエンハンスし、新たな価値を創造します。</p>
                 </div>
-                <div class="space-y-16 md:space-y-24">
-                    <%- include('../modules/components/ai-lp/_people.html') %>
-                </div>
+                <%- include('../modules/components/ai-lp/_people.html') %>
             </div>
         </section>
         
@@ -156,7 +164,7 @@
         <section class="py-20 bg-slate-900">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl font-black text-white font-jp mb-4 fade-in-section">この教科書で、あなたが手に入れる未来</h2>
+                    <h2 class="text-4xl font-black text-white font-jp mb-4 fade-in-section">この教科書で、<br class="sm:hidden">手に入れる未来</h2>
                 </div>
                 <div class="grid md:grid-cols-3 gap-10 text-center">
                     <!-- Benefit 1 -->
@@ -196,9 +204,8 @@
         <section class="py-20 bg-slate-800">
             <div class="container mx-auto px-6">
                  <div class="text-center mb-16">
-                    <h2 class="text-4xl font-black text-white font-jp mb-4 fade-in-section">収録コンテンツ（一部抜粋）</h2>
-                    <p class="text-lg text-gray-400 max-w-3xl mx-auto fade-in-section">全7章、50以上の動画とテキストで構成。初心者からでも体系的に学べます。</p>
-                </div>
+                    <h2 class="text-4xl font-black text-white font-jp mb-4 fade-in-section">収録コンテンツ</h2>
+                 </div>
                 <div class="max-w-3xl mx-auto bg-slate-800 p-8 rounded-lg shadow-lg fade-in-section">
                     <ul class="space-y-4">
                         <li class="border-b border-slate-700 pb-2"><strong class="text-emerald-400">第1章：</strong>AI時代の新常識 - なぜ今、AIを学ぶべきなのか？</li>
@@ -302,7 +309,6 @@
                     <a href="#" class="bg-emerald-500 hover:bg-emerald-400 text-white text-2xl font-bold py-5 px-12 rounded-xl transition-transform transform hover:scale-105 shadow-lg shadow-emerald-500/20">
                         LINEに登録して、今すぐ始める
                     </a>
-                    <p class="text-gray-500 mt-4 text-sm font-jp">24時間いつでも、あなたのキャリアは変えられます。</p>
                 </div>
             </div>
         </section>
@@ -313,6 +319,143 @@
             <p>&copy; 2025 生成AIの教科書. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Fade-in animation script
+        const fadeInSections = document.querySelectorAll('.fade-in-section');
+        const fadeInObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        fadeInSections.forEach(section => {
+            fadeInObserver.observe(section);
+        });
+
+        // three.js background animation
+        let scene, camera, renderer, particles, mouseX = 0, mouseY = 0;
+        const canvas = document.getElementById('bg-canvas');
+        if (canvas) {
+            const heroSection = canvas.parentElement;
+
+            function initThree() {
+                scene = new THREE.Scene();
+                camera = new THREE.PerspectiveCamera(75, heroSection.offsetWidth / heroSection.offsetHeight, 0.1, 1000);
+                camera.position.z = 50;
+
+                renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true });
+                renderer.setSize(heroSection.offsetWidth, heroSection.offsetHeight);
+                renderer.setClearColor(0x000000, 0);
+
+                const particleCount = 500;
+                const geometry = new THREE.BufferGeometry();
+                const positions = new Float32Array(particleCount * 3);
+                const colors = new Float32Array(particleCount * 3);
+                const color = new THREE.Color();
+
+                for (let i = 0; i < particleCount; i++) {
+                    const x = (Math.random() - 0.5) * 200;
+                    const y = (Math.random() - 0.5) * 200;
+                    const z = (Math.random() - 0.5) * 200;
+                    positions[i * 3] = x;
+                    positions[i * 3 + 1] = y;
+                    positions[i * 3 + 2] = z;
+
+                    color.setHSL(0.4 + Math.random() * 0.2, 0.7, 0.5 + Math.random() * 0.1);
+                    colors[i * 3] = color.r;
+                    colors[i * 3 + 1] = color.g;
+                    colors[i * 3 + 2] = color.b;
+                }
+
+                geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+                geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+                const material = new THREE.PointsMaterial({
+                    size: 0.5,
+                    vertexColors: true,
+                    blending: THREE.AdditiveBlending,
+                    transparent: true,
+                    opacity: 0.8
+                });
+
+                particles = new THREE.Points(geometry, material);
+                scene.add(particles);
+
+                animateThree();
+            }
+
+            function animateThree() {
+                requestAnimationFrame(animateThree);
+                const time = Date.now() * 0.0001;
+                if(particles) particles.rotation.y = time;
+
+                if(camera) {
+                    camera.position.x += (mouseX - camera.position.x) * 0.02;
+                    camera.position.y += (-mouseY - camera.position.y) * 0.02;
+                    camera.lookAt(scene.position);
+                }
+
+                if(renderer) renderer.render(scene, camera);
+            }
+            
+            function onWindowResize() {
+                if(camera) {
+                    camera.aspect = heroSection.offsetWidth / heroSection.offsetHeight;
+                    camera.updateProjectionMatrix();
+                }
+                if(renderer) renderer.setSize(heroSection.offsetWidth, heroSection.offsetHeight);
+            }
+
+            function onDocumentMouseMove(event) {
+                mouseX = (event.clientX - window.innerWidth / 2) / 20;
+                mouseY = (event.clientY - window.innerHeight / 2) / 20;
+            }
+
+            window.addEventListener('resize', onWindowResize, false);
+            document.addEventListener('mousemove', onDocumentMouseMove, false);
+            initThree();
+        }
+
+
+        // Custom Parallax Effect with IntersectionObserver
+        const parallaxElements = document.querySelectorAll('.parallax-element');
+
+        const parallaxObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    window.addEventListener('scroll', handleParallaxScroll);
+                } else {
+                    window.removeEventListener('scroll', handleParallaxScroll);
+                }
+            });
+        }, {
+            threshold: 0
+        });
+
+        parallaxElements.forEach(elem => {
+            parallaxObserver.observe(elem);
+        });
+        
+        const handleParallaxScroll = () => {
+            const visibleElements = document.querySelectorAll('.parallax-element');
+             visibleElements.forEach(elem => {
+                const rect = elem.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+
+                // Check if the element is currently in the viewport
+                if (rect.bottom >= 0 && rect.top <= windowHeight) {
+                    const speed = parseFloat(elem.dataset.speed) || 0.5;
+                    // Calculate the offset based on the element's position relative to the center of the viewport
+                    const offset = (windowHeight / 2 - (rect.top + rect.height / 2)) * speed / 10;
+                    elem.style.transform = `translateY(${offset}px)`;
+                }
+            });
+        }
+    </script>
 
     <%- include('../modules/meta/ai-lp/_script.html') %>
 </body>
