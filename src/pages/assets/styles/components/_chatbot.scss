@@ -1,0 +1,23 @@
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+#dify-chatbot-bubble-window {
+  position: fixed !important;
+  right: 0;
+  bottom: 0;
+  min-width: 200px;
+  min-height: 100px;
+  border-radius: 17px;
+  overflow: hidden;
+}
+
+#dify-chatbot-bubble-button {
+  background-color: var(--color-sub) !important;
+  // --dify-chatbot-bubble-button-bg-color: var(--color-sub) !important;
+}
+
+#dify-chatbot-bubble-window {
+  width: 24rem !important;
+  height: 40rem !important;
+}
