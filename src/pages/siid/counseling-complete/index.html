@@ -4,25 +4,28 @@ text: "お申し込み" } }; const hero={ title: "COUNSELING" , sub: "個別説�
 disc: "SiiD個別説明会の窓口です" }; %> <%- include('../modules/meta/_head.html',
 head) %>
 
-<span id="a8sales"></span>
-<script src="//statics.a8.net/a8sales/a8sales.js"></script>
+<!-- Start FullSpeed -->
 <script>
-  let params = new URLSearchParams(document.location.search);
-  let eventUid = params.get("eventUid");
-  a8sales({
-    pid: "s00000026893001",
-    order_number: eventUid,
-    currency: "JPY",
-    items: [
-      {
-        code: "soudan",
-        price: 1,
-        quantity: 1,
-      },
-    ],
-    total_price: 1,
-  });
+if (!window.dtlpcvCvConf) {
+  window.dtlpcvCvConf = [];
+}
+window.dtlpcvCvConf.push({
+  siteId: "6548668445360128",
+  commitData: {
+    pid: "5794135838556160",
+    amount: "",
+    mid: "",
+    u: "111111", // 注文IDなど識別子
+    t:"WfvHSKXPRi",
+    cvinfo:"1.1.1", // [商品キー].[数量].[単価]
+    cvparam1: "", // 任意パラメータ1
+    cvparam2: "", // 任意パラメータ2
+    cvparam3: ""  // 任意パラメータ3
+    }
+});
 </script>
+<script src="https://dep.tc/public/js/lpcv.js?cid=6548668445360128&pid=5794135838556160&t=WfvHSKXPRi" async="async"></script>
+<!-- End FullSpeed -->
 
 <%- include('../modules/layout/_header.html', {header: header}) %> <%-
 include('../modules/components/_sub-hero.html', {hero: hero}) %>
