@@ -9,13 +9,16 @@ head) %>
 if (!window.dtlpcvCvConf) {
   window.dtlpcvCvConf = [];
 }
+let params = new URLSearchParams(document.location.search);
+let eventUid = params.get("eventUid");
+
 window.dtlpcvCvConf.push({
   siteId: "6548668445360128",
   commitData: {
     pid: "5794135838556160",
     amount: "",
     mid: "",
-    u: "111111", // 注文IDなど識別子
+    u: eventUid, // URLパラメータから取得
     t:"WfvHSKXPRi",
     cvinfo:"1.1.1", // [商品キー].[数量].[単価]
     cvparam1: "", // 任意パラメータ1
