@@ -4,7 +4,7 @@
 
 .nav {
   position: fixed;
-  width: fn.vw(510px);
+  width: fn.vw(660px);
   z-index: cn.$z-index-max;
   right: fn.vw(80px);
   background: #fff;
@@ -17,12 +17,15 @@
     justify-content: space-between;
   }
   .nav-contact {
-    width: 34.2%;
+    width: 54.2%;
     line-height: 1;
     text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    gap: fn.vw(10px);
   }
   .nav-list {
-    width: 58%;
+    width: 50%;
     align-content: center;
     align-items: center;
     display: flex;
@@ -176,6 +179,8 @@
       .nav-contact {
         transform: translateY(0);
         opacity: 1;
+        justify-content: center;
+        gap: fn.vw(30px);
       }
       .nav-children {
         visibility: visible;

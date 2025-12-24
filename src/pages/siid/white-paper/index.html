@@ -1,0 +1,45 @@
+<% const head={ 
+  title: common.title.siid.whitePaper, 
+  disc: common.disc.siid.whitePaper, 
+  theme: "theme-siid" 
+}; 
+
+const header={ 
+  contact: { href: "/siid/counseling/" , 
+  text: "お申し込み" } 
+}; 
+
+const hero={ title: "WHITE PAPER" , sub: "資料請求", disc:
+"SiiDのサービス紹介資料をダウンロードいただけます。" }; %> <%-
+include('../modules/meta/_head.html', head) %> <%-
+include('../modules/layout/_header.html', {header: header}) %> <%-
+include('../modules/components/_sub-hero.html', {hero: hero}) %>
+
+<main>
+  <section class="white-paper">
+
+    <div class="white-paper-body">
+      <p>
+        公式LINEへのご登録で、<br class="br" />SiiDのサービス紹介資料をダウンロードいただけます。<br>
+        <a href="/privacy-policy">プライバシーポリシー</a>にご同意の上、お申し込みください。
+      </p>
+      <figure class="white-paper-img">
+        <div class="white-paper-img-box">
+          <img src="/images/white-paper/page-1.jpg" alt="サービス資料の画像１">
+          <img src="/images/white-paper/page-2.jpg" alt="サービス資料の画像２">
+        </div>
+        <figcaption>※画像はイメージです。</figcaption>
+      </figure>
+      <div class="white-paper-button">
+        <%- include("../modules/components/_link.html", {
+          modifier: "link-contact",
+          href: "https://bit.ly/4p3SOBn",
+          text: "公式LINEで資料を受け取る",
+        }) %>
+      </div>
+    </div>
+  </section>
+</main>
+
+<%- include('../modules/layout/_footer.html', {modifier: "" }) %> <%-
+include('../modules/meta/_foot.html') %>

@@ -79,6 +79,12 @@
       background: var(--color-line-dark);
     }
   }
+  &.link-white-paper {
+    background: var(--color-main);
+    &::after {
+      background: var(--color-main-dark);
+    }
+  }
 
   @media screen and (max-width: cn.$bp-sm){
     padding-top: fn.vw(50px);
