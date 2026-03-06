@@ -29,6 +29,9 @@
         background: var(--color-core);
         color: #fff;
       }
+      > i {
+        font-size: fn.fs(14px);
+      }
     }
   }
   // .tuition-body {}

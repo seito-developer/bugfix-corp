@@ -84,4 +84,31 @@
       }
     }
   }
+
+  &.is-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    .panel-headline {
+      > span {
+        &::after {
+          background-color: #fff;
+        }
+      }
+    }
+    &:hover {
+      border-color: rgba(#fff, .5);
+      background: transparent;
+      .panel-headline {
+        padding-right: fn.vw(50px);
+        > span {
+          background: rgba(#fff, .2);
+          transform: translateY(-50%) scale(1);
+          &::after {
+            background-color: #fff;
+            transform: translate(-50%, -50%) scale(1);
+          }
+        }
+      }
+    }
+  }
 }
