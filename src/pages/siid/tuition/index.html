@@ -95,8 +95,8 @@ const features = {
     <div class="tuition-header">
       <h1 class="tuition-header-inner">
         <span>コース</span>
-        <span class="u-disable">Basicコース<i>＜募集停止中＞</i></span>
         <span>Careerコース</span>
+        <span>Careerコース + Full Supportエディション</span>
       </h1>
     </div>
     <div class="tuition-body">
@@ -104,61 +104,42 @@ const features = {
       <dl class="tuition-body-inner">
         <!-- goal -->
         <dt>目標とするゴール</dt>
-        <dd class="u-disable">
+        <dd>
           <ul>
-            <li>簡単なWebサイトやプログラムが作成できる</li>
-            <li>初級レベルのプログラミング問題が解ける</li>
+            <li>AIを業務に活用してキャリアアップする</li>
+            <li>中級レベルのプログラミング問題が解ける</li>
             <li>仕事で技術的なコミュニケーションがとれる</li>
           </ul>
         </dd>
         <dd>
           <ul>
             <li>Web/ITエンジニア職に内定する</li>
-            <li>中級レベルのプログラミング問題が解ける</li>
-            <li>ITビジネスパーソンとして十分なコミュニケーションスキルを習得する</li>
+            <li>上級レベルのプログラミング問題が解ける</li>
+            <li>AI/ITビジネスパーソンとして十分なコミュニケーションスキルを習得する</li>
           </ul>
         </dd>
 
         <!-- person -->
         <dt>こんな人にオススメ</dt>
-        <dd class="u-disable">
+        <dd>
           <ul>
-            <li>気軽にプログラミングを始めてみたい</li>
-            <li>IT/DXスキルを現在の仕事に活かしたい</li>
+            <li>短期間で結果を出したい</li>
+            <li>最低限のスキルを学びたい</li>
             <li>一緒に学べるメンターや仲間がほしい</li>
           </ul>
         </dd>
         <dd>
           <ul>
-            <li>Web/ITエンジニア職、またはそれに準ずる職種にキャリアチェンジしたい</li>
-            <li>一緒に学べるメンターや仲間がほしい</li>
-            <li>事業を創りたい、独立したい</li>
+            <li>仕事・学業と両立しながら結果を出したい</li>
+            <li>最新の技術も含め実践的なスキルを学びたい</li>
+            <li>継続的に一緒に学べるメンターや仲間がほしい</li>
           </ul>
         </dd>
 
         <!-- 学習スタイル -->
         <dt>学習スタイル</dt>
-        <dd class="u-disable">
-          <ul>
-            <li>
-              <strong>スケジュール管理</strong>
-              <p>カジュアル</p>
-            </li>
-            <li>
-              <strong>課題の内容</strong>
-              <ul>
-                <li>ペーパーテスト</li>
-                <li>コーディング演習</li>
-              </ul>
-            </li>
-          </ul>
-        </dd>
         <dd>
           <ul>
-            <li>
-              <strong>スケジュール管理</strong>
-              <p>ストイック</p>
-            </li>
             <li>
               <strong>課題の内容</strong>
               <ul>
@@ -168,38 +149,41 @@ const features = {
                 <li>その他コミュニケーション力やプレゼンテーション力を強化する内容</li>
               </ul>
             </li>
+            <li>
+              <strong>課題への取り組み方</strong>
+              <ul>
+                <li>カジュアル</li>
+              </ul>
+            </li>
+          </ul>
+        </dd>
+        <dd>
+          <ul>
+            <li>
+              <strong>課題の内容</strong>
+              <ul>
+                <li>ペーパーテスト</li>
+                <li>コーディング演習</li>
+                <li>アプリケーション開発・企画</li>
+                <li>コミュニケーション力やプレゼンテーション力を強化する内容</li>
+                <li>実務に即した開発プロジェクト</li>
+              </ul>
+            </li>
+            <li>
+              <strong>課題への取り組み方</strong>
+              <p>ストイック</p>
+            </li>
           </ul>
         </dd>
 
         <!-- サポート範囲 -->
         <dt>学習範囲</dt>
-        <dd class="u-disable">
+        <dd>
           <ul>
             <li>
               <strong>ハードスキル</strong>
               <ul>
-                <li>AIツール(ChatGPT, GitHub Copilotなど)</li>
-                <li>コンピューターサイエンス基礎</li>
-                <li>HTML, CSS, JavaScript/ES6, SQL</li>
-                <li>Git, ChatGPT, CLI, DevTool</li>
-                <li>(Option) Node.js, Firebase</li>
-              </ul>
-            </li>
-            <li>
-              <strong>ソフトスキル</strong>
-              <ul>
-                <li>学習方法・課題解決力</li>
-              </ul>
-            </li>
-          </ul>
-        </dd>
-
-        <dd class="u-disable">
-          <ul>
-            <li>
-              <strong>ハードスキル</strong>
-              <ul>
-                <li>AIツール(ChatGPT, GitHub Copilotなど)</li>
+                <li>AIツール(ChatGPT, Codex, GitHub Copilotなど)</li>
                 <li>コンピューターサイエンス基礎</li>
                 <li>HTML, CSS, JavaScript/ES6, Node.js, PHP/Laravel, PostgreSQL</li>
                 <li>Git, ChatGPT, CLI, DevTool, Figma, Figjam</li>
@@ -212,30 +196,34 @@ const features = {
                 <li>学習方法・課題解決力</li>
                 <li>ビジネスコミュニケーション力</li>
                 <li>企画・プレゼンテーション力</li>
-              </ul>
-            </li>
-            <li>
-              <strong>転職支援（回数制限つき）</strong>
-              <ul>
                 <li>ポートフォリオのアプリケーション開発</li>
                 <li>履歴書・職務経歴書の添削</li>
                 <li>模擬面接</li>
-              </ul>
             </li>
           </ul>
-          <p class="tuition-headline">+ Full Supportオプション・VIPオプション</p>
+        </dd>
+
+        <dd>
           <ul>
             <li>
               <strong>ハードスキル</strong>
+              <p>Careerコースに加えて下記の内容が加わります。また今後の新規追加コンテンツも受講可能です。</p>
               <ul>
-                <li>ハードスキルにTypeScript, React, Pythonが加わります。また今後の新規追加コンテンツも受講可能です。</li>
+                <li>TypeScript, React, Next.js</li>
+                <li>Python, Numpy, Pandas</li>
               </ul>
             </li>
             <li>
-              <strong>転職支援</strong>
+              <strong>ソフトスキル</strong>
               <ul>
-                <li>転職支援の各種サポートが無制限になります。</li>
-                <li>主任講師（セイト）への無制限相談が可能になります。</li>
+                <li>Careerコースと同様</li>
+              </ul>
+            <li>
+              <strong>転職支援</strong>
+              <p>※受講中の成績に応じて下記のサポートが受けられます。</p>
+              <ul>
+                <li>実務経験の紹介</li>
+                <li>求人紹介</li>
               </ul>
             </li>
           </ul>
@@ -243,34 +231,34 @@ const features = {
 
         <!-- 実施内容 -->
         <dt>実施内容</dt>
-        <dd class="u-disable">
+        <dd>
           <ul>
             <li>個別コンサル: 初回のみ</li>
             <li>チャット: 24h質問・相談OK</li>
+            <li>Zoom: 週5日間講師への相談OK</li>
           </ul>
         </dd>
         <dd>
           <ul>
             <li>個別コンサル: 初回 + 適時</li>
             <li>チャット: 24h質問・相談OK</li>
-            <li>Zoom: 週3~5日間講師への相談OK</li>
+            <li>Zoom: 週5日間講師への相談OK</li>
           </ul>
-          <p class="tuition-headline">+ Full Supportオプション・VIPオプション</p>
+          <p class="tuition-headline">VIPオプション</p>
           <ul>
             <li>主任講師（セイト）との1on1を適時実施いたします</li>
+            <li>ビジネス相談や技術コンサルなど特殊要件に対応</li>
           </ul>
         </dd>
 
         <!-- 期間-->
         <dt>学習期間</dt>
-        <dd class="u-disable">
-          最短3ヶ月 〜 最長6ヶ月<br>
-          (目安: 約250 〜 300時間程度)
+        <dd>
+          12ヶ月<br>
+          (目安: 約500 〜 1000時間程度)
         </dd>
         <dd>
-          12ヶ月
-          <p class="tuition-headline">+ Full Supportオプション・VIPオプション</p>
-          アフターフォローがつきます。
+          12ヶ月の受講期間に加え、アフターフォローがつきます。
         </dd>
 
         <!-- tuition -->
@@ -280,32 +268,10 @@ const features = {
             ※銀行振込 or クレジットカード支払い可。
           </span>
         </dt>
-        <dd class="u-disable">
-          <div class="tuition-price">
-            <dl class="price">
-              <dt>3ヶ月プラン</dt>
-              <dd>
-                分割月々<em>24,085</em>円（税込）<br> ✕ 4回
-              </dd>
-              <dd>
-                総額<em>92,500</em>円（税込）
-              </dd>
-            </dl>
-            <dl class="price">
-              <dt>6ヶ月プラン</dt>
-              <dd>
-                分割月々<em>19,072</em>円（税込）<br> ✕ 8回
-              </dd>
-              <dd>
-                総額<em>146,500</em>円（税込）
-              </dd>
-            </dl>
-          </div>
-        </dd>
         <dd>
           <div class="tuition-price">
             <dl class="price">
-              <dt>通常プラン</dt>
+              <dt>12ヶ月プラン</dt>
               <dd>
                 分割月々<em>22,000</em>円（税込）<br> × 24回
               </dd>
@@ -316,7 +282,27 @@ const features = {
                 Reスキル講座給付金使用時
               </dd>
               <dd>
-                <em>105,600円〜264,000</em>円（税込）
+                <em>105,600〜</em>円（税込）
+              </dd>
+              <dd>
+                <strong>528,000円から最大422,400円割引</strong>
+              </dd>
+            </dl>
+          </div>
+        </dd>
+        <dd>
+          <div class="tuition-price">
+            <dl class="price">
+              <dt>+ Full Support オプション</dt>
+              <dd>
+                分割月々<em>29,083.3</em>円（税込）<br> × 24回
+              </dd>
+              <dd>総額<em>698,000</em>円（税込）</dd>
+              <dd class="special">
+                Reスキル講座給付金使用時
+              </dd>
+              <dd>
+                <em>275,600〜</em>円（税込）
               </dd>
               <dd>
                 <strong>528,000円から最大422,400円割引</strong>
@@ -324,23 +310,11 @@ const features = {
             </dl>
 
             <dl class="price price-option">
-              <dt>+ Full Support オプション</dt>
-              <dd>
-                Careerコースに追加<em>+170,000</em>円（税込）
-              </dd>
-              <dd>◎主任講師（セイト）への相談回数無制限</dd>
-              <dd>◎オプション追加でカリキュラム拡張やアフターサポートを充実</dd>
-              <dd>◎分割払い可。総額は<em>698,000</em>円（税込）</dd>
-            </dl>
-
-            <dl class="price price-option">
               <dt>+ VIP オプション</dt>
               <dd>
-                Careerコースに追加<em>+370,000</em>円（税込）
+                分割月々<em>37,416.6</em>円（税込）<br> × 24回
               </dd>
-              <dd>◎主任講師（セイト）への相談回数無制限</dd>
-              <dd>◎ビジネス相談や技術コンサルなど特殊要件に対応</dd>
-              <dd>◎分割払い可。総額は<em>898,000</em>円（税込）</dd>
+              <dd>総額<em>898,000</em>円（税込）</dd>
             </dl>
           </div>
         </dd>
