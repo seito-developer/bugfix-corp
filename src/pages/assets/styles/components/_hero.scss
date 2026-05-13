@@ -35,6 +35,9 @@
   .hero-headline-text {
     display: inline-block;
     position: relative;
+    br {
+      display: none;
+    }
     > span {
       font-size: fn.fs(52px);
       font-weight: bold;
@@ -121,6 +124,9 @@
       letter-spacing: 0.1em;
     }
     .hero-headline-text {
+      br {
+        display: block;
+      }
       > span {
         display: block;
         font-size: fn.fs(32px);
