@@ -147,47 +147,12 @@
         letter-spacing: 0.08em;
         box-shadow: 3px 3px 0 var(--ink);
       }
-      .menu-btn {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        border: 1.5px solid var(--ink);
-        background: #fff;
-        display: grid;
-        place-items: center;
-        cursor: pointer;
-      }
-      .menu-btn span {
-        display: block;
-        width: 18px;
-        height: 1.8px;
-        background: var(--ink);
-        position: relative;
-      }
-      .menu-btn span::before,
-      .menu-btn span::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        width: 18px;
-        height: 1.8px;
-        background: var(--ink);
-      }
-      .menu-btn span::before {
-        top: -5px;
-      }
-      .menu-btn span::after {
-        top: 5px;
-      }
       @media (min-width: 750px) {
         .nav {
           padding: 18px 40px;
         }
         .nav-links {
           display: flex;
-        }
-        .menu-btn {
-          display: none;
         }
       }
 
@@ -1740,7 +1705,6 @@
             <a href="#faq"><span class="en">05 FAQ</span>よくある質問</a>
           </nav>
           <a href="#cta" class="nav-pill">無料カウンセリングへ申し込む</a>
-          <button class="menu-btn" aria-label="menu"><span></span></button>
         </div>
       </header>
 
