@@ -1,0 +1,22 @@
+// FAQ
+document.querySelectorAll(".faq-item").forEach((it) => {
+  it.querySelector(".faq-q").addEventListener("click", () =>
+    it.classList.toggle("open"),
+  );
+});
+// open first FAQ
+const first = document.querySelector(".faq-item");
+if (first) first.classList.add("open");
+
+// js-float-cta
+// 下にスクロールしたら表示、上にスクロールしたら非表示
+const cta = document.querySelector("#js-float-cta");
+let lastScrollY = window.scrollY;
+window.addEventListener("scroll", () => {
+  if (window.scrollY > lastScrollY) {
+    cta.classList.add("is-active");
+  } else {
+    cta.classList.remove("is-active");
+  }
+  lastScrollY = window.scrollY;
+});
