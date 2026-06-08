@@ -110,6 +110,13 @@ a {
     display: block;
     text-align: center;
   }
+  .nav {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+      top: 0;
+      width: 100%;
+  }
   .nav-right {
     display: none;
   }
@@ -149,92 +156,6 @@ a {
     padding: 18px 40px;
   }
   .nav-links {
-    display: flex;
-  }
-}
-
-/* ---- HERO ---- */
-.hero {
-  position: relative;
-}
-.hero-card {
-  position: relative;
-  overflow: hidden;
-  box-shadow: 3px 3px 0 var(--ink);
-}
-.hero-image {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-.hero-cta {
-  max-width: 460px;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  padding: 18px 28px;
-  background: var(--orange);
-  color: #fff;
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  line-height: 1.3;
-  text-align: center;
-  border: 1.5px solid var(--ink);
-  border-radius: 999px;
-  outline: 1px solid rgba(255, 255, 255, 0.95);
-  outline-offset: -6px;
-  transition:
-    transform 0.2s ease,
-    filter 0.2s ease;
-  filter: drop-shadow(3px 3px 0 rgba(20, 24, 58, 0.18));
-  z-index: 2;
-}
-.hero-cta .hero-cta-arrow {
-  font-family: "Poppins", sans-serif;
-  font-size: 22px;
-  font-weight: 500;
-  line-height: 1;
-}
-.hero-cta-pc {
-  position: absolute;
-  left: 6%;
-  bottom: 26%;
-}
-.hero-cta:hover {
-  transform: translateY(-2px) scale(1.02);
-}
-.hero-cta:active {
-  transform: translateY(0) scale(1);
-}
-
-@media (max-width: 749px) {
-  .hero-cta {
-    left: 10px;
-    right: auto;
-    bottom: 10%;
-    font-size: 12px;
-    padding: 10px 15px;
-    gap: 5px;
-    outline: none;
-  }
-  .hero-cta .hero-cta-arrow {
-    font-size: 14px;
-  }
-}
-
-@media (min-width: 750px) {
-  .hero-cta {
-    /* width: 38%; */
-    max-width: 600px;
-    bottom: 10%;
-    left: 45px;
-    font-size: 30px;
-    padding: 32px 52px;
-  }
-  .hero-cta-pc {
     display: flex;
   }
 }
@@ -381,7 +302,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url(assets/noise.png);
+  background-image: url(assets/noise.webp);
   opacity: 0.08;
   mix-blend-mode: overlay;
   pointer-events: none;
@@ -1076,6 +997,7 @@ a {
 .v-thumb img {
   display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }
@@ -1339,21 +1261,9 @@ a {
   border-radius: 999px;
 }
 
-/* ---- Visually-hidden heading (SEO/a11y) ---- */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
 /* ---- Campaign banner (under nav) ---- */
 .campaign-banner {
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1367,35 +1277,46 @@ a {
   letter-spacing: 0.06em;
   line-height: 1.5;
   text-align: center;
-}
-.campaign-banner .cb-text {
-  flex: 1;
-  min-width: 0;
-}
-.campaign-banner .cb-strong {
-  color: #ffd9be;
-  font-size: 14px;
-  font-weight: 900;
+  .cb-text {
+    flex: 1;
+    min-width: 0;
+  }
+  .cb-strong {
+    color: #ffd9be;
+    font-size: 14px;
+    font-weight: 900;
+  }
+  .cb-br {
+    display: none;
+  }
 }
 @media (min-width: 750px) {
   .campaign-banner {
     font-size: 14px;
     padding: 14px 40px;
     gap: 18px;
-  }
-  .campaign-banner .cb-strong {
-    font-size: 16px;
+    .cb-strong {
+      font-size: 16px;
+    }
   }
 }
 @media (max-width: 749px) {
   .campaign-banner {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    top: 50px;
+    width: 100%;
     flex-direction: column;
     gap: 6px;
-    padding: 10px 14px;
+    padding: 10px 0;
     font-size: 11px;
-  }
-  .campaign-banner .cb-strong {
-    font-size: 13px;
+    .cb-strong {
+      font-size: 13px;
+    }
+    .cb-br {
+      display: block;
+    }
   }
 }
 

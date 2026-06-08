@@ -1,0 +1,103 @@
+<div class="hero-sp">
+
+  <div class="hero-sp-main">
+    <div class="hero-sp-title">
+        <img
+        src="assets/copy.svg"
+        alt="上位1%の次世代型AI人材へ。AIプログラミングスクールSiiD"
+        />
+    </div>
+    <a href="#cta" class="hero-cta hero-cta-sp">
+      <span class="hero-cta-text">無料カウンセリングを予約</span>
+      <span class="hero-cta-arrow" aria-hidden="true">→</span>
+    </a>
+  </div>
+  <img
+  class="hero-sp-logo"
+    src="assets/logo-hero.png"
+    alt="SiiDロゴ"
+  />
+</div>
+  
+  <figure class="hero-sp-works">
+    <div class="hero-sp-budge">
+      <img src="assets/budge.png" alt="目標達成率88% / 受講生満足度92%" />
+      <figcaption class="hero-sp-note">
+          ※1 所定の学習時間を達成した受講生の割合（当社調べ）<br />
+          ※2 受講後アンケートにて「満足」「やや満足」と回答した割合（当社調べ）
+      </figcaption>
+    </div>
+    <div class="hero-sp-reskill">
+        <img src="assets/benefits.png" alt="給付金制度で受講料の最大80%が給付対象" />
+    </div>
+  </figure>
+</div>
+
+<style>
+  .hero-sp {
+      background: url("assets/noise-bg.png") repeat;
+      width: 100vw;
+      height: 100vh;
+      min-height: 750px;
+      position: relative;
+  }
+  .hero-sp-logo {
+        display: block;
+        opacity: 0.3;
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+  
+  .hero-sp-main {
+    position: absolute;
+    z-index: 2;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+  }
+  .hero-sp-title {
+    width: 110%;
+    margin: 0 auto 32px;
+
+    > img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .hero-cta.hero-cta-sp {
+    font-size: 20px;
+    padding: 18px 28px;
+    display: block;
+    margin: 0 15px;
+  }
+  .hero-sp-works {
+    position: absolute;
+    z-index: 2;
+    bottom: 32px;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  .hero-sp-note {
+      font-size: 10px;
+  }
+  .hero-sp-reskill {
+    width: 100%;
+    text-align: center;
+    > img {
+        display: inline-block;
+    }
+  }
+
+  @media (min-width: 750px) {
+      .hero-sp {
+        display: none;
+      }
+  }
+</style>

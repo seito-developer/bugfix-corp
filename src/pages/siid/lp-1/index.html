@@ -10,7 +10,7 @@
     <meta property="og:title" content="AIプログラミングスクール SiiD｜未経験からエンジニア転職／給付金で受講料最大80%OFF" />
     <meta property="og:description" content="経済産業省リスキル講座認定で受講料は給付金により最大80%OFF。現役エンジニアの個別指導と就活サポートで未経験からエンジニア転職へ。無料カウンセリング受付中。" />
     <meta property="og:url" content="https://bug-fix.org/siid/" />
-    <meta property="og:image" content="https://bug-fix.org/siid/assets/hero.png" />
+    <meta property="og:image" content="https://bug-fix.org/siid/assets/hero.webp" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,6 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&family=Barlow+Semi+Condensed:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="preload" as="image" href="assets/hero.webp" fetchpriority="high" />
     <link rel="stylesheet" href="./assets/style.css" />
     
     <%- include('../modules/meta/_analytics.html') %>
@@ -40,36 +41,23 @@
             <a href="#voice"><span class="en">04 Voice</span>受講生の声</a>
             <a href="#faq"><span class="en">05 FAQ</span>よくある質問</a>
           </nav>
-          <a href="#cta" class="nav-pill">無料カウンセリングへ申し込む</a>
+          <a href="#cta" class="nav-pill">無料カウンセリングを予約する</a>
         </div>
       </header>
 
       <!-- CAMPAIGN BANNER -->
-      <aside class="campaign-banner" aria-label="キャンペーン情報">
+      <h1 class="campaign-banner" aria-label="キャンペーン情報">
         <span class="cb-text">
-          経済産業省リスキル講座認定／給付金制度で
-          <span class="cb-strong">受講料 最大80%が給付対象</span>
+          エンジニア転職／AIスキル学習ならAIプログラミングスクールSiiD。<br class="cb-br" />
+
+          経済産業省リスキル講座だから<span class="cb-strong">給付金で受講料が最大80%OFF</span>
         </span>
-      </aside>
+      </h1>
 
       <!-- HERO -->
-      <section class="hero">
-        <h1 class="sr-only">
-          AIプログラミングスクール
-          SiiD｜上位1%の次世代型AI人材へ。目標達成率88%・受講生満足度92%・給付金制度で受講料の最大80%が給付対象
-        </h1>
-        <div class="hero-card">
-          <img
-            class="hero-image"
-            src="assets/hero.png"
-            alt="上位1%の次世代型AI人材へ。AIプログラミングスクールSiiD / 目標達成率88% / 受講生満足度92% / 給付金制度で受講料の最大80%が給付対象"
-          />
-          <a href="#cta" class="hero-cta hero-cta-pc">
-            <span class="hero-cta-text">無料カウンセリングへ申し込む</span>
-            <span class="hero-cta-arrow" aria-hidden="true">→</span>
-          </a>
-        </div>
-      </section>
+       <%- include('../modules/components/lp-1/_hero.html') %>
+       <%- include('../modules/components/lp-1/_hero-sp.html') %>
+      
 
       <!-- MESSAGE / about -->
       <section class="message" id="about">
@@ -105,7 +93,11 @@
         <figure class="founder-quote">
           <img
             class="founder-photo"
-            src="assets/seito.jpg"
+            src="assets/seito.webp"
+            width="154"
+            height="154"
+            loading="lazy"
+            decoding="async"
             alt="主任講師 堀口セイト"
           />
           <blockquote class="founder-text">
@@ -136,7 +128,11 @@
         <div class="p-wrap">
           <div class="p-visual">
             <img
-              src="assets/nayami.png"
+              src="assets/nayami.webp"
+              width="1016"
+              height="572"
+              loading="lazy"
+              decoding="async"
               alt="ゴールに向かって曲がりくねった山道を登るビジネスパーソン"
             />
           </div>
@@ -176,7 +172,7 @@
           <article class="r-card">
             <div class="no">01</div>
             <div class="visual">
-              <img src="assets/feature-1.png" alt="" />
+              <img src="assets/feature-1.webp" width="444" height="282" loading="lazy" decoding="async" alt="" />
             </div>
             <h3>
               ゴールから逆算する<br /><span class="brand">必要なことだけ</span
@@ -189,22 +185,22 @@
           <article class="r-card">
             <div class="no">02</div>
             <div class="visual">
-              <img src="assets/feature-3.png" alt="" />
+              <img src="assets/feature-3.webp" width="444" height="258" loading="lazy" decoding="async" alt="" />
             </div>
             <h3>
-              生成AIを武器に<br />独自の<span class="brand">AI先生</span
-              >まで完備
+              生成AIで最短学習！<br />独自の<span class="brand">AI先生</span
+              >も完備
             </h3>
             <p>
-              ChatGPT・Copilot・Cursor・Codexを前提とした実践的な活用法を指導。SiiD独自開発の「AI先生」と対話しながら、書類作成を従来の4〜5倍のスピードで質高く仕上げます。
+              ChatGPT・Copilot・Cursor・Codexを前提とした実践的な活用法を指導。SiiD独自開発の「AI先生」と対話しながら、書類作成やポートフォリオの仕様書を従来の4〜5倍のスピードで質高く仕上げます。
             </p>
           </article>
           <article class="r-card">
             <div class="no">03</div>
             <div class="visual">
-              <img src="assets/feature-2.png" alt="" />
+              <img src="assets/feature-2.webp" width="888" height="503" loading="lazy" decoding="async" alt="" />
             </div>
-            <h3>技術だけでは勝てない、<br />就活を総合プロデュース</h3>
+            <h3>徹底したポートフォリオ添削と模擬面接で、万全の就活対策<br /></h3>
             <p>
               自己分析・企業分析・履歴書／職務経歴書／GitHub／ポートフォリオ添削・模擬面接まで一貫支援。人柄・コミュニケーション含めた「受かる人材」へと磨き上げます。
             </p>
@@ -212,38 +208,41 @@
           <article class="r-card">
             <div class="no">04</div>
             <div class="visual">
-              <img src="assets/feature-4.png" alt="" />
+              <img src="assets/feature-4.webp" width="444" height="282" loading="lazy" decoding="async" alt="" />
             </div>
-            <h3>現役エンジニア＋<br />採用・経営視点の講師陣</h3>
+            <h3>現役エンジニア＋<br />人事経験のある講師陣</h3>
             <p>
-              主任講師・堀口セイト（YouTube登録12.7万人／合同会社BugFix代表）を筆頭に、現役フルスタック／Webエンジニアが在籍。人事部長・社長経験者の視点から、採用現場の本音まで指導します。
+              講師には現役フルスタック／Webエンジニアが複数人在籍。主任講師は前職約100人規模の開発会社で人事や経営の経験を持つため、その視点から企業が求める人材にあなたをプロデュースします。
             </p>
           </article>
           <article class="r-card">
             <div class="no">05</div>
             <div class="visual">
-              <img src="assets/feature-5.png" alt="" />
+              <img src="assets/feature-5.webp" width="446" height="282" loading="lazy" decoding="async" alt="" />
             </div>
-            <h3>Discord 24h質問＋<br />毎日夜のZoom相談室</h3>
+            <h3>チャットで24h質問＋<br />毎日のZoom相談・交流室</h3>
             <p>
-              Discordでチャット質問は24時間・無制限。さらに毎日21:00〜23:00はZoom相談ルームを常時開放。予約不要・カメラOFF可で、言語化しづらい悩みもその場で解決できます。
+              チャットでの質問は24時間・無制限。
+              さらに毎日21:00〜23:00はZoom相談ルームを常時開放。<br />
+              言語化しづらい悩みもその場で解決できるほか、講師や他の受講生様たちと交流できる時間も設けています。
             </p>
           </article>
           <article class="r-card">
             <div class="no">06</div>
             <div class="visual">
-              <img src="assets/feature-6.png" alt="" />
+              <img src="assets/feature-6.webp" width="295" height="195" loading="lazy" decoding="async" alt="" />
             </div>
-            <h3>卒業後も無期限。<br />学習・相談・求人すべて継続</h3>
+            <h3>卒業後も参加可能！<br />イベントも豊富な永久コミュニティ</h3>
             <p>
-              カリキュラムは継続更新・無期限アクセス。コミュニティ、相談ルーム、パートナー企業GIG経由の求人紹介「SiiD
-              Passport」まで、卒業後もつながりと学びが途切れません。
+              SiiDは卒業生との交流も盛んです。<br />
+              カリキュラムの閲覧、オフ会などのイベント、チャット等、多くのサービスが卒業後も利用可能！<br />
+              困ったときにいつでも頼れる仲間と講師がいる環境を提供します。
             </p>
           </article>
         </div>
         <div class="section-cta">
           <a href="#cta">
-            無料カウンセリングへ申し込む
+            無料カウンセリングを予約する
             <span style="font-family: &quot;Poppins&quot;; font-weight: 700"
               >→</span
             >
@@ -578,7 +577,7 @@
         </p>
         <div class="section-cta">
           <a href="#cta">
-            無料カウンセリングへ申し込む
+            無料カウンセリングを予約する
             <span style="font-family: &quot;Poppins&quot;; font-weight: 700"
               >→</span
             >
@@ -599,7 +598,10 @@
           <article class="v-card">
             <div class="v-thumb">
               <img
-                src="assets/works/thumb-iryu.jpg"
+                src="assets/works/thumb-iryu.webp"
+                width="500"
+                height="282"
+                decoding="async"
                 alt="Iryuさん（文系大学生）新卒でメガベンチャー内定"
                 loading="lazy"
               />
@@ -611,7 +613,10 @@
           <article class="v-card">
             <div class="v-thumb">
               <img
-                src="assets/works/thumb-sho.jpg"
+                src="assets/works/thumb-sho.webp"
+                width="500"
+                height="282"
+                decoding="async"
                 alt="ショウさん（公務員）データサイエンティストに転職"
                 loading="lazy"
               />
@@ -623,7 +628,10 @@
           <article class="v-card">
             <div class="v-thumb">
               <img
-                src="assets/works/thumb-maru.jpg"
+                src="assets/works/thumb-maru.webp"
+                width="500"
+                height="282"
+                decoding="async"
                 alt="まるさん（医療従事者）Webエンジニアに内定"
                 loading="lazy"
               />
@@ -633,29 +641,38 @@
           <article class="v-card">
             <div class="v-thumb">
               <img
-                src="assets/works/thumb-hachi.jpg"
+                src="assets/works/thumb-hachi.webp"
+                width="500"
+                height="282"
+                decoding="async"
                 alt="ハチさん（デザイナー）フルリモートWeb開発企業へ"
                 loading="lazy"
               />
             </div>
-            <p class="v-caption">30代女性・経験者がそれでも挑戦した理由</p>
+            <p class="v-caption">30代女性・WebデザイナーからUI/UXデザイナーへ転職！</p>
           </article>
           <article class="v-card">
             <div class="v-thumb">
               <img
-                src="assets/works/thumb-ryusei.jpg"
+                src="assets/works/thumb-ryusei.webp"
+                width="500"
+                height="282"
+                decoding="async"
                 alt="リュウセイさん（現役エンジニア）フリーランス転身で年収2.5倍"
                 loading="lazy"
               />
             </div>
             <p class="v-caption">
-              20代男性・現役エンジニアがフリーランサー転身で年収が2.5倍に！
+              20代男性・現役エンジニアがフリーランサー転身で年収が2.5倍へ！
             </p>
           </article>
           <article class="v-card">
             <div class="v-thumb">
               <img
-                src="assets/works/thumb-shota.jpg"
+                src="assets/works/thumb-shota.webp"
+                width="500"
+                height="282"
+                decoding="async"
                 alt="ショウタさん（介護職）Webエンジニアに転職"
                 loading="lazy"
               />
@@ -665,7 +682,7 @@
         </div>
         <div class="section-cta">
           <a href="#cta">
-            無料カウンセリングへ申し込む
+            無料カウンセリングを予約する
             <span style="font-family: &quot;Poppins&quot;; font-weight: 700"
               >→</span
             >
@@ -681,7 +698,7 @@
         </div>
         <div class="mentor-card">
           <div class="mentor-avatar" aria-hidden="true">
-            <img src="assets/seito.jpg" alt="" />
+            <img src="assets/seito.webp" width="154" height="154" loading="lazy" decoding="async" alt="" />
           </div>
           <div class="mentor-info">
             <span class="role">CHIEF INSTRUCTOR / FOUNDER</span>
@@ -913,7 +930,7 @@
 
     <div class="float-cta-wrap" id="js-float-cta">
       <a class="float-cta" href="#cta" rel="noopener">
-        <span> 無料カウンセリングへ申し込む </span>
+        <span> 無料カウンセリングを予約する </span>
         <span style="font-family: &quot;Poppins&quot;; font-weight: 800">→</span>
       </a>
     </div>
