@@ -88,7 +88,7 @@ a {
   color: var(--navy);
 }
 .logo img {
-  display: block;
+  display: inline-block;
   height: 26px;
   width: auto;
 }
@@ -102,6 +102,17 @@ a {
   display: flex;
   align-items: center;
   gap: 14px;
+}
+@media (max-width: 750px) {
+  .logo {
+    line-height: 1;
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  .nav-right {
+    display: none;
+  }
 }
 .nav-links {
   display: none;
@@ -204,9 +215,10 @@ a {
     left: 10px;
     right: auto;
     bottom: 10%;
-    font-size: 14px;
-    padding: 14px 18px;
-    gap: 8px;
+    font-size: 12px;
+    padding: 10px 15px;
+    gap: 5px;
+    outline: none;
   }
   .hero-cta .hero-cta-arrow {
     font-size: 14px;
@@ -273,7 +285,7 @@ a {
   letter-spacing: 0.08em;
 }
 .sec-head.is-long h2 {
-    font-size: 24px;
+  font-size: 24px;
 }
 .sec-head h2 .brand {
   color: var(--navy);
@@ -1265,6 +1277,11 @@ a {
   width: 100%;
   text-align: center;
   padding: 0 20px;
+  transform: translateY(150%);
+  transition: transform 0.25s ease-in-out;
+  &.is-active {
+    transform: translateY(0);
+  }
 }
 .float-cta {
   cursor: pointer;
@@ -1292,12 +1309,15 @@ a {
   letter-spacing: 0.14em;
   opacity: 0.8;
 }
+
 @media (min-width: 750px) {
   .float-cta-wrap {
     text-align: right;
     padding: 0;
     right: 14px;
     width: auto;
+    transform: translateY(0);
+    transition: none;
   }
   .float-cta {
     padding: 18px 34px;
@@ -1671,4 +1691,8 @@ a {
     color: var(--ink-2);
     font-size: 16px;
   }
+}
+
+.strong {
+  color: #ffd9be;
 }
