@@ -11,59 +11,56 @@
       <span class="hero-cta-text">無料カウンセリングを予約</span>
       <span class="hero-cta-arrow" aria-hidden="true">→</span>
     </a>
+    <figure class="hero-sp-works">
+        <div class="hero-sp-budge">
+        <!-- <img src="assets/budge.png" alt="目標達成率88% / 受講生満足度92%" /> -->
+        <!-- <figcaption class="hero-sp-note">
+            ※1 所定の学習時間を達成した受講生の割合（当社調べ）<br />
+            ※2 受講後アンケートにて「満足」「やや満足」と回答した割合（当社調べ）
+        </figcaption> -->
+        </div>
+        <div class="hero-sp-reskill">
+            <img src="assets/benefits.png" alt="給付金制度で受講料の最大80%が給付対象" />
+        </div>
+    </figure>
   </div>
+  
   <img
   class="hero-sp-logo"
     src="assets/logo-hero.png"
     alt="SiiDロゴ"
   />
 </div>
-  
-  <figure class="hero-sp-works">
-    <div class="hero-sp-budge">
-      <img src="assets/budge.png" alt="目標達成率88% / 受講生満足度92%" />
-      <figcaption class="hero-sp-note">
-          ※1 所定の学習時間を達成した受講生の割合（当社調べ）<br />
-          ※2 受講後アンケートにて「満足」「やや満足」と回答した割合（当社調べ）
-      </figcaption>
-    </div>
-    <div class="hero-sp-reskill">
-        <img src="assets/benefits.png" alt="給付金制度で受講料の最大80%が給付対象" />
-    </div>
-  </figure>
-</div>
 
 <style>
   .hero-sp {
       background: url("assets/noise-bg.png") repeat;
       width: 100vw;
-      height: 100vh;
-      min-height: 750px;
+      min-height: 100vh;
       position: relative;
+      padding: 113px 0 20px;
   }
   .hero-sp-logo {
         display: block;
-        opacity: 0.3;
+        opacity: 0.15;
         position: absolute;
         z-index: 1;
         width: 100%;
-        top: 50%;
+        top: 30%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, 0);
     }
   
   .hero-sp-main {
-    position: absolute;
+    margin: 15% auto 0;
+    position: relative;
     z-index: 2;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
     width: 100%;
   }
   .hero-sp-title {
     width: 110%;
-    margin: 0 auto 32px;
+    margin: 0 auto 15%;
 
     > img {
       width: 100%;
@@ -77,12 +74,17 @@
     margin: 0 15px;
   }
   .hero-sp-works {
-    position: absolute;
-    z-index: 2;
-    bottom: 32px;
     width: 100%;
     text-align: center;
-    margin: 0;
+    margin: 30px 0 0;
+  }
+    .hero-sp-budge {
+        text-align: center;
+    > img {
+        display: inline-block;
+        width: 80%;
+        height: auto;
+    }
   }
   .hero-sp-note {
       font-size: 10px;
