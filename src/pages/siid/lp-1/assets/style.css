@@ -360,6 +360,11 @@ a {
   border-radius: 8px;
   position: relative;
 }
+@media (max-width: 750px) {
+  .founder-quote {
+    flex-direction: column;
+  }
+}
 .founder-photo {
   width: 80px;
   height: 80px;
@@ -985,9 +990,6 @@ a {
   border: 1px solid var(--line);
   border-radius: 10px;
   overflow: hidden;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
 }
 
 .v-thumb {
@@ -1008,6 +1010,22 @@ a {
   font-weight: 700;
   line-height: 1.6;
   color: var(--ink-2);
+}
+.voice-others {
+  /* padding: 20px; */
+  /* border-radius: 12px; */
+  /* border: 1px dashed var(--line); */
+  max-width: 920px;
+  width: 100%;
+  margin: 36px auto 0;
+  font-size: 14px;
+  color: var(--muted);
+  text-align: center;
+  color: var(--ink-2);
+  > img {
+    width: 100%;
+    margin-bottom: 8px;
+  }
 }
 @media (min-width: 750px) {
   .voice-grid {
@@ -1617,3 +1635,4 @@ a {
 .strong {
   color: #ffd9be;
 }
+
