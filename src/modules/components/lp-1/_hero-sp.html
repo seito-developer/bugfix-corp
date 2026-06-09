@@ -2,10 +2,7 @@
 
   <div class="hero-sp-main">
     <div class="hero-sp-title">
-        <img
-        src="assets/copy.svg"
-        alt="上位1%の次世代型AI人材へ。AIプログラミングスクールSiiD"
-        />
+        <%- include('../modules/components/lp-1/_hero-copy.html') %>
     </div>
     <a href="#cta" class="hero-cta hero-cta-sp">
       <span class="hero-cta-text">無料カウンセリングを予約</span>
@@ -60,18 +57,18 @@
   }
   .hero-sp-title {
     width: 110%;
-    margin: 0 auto 15%;
+    margin: 0 auto 7%;
 
-    > img {
+    > svg {
       width: 100%;
       height: auto;
     }
   }
   .hero-cta.hero-cta-sp {
     font-size: 20px;
-    padding: 18px 28px;
+    padding: 22px 25px;
     display: block;
-    margin: 0 15px;
+    margin: 0 20px;
   }
   .hero-sp-works {
     width: 100%;
@@ -92,8 +89,10 @@
   .hero-sp-reskill {
     width: 100%;
     text-align: center;
+    padding: 0 20px;
     > img {
-        display: inline-block;
+        width: 100%;
+        height: auto;
     }
   }
 
