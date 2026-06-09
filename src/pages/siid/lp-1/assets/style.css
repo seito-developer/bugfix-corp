@@ -1012,9 +1012,9 @@ a {
   color: var(--ink-2);
 }
 .voice-others {
-  /* padding: 20px; */
-  /* border-radius: 12px; */
-  /* border: 1px dashed var(--line); */
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px dashed var(--line);
   max-width: 920px;
   width: 100%;
   margin: 36px auto 0;
