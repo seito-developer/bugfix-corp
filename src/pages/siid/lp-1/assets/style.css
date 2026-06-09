@@ -302,7 +302,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url(assets/noise.webp);
+  background-image: url(assets/noise-bg.webp);
   opacity: 0.08;
   mix-blend-mode: overlay;
   pointer-events: none;

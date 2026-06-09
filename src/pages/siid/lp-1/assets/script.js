@@ -12,16 +12,16 @@ if (first) first.classList.add("open");
 // スマホのみ有効。下にスクロールしたら表示、上にスクロールしたら非表示
 if (window.innerWidth <= 750) {
   const cta = document.querySelector("#js-float-cta");
-  let lastScrollY = window.scrollY;
+  const ACTIVATED_LINE = 200;
+  let isWorking = true;
 
-  if (cta) {
+  if (cta && isWorking) {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > lastScrollY) {
+      console.log(window.scrollY);
+      if (window.scrollY > ACTIVATED_LINE) {
         cta.classList.add("is-active");
-      } else {
-        cta.classList.remove("is-active");
+        isWorking = false;
       }
-      lastScrollY = window.scrollY;
     });
   }
 }
