@@ -12,7 +12,7 @@ if (first) first.classList.add("open");
 // スマホのみ有効。下にスクロールしたら表示、上にスクロールしたら非表示
 if (window.innerWidth < window.innerHeight) {
   const cta = document.querySelector("#js-float-cta");
-  const lastScrollY = window.scrollY;
+  let lastScrollY = window.scrollY;
 
   if (cta) {
     window.addEventListener("scroll", () => {
