@@ -10,7 +10,7 @@ if (first) first.classList.add("open");
 
 // js-float-cta
 // スマホのみ有効。下にスクロールしたら表示、上にスクロールしたら非表示
-if (window.innerWidth <= 750) {
+if (window.innerWidth < window.innerHeight) {
   const cta = document.querySelector("#js-float-cta");
   const lastScrollY = window.scrollY;
 
