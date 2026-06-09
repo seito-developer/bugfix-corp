@@ -1,32 +1,51 @@
-<!-- User Heat Tag -->
-<script type="text/javascript">
-  (function(add, cla){window['UserHeatTag']=cla;window[cla]=window[cla]||function(){(window[cla].q=window[cla].q||[]).push(arguments)},window[cla].l=1*new Date();var ul=document.createElement('script');var tag = document.getElementsByTagName('script')[0];ul.async=1;ul.src=add;tag.parentNode.insertBefore(ul,tag);})('//uh.nakanohito.jp/uhj2/uh.js', '_uhtracker');_uhtracker({id:'uhR7AfnJKz'});
-</script>
-<!-- End User Heat Tag -->
+<!-- 計測タグ：初回ユーザー操作 or 4秒後まで遅延読み込み（Total Blocking Time 削減のため） -->
+<script>
+  (function () {
+    var loaded = false;
+    function loadAll() {
+      if (loaded) return;
+      loaded = true;
 
-<!-- Start GA -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-54L1JQ7Q7V"></script>
+      // User Heat Tag
+      (function (add, cla) {
+        window["UserHeatTag"] = cla;
+        window[cla] = window[cla] || function () { (window[cla].q = window[cla].q || []).push(arguments); };
+        window[cla].l = 1 * new Date();
+        var ul = document.createElement("script");
+        var tag = document.getElementsByTagName("script")[0];
+        ul.async = 1;
+        ul.src = add;
+        tag.parentNode.insertBefore(ul, tag);
+      })("//uh.nakanohito.jp/uhj2/uh.js", "_uhtracker");
+      _uhtracker({ id: "uhR7AfnJKz" });
+
+      // Google Tag Manager（PCDDS7MV / 58D75LLL）
+      window.dataLayer = window.dataLayer || [];
+      ["GTM-PCDDS7MV", "GTM-58D75LLL"].forEach(function (i) {
+        window.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var j = document.createElement("script");
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i;
+        document.head.appendChild(j);
+      });
+    }
+
+    var evts = ["scroll", "pointerdown", "keydown", "touchstart", "mousemove"];
+    function trigger() {
+      evts.forEach(function (e) { removeEventListener(e, trigger, { passive: true }); });
+      loadAll();
+    }
+    evts.forEach(function (e) { addEventListener(e, trigger, { passive: true }); });
+    setTimeout(loadAll, 4000); // 無操作ユーザーでも確実に計測（フォールバック）
+  })();
+</script>
+
+<!-- GA は現状無効（コメントアウト）。有効化する場合は上記 loadAll() 内に gtag.js を追加すること。
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-54L1JQ7Q7V"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-54L1JQ7Q7V');
-</script> -->
-<!-- End GA -->
-
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PCDDS7MV');</script>
-<!-- End Google Tag Manager -->
-
-<!-- Google Tag Manager from Uchimura-san -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-58D75LLL');</script>
-<!-- End Google Tag Manager -->
+</script>
+-->
