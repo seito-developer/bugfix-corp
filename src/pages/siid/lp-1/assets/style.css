@@ -1,3 +1,26 @@
+/* Noto Sans JP — self-hosted subset（使用文字＋全かな。Google Fontsの分割DLを排除） */
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/notosansjp-400.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/notosansjp-700.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(fonts/notosansjp-900.woff2) format("woff2");
+}
+
 :root {
   --navy: #475499;
   --navy-2: #5a7fb2;
