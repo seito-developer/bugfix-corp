@@ -9,7 +9,11 @@
       // User Heat Tag
       (function (add, cla) {
         window["UserHeatTag"] = cla;
-        window[cla] = window[cla] || function () { (window[cla].q = window[cla].q || []).push(arguments); };
+        window[cla] =
+          window[cla] ||
+          function () {
+            (window[cla].q = window[cla].q || []).push(arguments);
+          };
         window[cla].l = 1 * new Date();
         var ul = document.createElement("script");
         var tag = document.getElementsByTagName("script")[0];
@@ -22,7 +26,10 @@
       // Google Tag Manager（PCDDS7MV / 58D75LLL）
       window.dataLayer = window.dataLayer || [];
       ["GTM-PCDDS7MV", "GTM-58D75LLL"].forEach(function (i) {
-        window.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        window.dataLayer.push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
         var j = document.createElement("script");
         j.async = true;
         j.src = "https://www.googletagmanager.com/gtm.js?id=" + i;
@@ -32,10 +39,14 @@
 
     var evts = ["scroll", "pointerdown", "keydown", "touchstart", "mousemove"];
     function trigger() {
-      evts.forEach(function (e) { removeEventListener(e, trigger, { passive: true }); });
+      evts.forEach(function (e) {
+        removeEventListener(e, trigger, { passive: true });
+      });
       loadAll();
     }
-    evts.forEach(function (e) { addEventListener(e, trigger, { passive: true }); });
+    evts.forEach(function (e) {
+      addEventListener(e, trigger, { passive: true });
+    });
     setTimeout(loadAll, 4000); // 無操作ユーザーでも確実に計測（フォールバック）
   })();
 </script>
@@ -49,3 +60,21 @@
   gtag('config', 'G-54L1JQ7Q7V');
 </script>
 -->
+
+<!-- OpenAI Ads -->
+<script>
+  !(function (w, d, s, u) {
+    if (w.oaiq) return;
+    var q = function () {
+      q.q.push(arguments);
+    };
+    q.q = [];
+    w.oaiq = q;
+    var j = d.createElement(s);
+    j.async = 1;
+    j.src = u;
+    var f = d.getElementsByTagName(s)[0];
+    f.parentNode.insertBefore(j, f);
+  })(window, document, "script", "https://bzrcdn.openai.com/sdk/oaiq.min.js");
+  oaiq("init", { pixelId: "DNSeeLpdRTGGyfec5wUced", debug: true });
+</script>
