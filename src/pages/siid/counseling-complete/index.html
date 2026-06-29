@@ -7,6 +7,12 @@ head) %>
 <%- include('../modules/layout/_header.html', {header: header}) %> <%-
 include('../modules/components/_sub-hero.html', {hero: hero}) %>
 
+<script>
+  window.__bugfixTrackOpenAIAds("appointment_scheduled", {
+    type: "customer_action",
+  });
+</script>
+
 <main>
   <section class="application application-complete">
     <h1 class="application-conductor">お申し込み完了</h1>

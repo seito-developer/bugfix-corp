@@ -76,5 +76,16 @@
     var f = d.getElementsByTagName(s)[0];
     f.parentNode.insertBefore(j, f);
   })(window, document, "script", "https://bzrcdn.openai.com/sdk/oaiq.min.js");
-  oaiq("init", { pixelId: "DNSeeLpdRTGGyfec5wUced", debug: true });
+  oaiq("init", { pixelId: "DNSeeLpdRTGGyfec5wUced" });
+
+  window.__bugfixTrackOpenAIAds = function (eventName, eventData, options) {
+    try {
+      if (typeof window.oaiq !== "function") return;
+      if (options) {
+        window.oaiq("measure", eventName, eventData, options);
+        return;
+      }
+      window.oaiq("measure", eventName, eventData);
+    } catch (error) {}
+  };
 </script>

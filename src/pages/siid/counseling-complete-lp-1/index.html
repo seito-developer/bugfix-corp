@@ -8,7 +8,9 @@ include('../modules/meta/_head.html', head) %>
 include('../modules/components/_sub-hero.html', {hero: hero}) %>
 
 <script>
-  oaiq("measure", "page_viewed", { type: "contents" });
+  window.__bugfixTrackOpenAIAds("appointment_scheduled", {
+    type: "customer_action",
+  });
 </script>
 
 <main>
