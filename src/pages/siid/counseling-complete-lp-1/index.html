@@ -7,6 +7,10 @@ include('../modules/meta/_head.html', head) %>
 <%- include('../modules/layout/_header.html', {header: header}) %> <%-
 include('../modules/components/_sub-hero.html', {hero: hero}) %>
 
+<script>
+  oaiq("measure", "page_viewed", { type: "contents" });
+</script>
+
 <main>
   <section class="application application-complete">
     <h1 class="application-conductor">お申し込み完了</h1>
@@ -48,8 +52,6 @@ include('../modules/components/_sub-hero.html', {hero: hero}) %>
     </div>
   </section>
 </main>
-
-<script type="module" src="/assets/scripts/moshimo.js"></script>
 
 <%- include('../modules/layout/_footer.html', {modifier: "" }) %> <%-
 include('../modules/meta/_foot.html') %>
