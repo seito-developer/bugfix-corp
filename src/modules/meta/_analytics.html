@@ -37,7 +37,58 @@
 
   gtag("config", "G-54L1JQ7Q7V");
 </script>
-<!-- End GA -->
+<!-- 計測タグ：初回ユーザー操作 or 4秒後まで遅延読み込み（Total Blocking Time 削減のため） -->
+<script>
+  (function () {
+    var loaded = false;
+    function loadAll() {
+      if (loaded) return;
+      loaded = true;
+
+      // User Heat Tag
+      (function (add, cla) {
+        window["UserHeatTag"] = cla;
+        window[cla] =
+          window[cla] ||
+          function () {
+            (window[cla].q = window[cla].q || []).push(arguments);
+          };
+        window[cla].l = 1 * new Date();
+        var ul = document.createElement("script");
+        var tag = document.getElementsByTagName("script")[0];
+        ul.async = 1;
+        ul.src = add;
+        tag.parentNode.insertBefore(ul, tag);
+      })("//uh.nakanohito.jp/uhj2/uh.js", "_uhtracker");
+      _uhtracker({ id: "uhR7AfnJKz" });
+
+      // Google Tag Manager（PCDDS7MV / 58D75LLL）
+      window.dataLayer = window.dataLayer || [];
+      ["GTM-PCDDS7MV", "GTM-58D75LLL"].forEach(function (i) {
+        window.dataLayer.push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var j = document.createElement("script");
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i;
+        document.head.appendChild(j);
+      });
+    }
+
+    var evts = ["scroll", "pointerdown", "keydown", "touchstart", "mousemove"];
+    function trigger() {
+      evts.forEach(function (e) {
+        removeEventListener(e, trigger, { passive: true });
+      });
+      loadAll();
+    }
+    evts.forEach(function (e) {
+      addEventListener(e, trigger, { passive: true });
+    });
+    setTimeout(loadAll, 4000); // 無操作ユーザーでも確実に計測（フォールバック）
+  })();
+</script>
 
 <!-- Google Tag Manager -->
 <script>
@@ -54,38 +105,6 @@
 </script>
 <!-- End Google Tag Manager -->
 
-<!-- Meta Pixel Code -->
-<script>
-  !(function (f, b, e, v, n, t, s) {
-    if (f.fbq) return;
-    n = f.fbq = function () {
-      n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
-    };
-    if (!f._fbq) f._fbq = n;
-    n.push = n;
-    n.loaded = !0;
-    n.version = "2.0";
-    n.queue = [];
-    t = b.createElement(e);
-    t.async = !0;
-    t.src = v;
-    s = b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t, s);
-  })(
-    window,
-    document,
-    "script",
-    "https://connect.facebook.net/en_US/fbevents.js",
-  );
-  fbq("init", "1536990024347464");
-  fbq("track", "PageView");
-</script>
-<!-- End Meta Pixel Code -->
-
-<!-- Start もしも -->
-<script src="https://r.moshimo.com/af/r/maftag.js"></script>
-<!-- End もしも -->
-
 <!-- Google Tag Manager from Uchimura-san -->
 <script>
   (function (w, d, s, l, i) {
@@ -101,17 +120,31 @@
 </script>
 <!-- End Google Tag Manager -->
 
-<!-- Google Tag Manager from IncreaseMarketing-->
+<!-- OpenAI Ads -->
 <script>
-  (function (w, d, s, l, i) {
-    w[l] = w[l] || [];
-    w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-    var f = d.getElementsByTagName(s)[0],
-      j = d.createElement(s),
-      dl = l != "dataLayer" ? "&l=" + l : "";
-    j.async = true;
-    j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+  !(function (w, d, s, u) {
+    if (w.oaiq) return;
+    var q = function () {
+      q.q.push(arguments);
+    };
+    q.q = [];
+    w.oaiq = q;
+    var j = d.createElement(s);
+    j.async = 1;
+    j.src = u;
+    var f = d.getElementsByTagName(s)[0];
     f.parentNode.insertBefore(j, f);
-  })(window, document, "script", "dataLayer", "GTM-NWT5NTNS");
+  })(window, document, "script", "https://bzrcdn.openai.com/sdk/oaiq.min.js");
+  oaiq("init", { pixelId: "DNSeeLpdRTGGyfec5wUced" });
+
+  window.__bugfixTrackOpenAIAds = function (eventName, eventData, options) {
+    try {
+      if (typeof window.oaiq !== "function") return;
+      if (options) {
+        window.oaiq("measure", eventName, eventData, options);
+        return;
+      }
+      window.oaiq("measure", eventName, eventData);
+    } catch (error) {}
+  };
 </script>
-<!-- End Google Tag Manager -->

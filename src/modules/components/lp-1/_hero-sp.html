@@ -1,0 +1,104 @@
+<div class="hero-sp">
+
+  <div class="hero-sp-main">
+    <div class="hero-sp-title">
+        <%- include('../modules/components/lp-1/_hero-copy.html') %>
+    </div>
+    <a href="#cta" class="hero-cta hero-cta-sp">
+      <span class="hero-cta-text">無料カウンセリングを予約</span>
+      <span class="hero-cta-arrow" aria-hidden="true">→</span>
+    </a>
+    <figure class="hero-sp-works">
+        <div class="hero-sp-budge">
+        <!-- <img src="assets/budge.webp" alt="目標達成率88% / 受講生満足度92%" /> -->
+        <!-- <figcaption class="hero-sp-note">
+            ※1 所定の学習時間を達成した受講生の割合（当社調べ）<br />
+            ※2 受講後アンケートにて「満足」「やや満足」と回答した割合（当社調べ）
+        </figcaption> -->
+        </div>
+        <div class="hero-sp-reskill">
+            <img src="assets/benefits.webp" width="337" height="406" fetchpriority="high" decoding="async" alt="給付金制度で受講料の最大80%が給付対象" />
+        </div>
+    </figure>
+  </div>
+  
+  <img
+  class="hero-sp-logo"
+    src="assets/logo-hero.webp"
+    alt="SiiDロゴ"
+  />
+</div>
+
+<style>
+  .hero-sp {
+      background: url(assets/noise-bg.webp) repeat;
+      width: 100vw;
+      min-height: 100vh;
+      position: relative;
+      padding: 113px 0 20px;
+  }
+  .hero-sp-logo {
+        display: block;
+        opacity: 0.15;
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+  
+  .hero-sp-main {
+    margin: 10% auto 0;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+  }
+  .hero-sp-title {
+    width: 110%;
+    margin: 0 auto 7%;
+
+    > svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .hero-cta.hero-cta-sp {
+    font-size: 20px;
+    padding: 22px 25px;
+    display: block;
+    margin: 0 20px;
+  }
+  .hero-sp-works {
+    width: 100%;
+    text-align: center;
+    margin: 30px 0 0;
+  }
+    .hero-sp-budge {
+        text-align: center;
+    > img {
+        display: inline-block;
+        width: 80%;
+        height: auto;
+    }
+  }
+  .hero-sp-note {
+      font-size: 10px;
+  }
+  .hero-sp-reskill {
+    width: 100%;
+    text-align: center;
+    padding: 0 20px;
+    > img {
+        width: 100%;
+        height: auto;
+    }
+  }
+
+  @media (min-width: 750px) {
+      .hero-sp {
+        display: none;
+      }
+  }
+</style>

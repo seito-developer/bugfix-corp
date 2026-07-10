@@ -4,12 +4,14 @@ text: "お申し込み" } }; const hero={ title: "COUNSELING" , sub:
 "無料カウンセリング", disc: "SiiD無料カウンセリングの窓口です" }; %> <%-
 include('../modules/meta/_head.html', head) %>
 
-<!-- Start もしも -->
-<div id="moshimo"></div>
-<!-- End もしも -->
-
 <%- include('../modules/layout/_header.html', {header: header}) %> <%-
 include('../modules/components/_sub-hero.html', {hero: hero}) %>
+
+<script>
+  window.__bugfixTrackOpenAIAds("appointment_scheduled", {
+    type: "customer_action",
+  });
+</script>
 
 <main>
   <section class="application application-complete">
@@ -52,8 +54,6 @@ include('../modules/components/_sub-hero.html', {hero: hero}) %>
     </div>
   </section>
 </main>
-
-<script type="module" src="/assets/scripts/moshimo.js"></script>
 
 <%- include('../modules/layout/_footer.html', {modifier: "" }) %> <%-
 include('../modules/meta/_foot.html') %>
