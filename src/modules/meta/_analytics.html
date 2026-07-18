@@ -1,3 +1,42 @@
+<!-- Start KARTE Tag -->
+<script>
+  !(function (n) {
+    if (!window[n]) {
+      var o = (window[n] = function () {
+        var n = [].slice.call(arguments);
+        return o.x ? o.x.apply(0, n) : o.q.push(n);
+      });
+      ((o.q = []),
+        (o.i = Date.now()),
+        (o.allow = function () {
+          o.o = "allow";
+        }),
+        (o.deny = function () {
+          o.o = "deny";
+        }));
+    }
+  })("krt");
+</script>
+<script
+  async
+  src="https://cdn-edge.karte.io/81f5dc95580fe42385d93c4da40b387e/edge.js"
+></script>
+<!-- End KARTE Tag -->
+
+<!-- Start GA -->
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-54L1JQ7Q7V"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-54L1JQ7Q7V");
+</script>
 <!-- 計測タグ：初回ユーザー操作 or 4秒後まで遅延読み込み（Total Blocking Time 削減のため） -->
 <script>
   (function () {
@@ -51,15 +90,35 @@
   })();
 </script>
 
-<!-- GA は現状無効（コメントアウト）。有効化する場合は上記 loadAll() 内に gtag.js を追加すること。
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-54L1JQ7Q7V"></script>
+<!-- Google Tag Manager -->
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-54L1JQ7Q7V');
+  (function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != "dataLayer" ? "&l=" + l : "";
+    j.async = true;
+    j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(window, document, "script", "dataLayer", "GTM-PCDDS7MV");
 </script>
--->
+<!-- End Google Tag Manager -->
+
+<!-- Google Tag Manager from Uchimura-san -->
+<script>
+  (function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != "dataLayer" ? "&l=" + l : "";
+    j.async = true;
+    j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(window, document, "script", "dataLayer", "GTM-58D75LLL");
+</script>
+<!-- End Google Tag Manager -->
 
 <!-- OpenAI Ads -->
 <script>
