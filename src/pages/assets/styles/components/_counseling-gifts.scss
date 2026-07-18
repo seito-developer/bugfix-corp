@@ -1,0 +1,138 @@
+// settings
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+.counseling-gifts {
+  padding: 0 fn.vw(120px) fn.vw(40px);
+
+  .counseling-gifts-headline {
+    text-align: center;
+    font-size: fn.fs(18px);
+    font-weight: normal;
+    color: var(--color-main);
+    margin-bottom: fn.vw(40px);
+
+    em {
+      font-style: normal;
+      color: var(--color-accent);
+    }
+  }
+  .counseling-gifts-headline-label {
+    display: inline-block;
+    width: fit-content;
+    background: var(--color-sub);
+    color: #fff;
+    font-size: fn.fs(14px);
+    padding: fn.vw(6px) fn.vw(20px);
+    border-radius: 100px;
+    margin-right: fn.vw(10px);
+  }
+
+  .counseling-gifts-carousel {
+    --swiper-theme-color: var(--color-sub);
+    --swiper-navigation-size: #{fn.fs(24px)};
+    padding: 0 fn.vw(48px) fn.vw(48px);
+  }
+
+  .counseling-gifts-list {
+    list-style: none;
+    margin: 0 0 10px;
+    padding: 0;
+  }
+
+  .counseling-gifts-item {
+    position: relative;
+    height: auto;
+    background: #fff;
+    border: 1px solid var(--color-sub);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .counseling-gifts-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: var(--color-accent);
+    color: #fff;
+    font-weight: bold;
+    font-size: fn.fs(14px);
+    padding: fn.vw(6px) fn.vw(16px);
+    border-radius: 0 0 8px 0;
+  }
+
+  .counseling-gifts-image {
+    aspect-ratio: 1735 / 2498;
+    background: #fff;
+    height: 150px;
+    padding: fn.fs(10px);
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .counseling-gifts-title {
+    font-size: fn.fs(15px);
+    font-weight: bold;
+    line-height: 1.6;
+    color: var(--color-core);
+    padding: 0 fn.vw(20px) fn.vw(20px);
+    margin: 0;
+  }
+
+  .counseling-gifts-prev,
+  .counseling-gifts-next {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .counseling-gifts-prev {
+    left: 0;
+  }
+  .counseling-gifts-next {
+    right: 0;
+  }
+
+  .counseling-gifts-pagination {
+    bottom: 0;
+  }
+
+  @media screen and (max-width: cn.$bp-sm) {
+    padding: 0 0 fn.vw(120px);
+
+    .counseling-gifts-headline {
+      font-size: fn.fs(15px);
+      margin-bottom: fn.vw(60px);
+      padding: 0 fn.vw(40px);
+    }
+    .counseling-gifts-headline-label {
+      display: block;
+      margin: 0 auto fn.vw(20px);
+      padding: fn.vw(10px) fn.vw(40px);
+    }
+    .counseling-gifts-image {
+      height: 120px;
+    }
+    .counseling-gifts-carousel {
+      padding: 0 0 fn.vw(100px);
+    }
+    .counseling-gifts-prev,
+    .counseling-gifts-next {
+      display: none;
+    }
+    .counseling-gifts-badge {
+      padding: fn.vw(12px) fn.vw(30px);
+    }
+    .counseling-gifts-title {
+    font-size: fn.fs(12px);
+      padding: fn.vw(30px) fn.vw(40px) fn.vw(40px);
+    }
+  }
+}

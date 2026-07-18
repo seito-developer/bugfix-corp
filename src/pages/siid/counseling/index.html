@@ -1,18 +1,54 @@
 <% const head={ title: common.title.siid.index, disc: common.disc.siid.index,
 theme: "theme-siid" }; const header={ contact: { href: "/siid/counseling/" ,
 text: "お申し込み" } }; const hero={ title: "COUNSELING" , sub:
-"個別説明会", disc: "SiiD個別説明会の窓口です" }; %> <%-
+"個別説明会", disc: "" };
+// 個別説明会の参加特典
+const counselingGifts = [
+  { image: "/images/counseling-gifts/gift-1.jpg", title: "【Win/Mac対応】1分でわかる！プログラミング学習向けPCの選び方（PCを30%割引で買える裏技つき）" },
+  { image: "/images/counseling-gifts/gift-2.jpg", title: "【歴14年エンジニアが選ぶ】主要AIツール5選・完全解説ガイド" },
+  { image: "/images/counseling-gifts/gift-3.jpg", title: "【歴13年のエンジニアが活用する】Claude Code & Codex 裏ワザ＆プロンプト９セット" },
+  { image: "/images/counseling-gifts/gift-4.jpg", title: "【Tier表別】AI時代のプログラミング言語27選・完全解説ガイド" },
+  { image: "/images/counseling-gifts/gift-5.jpg", title: "300人の受講生データから作った「あなたのAI時代キャリア適性診断」GPTs" },
+  { image: "/images/counseling-gifts/gift-6.jpg", title: "【実例ベース】年代別・未経験からエンジニア＆AI関連職へ転職までの20~40代ロードマップ" },
+  { image: "/images/counseling-gifts/gift-7.jpg", title: "【外資テック内定エンジニア直伝】フルスタックエンジニアへの完全ロードマップ75分特別動画講義" },
+];
+%> <%-
 include('../modules/meta/_head.html', head) %> <%-
 include('../modules/layout/_header.html', {header: header}) %> <%-
 include('../modules/components/_sub-hero.html', {hero: hero}) %>
 
 <main>
-  <div class="counseling-lead">
-    <p>
-      こちらはプログラミングスクール"SiiD"の個別説明会の窓口です。<br />
-      <strong>Zoom</strong>でのご案内になります。
-    </p>
-  </div>
+
+  <section class="counseling-gifts">
+    <h2 class="counseling-gifts-headline">
+      <span class="counseling-gifts-headline-label">個別説明会 参加特典</span>
+      参加された方全員に<em>7大特典</em>プレゼント
+    </h2>
+    <div class="counseling-gifts-carousel swiper">
+      <ul class="counseling-gifts-list swiper-wrapper">
+        <% counselingGifts.forEach((gift, i) => { %>
+        <li class="counseling-gifts-item swiper-slide">
+          <span class="counseling-gifts-badge">特典<%= i + 1 %></span>
+          <div class="counseling-gifts-image">
+            <img src="<%= gift.image %>" alt="<%= gift.title %>" loading="lazy" />
+          </div>
+          <h3 class="counseling-gifts-title"><%= gift.title %></h3>
+        </li>
+        <% }); %>
+      </ul>
+      <div class="counseling-gifts-pagination swiper-pagination"></div>
+      <button
+        type="button"
+        class="counseling-gifts-prev swiper-button-prev"
+        aria-label="前の特典へ"
+      ></button>
+      <button
+        type="button"
+        class="counseling-gifts-next swiper-button-next"
+        aria-label="次の特典へ"
+      ></button>
+    </div>
+  </section>
 
   <section class="application">
     <h1 class="application-conductor">お申し込みはこちらから</h1>
@@ -20,14 +56,7 @@ include('../modules/components/_sub-hero.html', {hero: hero}) %>
     <div class="application-body">
       <div class="application-form">
         <div class="application-form-item">
-          <p>
-            フォームが表示されない場合はお手数ですが、<a
-              href="https://www.jicoo.com/t/iYDSD_qvK-HS/e/XllTYCJ3"
-              target="_blank"
-              ><b>こちらからお問い合わせください。</b></a
-            >
-          </p>
-
+          <p>個別説明会は<strong>Zoom</strong>で実施いたします。</p>
           <div
             class="jicoo-widget"
             data-url="https://www.jicoo.com/event_types/dPvwnhRYxhQB/widget"
@@ -51,4 +80,5 @@ include('../modules/components/_sub-hero.html', {hero: hero}) %>
   src="https://www.jicoo.com/widget/event_type.js"
   async
 ></script>
+<script type="module" src="/assets/scripts/counseling.js"></script>
 <%- include('../modules/meta/_foot.html') %>
