@@ -1,18 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8"/>
     <link rel="icon" href="/images/favicon.ico"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-58D75LLL');</script>
-    <!-- End Google Tag Manager -->
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&family=Oxygen+Mono&display=swap" rel="stylesheet" />
@@ -21,11 +13,14 @@
     <script src="https://kit.fontawesome.com/c1405253c9.js" crossorigin="anonymous"></script>
     <title><%= title %></title>
     <meta name="description" content="<%= disc %>">
+    <!-- 広告専用LPのため検索結果には出さない（/siid/ との重複評価を回避） -->
+    <meta name="robots" content="noindex">
+    <link rel="canonical" href="https://bug-fix.org/siid-lp/">
 
     <meta property="og:title" content="<%= title %>">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="<%= common.domain %>">
-    <meta property="og:image" content="/images/ogp-siid.png">
+    <meta property="og:url" content="https://bug-fix.org/siid-lp/">
+    <meta property="og:image" content="https://bug-fix.org/images/ogp-siid.png">
 
     <!-- オプション -->
     <meta property="og:description" content="<%= disc %>">
@@ -37,7 +32,7 @@
     <meta name="twitter:site" content="@seito_horiguchi"> <!-- サイトのTwitterアカウント -->
     <meta name="twitter:title" content="<%= title %>">
     <meta name="twitter:description" content="<%= disc %>">
-    <meta name="twitter:image" content="/images/ogp-siid.png">
+    <meta name="twitter:image" content="https://bug-fix.org/images/ogp-siid.png">
     <meta name="twitter:image:alt" content="<%= title %>">
 
     <%- include('../modules/meta/_analytics.html') %>
