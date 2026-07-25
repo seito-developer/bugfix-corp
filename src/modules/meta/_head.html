@@ -1,33 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8"/>
     <link rel="icon" href="/images/favicon.ico"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-58D75LLL');</script>
-    <!-- End Google Tag Manager -->
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&family=Noto+Sans+JP:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/styles/main.scss">
     <script src="https://kit.fontawesome.com/6f1db9376e.js" crossorigin="anonymous"></script>
 
     <title><%= title %></title>
     <meta name="description" content="<%= disc %>">
+    <%
+    const pageUrl = "https://bug-fix.org" + (typeof path !== "undefined" ? path : "/");
+    const ogpImg = "https://bug-fix.org" + (theme === "theme-siid" ? "/images/ogp-siid.png" : "/images/ogp.png");
+    %>
+    <link rel="canonical" href="<%= pageUrl %>">
 
     <meta property="og:title" content="<%= title %>">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="<%= common.domain %>">
-    <% 
-    const ogpImg = theme === "theme-siid" ? "/images/ogp-siid.png" : "/images/ogp.png";
-    %>
+    <meta property="og:url" content="<%= pageUrl %>">
     <meta property="og:image" content="<%= ogpImg %>">
 
     <!-- オプション -->
@@ -42,6 +36,31 @@
     <meta name="twitter:description" content="<%= disc %>">
     <meta name="twitter:image" content="<%= ogpImg %>">
     <meta name="twitter:image:alt" content="<%= title %>">
+
+    <% if (pageUrl === "https://bug-fix.org/") { %>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "合同会社BugFix",
+      "alternateName": "BugFix LLC",
+      "url": "https://bug-fix.org/",
+      "logo": "https://bug-fix.org/images/ogp.png",
+      "address": {
+        "@type": "PostalAddress",
+        "postalCode": "156-0045",
+        "addressRegion": "東京都",
+        "addressLocality": "世田谷区",
+        "streetAddress": "桜上水4丁目9-11 wdsビル303"
+      },
+      "sameAs": [
+        "https://twitter.com/seito_horiguchi",
+        "https://www.youtube.com/channel/UC8IWoNfegB72Q2nT9GJy2zQ",
+        "https://www.tiktok.com/@seito2020"
+      ]
+    }
+    </script>
+    <% } %>
 
     <%- include('../modules/meta/_analytics.html') %>
 </head>

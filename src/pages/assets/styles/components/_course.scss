@@ -8,7 +8,7 @@
   background: var(--color-core);
   .course-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     margin: fn.vw(85px) 0 0;
     > li {

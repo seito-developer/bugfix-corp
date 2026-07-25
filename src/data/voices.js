@@ -5,7 +5,7 @@ export const voices = [
     job: "ミュージシャン",
     course: "Career",
     result: "プライベートと両立しながら約5ヶ月でWebエンジニアに内定！",
-    img: "/images/voices/zakky.png",
+    img: "/images/voices/zakky.webp",
     hiddenData: {
       thoughts: "全力で応えてくれる先生のもと、1on1ではプログラミングのみならず、ビジネスコミュニケーションの学びにもなりました。常に受講生ファーストで向き合ってくれるので、自分の状況に応じて、都度スケジュールを一緒に考えてもらえました。経歴関係なく、やる気のある人全員にオススメします！",
       feedback: "Zakkyさんはこれまで全く異なる分野のお仕事をされていたにもかかわらず、見事に短期間で内定を勝ち取りました！作成したポートフォリオがXで共感を生んだのもとても良かったと思います◎"
@@ -16,7 +16,7 @@ export const voices = [
     job: "フリーター",
     course: "Career",
     result: "未経験からエンジニア職に8社内定！",
-    img: "/images/voices/ryo.png",
+    img: "/images/voices/ryo.webp",
     hiddenData: {
       thoughts: "「0→1」「1→10」「10→100」全て自分で創り上げる楽しさをしれました！<br>IT業界に興味あるけど、何から始めたらいいか分からない、自信がないって方におすすめです！！",
       feedback: "アルバイトと両立しながらの学習はなかなか大変だったかと思います。しかし約8ヶ月の学習の末、結果的に何社からもオファーを頂き逆に選ぶのが大変な事態に...！"
@@ -27,7 +27,7 @@ export const voices = [
     job: "学生",
     course: "Career",
     result: "医療系スタートアップのエンジニア職インターンに内定！",
-    img: "/images/voices/iryu.png",
+    img: "/images/voices/iryu.webp",
     hiddenData: {
       thoughts: "幅広く学ぶことができ、実務の現場で「これやった！」という場面が多々ありました。また、ITスキルだけでなくビジネスにおけるコミュニケーションも学べる内容で、非常に実践的でした。",
       feedback: "Iryuさんはまだ学生だったため、ディスカッションの末に将来の就活を見据えてまずはエンジニア職のインターン獲得を目指すことになりました。結果、忙しい学業やアルバイトとも両立しながら見事内定されました！"
@@ -38,7 +38,7 @@ export const voices = [
     job: "ITエンジニア職",
     course: "Basic",
     result: "SIerからWeb系企業への転職を達成！",
-    img: "/images/voices/ah.png",
+    img: "/images/voices/ah.webp",
     hiddenData: {
       thoughts: "受講後に目標だった自社ECサイトを運用している会社にFEエンジニアとして転職を達成できたので大満足しています。内容としては転職後にもよく使っているツールや考え方を学べまたので、今でもとても役立っています！また、毎週宿題で小さな成果物を作るので勉強が習慣になるのも良いところだと思いました！",
       feedback: "A・HさんはBasicコースで学ばれたあと、自身でも学習を継続された結果、見事Webエンジニアへの転職を果たされました！卒業後も学んだ知識を活用いただき大変嬉しく思います！"
@@ -60,7 +60,7 @@ export const voices = [
     job: "デザイナー、動画編集",
     course: "Basic",
     result: "学んだ技術を活かして自作Webゲームを作成＆販売！",
-    img: "/images/voices/nt.png",
+    img: "/images/voices/nt.webp",
     hiddenData: {
       thoughts: "元々、独学でコーディングの勉強をしていたのですが、先生の授業を受けて、知的好奇心が刺激され、より楽しくプログラミング学習ができるようになりました。また、生徒の皆さんの学ぶ意欲に圧倒され、「何か自分でもアウトプットしてみよう！」と思い、自分が好きなゲームとプログラミングを掛け合わせた商品を作り、ウェブ上で販売したところ、多くの人が自分の作った作品で遊んでくれるようになりました！ ",
       feedback: "N・TさんはBasicコースで学んだ知識を活かし、なんと在籍中にBoothで自作コンテンツを販売されるまでに至りました！しかもかなり売れてます！マーダーミステリーや謎解きに興味ある方はぜひチェックしてみてください。 <a href='https://onigiriyakata.booth.pm/' target='_blank'>https://onigiriyakata.booth.pm/</a>"
@@ -71,7 +71,7 @@ export const voices = [
     job: "広報・マーケティング",
     course: "Basic",
     result: "オリジナルゲームを企画・開発してAppleストアに公開！",
-    img: "/images/voices/shuji.png",
+    img: "/images/voices/shuji.webp",
     hiddenData: {
       thoughts: "プログラミングの知識が全くない状態から、実際にアプリを作れるようになりました！コードの知識だけでなく、プログラムを動かすために必要なコンピューターやWebの基礎知識まで教えていただけたのが、とても助かりました。エンジニアを目指す人だけでなく、キャリアアップを目的に受講するのも良いと思います。私は、SiiDの学びを通じて、職場でWeb関連の仕事を任されるようになりました。",
       feedback: "S・NさんはBasicコースで学んだ知識を発展させ、ゲームを開発してストアに公開するまでに至りました！ゲーム好きな方はぜひチェックしてみてください。 → <a href='https://apps.apple.com/jp/app/%E3%81%B5%E3%82%8F%E3%81%B5%E3%82%8F%E3%81%AE%E3%82%A8%E3%83%93%E3%83%95%E3%83%A9%E3%82%A4/id6453123312' target='_blank'>ふわふわのエビフライ</a>"
