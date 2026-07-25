@@ -1,9 +1,20 @@
+<%
+// header.simple: true でグローバルナビを非表示にし、ロゴのリンクを外す（CV特化ページ用）
+const isSimpleHeader = header.simple === true;
+%>
 <header class="header">
   <div class="header-inner">
     <div class="header-flex">
+      <% if(isSimpleHeader){ %>
+      <div class="header-logo">
+        <%- include('../modules/components/_logo.html') %>
+      </div>
+      <% } else { %>
       <a class="header-logo" href="/">
         <%- include('../modules/components/_logo.html') %>
       </a>
+      <% } %>
+      <% if(!isSimpleHeader){ %>
       <button type="button" class="trigger" id="js-nav-trigger">
         <span></span>
       </button>
@@ -52,6 +63,7 @@
           </div>
         </div>
       </nav>
+      <% } %>
     </div>
   </div>
 </header>

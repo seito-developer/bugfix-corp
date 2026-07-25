@@ -84,6 +84,12 @@
   &.footer-has-contact {
     padding-top: fn.vw(120px + 150px);
   }
+  &.footer-simple {
+    padding: fn.vw(40px) fn.vw(120px);
+    .footer-bottom {
+      justify-content: center;
+    }
+  }
 
   @media screen and (max-width: cn.$bp-lg) {
     .footer-top-info {
