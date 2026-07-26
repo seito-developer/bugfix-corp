@@ -1,4 +1,9 @@
+<%
+// simple: true でコピーライト以外を非表示にする（CV特化ページ用）
+const isSimpleFooter = typeof simple !== "undefined" && simple === true;
+%>
 <footer class="footer <%= modifier %>">
+    <% if(!isSimpleFooter){ %>
     <div class="footer-top">
         <div class="footer-top-info">
             <div class="footer-top-logo">
@@ -41,14 +46,17 @@
             </div>
         </div>
     </div>
-    
+
     <hr class="footer-border">
+    <% } %>
 
     <div class="footer-bottom">
         <small class="footer-bottom-credit">&copy;BugFix LLC.</small>
+        <% if(!isSimpleFooter){ %>
         <div class="footer-bottom-nav">
             <a href="/privacy-policy/">プライバシーポリシー</a>
             <a href="/law/">特定商取引法に基づく表示</a>
         </div>
+        <% } %>
     </div>
 </footer>
