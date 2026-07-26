@@ -1,5 +1,5 @@
-<% if (href === "") { %>  
-<span class="panel is-disabled">
+<% if (href === "") { %>
+<div class="panel is-disabled">
 <% } else { %>
 <a class="panel" href="<%= href %>" <% if(external) { %>target="_blank"<% } %>>
 <% } %>
@@ -11,7 +11,7 @@
     <dd class="panel-disc"><%- disc %></dd>
   </dl>
 <% if (href === "") { %>
-</span>
+</div>
 <% } else { %>
 </a>
 <% } %>

@@ -1,5 +1,5 @@
 <% const head={ title: common.title.siid.index, disc: common.disc.siid.index,
-theme: "theme-siid" }; const header={ contact: { href: "/siid/counseling/" ,
+theme: "theme-siid", path: "/siid/counseling-complete/" }; const header={ contact: { href: "/siid/counseling/" ,
 text: "お申し込み" } }; const hero={ title: "COUNSELING" , sub: "個別説明会",
 disc: "SiiD個別説明会の窓口です" }; %> <%- include('../modules/meta/_head.html',
 head) %>
@@ -55,7 +55,6 @@ include('../modules/components/_sub-hero.html', {hero: hero}) %>
   </section>
 </main>
 
-<script type="module" src="/assets/scripts/moshimo.js"></script>
 
 <%- include('../modules/layout/_footer.html', {modifier: "" }) %> <%-
 include('../modules/meta/_foot.html') %>

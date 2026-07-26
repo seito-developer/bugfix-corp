@@ -6,9 +6,13 @@
   </div>
   <div class="hero-images">
     <ul class="hero-images-list">
-      <% for( let index = 0; index < hero.images.length; index++ ) { %>
+      <% for( let index = 0; index < hero.images.length; index++ ) {
+        const item = hero.images[index];
+        const imgSrc = typeof item === "string" ? item : item.src;
+        const imgAlt = typeof item === "string" ? "" : item.alt;
+      %>
         <li class="hero-images-item">
-          <img src="/images/hero/<%= hero.images[index] %>" alt="">
+          <img src="/images/hero/<%= imgSrc %>" alt="<%= imgAlt %>">
         </li>
       <% } %>
     </ul>
