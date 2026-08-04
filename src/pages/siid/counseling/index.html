@@ -1,6 +1,6 @@
 <% const head={ title: common.title.siid.counseling, disc: common.disc.siid.counseling,
 theme: "theme-siid", path: "/siid/counseling/" }; const header={ contact: { href: "/siid/counseling/" ,
-text: "お申し込み" } }; const hero={ title: "COUNSELING" , sub:
+text: "お申し込み" }, simple: true }; const hero={ title: "COUNSELING" , sub:
 "個別説明会", disc: "" };
 // 個別説明会の参加特典
 const counselingGifts = [
@@ -73,7 +73,7 @@ include('../modules/components/_sub-hero.html', {hero: hero}) %>
   </section>
 </main>
 
-<%- include('../modules/layout/_footer.html', {modifier: "" }) %>
+<%- include('../modules/layout/_footer.html', {modifier: "footer-simple", simple: true }) %>
 
 <script
   type="text/javascript"
