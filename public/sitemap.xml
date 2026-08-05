@@ -1,25 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- コーポレートサイト（bug-fix.org / 本リポジトリ） -->
   <url>
     <loc>https://bug-fix.org/</loc>
-  </url>
-  <url>
-    <loc>https://bug-fix.org/siid/</loc>
-  </url>
-  <url>
-    <loc>https://bug-fix.org/siid/tuition/</loc>
-  </url>
-  <url>
-    <loc>https://bug-fix.org/siid/counseling/</loc>
-  </url>
-  <url>
-    <loc>https://bug-fix.org/siid/career/</loc>
-  </url>
-  <url>
-    <loc>https://bug-fix.org/siid/voices/</loc>
-  </url>
-  <url>
-    <loc>https://bug-fix.org/siid/white-paper/</loc>
   </url>
   <url>
     <loc>https://bug-fix.org/contact/</loc>
@@ -29,5 +12,31 @@
   </url>
   <url>
     <loc>https://bug-fix.org/law/</loc>
+  </url>
+  <!-- SiiD（siid-web リポジトリ / Next.js）
+       Next.js の trailingSlash 未設定のため末尾スラッシュ無しが正規URL -->
+  <url>
+    <loc>https://bug-fix.org/siid</loc>
+  </url>
+  <url>
+    <loc>https://bug-fix.org/siid/career-path</loc>
+  </url>
+  <url>
+    <loc>https://bug-fix.org/siid/courses</loc>
+  </url>
+  <url>
+    <loc>https://bug-fix.org/siid/community</loc>
+  </url>
+  <url>
+    <loc>https://bug-fix.org/siid/service</loc>
+  </url>
+  <url>
+    <loc>https://bug-fix.org/siid/counseling</loc>
+  </url>
+  <url>
+    <loc>https://bug-fix.org/siid/line</loc>
+  </url>
+  <url>
+    <loc>https://bug-fix.org/siid/white-paper</loc>
   </url>
 </urlset>
