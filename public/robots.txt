@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://bug-fix.org/sitemap.xml
+Sitemap: https://bug-fix.org/siid/sitemap.xml
