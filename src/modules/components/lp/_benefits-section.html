@@ -2,7 +2,7 @@
     const benefits = [
         {
             id: 1,
-            image: "gift-1.png",
+            image: "gift-1.webp",
             subtitle: "電子書籍『180日でITエンジニアになる方法』",
             description: "GAFAや国内大手テック企業内定者も輩出した黄金メソッドを掲載"
         },
@@ -39,7 +39,7 @@
                 </div>
                 <div class="benefit-content">
                     <div class="benefit-image-container">
-                        <img src="/images/siid-lp/<%= benefit.image %>" alt="<%= benefit.subtitle %>" class="benefit-image">
+                        <img src="/images/siid-lp/<%= benefit.image %>" alt="<%= benefit.subtitle %>" class="benefit-image" loading="lazy">
                     </div>
                     <div class="benefit-details">
                         <h3 class="benefit-subtitle"><%= benefit.subtitle %></h3>
