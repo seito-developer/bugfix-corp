@@ -29,12 +29,12 @@ npm run preview  # ビルド成果物のプレビュー
 - **パーシャル** (`src/modules/`):
   - `meta/` … `_head.html`（`<!DOCTYPE>`〜`<head>`、GTM 等を含む）、`_foot.html`、`_analytics*.html`
   - `layout/` … `_header.html`, `_footer.html`
-  - `components/` … `_hero.html` 等の再利用パーツ。`ai-lp/`, `lp/`, `lp-1/` などキャンペーン LP 用のサブディレクトリを持つ
+  - `components/` … `_hero.html` 等の再利用パーツ。`ai-lp/`, `lp-1/` などキャンペーン LP 用のサブディレクトリを持つ
   - `_head.html` が HTML 冒頭を出力するため、各ページはこれを最初に include する。
 
 - **`moveScript` プラグイン** (`vite.config.js` 内で自作): ビルド時に `<head>` 内の `assets` を含む `.js` ある `<script>` を JSDOM で `<body>` 末尾へ移動し、描画パフォーマンスを最適化する。head に置いたスクリプトが body 末尾に出ることを前提に考えること。
 
-- **スタイル** (`src/pages/assets/styles/`): Sass。`main.scss` がエントリで、`_const`/`_function`/`_mixins`/`_theme`/`_base` の基盤と `layout/` `components/` `utilities/` を取り込む。SiiD LP 専用は `siid-lp/main.scss`。
+- **スタイル** (`src/pages/assets/styles/`): Sass。`main.scss` がエントリで、`_const`/`_function`/`_mixins`/`_theme`/`_base` の基盤と `layout/` `components/` `utilities/` を取り込む。
 
 - **スクリプト** (`src/pages/assets/scripts/`): ページ別の素の JS（`index.js`, `siid.js`, `voices.js`, `gifts-*.js`, `moshimo.js` 等）と共通の `main.js`、再利用モジュール `modules/`（`hero.js`, `tab.js`, `stream.js`）。アニメーションは `animejs`。
 
