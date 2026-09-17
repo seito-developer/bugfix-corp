@@ -4,7 +4,7 @@ export const works = {
       headline: "週間献立プランナー",
       author: "Some558さん",
       course: "Career",
-      img: "/images/showcase/work-8.png",
+      img: "/images/showcase/work-8.webp",
       desc: "1週間分の献立を簡単に作成できるWebアプリケーション。<br>食材や料理ジャンル、調理時間などの条件からレシピを検索したり登録できる。",
       tech: "PHP(Laravel), PostgreSQL, Docker, JavaScript(ES6), HTML/CSS(Tailwind)",
     },
