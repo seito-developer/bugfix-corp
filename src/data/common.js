@@ -6,6 +6,7 @@ export const common = {
     contact: "お問い合わせ | BugFix LLC",
     privacyPolicy: "プライバシーポリシー | BugFix LLC",
     law: "特定商取引法に基づく表示 | BugFix LLC",
+    consumer: "消費者志向自主宣言 | BugFix LLC",
     gifts: "LINEギフト | BugFix LLC",
     siid: {
       index: "オンラインのAIプログラミングスクール「SiiD」 - BugFix LLC",
@@ -29,6 +30,7 @@ export const common = {
       "弊社BugFixへはこちらからお気軽にお問い合わせください。AIの導入支援・顧問・研修・システム開発・マーケティングなど承っております。",
     privacyPolicy:
       "BugFixは登録者12万人のYouTubeチャンネル「セイト先生のWeb/ITエンジニア転職ラボ」の運営や、ゼミ形式のオンライン・AIプログラミングスクール「SiiD」などを運営するテック企業です。",
+    consumer: "合同会社BugFixの消費者志向自主宣言です。AIプログラミングスクール「SiiD」を運営し、受講生の声を聴いて学びの場を改善し続けます。",
     law: "BugFixは登録者12万人のYouTubeチャンネル「セイト先生のWeb/ITエンジニア転職ラボ」の運営や、ゼミ形式のオンライン・AIプログラミングスクール「SiiD」などを運営するテック企業です。",
     gifts:
       "BugFixは登録者12万人のYouTubeチャンネル「セイト先生のWeb/ITエンジニア転職ラボ」の運営や、ゼミ形式のオンライン・AIプログラミングスクール「SiiD」などを運営するテック企業です。",
