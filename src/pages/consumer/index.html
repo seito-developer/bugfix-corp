@@ -1,0 +1,54 @@
+<% const head = { title: common.title.consumer, disc: common.disc.consumer, theme:
+"", path: "/consumer/" }; const header = { contact: { href: "/contact/", text: "CONTACT" } }; const hero = {
+title: "Declaration", sub: "消費者志向自主宣言", modifier: "sub-hero-long" };
+const contact = {
+  headline: "お問い合わせはこちら",
+  href: "/contact/",
+  text: "CONTACT"
+};
+%>
+<%- include('../modules/meta/_head.html', head) %> <%-
+include('../modules/layout/_header.html', {header: header}) %> <%-
+include('../modules/components/_sub-hero.html', {hero: hero}) %>
+
+<main>
+  <div class="docs">
+    <section>
+      <h1>合同会社BugFix 消費者志向自主宣言</h1>
+    </section>
+
+    <section>
+      <h1>理念</h1>
+      <p>合同会社BugFixは、AIプログラミングスクール「SiiD」を運営し、AIを学んで次世代のAI・IT人材を目指すビジネスパーソンを支援しています。受講生の声を聴いて学びの場を改善し続け、受講する方が納得して学び、次の一歩を踏み出せる状態をつくります。</p>
+    </section>
+
+    <section>
+      <h1>取組方針</h1>
+      <dl>
+        <dt>1. 受講生の声を聴き、いかします。</dt>
+        <dd>24時間受け付けるチャットと、毎日21:00〜23:00の Zoom で、受講生の質問や相談に答えています。卒業生のインタビューを公式サイトで公開しています（<a href="https://bug-fix.org/siid/career-path/1">https://bug-fix.org/siid/career-path/1</a>）。卒業して1年後を目処に、習得したスキルの活用状況や勤務先での処遇の変化などをうかがう任意のフォローアップ調査をお願いすることがあり、その結果をプログラムの向上に使います。</dd>
+      </dl>
+      <dl>
+        <dt>2. 未来・次世代のために取り組みます。</dt>
+        <dd>IT人材の不足と、仕事での生成AIの活用が広がっていることを受けて、AI・ITのスキルを身につけたいビジネスパーソンの学び直しを支えます。ITエンジニアへの転職を目指す方だけでなく、今の仕事でのキャリアアップや業務の効率化にAIを生かしたい方も学べるよう、ChatGPT・GitHub Copilot・Claude CodeなどのAIツールを使った開発をカリキュラムに入れています。カリキュラムは受講後も無期限で使えるようにし、内容を更新し続けます。</dd>
+      </dl>
+      <dl>
+        <dt>3. 法令を守り、正しくお伝えします。</dt>
+        <dd>契約の前に、コースごとの受講料（税込）、給付金を適用した後の金額、書類添削と模擬面接の回数を <a href="https://bug-fix.org/siid/courses">https://bug-fix.org/siid/courses</a> でお伝えしています。特定商取引法に基づく表示（<a href="/law/">https://bug-fix.org/law/</a>）とプライバシーポリシー（<a href="/privacy-policy/">https://bug-fix.org/privacy-policy/</a>）を公開し、消費者関連の法令を守り、個人情報を適切に取り扱います。</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h1>フォローアップ</h1>
+      <p>この宣言にもとづく取り組みを、原則1年ごとに振り返り、公開します。</p>
+    </section>
+
+    <p><time datetime="2026-11">2026年11月</time> 合同会社BugFix 代表社員 堀口誠人</p>
+  </div>
+
+  <%- include('../modules/components/_contact.html', {contact: contact}) %>
+</main>
+
+<%- include('../modules/layout/_footer.html', {modifier: "footer-has-contact"}) %>
+
+<%- include('../modules/meta/_foot.html') %>
